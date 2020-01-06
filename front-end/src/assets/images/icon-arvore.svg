@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="27px" viewBox="0 0 24 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon-arvore</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu-admin" transform="translate(-24.000000, -18.000000)">
+            <g id="Group-16" transform="translate(24.000000, 18.000000)">
+                <g id="icon-arvore">
+                    <path d="M12.1752809,0 L0,0 L0,12.4444444 L24,12.4444444 L24,12.4444444 C24,5.57162042 18.7058427,0 12.1752809,0" id="Fill-1" fill="#76D41F"></path>
+                    <path d="M24,14.2222222 L0,14.2222222 L0,14.2222222 C0,21.0950462 5.29402247,26.6666667 11.8245843,26.6666667 L24,26.6666667 L24,14.2222222 Z" id="Fill-4" fill="#45D0C1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
