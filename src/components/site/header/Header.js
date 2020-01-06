@@ -10,9 +10,9 @@ import {
   DropdownStyled
 } from './Header.style'
 import RoundButton from 'components/admin/user-management-panel/round-button/RoundButton'
-import iconArvore from 'front-end/images/icon-arvore.svg'
+import iconArvore from 'assets/images/icon-arvore.svg'
 import { colors } from 'config/ui'
-import LogoArvoreEducacao from 'front-end/images/logo-arvore-edu-white.svg'
+import LogoArvoreEducacao from 'assets/images/logo-arvore-edu-white.svg'
 import { Dropdown } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'

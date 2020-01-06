@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container, Header } from './Sidebar.styles'
 import { FontIcon } from 'components/lib/icons'
 import SidebarMenu from 'components/admin/user-management-panel/sidebar-menu'
-import logo from 'front-end/images/icon-arvore.svg'
+import logo from 'assets/images/icon-arvore.svg'
 import { Transition } from 'react-transition-group'
 import { ARVORE_URL } from 'config/vars'
 

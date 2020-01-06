@@ -11,7 +11,7 @@ import {
   LogoContainer,
   StyledButton
 } from './Header.styles'
-import logo from 'front-end/images/logo-arvore-edu.svg'
+import logo from 'assets/images/logo-arvore-edu.svg'
 
 const Header = () => {
   return (

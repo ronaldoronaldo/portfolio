@@ -7,8 +7,8 @@ import { Input } from 'components/lib/inputs'
 import BorderOr from 'components/lib/borderOr'
 import { withApollo } from 'react-apollo'
 import { Alert } from 'components/lib/alerts'
-import logoGoogle from 'front-end/images/icon-google.svg'
-import logoMicrosoft from 'front-end/images/icon-microsoft.svg'
+import logoGoogle from 'assets/images/icon-google.svg'
+import logoMicrosoft from 'assets/images/icon-microsoft.svg'
 import getQueryStringValue from 'utils/getQueryStringValue'
 
 import {

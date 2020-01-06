@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import backgroundStudent from 'front-end/images/student-recover-pass.png'
-import backgroundTeacher from 'front-end/images/teacher-recover-pass.png'
+import backgroundStudent from 'assets/images/student-recover-pass.png'
+import backgroundTeacher from 'assets/images/teacher-recover-pass.png'
 import { spacing, colors, sizes } from 'config/ui'
 import Button from 'components/lib/buttons/Button'
 

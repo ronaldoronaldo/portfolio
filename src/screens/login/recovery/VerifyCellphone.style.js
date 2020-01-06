@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { sizes, colors } from 'config/ui'
-import backgroundMock from 'front-end/images/success-forget-password.svg'
+import backgroundMock from 'assets/images/success-forget-password.svg'
 import { Button } from 'components/lib/buttons'
 
 export const ContainerLeftStyle = styled.div`

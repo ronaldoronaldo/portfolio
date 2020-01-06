@@ -10,7 +10,7 @@ import {
 import { ItemsShelf } from 'components/shelf'
 
 import { colors } from 'config/ui'
-import LogoGuten from 'front-end/images/guten-news.svg'
+import LogoGuten from 'assets/images/guten-news.svg'
 
 import { redirectToPlatform } from 'utils/redirects'
 

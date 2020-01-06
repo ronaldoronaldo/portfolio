@@ -8,8 +8,8 @@ import {
   ImgStyle
 } from './ExploreMore.style'
 
-import Book from 'front-end/images/book.svg'
-import News from 'front-end/images/news.svg'
+import Book from 'assets/images/book.svg'
+import News from 'assets/images/news.svg'
 
 const ExploreMore = ({ arvore, ...rest }) => {
   return (

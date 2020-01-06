@@ -10,12 +10,12 @@ import { Overlay } from 'styles/common/Common.styles'
 
 import Shelf from './Shelf'
 
-import image1 from 'front-end/images/mock/Modelo_Colecao.jpg'
-import image2 from 'front-end/images/mock/Modelo_Colecao_2.jpg'
-import image3 from 'front-end/images/mock/Modelo_Colecao_3.jpg'
-import image4 from 'front-end/images/mock/Modelo_Colecao_4.jpg'
-import image5 from 'front-end/images/mock/Modelo_Colecao_5.jpg'
-import image6 from 'front-end/images/mock/Modelo_Colecao_6.jpg'
+import image1 from 'assets/images/mock/Modelo_Colecao.jpg'
+import image2 from 'assets/images/mock/Modelo_Colecao_2.jpg'
+import image3 from 'assets/images/mock/Modelo_Colecao_3.jpg'
+import image4 from 'assets/images/mock/Modelo_Colecao_4.jpg'
+import image5 from 'assets/images/mock/Modelo_Colecao_5.jpg'
+import image6 from 'assets/images/mock/Modelo_Colecao_6.jpg'
 
 import books from './books.json'
 import news from './news.json'
@@ -28,8 +28,8 @@ const collections = [
   { image: image3, title: 'Rumos do planeta' }
 ]
 
-import BookImage from 'front-end/images/book.svg'
-import NewsImage from 'front-end/images/news.svg'
+import BookImage from 'assets/images/book.svg'
+import NewsImage from 'assets/images/news.svg'
 const didactics = [
   {
     title: 'Redes sociais, celular e internet: o gênero Notícia',

@@ -1,5 +1,5 @@
-import logoArvore from 'front-end/images/icon-otto.svg'
-import logoGuten from 'front-end/images/icon-guten.svg'
+import logoArvore from 'assets/images/icon-otto.svg'
+import logoGuten from 'assets/images/icon-guten.svg'
 
 let data = [
   {

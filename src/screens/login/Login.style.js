@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { sizes, spacing } from 'config/ui'
-import backgroundMock from 'front-end/images/img_login_web.png'
+import backgroundMock from 'assets/images/img_login_web.png'
 import { Link } from 'react-router-dom'
 
 export const ContainerStyle = styled.div`
