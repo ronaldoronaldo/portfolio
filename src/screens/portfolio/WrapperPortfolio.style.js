@@ -10,7 +10,7 @@ export const Page = styled.div`
         colors.black4 : colors.black2
     };
   `}
-  transition: background-color 0.3s ease-out;
+  transition: background-color 0.5s ease-out;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -91,10 +91,29 @@ export const LogoImage = styled.img`
   ${({selectedPage}) => css`
     opacity: ${selectedPage === '' ? 1 : 0};
   `}
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.4s ease-out;
   margin-top: ${spacing.spacingLarge + 64}px;
   margin-bottom: ${spacing.spacingLarge + 32}px;
   @media (max-width: ${sizes.mdScreen}px) {
     width: 89%;
-  }
+  } 
+`
+export const IconsBorder = styled.img`
+  ${({selectedPage}) => css`
+    border-bottom: 2px solid;
+    border-color: ${
+    selectedPage === 'curriculum' ?
+      colors.portGreen :
+      selectedPage === 'about me' ?
+        colors.white : colors.black3
+    };
+    width: ${selectedPage === '' ? 0 : 75}%;
+    transition: width 0.5s ease-out;
+    position: absolute;
+    top: 100px;
+    @media (min-width: ${sizes.mdScreen}px) {
+      width: ${selectedPage === '' ? 0 : 32}%;
+      top: 160px;
+    } 
+  `}
 `

@@ -5,13 +5,14 @@ import { Examples } from './examples'
 import logo from 'assets/images/rw-logo.png'
 
 
-import { Page, IconsContainer, LogoImage } from './WrapperPortfolio.style'
+import { Page, IconsContainer, LogoImage, IconsBorder } from './WrapperPortfolio.style'
 import IconButton from 'components/lib/buttons/IconButton'
 
 const WrapperPortfolio = () => {
   const [selectedPage, setSelectedPage] = useState('')
   const [forIcons, setForIcons] = useState('')
   const [forPage, setForPage] = useState('')
+  const [forBorder, setForBorder] = useState('')
 
   const handleIconClicked = page => {
     if (selectedPage === '') {
@@ -19,12 +20,16 @@ const WrapperPortfolio = () => {
       setTimeout(() => {
         setForIcons(page)
         setForPage(page)
-      }, 400)
+      }, 500)
+      setTimeout(() => {
+        setForBorder(page)
+      }, 1000)
       return
     }
     setSelectedPage(page)
     setForPage(page)
     setForIcons(page)
+    setForBorder(page)
   }
 
   return (
@@ -38,6 +43,7 @@ const WrapperPortfolio = () => {
         {/*<IconButton iconName={'computer-code'}/>*/}
         {/*<IconButton iconName={'devices'}/>*/}
       </IconsContainer>
+      <IconsBorder selectedPage={forBorder}/>
       {selectedPage === 'curriculum' && <Curriculum/>}
       {selectedPage === 'about me' && <AboutMe/>}
       {selectedPage === 'examples' && <Examples/>}
