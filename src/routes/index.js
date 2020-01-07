@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 
 export const ROOT_PATH = '/app'
 
+//PORTFOLIO ROUTES
+export const PORTFOLIO_PATH = ROOT_PATH + '/home'
+
 //SITE ROUTES
 export const SITE_PATH = ROOT_PATH + '/biblioteca'
 export const SITE_SEARCH_RESULTS_PATH = term => `${SITE_PATH}/busca/${term || ':term'}`
@@ -121,16 +124,16 @@ import {
 
 import WrapperPanel from 'screens/admin/user-management-panel/WrapperPanel'
 import WrapperSite from 'screens/site/WrapperSite'
+import WrapperPortfolio from 'screens/portfolio/WrapperPortfolio'
 
 const Routes = () => (
   <BrowserRouter>
-    <Route path={'/'} exact render={() => <Redirect to={LOGIN_PATH} />} />
-    <Route path={ROOT_PATH} exact render={() => <Redirect to={LOGIN_PATH} />} />
+    <Route path={'/'} exact render={() => <Redirect to={PORTFOLIO_PATH} />} />
+    <Route path={ROOT_PATH} exact render={() => <Redirect to={PORTFOLIO_PATH} />} />
     <Route
       path={FORGOT_LOGIN_PATH}
       exact
-      render={() => <Redirect to={RECOVER_VIA_EMAIL_PATH} />}
-    />
+      component={ForgotLogin} />
     <Route path={LOGIN_PATH} component={Login} />
     <Route
       path={LOGOUT_PATH}
@@ -191,6 +194,9 @@ const Routes = () => (
 
     {/*site home routes*/}
     <Route path={SITE_PATH} component={WrapperSite} />
+
+    {/*portfolio routes*/}
+    <Route path={PORTFOLIO_PATH} component={WrapperPortfolio} />
   </BrowserRouter>
 )
 

@@ -28,7 +28,7 @@ import {
   ContainerButtonRecovery
 } from './Login.style'
 import GoogleLogin from 'react-google-login'
-import { RECOVER_VIA_EMAIL_PATH, SITE_PATH } from 'routes'
+import { CHOOSE_USER_TYPE_PATH, SITE_PATH } from 'routes'
 import { UserAgentApplication } from 'msal/lib-es6'
 import { LOGIN_JWT } from 'config/vars'
 import IconButton from 'components/lib/buttons/IconButton'
@@ -404,7 +404,7 @@ const Login = ({ client, ...props }) => {
             iconImgSrc={logoMicrosoft}
           />
         </ContainerButtonsRow>
-        <ContainerButtonRecovery to={RECOVER_VIA_EMAIL_PATH}>
+        <ContainerButtonRecovery to={CHOOSE_USER_TYPE_PATH}>
           <Button
             text="Esqueci como entrar"
             size="small"
