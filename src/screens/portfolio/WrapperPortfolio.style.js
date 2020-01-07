@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { colors, spacing } from 'config/ui'
+import { colors, spacing, sizes } from 'config/ui'
 
 export const Page = styled.div`
   ${({selectedPage}) => css`
@@ -16,6 +16,10 @@ export const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 ${spacing.spacingMedium}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding: 0 20%;
+  }
 `
 
 export const IconsContainer = styled.div`
@@ -26,8 +30,6 @@ export const IconsContainer = styled.div`
         height: 120px;
         border-radius: 50%;
         background-color: transparent;
-        margin-right: ${spacing.spacingLarge}px;
-        margin-left: ${spacing.spacingLarge}px;
         transition: box-shadow 0.1s ease-out;
         &:hover {
           > span {
@@ -63,16 +65,25 @@ export const IconsContainer = styled.div`
               colors.white : colors.black4
           };
         }
+        @media (max-width: ${sizes.mdScreen}px) {
+          width: 70px;
+          height: 70px;
+          > span { 
+            font-size: 40px;          
+          }
+        }
       }
   `}
+  padding: 0 ${spacing.spacingMedium}px;
   transition: top 0.5s ease-in-out;
   position: absolute;
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;;
   align-items: center;
-  > button {
-
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding: 0 34%;
   }
 `
 
@@ -83,4 +94,7 @@ export const LogoImage = styled.img`
   transition: opacity 0.3s ease-out;
   margin-top: ${spacing.spacingLarge + 64}px;
   margin-bottom: ${spacing.spacingLarge + 32}px;
+  @media (max-width: ${sizes.mdScreen}px) {
+    width: 89%;
+  }
 `
