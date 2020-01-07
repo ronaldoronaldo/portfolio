@@ -10,20 +10,28 @@ import IconButton from 'components/lib/buttons/IconButton'
 
 const WrapperPortfolio = () => {
   const [selectedPage, setSelectedPage] = useState('')
-  const [selectedPageDelayed, setSelectedPageDelayed] = useState('')
+  const [forIcons, setForIcons] = useState('')
+  const [forPage, setForPage] = useState('')
 
   const handleIconClicked = page => {
+    if (selectedPage === '') {
+      setSelectedPage(page)
+      setTimeout(() => {
+        setForIcons(page)
+        setForPage(page)
+      }, 400)
+      return
+    }
     setSelectedPage(page)
-    setTimeout(() => {
-      setSelectedPageDelayed(page)
-    }, 400)
+    setForPage(page)
+    setForIcons(page)
   }
 
   return (
-    <Page selectedPage={selectedPageDelayed}>
+    <Page selectedPage={forPage}>
       <LogoImage src={logo} selectedPage={selectedPage}/>
 
-      <IconsContainer selectedPage={selectedPageDelayed}>
+      <IconsContainer selectedPage={forIcons}>
         <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
         <IconButton iconName={'user'} onClick={() => handleIconClicked('about me')}/>
         <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>

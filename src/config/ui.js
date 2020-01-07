@@ -7,6 +7,10 @@ export const fontWeights = {
 const lightness = 5
 
 export const colors = {
+  // portfolio collors
+  portGreen: '#3EECB4',
+  portBlack: '#282828',
+
   primary: `hsl(174, 60%, 54%)`,
   primaryDark: `hsl(174, 60%, ${54 - lightness}%)`,
   primaryLight: `hsl(174, 60%, ${54 + lightness}%)`,
