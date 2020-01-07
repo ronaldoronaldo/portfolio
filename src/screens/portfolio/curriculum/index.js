@@ -1,3 +1,3 @@
-import Curiculum from './Curriculum'
+import Curriculum from './Curriculum'
 
-export { Curiculum }
+export { Curriculum }

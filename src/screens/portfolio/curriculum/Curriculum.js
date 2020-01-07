@@ -1,11 +1,12 @@
 import React from 'react'
+import { CurriculumContainer } from './Curriculum.style'
 
-const Curiculum = () => {
+const Curriculum = () => {
   return (
-    <>
-
-    </>
+    <CurriculumContainer>
+      yey
+    </CurriculumContainer>
   )
 }
 
-export default Curiculum
+export default Curriculum
