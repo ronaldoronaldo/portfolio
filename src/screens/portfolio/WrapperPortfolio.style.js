@@ -114,6 +114,13 @@ export const IconsBorder = styled.img`
     @media (min-width: ${sizes.mdScreen}px) {
       width: ${selectedPage === '' ? 0 : 32}%;
       top: 160px;
+      border-bottom: 4px solid;
+      border-color: ${
+      selectedPage === 'curriculum' ?
+        colors.portGreen :
+        selectedPage === 'about me' ?
+          colors.white : colors.black3
+      };
     } 
   `}
 `
