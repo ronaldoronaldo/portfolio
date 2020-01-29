@@ -40,8 +40,6 @@ const WrapperPortfolio = () => {
         <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
         <IconButton iconName={'user'} onClick={() => handleIconClicked('about me')}/>
         <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>
-        {/*<IconButton iconName={'computer-code'}/>*/}
-        {/*<IconButton iconName={'devices'}/>*/}
       </IconsContainer>
       <IconsBorder selectedPage={forBorder}/>
       {selectedPage === 'curriculum' && <Curriculum/>}

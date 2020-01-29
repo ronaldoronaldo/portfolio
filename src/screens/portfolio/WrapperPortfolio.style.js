@@ -98,6 +98,7 @@ export const LogoImage = styled.img`
     width: 89%;
   } 
 `
+
 export const IconsBorder = styled.img`
   ${({selectedPage}) => css`
     border-bottom: 2px solid;
