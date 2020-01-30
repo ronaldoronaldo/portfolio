@@ -4,7 +4,7 @@ import { CurriculumContainer } from './Curriculum.style'
 const Curriculum = () => {
   return (
     <CurriculumContainer>
-
+      testando
     </CurriculumContainer>
   )
 }
