@@ -7,7 +7,7 @@ export const Page = styled.div`
     selectedPage === 'curriculum' ? 
       colors.portBlack :
       selectedPage === 'about me' ?
-        colors.black4 : colors.black2
+        colors.black5 : colors.black2
     };
   `}
   transition: background-color 0.5s ease-out;
@@ -46,7 +46,7 @@ export const IconsContainer = styled.div`
             > span { color: ${colors.portBlack}; }
           `}
           ${selectedPage === 'about me' && `
-            border: 4px solid ${colors.white};
+            > span { color: ${colors.white}; }
           `}
           ${(selectedPage === 'examples' || selectedPage === '') && `
             box-shadow: 10px 10px 25px 0 rgba(83, 101, 111, 0.4);
@@ -62,7 +62,7 @@ export const IconsContainer = styled.div`
           selectedPage === 'curriculum' ?
             colors.portGreen :
             selectedPage === 'about me' ?
-              colors.white : colors.black4
+              colors.black3 : colors.black4
           };
         }
         @media (max-width: ${sizes.mdScreen}px) {
@@ -106,7 +106,7 @@ export const IconsBorder = styled.img`
     selectedPage === 'curriculum' ?
       colors.portGreen :
       selectedPage === 'about me' ?
-        colors.white : colors.black3
+        colors.black3 : colors.black3
     };
     width: ${selectedPage === '' ? 0 : 75}%;
     transition: width 0.5s ease-out;
@@ -120,7 +120,7 @@ export const IconsBorder = styled.img`
       selectedPage === 'curriculum' ?
         colors.portGreen :
         selectedPage === 'about me' ?
-          colors.white : colors.black3
+          colors.black3 : colors.black3
       };
     } 
   `}

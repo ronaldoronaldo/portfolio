@@ -34,7 +34,7 @@ const WrapperPortfolio = () => {
 
   return (
     <Page selectedPage={forPage}>
-      <LogoImage src={logo} selectedPage={selectedPage}/>
+      {forPage === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
 
       <IconsContainer selectedPage={forIcons}>
         <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
