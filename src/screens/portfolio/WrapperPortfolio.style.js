@@ -24,7 +24,7 @@ export const Page = styled.div`
 
 export const IconsContainer = styled.div`
   ${({selectedPage}) => css`
-      top: ${selectedPage === '' ? '48vh' : '20px'};
+      top: ${selectedPage ? '20px' : '48vh'};
       > Button {
         width: 120px;
         height: 120px;
@@ -123,5 +123,12 @@ export const IconsBorder = styled.img`
           colors.black3 : colors.black3
       };
     } 
+  `}
+`
+
+export const PageContent = styled.div`
+  ${({unlock3}) => css`
+    opacity: ${unlock3 ? 1 : 0};
+    transition: opacity 0.5s ease-out;
   `}
 `

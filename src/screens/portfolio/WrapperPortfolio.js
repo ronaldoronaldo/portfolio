@@ -3,48 +3,55 @@ import { Curriculum } from './curriculum'
 import { AboutMe } from './about-me'
 import { Examples } from './examples'
 import logo from 'assets/images/rw-logo.png'
-
-
-import { Page, IconsContainer, LogoImage, IconsBorder } from './WrapperPortfolio.style'
+import {
+  Page,
+  IconsContainer,
+  LogoImage, IconsBorder,
+  PageContent
+} from './WrapperPortfolio.style'
 import IconButton from 'components/lib/buttons/IconButton'
 
 const WrapperPortfolio = () => {
   const [selectedPage, setSelectedPage] = useState('')
-  const [forIcons, setForIcons] = useState('')
-  const [forPage, setForPage] = useState('')
-  const [forBorder, setForBorder] = useState('')
+  const [unlock1, setUnlock1] = useState('')
+  const [unlock2, setUnlock2] = useState('')
+  const [unlock3, setUnlock3] = useState(false)
 
   const handleIconClicked = page => {
     if (selectedPage === '') {
       setSelectedPage(page)
       setTimeout(() => {
-        setForIcons(page)
-        setForPage(page)
+        setUnlock1(page)
       }, 500)
       setTimeout(() => {
-        setForBorder(page)
+        setUnlock2(page)
       }, 1000)
+      setTimeout(() => {
+        setUnlock3(true)
+      }, 1500)
       return
     }
     setSelectedPage(page)
-    setForPage(page)
-    setForIcons(page)
-    setForBorder(page)
+    setUnlock1(page)
+    setUnlock2(page)
+    setUnlock3(true)
   }
 
   return (
-    <Page selectedPage={forPage}>
-      {forPage === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
+    <Page selectedPage={unlock1}>
+      {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
 
-      <IconsContainer selectedPage={forIcons}>
+      <IconsContainer selectedPage={unlock1}>
         <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
         <IconButton iconName={'user'} onClick={() => handleIconClicked('about me')}/>
         <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>
       </IconsContainer>
-      <IconsBorder selectedPage={forBorder}/>
-      {selectedPage === 'curriculum' && <Curriculum/>}
-      {selectedPage === 'about me' && <AboutMe/>}
-      {selectedPage === 'examples' && <Examples/>}
+      <IconsBorder selectedPage={unlock2}/>
+      <PageContent unlock3={unlock3}>
+        {selectedPage === 'curriculum' && <Curriculum/>}
+        {selectedPage === 'about me' && <AboutMe/>}
+        {selectedPage === 'examples' && <Examples/>}
+      </PageContent>
     </Page>
   )
 }
