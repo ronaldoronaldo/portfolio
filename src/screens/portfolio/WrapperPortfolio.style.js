@@ -26,6 +26,18 @@ export const Page = styled.div`
 export const IconsContainer = styled.div`
   ${({selectedPage}) => css`
       top: ${selectedPage ? '20px' : '48vh'};
+      padding: 0 ${spacing.medium}px;
+      transition: top 0.5s ease-in-out;
+      position: absolute;
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;;
+      align-items: center;
+      max-width: 400px;
+      @media (min-width: ${sizes.mdScreen}px) {
+        max-width: 700px;
+      }
       > Button {
         width: 120px;
         height: 120px;
@@ -75,20 +87,6 @@ export const IconsContainer = styled.div`
         }
       }
   `}
-  padding: 0 ${spacing.medium}px;
-  transition: top 0.5s ease-in-out;
-  position: absolute;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;;
-  align-items: center;
-  @media (min-width: ${sizes.mdScreen}px) {
-    padding: 0 24%;
-  }
-  @media (min-width: ${sizes.lgScreen}px) {
-    padding: 0 34%;
-  }
 `
 
 export const LogoImage = styled.img`
@@ -112,11 +110,12 @@ export const IconsBorder = styled.div`
       selectedPage === 'about me' ?
         colors.black3 : colors.black3
     };
-    width: ${selectedPage === '' ? 0 : 100}%;
+    width: ${selectedPage === '' ? 0 : 800}px;
     transition: width 0.5s ease-out;
     position: absolute;
     top: 100px;
     @media (min-width: ${sizes.mdScreen}px) {
+      width: ${selectedPage === '' ? 0 : 800}px;
       top: 160px;
       border-bottom: 4px solid;
       border-color: ${
