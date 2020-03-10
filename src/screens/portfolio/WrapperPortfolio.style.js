@@ -19,7 +19,7 @@ export const Page = styled.div`
   flex-wrap: wrap;
   padding: 0 ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
-    padding: 0 20%;
+    padding: 0;
   }
 `
 
@@ -132,5 +132,9 @@ export const PageContent = styled.div`
   ${({unlock3}) => css`
     opacity: ${unlock3 ? 1 : 0};
     transition: opacity 0.5s ease-out;
+    width: 100%;
+    @media (min-width: ${sizes.mdScreen}px) {
+      width: 800px;
+    }
   `}
 `
