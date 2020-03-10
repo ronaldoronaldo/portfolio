@@ -80,7 +80,7 @@ const InputSearch = ({
 
 InputSearch.propTypes = {
   value: PropTypes.string,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large']),
   error: PropTypes.bool,
   success: PropTypes.bool,
   outline: PropTypes.string,

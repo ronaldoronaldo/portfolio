@@ -9,7 +9,7 @@ export const ContainerStyle = styled.div`
 
   @media (min-width: ${sizes.mdScreen}px) {
     width: 704px;
-    padding: 0 ${spacing.spacingMedium}px;
+    padding: 0 ${spacing.medium}px;
   }
 
   @media (min-width: ${sizes.lgScreen}px) {
@@ -27,15 +27,15 @@ export const ContainerStyle = styled.div`
 
 export const ContainerFluidStyle = styled.div`
   width: 100%;
-  padding: 0 ${spacing.spacingSmall}px;
+  padding: 0 ${spacing.small}px;
 
   @media (min-width: ${sizes.mdScreen}px) {
-    padding: 0 ${spacing.spacingMedium}px;
+    padding: 0 ${spacing.medium}px;
   }
 `
 export const RowStyle = styled.div`
-  margin-left: -${spacing.spacingSmall}px;
-  margin-right: -${spacing.spacingSmall}px;
+  margin-left: -${spacing.small}px;
+  margin-right: -${spacing.small}px;
   display: flex;
   flex-wrap: wrap;
   align-items: ${props => (props.flexstart ? 'flex-start' : 'baseline')};
@@ -49,13 +49,13 @@ export const ColumnStyle = styled.div`
   ${({ sm = 12, md, lg, xlg, xxlg }) => css`
     position: relative;
     width: ${(sm / 12) * 100}%;
-    padding-left: ${spacing.spacingXSmall}px;
-    padding-right: ${spacing.spacingXSmall}px;
+    padding-left: ${spacing.xSmall}px;
+    padding-right: ${spacing.xSmall}px;
 
     @media (min-width: ${sizes.mdScreen}px) {
       ${md && `width: ${(md / 12) * 100}%`};
-      padding-left: ${spacing.spacingSmall}px;
-      padding-right: ${spacing.spacingSmall}px;
+      padding-left: ${spacing.small}px;
+      padding-right: ${spacing.small}px;
     }
 
     @media (min-width: ${sizes.lgScreen}px) {

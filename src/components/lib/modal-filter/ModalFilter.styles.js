@@ -73,7 +73,7 @@ export const CheckboxContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  margin-bottom: ${spacing.spacingXSmall}px;
+  margin-bottom: ${spacing.xSmall}px;
 `
 
 export const LabelCheckbox = styled.p`

@@ -22,8 +22,8 @@ export const CardButtonTitle = styled.div`
     font-size: 20px;
     font-weight: ${fontWeights.bold};
     color: ${colors.black5};
-    margin-bottom: ${spacing.spacingSmall}px;
-    margin-top: ${spacing.spacingSmall}px;
+    margin-bottom: ${spacing.small}px;
+    margin-top: ${spacing.small}px;
 `
 
 export const CardButtonSubtitle = styled.div`

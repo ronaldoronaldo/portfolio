@@ -40,7 +40,7 @@ export const ButtonStyle = styled.button`
     padding: 0 ${sizes.padding}px;
     outline: ${outline ? outline : 'none'};
     height: ${size === 'x-small'
-      ? `${sizes.buttonSizes.xsmall}px`
+      ? `${sizes.buttonSizes.xSmall}px`
       : size === 'small'
         ? `${sizes.buttonSizes.small}px`
         : size === 'medium'

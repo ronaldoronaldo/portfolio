@@ -37,7 +37,7 @@ const ChooseClientScreen = props => {
             size={4}
             style={{
               marginTop: 0,
-              marginBottom: spacing.spacingMedium
+              marginBottom: spacing.medium
             }}
           />
           <Select
@@ -62,8 +62,8 @@ const ChooseClientScreen = props => {
             text={'Avançar'}
             onClick={() => redirectTo(USER_MANAGEMENT_ROOT_PATH)}
             style={{
-              marginBottom: spacing.spacingSmall,
-              marginTop: spacing.spacingSmall
+              marginBottom: spacing.small,
+              marginTop: spacing.small
             }}
             isEnabled={enableButton}
           />

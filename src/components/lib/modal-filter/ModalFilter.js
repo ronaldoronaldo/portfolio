@@ -131,7 +131,7 @@ const ModalFilter = ({
                       headerTitle={select.headerTitle}
                       searchInputLabel={select.searchInputPlaceholder}
                       style={{
-                        marginBottom: spacing.spacingMedium
+                        marginBottom: spacing.medium
                       }}
                       iconNext={iconNext}
                     />

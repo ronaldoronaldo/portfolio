@@ -39,7 +39,7 @@ const NextButton = ({
         iconName="caret-right"
         size={15}
         style={{
-          marginLeft: spacing.spacingXSmall,
+          marginLeft: spacing.xSmall,
           color: color || colors.black3
         }}
       />

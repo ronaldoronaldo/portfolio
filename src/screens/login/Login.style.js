@@ -48,11 +48,11 @@ export const ContainerNotMe = styled.div`
 `
 
 export const ContainerButtonSiginInStyle = styled.div`
-  margin-bottom: ${spacing.spacingXSmall}px;
+  margin-bottom: ${spacing.xSmall}px;
 `
 
 export const ContainerButtonsRow = styled.div`
-  margin-top: ${spacing.spacingXSmall - 3}px;
+  margin-top: ${spacing.xSmall - 3}px;
   display: flex;
 `
 

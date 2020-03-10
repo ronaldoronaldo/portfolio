@@ -13,11 +13,11 @@ export const BackButtonStyle = styled.button`
   border: ${border ? border : 'none'};
   height: ${
     size === 'x-small'
-      ? `${sizes.buttonSizes.xsmall}px`
+      ? `${sizes.buttonSizes.xSmall}px`
       : size === 'small'
       ? `${sizes.buttonSizes.small}px`
       : size === 'x-large'
-      ? `${sizes.buttonSizes.xlarge}px`
+      ? `${sizes.buttonSizes.xLarge}px`
       : size === 'medium'
       ? `${sizes.buttonSizes.medium}px`
       : `${sizes.buttonSizes.large}px`

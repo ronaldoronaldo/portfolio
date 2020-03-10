@@ -32,7 +32,7 @@ const BackButton = ({
 }
 
 BackButton.propTypes = {
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large']),
   onClick: PropTypes.func.isRequired,
   bgColor: PropTypes.string,
   flex: PropTypes.number,

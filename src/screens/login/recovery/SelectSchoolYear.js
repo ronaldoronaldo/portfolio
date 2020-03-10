@@ -109,7 +109,7 @@ const SelectSchoolYear = props => {
           text="Avançar"
           isEnabled={enableButton}
           onClick={sendSchoolYear}
-          style={{ marginTop: spacing.spacingSmall }}
+          style={{ marginTop: spacing.small }}
           loading={sendSchoolYearLoading}
         />
         <ContainerBulletsStyle>

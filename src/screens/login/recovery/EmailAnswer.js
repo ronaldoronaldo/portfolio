@@ -126,7 +126,7 @@ const EmailAnswer = ({ client, ...props }) => {
           placeholder={'Seu e-mail'}
           onChange={handleValueInput}
           label={'e-mail'}
-          style={{ marginBottom: spacing.spacingSmall }}
+          style={{ marginBottom: spacing.small }}
         />
         <Button
           text="Avançar"

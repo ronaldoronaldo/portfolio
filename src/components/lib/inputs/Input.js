@@ -82,7 +82,7 @@ const Input = ({
 
 Input.propTypes = {
   value: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large']),
   error: PropTypes.bool,
   success: PropTypes.bool,
   outline: PropTypes.string,

@@ -17,7 +17,7 @@ export const IconButtonStyle = styled(IconButton)`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  height: ${spacing.spacingLarge}px;
+  height: ${spacing.large}px;
   border-radius: 0;
   font-size: 20px;
 `

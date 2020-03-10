@@ -55,7 +55,7 @@ export const OptionContainer = styled.div`
   justify-content: center;
   align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
-    margin-right: ${spacing.spacingMedium}px;
+    margin-right: ${spacing.medium}px;
     &:last-child {
       margin-right: 0px;
     }

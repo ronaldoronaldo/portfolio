@@ -90,7 +90,7 @@ const CellphoneAnswer = props => {
           placeholder={'Celular vinculado'}
           onChange={handleValueInput}
           label={'Celular'}
-          style={{ marginBottom: spacing.spacingSmall }}
+          style={{ marginBottom: spacing.small }}
         />
         <Button
           text="Avançar"

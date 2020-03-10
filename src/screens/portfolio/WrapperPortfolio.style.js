@@ -16,7 +16,8 @@ export const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 ${spacing.spacingMedium}px;
+  flex-wrap: wrap;
+  padding: 0 ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding: 0 20%;
   }
@@ -74,7 +75,7 @@ export const IconsContainer = styled.div`
         }
       }
   `}
-  padding: 0 ${spacing.spacingMedium}px;
+  padding: 0 ${spacing.medium}px;
   transition: top 0.5s ease-in-out;
   position: absolute;
   display: flex;
@@ -83,6 +84,9 @@ export const IconsContainer = styled.div`
   justify-content: space-between;;
   align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
+    padding: 0 24%;
+  }
+  @media (min-width: ${sizes.lgScreen}px) {
     padding: 0 34%;
   }
 `
@@ -92,14 +96,14 @@ export const LogoImage = styled.img`
     opacity: ${selectedPage === '' ? 1 : 0};
   `}
   transition: opacity 0.4s ease-out;
-  margin-top: ${spacing.spacingLarge + 64}px;
-  margin-bottom: ${spacing.spacingLarge + 32}px;
+  margin-top: ${spacing.large + 64}px;
+  margin-bottom: ${spacing.large + 32}px;
   @media (max-width: ${sizes.mdScreen}px) {
     width: 89%;
   } 
 `
 
-export const IconsBorder = styled.img`
+export const IconsBorder = styled.div`
   ${({selectedPage}) => css`
     border-bottom: 2px solid;
     border-color: ${
@@ -108,12 +112,11 @@ export const IconsBorder = styled.img`
       selectedPage === 'about me' ?
         colors.black3 : colors.black3
     };
-    width: ${selectedPage === '' ? 0 : 75}%;
+    width: ${selectedPage === '' ? 0 : 100}%;
     transition: width 0.5s ease-out;
     position: absolute;
     top: 100px;
     @media (min-width: ${sizes.mdScreen}px) {
-      width: ${selectedPage === '' ? 0 : 32}%;
       top: 160px;
       border-bottom: 4px solid;
       border-color: ${

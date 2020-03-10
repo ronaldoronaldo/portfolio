@@ -7,7 +7,7 @@ export const ContainerTextInputStyle = styled.div`
   border-radius: 5px;
   height: ${
     size === 'x-small'
-      ? `${sizes.inputSizes.xsmall}px`
+      ? `${sizes.inputSizes.xSmall}px`
       : size === 'small'
         ? `${sizes.inputSizes.small}px`
         : size === 'large'
@@ -32,7 +32,7 @@ color: ${colors.black6}
 
 height: ${
     size === 'x-small'
-      ? `${sizes.inputSizes.xsmall}px`
+      ? `${sizes.inputSizes.xSmall}px`
       : size === 'small'
         ? `${sizes.inputSizes.small}px`
         : size === 'medium'

@@ -70,7 +70,7 @@ const Dropdown = ({
                 color={colors.black5Light}
                 style={{
                   fontWeight: fontWeights.bold,
-                  marginRight: spacing.spacingSmall + 4
+                  marginRight: spacing.small + 4
                 }}
               />
               {item.text}

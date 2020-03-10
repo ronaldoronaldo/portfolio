@@ -32,7 +32,7 @@ const ButtonSelect = ({
 }
 
 ButtonSelect.propTypes = {
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large']),
   text: PropTypes.string,
   color: PropTypes.string,
   onClick: PropTypes.func.isRequired,

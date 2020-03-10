@@ -17,7 +17,7 @@ export const ChooseClientContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: ${colors.white};
-  padding: ${spacing.spacingMedium}px;
+  padding: ${spacing.medium}px;
   border-radius: 10px;
   box-shadow: 0 0 25px 0 rgba(83, 101, 111, 0.18);
 `

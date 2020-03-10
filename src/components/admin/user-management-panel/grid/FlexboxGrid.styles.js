@@ -22,8 +22,8 @@ export const ContainerStyle = styled.div`
 `
 
 export const RowStyle = styled.div`
-  margin-left: -${spacing.spacingMSmall}px;
-  margin-right: -${spacing.spacingMSmall}px;
+  margin-left: -${spacing.mSmall}px;
+  margin-right: -${spacing.mSmall}px;
   display: flex;
   flex-wrap: wrap;
   align-items: ${props => (props.flexstart ? 'flex-start' : 'baseline')};
@@ -37,13 +37,13 @@ export const ColumnStyle = styled.div`
   ${({ sm = 12, md, lg, xlg, xxlg }) => css`
     position: relative;
     width: ${(sm / 12) * 100}%;
-    padding-left: ${spacing.spacingMSmall}px;
-    padding-right: ${spacing.spacingMSmall}px;
+    padding-left: ${spacing.mSmall}px;
+    padding-right: ${spacing.mSmall}px;
 
     @media (min-width: ${sizes.mdScreen}px) {
       ${md && `width: ${(md / 12) * 100}%`};
-      padding-left: ${spacing.spacingMSmall}px;
-      padding-right: ${spacing.spacingMSmall}px;
+      padding-left: ${spacing.mSmall}px;
+      padding-right: ${spacing.mSmall}px;
     }
 
     @media (min-width: ${sizes.lgScreen}px) {

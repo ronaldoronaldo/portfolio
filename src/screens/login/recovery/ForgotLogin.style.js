@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { sizes, colors, spacing } from 'config/ui'
 
 export const ContainerStyle = styled.div`
-  padding-top: ${spacing.spacingLarge}px;
+  padding-top: ${spacing.large}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding-top: 0;
     display: flex;

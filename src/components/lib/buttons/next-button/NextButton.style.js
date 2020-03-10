@@ -23,8 +23,8 @@ export const NextButtonStyle = styled.button`
     border-bottom: 1px solid
       ${lastButton ? 'transparent' : borderColor ? borderColor : colors.black2};
   `}
-  min-height: ${sizes.buttonSizes.xsmall}px;
-  padding-right: ${spacing.spacingSmall}px;
+  min-height: ${sizes.buttonSizes.xSmall}px;
+  padding-right: ${spacing.small}px;
   cursor: pointer;
   padding-top: ${sizes.padding / 3}px;
   padding-bottom: ${sizes.padding / 3}px;

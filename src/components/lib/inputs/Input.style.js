@@ -39,7 +39,7 @@ export const TextInputStyle = styled.input`
         : colors.black2};
 
     height: ${size === 'x-small'
-      ? `${sizes.inputSizes.xsmall}px`
+      ? `${sizes.inputSizes.xSmall}px`
       : size === 'small'
       ? `${sizes.inputSizes.small}px`
       : size === 'medium'

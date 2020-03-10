@@ -7,7 +7,6 @@ export const fontWeights = {
 const lightness = 5
 
 export const colors = {
-  // portfolio collors
   portGreen: '#3EECB4',
   portBlack: '#282828',
 
@@ -89,14 +88,12 @@ export const colors = {
 export const sizes = {
   radius: 3,
   padding: 16,
-  // Old sizes
   text: 16,
   smScreen: 480,
   mdScreen: 768,
   lgScreen: 992,
   xlgScreen: 1200,
   xxlgScreen: 1400,
-  // New sizes *Use this ones*
   h: {
     1: { size: 56, lineHeight: 70 },
     2: { size: 40, lineHeight: 50 },
@@ -108,25 +105,25 @@ export const sizes = {
   buttonText: { size: 15, lineHeight: 22, letterSpacing: 1 },
   bodySmall: { size: 13, lineHeight: 22, letterSpacing: 1 },
   inputSizes: {
-    xsmall: 24,
+    xSmall: 24,
     small: 32,
     medium: 40, // default size
     large: 48,
-    xlarge: 64
+    xLarge: 64
   },
   buttonSizes: {
-    xsmall: 24,
+    xSmall: 24,
     small: 32,
     medium: 40, // default size
     large: 48,
-    xlarge: 64
+    xLarge: 64
   }
 }
 
 export const spacing = {
-  spacingXSmall: 8,
-  spacingMSmall: 12,
-  spacingSmall: 16,
-  spacingMedium: 32,
-  spacingLarge: 56
+  xSmall: 8,
+  mSmall: 12,
+  small: 16,
+  medium: 32,
+  large: 56
 }
