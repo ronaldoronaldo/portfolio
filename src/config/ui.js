@@ -9,6 +9,8 @@ const lightness = 5
 export const colors = {
   portGreen: '#3EECB4',
   portBlack: '#282828',
+  portDark: '#4b4b4b',
+  portDivision: '#3B3B3B',
 
   primary: `hsl(174, 60%, 54%)`,
   primaryDark: `hsl(174, 60%, ${54 - lightness}%)`,

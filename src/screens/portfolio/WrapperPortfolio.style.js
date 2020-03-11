@@ -17,7 +17,7 @@ export const Page = styled.div`
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 ${spacing.medium}px;
+  padding: 0 ${spacing.small}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding: 0;
   }
