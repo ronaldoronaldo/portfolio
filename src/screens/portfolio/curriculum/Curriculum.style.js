@@ -27,11 +27,47 @@ export const RightSide = styled.div`
   flex: 1.8;
 `
 
+export const LeftSectionContainer = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  padding-right: ${spacing.medium}px;
+  margin-top: ${spacing.medium}px;
+`
+
+export const InformationRow = styled.div`
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+  margin-bottom: ${spacing.small}px;
+  justify-content: space-between;
+`
+
+export const Spacing = styled.div`
+  height: ${spacing.small}px;
+`
+
+export const TitleDivision = styled.div`
+  width: 70px;
+  border: 2px solid ${colors.portGreen};
+  margin-bottom: ${spacing.small}px;
+`
+
 export const StyledImage = styled.img`
   width: 100%;
   margin-bottom: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     width: 60%;
+  }
+`
+
+export const ProfileText = styled.span`
+  color: ${colors.portGray};
+  font-size: ${sizes.text}px;
+  font-weight: ${fontWeights.regular};
+  line-height: 1.5 !important;
+  @media (min-width: ${sizes.mdScreen}px) {
+    font-size: 16px;
   }
 `
 
@@ -43,6 +79,16 @@ export const Title = styled.span`
   margin-bottom: ${spacing.mSmall}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 34px;
+  }
+`
+
+export const Info = styled.span`
+  color: ${colors.portGray};
+  font-size: ${sizes.text}px;
+  font-weight: ${fontWeights.regular};
+  line-height: 1 !important;
+  @media (min-width: ${sizes.mdScreen}px) {
+    font-size: 16px;
   }
 `
 

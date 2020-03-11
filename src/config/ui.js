@@ -10,6 +10,7 @@ export const colors = {
   portGreen: '#3EECB4',
   portBlack: '#282828',
   portDark: '#4b4b4b',
+  portGray: '#626262',
   portDivision: '#3B3B3B',
 
   primary: `hsl(174, 60%, 54%)`,

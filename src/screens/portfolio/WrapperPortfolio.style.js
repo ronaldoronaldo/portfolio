@@ -11,8 +11,8 @@ export const Page = styled.div`
     };
   `}
   transition: background-color 0.5s ease-out;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 200%;
   display: flex;
   flex-direction: column;
   align-items: center;
