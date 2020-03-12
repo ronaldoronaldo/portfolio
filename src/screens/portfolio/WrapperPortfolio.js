@@ -18,9 +18,13 @@ const WrapperPortfolio = () => {
   const [unlock3, setUnlock3] = useState(false)
 
   const handleIconClicked = page => {
+    setUnlock3(false)
+    const body = document.body
+    body.setAttribute("class", "")
     if (selectedPage === '') {
       setSelectedPage(page)
       setTimeout(() => {
+        body.classList.add(page)
         setUnlock1(page)
       }, 500)
       setTimeout(() => {
@@ -31,19 +35,22 @@ const WrapperPortfolio = () => {
       }, 1500)
       return
     }
+    body.classList.add(page)
     setSelectedPage(page)
     setUnlock1(page)
     setUnlock2(page)
-    setUnlock3(true)
+    setTimeout(() => {
+      setUnlock3(true)
+    }, 500)
   }
 
   return (
-    <Page selectedPage={unlock1}>
+    <Page>
       {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
 
       <IconsContainer selectedPage={unlock1}>
         <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
-        <IconButton iconName={'user'} onClick={() => handleIconClicked('about me')}/>
+        <IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>
         <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>
       </IconsContainer>
       <IconsBorder selectedPage={unlock2}/>

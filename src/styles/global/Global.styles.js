@@ -4,20 +4,32 @@ import './icons.css'
 
 
 const GlobalStyle = createGlobalStyle`
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: ${sizes.text}px;
+    color: ${colors.black6};
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease-out;
+  }
+  body.curriculum {
+    background-color: ${colors.portBlack};
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: ${sizes.text}px;
-  color: ${colors.black6};
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+  body.about-me {
+    background-color: ${colors.black5};
+  }  
+  
+  body.examples {
+    background-color: ${colors.black2};
+  }  
 
  #root {
     @media print {

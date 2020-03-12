@@ -2,17 +2,6 @@ import styled, { css } from 'styled-components'
 import { colors, spacing, sizes } from 'config/ui'
 
 export const Page = styled.div`
-  ${({selectedPage}) => css`
-    background-color: ${
-    selectedPage === 'curriculum' ? 
-      colors.portBlack :
-      selectedPage === 'about me' ?
-        colors.black5 : colors.black2
-    };
-  `}
-  transition: background-color 0.5s ease-out;
-  width: 100%;
-  height: 200%;
   display: flex;
   flex-direction: column;
   align-items: center;
