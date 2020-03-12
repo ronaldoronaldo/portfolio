@@ -53,11 +53,18 @@ export const TitleDivision = styled.div`
   margin-bottom: ${spacing.small}px;
 `
 
-export const StyledImage = styled.img`
+export const LampImage = styled.img`
   width: 100%;
   margin-bottom: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     width: 60%;
+  }
+`
+export const ScreensImage = styled.img`
+  width: 100%;
+  margin-bottom: ${spacing.medium}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    width: 100%;
   }
 `
 

@@ -1,20 +1,35 @@
 import React from 'react'
-import {CurriculumContainer, LeftSide, RightSide, Role, StyledImage, Title, LeftSectionContainer, Info, InformationRow, Spacing, TitleDivision, ProfileText} from './Curriculum.style'
+import {
+  CurriculumContainer,
+  LeftSide,
+  RightSide,
+  Role,
+  Title,
+  LeftSectionContainer,
+  Info,
+  InformationRow,
+  Spacing,
+  TitleDivision,
+  ProfileText,
+  ScreensImage,
+  LampImage
+} from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
+import screen from 'assets/images/portfolio/screens.png'
 
 
 const Curriculum = () => {
   return (
     <CurriculumContainer>
       <LeftSide>
-        <StyledImage src={lamp}/>
+        <LampImage src={lamp}/>
         <Title>Rafael Weiss</Title>
         <Role>Front-end Developer</Role>
         <Role>UX UI Designer</Role>
         <LeftSectionContainer>
           <InformationRow>
             <Info>
-              Telefone
+              Cellphone
             </Info>
             <Info>
               +55 21 959 017 906
@@ -52,6 +67,7 @@ const Curriculum = () => {
             anyone, regardless of the industry,
             language or framework.
           </ProfileText>
+          <ScreensImage src={screen}/>
         </LeftSectionContainer>
 
 

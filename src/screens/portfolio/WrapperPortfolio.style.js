@@ -38,7 +38,7 @@ export const IconsContainer = styled.div`
            color: ${
             selectedPage === 'curriculum' ?
               colors.portGreen :
-              selectedPage === 'about me' ?
+              selectedPage === 'about-me' ?
                 colors.white : colors.black4
             };
           }
@@ -47,7 +47,7 @@ export const IconsContainer = styled.div`
             background-color: ${colors.portGreen};
             > span { color: ${colors.portBlack}; }
           `}
-          ${selectedPage === 'about me' && `
+          ${selectedPage === 'about-me' && `
             > span { color: ${colors.white}; }
           `}
           ${(selectedPage === 'examples' || selectedPage === '') && `
@@ -63,7 +63,7 @@ export const IconsContainer = styled.div`
           color: ${
           selectedPage === 'curriculum' ?
             colors.portGreen :
-            selectedPage === 'about me' ?
+            selectedPage === 'about-me' ?
               colors.black3 : colors.black4
           };
         }
@@ -96,7 +96,7 @@ export const IconsBorder = styled.div`
     border-color: ${
     selectedPage === 'curriculum' ?
       colors.portGreen :
-      selectedPage === 'about me' ?
+      selectedPage === 'about-me' ?
         colors.black3 : colors.black3
     };
     width: ${selectedPage === '' ? 0 : 800}px;
@@ -110,7 +110,7 @@ export const IconsBorder = styled.div`
       border-color: ${
       selectedPage === 'curriculum' ?
         colors.portGreen :
-        selectedPage === 'about me' ?
+        selectedPage === 'about-me' ?
           colors.black3 : colors.black3
       };
     } 

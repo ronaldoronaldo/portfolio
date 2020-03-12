@@ -16,15 +16,18 @@ const WrapperPortfolio = () => {
   const [unlock1, setUnlock1] = useState('')
   const [unlock2, setUnlock2] = useState('')
   const [unlock3, setUnlock3] = useState(false)
+  const body = document.body
+
+  const changeBackgroundColor = page => {
+    body.setAttribute("class", "")
+    body.classList.add(page)
+  }
 
   const handleIconClicked = page => {
-    setUnlock3(false)
-    const body = document.body
-    body.setAttribute("class", "")
     if (selectedPage === '') {
       setSelectedPage(page)
       setTimeout(() => {
-        body.classList.add(page)
+        changeBackgroundColor(page)
         setUnlock1(page)
       }, 500)
       setTimeout(() => {
@@ -35,13 +38,11 @@ const WrapperPortfolio = () => {
       }, 1500)
       return
     }
-    body.classList.add(page)
+    changeBackgroundColor(page)
     setSelectedPage(page)
     setUnlock1(page)
     setUnlock2(page)
-    setTimeout(() => {
-      setUnlock3(true)
-    }, 500)
+    setUnlock3(true)
   }
 
   return (
@@ -56,7 +57,7 @@ const WrapperPortfolio = () => {
       <IconsBorder selectedPage={unlock2}/>
       <PageContent unlock3={unlock3}>
         {selectedPage === 'curriculum' && <Curriculum/>}
-        {selectedPage === 'about me' && <AboutMe/>}
+        {selectedPage === 'about-me' && <AboutMe/>}
         {selectedPage === 'examples' && <Examples/>}
       </PageContent>
     </Page>
