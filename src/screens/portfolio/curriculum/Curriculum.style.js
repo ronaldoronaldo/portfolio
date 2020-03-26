@@ -20,6 +20,25 @@ export const LeftSide = styled.div`
   flex: 1;
 `
 
+export const NameSection = styled.div`
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+  @media (min-width: ${sizes.mdScreen}px) {
+    flex-direction: column;
+  } 
+`
+
+export const NameText = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  padding-left: ${spacing.small}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding-left: 0;  
+  } 
+`
+
 export const RightSide = styled.div`
   flex-direction: column;
   display: flex;
@@ -54,7 +73,7 @@ export const TitleDivision = styled.div`
 `
 
 export const LampImage = styled.img`
-  width: 100%;
+  width: 30%;
   margin-bottom: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     width: 60%;
@@ -73,6 +92,7 @@ export const ProfileText = styled.span`
   font-size: ${sizes.text}px;
   font-weight: ${fontWeights.regular};
   line-height: 1.5 !important;
+  margin-bottom: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 16px;
   }
@@ -80,7 +100,7 @@ export const ProfileText = styled.span`
 
 export const Title = styled.span`
   color: ${colors.white};
-  font-size: ${sizes.text}px;
+  font-size: 26px;
   font-weight: ${fontWeights.bold};
   line-height: 1 !important;
   margin-bottom: ${spacing.mSmall}px;
@@ -101,7 +121,7 @@ export const Info = styled.span`
 
 export const Role = styled.span`
   color: ${colors.portDark};
-  font-size: 12px;
+  font-size: ${sizes.text}px;
   font-weight: ${fontWeights.regular};
   line-height: 1 !important;
   margin-bottom: ${spacing.xSmall}px;

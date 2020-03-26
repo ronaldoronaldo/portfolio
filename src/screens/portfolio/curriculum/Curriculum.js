@@ -12,7 +12,7 @@ import {
   TitleDivision,
   ProfileText,
   ScreensImage,
-  LampImage
+  LampImage, NameSection, NameText
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
@@ -22,10 +22,14 @@ const Curriculum = () => {
   return (
     <CurriculumContainer>
       <LeftSide>
-        <LampImage src={lamp}/>
-        <Title>Rafael Weiss</Title>
-        <Role>Front-end Developer</Role>
-        <Role>UX UI Designer</Role>
+        <NameSection>
+          <LampImage src={lamp}/>
+          <NameText>
+            <Title>Rafael Weiss</Title>
+            <Role>Front-end Developer</Role>
+            <Role>UX UI Designer</Role>
+          </NameText>
+        </NameSection>
         <LeftSectionContainer>
           <InformationRow>
             <Info>
