@@ -29,6 +29,7 @@ const Curriculum = () => {
             <Role>Front-end Developer</Role>
             <Role>UX UI Designer</Role>
           </NameText>
+          <LampImage src={lamp} smallScreen/>
         </NameSection>
         <LeftSectionContainer>
           <InformationRow>

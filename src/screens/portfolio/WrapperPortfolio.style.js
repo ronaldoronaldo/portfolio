@@ -86,7 +86,7 @@ export const LogoImage = styled.img`
   margin-top: ${spacing.large + 64}px;
   margin-bottom: ${spacing.large + 32}px;
   @media (max-width: ${sizes.mdScreen}px) {
-    width: 89%;
+    width: 255px;
   } 
 `
 
@@ -99,7 +99,7 @@ export const IconsBorder = styled.div`
       selectedPage === 'about-me' ?
         colors.black3 : colors.black3
     };
-    width: ${selectedPage === '' ? 0 : 800}px;
+    width: ${selectedPage === '' ? 0 : 100}%;
     transition: width 0.5s ease-out;
     position: absolute;
     top: 100px;

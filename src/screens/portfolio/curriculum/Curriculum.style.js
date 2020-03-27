@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {sizes, colors, fontWeights, spacing} from 'config/ui'
 
 export const CurriculumContainer = styled.div`
@@ -8,8 +8,12 @@ export const CurriculumContainer = styled.div`
   top: 134px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     top: 212px;
   } 
 `
@@ -18,6 +22,11 @@ export const LeftSide = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
+  max-width: 400px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding: 0;
+    max-width: auto;
+  } 
 `
 
 export const NameSection = styled.div`
@@ -33,10 +42,6 @@ export const NameText = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
-  padding-left: ${spacing.small}px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    padding-left: 0;  
-  } 
 `
 
 export const RightSide = styled.div`
@@ -50,8 +55,11 @@ export const LeftSectionContainer = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
-  padding-right: ${spacing.medium}px;
+  padding-right: 0;
   margin-top: ${spacing.medium}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding-right: ${spacing.medium}px;
+  } 
 `
 
 export const InformationRow = styled.div`
@@ -73,11 +81,15 @@ export const TitleDivision = styled.div`
 `
 
 export const LampImage = styled.img`
-  width: 30%;
-  margin-bottom: ${spacing.medium}px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    width: 60%;
-  }
+  ${({smallScreen}) => css`
+    display: ${smallScreen ? 'flex' : 'none'};
+    width: 79px;
+    margin-bottom: ${spacing.medium}px;
+    @media (min-width: ${sizes.mdScreen}px) {
+      width: 60%;
+      display: ${smallScreen ? 'none' : 'flex'};
+    }
+ `}
 `
 export const ScreensImage = styled.img`
   width: 100%;
@@ -92,7 +104,7 @@ export const ProfileText = styled.span`
   font-size: ${sizes.text}px;
   font-weight: ${fontWeights.regular};
   line-height: 1.5 !important;
-  margin-bottom: ${spacing.medium}px;
+  margin-bottom: ${spacing.large}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 16px;
   }

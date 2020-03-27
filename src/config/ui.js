@@ -93,7 +93,7 @@ export const sizes = {
   padding: 16,
   text: 16,
   smScreen: 480,
-  mdScreen: 768,
+  mdScreen: 854,
   lgScreen: 992,
   xlgScreen: 1200,
   xxlgScreen: 1400,
