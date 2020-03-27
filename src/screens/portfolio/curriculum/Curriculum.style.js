@@ -62,6 +62,17 @@ export const LeftSectionContainer = styled.div`
   } 
 `
 
+export const RightSectionContainer = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  padding-left: 0;
+  margin-bottom: ${spacing.medium}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding-left: ${spacing.medium}px;
+  } 
+`
+
 export const InformationRow = styled.div`
   flex-direction: row;
   display: flex;
@@ -78,6 +89,37 @@ export const TitleDivision = styled.div`
   width: 70px;
   border: 2px solid ${colors.portGreen};
   margin-bottom: ${spacing.small}px;
+`
+
+export const ExperienceTitle = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const ExperienceList = styled.ul`
+  padding-left: 18px;
+`
+
+export const ExperienceListItem = styled.li`
+  color: ${colors.portGray};
+  font-size: 16px;
+  font-weight: ${fontWeights.regular};
+  margin-bottom: 4px;
+`
+
+export const ExperienceText = styled.span`
+  color: ${colors.portGray};
+  font-size: 20px;
+  font-weight: ${fontWeights.regular};
+`
+
+export const EducationDescription = styled.span`
+  color: ${colors.portDark};
+  font-size: 18px;
+  font-weight: ${fontWeights.regular};
 `
 
 export const LampImage = styled.img`
@@ -115,7 +157,7 @@ export const Title = styled.span`
   font-size: 26px;
   font-weight: ${fontWeights.bold};
   line-height: 1 !important;
-  margin-bottom: ${spacing.mSmall}px;
+  margin-bottom: ${spacing.mSmall + 2}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 34px;
   }
