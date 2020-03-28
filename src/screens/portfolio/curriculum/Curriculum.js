@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {
   CurriculumContainer,
   LeftSide,
@@ -42,7 +42,73 @@ const inceresExperiences = [
   'Using technologies such as React, Angular, Flask, Django, ElasticSearch, OpenLayers and many others.'
 ]
 
+const contactsInfo = [
+  {
+    label: 'Cellphone',
+    info: '+55 21 959 017 906'
+  },
+  {
+    label: 'E-mail',
+    info: 'dataweiss@gmail.com'
+  },
+  {
+    label: 'Address',
+    info: 'Muriaé, MG - Brasil'
+  }
+]
+
 const Curriculum = () => {
+  const renderTitle = text => {
+    return (
+      <Fragment>
+        <Title>{text}</Title>
+        <TitleDivision/>
+      </Fragment>
+    )
+  }
+
+  const renderExperienceTitle = (where, when) => {
+    return (
+      <ExperienceTitle>
+        <ExperienceText>
+          {where}
+        </ExperienceText>
+        <ExperienceText>
+          {when}
+        </ExperienceText>
+      </ExperienceTitle>
+    )
+  }
+
+  const renderExperienceList = experienceList => {
+    return (
+      <ExperienceList>
+        {experienceList.map(item => {
+          return (
+            <ExperienceListItem>
+              {item}
+            </ExperienceListItem>
+          )
+        })}
+      </ExperienceList>
+    )
+  }
+
+  const renderContactsInfo = () => {
+    return contactsInfo.map(contact => {
+      return (
+        <InformationRow>
+          <Info>
+            {contact.label}
+          </Info>
+          <Info>
+            {contact.info}
+          </Info>
+        </InformationRow>
+      )
+    })
+  }
+
   return (
     <CurriculumContainer>
       <LeftSide>
@@ -56,35 +122,9 @@ const Curriculum = () => {
           <LampImage src={lamp} smallScreen/>
         </NameSection>
         <LeftSectionContainer>
-          <InformationRow>
-            <Info>
-              Cellphone
-            </Info>
-            <Info>
-              +55 21 959 017 906
-            </Info>
-          </InformationRow>
-          <InformationRow>
-            <Info>
-              E-mail
-            </Info>
-            <Info>
-              dataweiss@gmail.com
-            </Info>
-          </InformationRow>
-          <InformationRow>
-            <Info>
-              Address
-            </Info>
-            <Info>
-              Muriaé, MG - Brasil
-            </Info>
-          </InformationRow>
+          {renderContactsInfo()}
           <Spacing/>
-        </LeftSectionContainer>
-        <LeftSectionContainer>
-          <Title>Profile</Title>
-          <TitleDivision/>
+          {renderTitle('Profile')}
           <ProfileText>
             A fullstack web developer with a strong
             interest in projects that require both
@@ -98,84 +138,26 @@ const Curriculum = () => {
           </ProfileText>
           <ScreensImage src={screen}/>
         </LeftSectionContainer>
-
-
       </LeftSide>
       <RightSide>
         <RightSectionContainer>
-          <Title>Experience</Title>
-          <TitleDivision/>
-          <ExperienceTitle>
-            <ExperienceText>
-              Front-end, Árvore Educação
-            </ExperienceText>
-            <ExperienceText>
-              2019 - Present
-            </ExperienceText>
-          </ExperienceTitle>
-          <ExperienceList>
-            {arvoreExperiences.map(item => {
-              return (
-                <ExperienceListItem>
-                  {item}
-                </ExperienceListItem>
-              )
-            })}
-          </ExperienceList>
-          <ExperienceTitle>
-            <ExperienceText>
-              Fullstack, Inceres
-            </ExperienceText>
-            <ExperienceText>
-              2017 - 2019
-            </ExperienceText>
-          </ExperienceTitle>
-          <ExperienceList>
-            {inceresExperiences.map(item => {
-              return (
-                <ExperienceListItem>
-                  {item}
-                </ExperienceListItem>
-              )
-            })}
-          </ExperienceList>
-          <ExperienceTitle>
-            <ExperienceText>
-              Front-end and Designer Freelancer
-            </ExperienceText>
-            <ExperienceText>
-              2015 - 2017
-            </ExperienceText>
-          </ExperienceTitle>
-          <ExperienceTitle style={{
-            marginTop: 14
-          }}>
-            <ExperienceText>
-              Intern Engineering Consultant, Setepla
-            </ExperienceText>
-            <ExperienceText>
-              2014 - 2015
-            </ExperienceText>
-          </ExperienceTitle>
+          {renderTitle('Experience')}
+          {renderExperienceTitle('Front-end, Árvore Educação', '2019 - Present')}
+          {renderExperienceList(arvoreExperiences)}
+          {renderExperienceTitle('Fullstack, Inceres', '2017 - 2019')}
+          {renderExperienceList(inceresExperiences)}
+          {renderExperienceTitle('Front-end and Designer Freelancer', '2015 - 2017')}
+          {renderExperienceTitle('Intern Engineering Consultant, Setepla', '2014 - 2015')}
         </RightSectionContainer>
         <RightSectionContainer>
-          <Title>Education</Title>
-          <TitleDivision/>
-          <ExperienceTitle>
-            <ExperienceText>
-              Self-Taught
-            </ExperienceText>
-            <ExperienceText>
-              2012 - Present
-            </ExperienceText>
-          </ExperienceTitle>
+          {renderTitle('Education')}
+          {renderExperienceTitle('Self-Taught', '2012 - Present')}
           <EducationDescription>
             PUC-RIO, UDEMY, LYNDA, INTERNET
           </EducationDescription>
         </RightSectionContainer>
         <RightSectionContainer>
-          <Title>Languages & Frameworks</Title>
-          <TitleDivision/>
+          {renderTitle('Languages & Frameworks')}
           {/*<LanguagesContainer>*/}
           {/*  <LeftSideLenguages>*/}
           {/*    */}

@@ -88,7 +88,6 @@ export const Spacing = styled.div`
 export const TitleDivision = styled.div`
   width: 70px;
   border: 2px solid ${colors.portGreen};
-  margin-bottom: ${spacing.small}px;
 `
 
 export const ExperienceTitle = styled.div`
@@ -97,6 +96,7 @@ export const ExperienceTitle = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: ${spacing.small}px;
 `
 
 export const ExperienceList = styled.ul`
@@ -147,6 +147,7 @@ export const ProfileText = styled.span`
   font-weight: ${fontWeights.regular};
   line-height: 1.5 !important;
   margin-bottom: ${spacing.large}px;
+  margin-top: ${spacing.small}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 16px;
   }
