@@ -19,7 +19,11 @@ import {
   ExperienceTitle,
   ExperienceText,
   ExperienceList,
-  ExperienceListItem, EducationDescription, LanguagesContainer, LanguagesLeftColumn, LanguagesRightColumn
+  ExperienceListItem,
+  EducationDescription,
+  LanguagesContainer,
+  LanguagesLeftColumn,
+  LanguagesRightColumn
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
