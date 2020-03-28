@@ -19,7 +19,7 @@ import {
   ExperienceTitle,
   ExperienceText,
   ExperienceList,
-  ExperienceListItem, EducationDescription
+  ExperienceListItem, EducationDescription, LanguagesContainer, LanguagesLeftColumn, LanguagesRightColumn
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
@@ -158,14 +158,14 @@ const Curriculum = () => {
         </RightSectionContainer>
         <RightSectionContainer>
           {renderTitle('Languages & Frameworks')}
-          {/*<LanguagesContainer>*/}
-          {/*  <LeftSideLenguages>*/}
-          {/*    */}
-          {/*  </LeftSideLenguages>*/}
-          {/*  <RightSideLenguages>*/}
-          {/*    */}
-          {/*  </RightSideLenguages>*/}
-          {/*</LanguagesContainer>*/}
+          <LanguagesContainer>
+            <LanguagesLeftColumn>
+
+            </LanguagesLeftColumn>
+            <LanguagesRightColumn>
+
+            </LanguagesRightColumn>
+          </LanguagesContainer>
         </RightSectionContainer>
       </RightSide>
     </CurriculumContainer>

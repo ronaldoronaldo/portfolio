@@ -70,6 +70,38 @@ export const RightSectionContainer = styled.div`
   margin-bottom: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding-left: ${spacing.medium}px;
+  }
+`
+
+export const LanguagesContainer = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  margin-top: ${spacing.small}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    flex-direction: row;
+  } 
+`
+
+export const LanguagesRightColumn = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  width: 50%;
+  padding-left: ${spacing.xSmall}px; 
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding-left: 0;  
+  } 
+`
+
+export const LanguagesLeftColumn = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  width: 50%;
+  padding-right: ${spacing.xSmall}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding-right: 0;  
   } 
 `
 
