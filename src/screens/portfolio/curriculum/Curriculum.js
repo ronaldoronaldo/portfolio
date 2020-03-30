@@ -27,6 +27,7 @@ import {
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
+import {ExperienceMeter} from "../../../components/portfolio/experience-meter"
 
 const arvoreExperiences = [
   'Árvore is an educational app, its like Netflix but with books instead of movies and it helps improving reading at schools in many different ways.',
@@ -44,6 +45,37 @@ const inceresExperiences = [
   'Member of a team that uses agile method, works with SCRUM, sprints, code review and provides daily feedback.',
   'Implemented a Health Check app to respond faster if modules go off, a special need for the system architecture',
   'Using technologies such as React, Angular, Flask, Django, ElasticSearch, OpenLayers and many others.'
+]
+
+const leftSideLanguages = [
+  {label: 'React', level: 5},
+  {label: 'React Native', level: 5},
+  {label: 'Styled Comp.', level: 5},
+  {label: 'ES6', level: 5},
+  {label: 'GraphQL', level: 5},
+  {label: 'JavaScript', level: 5},
+  {label: 'AngularJS', level: 5},
+  {label: 'Angular 2', level: 4},
+  {label: 'Angular 6', level: 4},
+  {label: 'Bootstrap', level: 4},
+  {label: 'OpenLayers', level: 3},
+  {label: 'Elastic S.', level: 2},
+  {label: 'Flask', level: 2},
+]
+
+const rightSideLanguages = [
+  {label: 'HTML', level: 5},
+  {label: 'CSS', level: 5},
+  {label: 'Jest', level: 5},
+  {label: 'Enzyme', level: 5},
+  {label: 'SASS', level: 5},
+  {label: 'Python', level: 4},
+  {label: 'Karma', level: 3},
+  {label: 'mySQL', level: 3},
+  {label: 'JQuery', level: 3},
+  {label: 'Linux', level: 3},
+  {label: 'Xamarin', level: 3},
+  {label: 'C#', level: 2},
 ]
 
 const contactsInfo = [
@@ -164,10 +196,14 @@ const Curriculum = () => {
           {renderTitle('Languages & Frameworks')}
           <LanguagesContainer>
             <LanguagesLeftColumn>
-
+              {leftSideLanguages.map(item => {
+                return <ExperienceMeter language={item.label} level={item.level}/>
+              })}
             </LanguagesLeftColumn>
             <LanguagesRightColumn>
-
+              {rightSideLanguages.map(item => {
+                return <ExperienceMeter language={item.label} level={item.level}/>
+              })}
             </LanguagesRightColumn>
           </LanguagesContainer>
         </RightSectionContainer>

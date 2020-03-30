@@ -88,9 +88,9 @@ export const LanguagesRightColumn = styled.div`
   display: flex;
   flex: 1;
   width: 50%;
-  padding-left: ${spacing.xSmall}px; 
+  padding-left: 0; 
   @media (min-width: ${sizes.mdScreen}px) {
-    padding-left: 0;  
+    padding-left: ${spacing.xSmall}px; 
   } 
 `
 
@@ -99,9 +99,9 @@ export const LanguagesLeftColumn = styled.div`
   display: flex;
   flex: 1;
   width: 50%;
-  padding-right: ${spacing.xSmall}px;
+  padding-right: 0;
   @media (min-width: ${sizes.mdScreen}px) {
-    padding-right: 0;  
+    padding-right: ${spacing.xSmall}px;
   } 
 `
 

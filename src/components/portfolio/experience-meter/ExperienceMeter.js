@@ -1,6 +1,7 @@
 import React from 'react'
-import { ExperienceMeterRow } from './ExperienceMeter.style'
+import {ExperienceMeterRow, Label} from './ExperienceMeter.style'
 import PropTypes from 'prop-types'
+import Meter from "./meter/Meter"
 
 const ExperienceMeter = ({
   language,
@@ -9,14 +10,14 @@ const ExperienceMeter = ({
   return (
     <ExperienceMeterRow>
       <Label>{language}</Label>
-      <Meter lv={level}/>
+      <Meter level={level}/>
     </ExperienceMeterRow>
   )
 }
 
 ExperienceMeter.propTypes = {
   language: PropTypes.string.isRequired,
-  level: PropTypes.number
+  level: PropTypes.number.isRequired,
 }
 
 export default ExperienceMeter
