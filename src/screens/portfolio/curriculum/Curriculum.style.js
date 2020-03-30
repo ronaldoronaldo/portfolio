@@ -18,17 +18,6 @@ export const CurriculumContainer = styled.div`
   } 
 `
 
-export const LeftSide = styled.div`
-  flex-direction: column;
-  display: flex;
-  flex: 1;
-  max-width: 400px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    padding: 0;
-    max-width: auto;
-  } 
-`
-
 export const NameSection = styled.div`
   flex-direction: row;
   display: flex;
@@ -44,11 +33,30 @@ export const NameText = styled.div`
   flex: 1;
 `
 
+export const LeftSide = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  margin-bottom: ${spacing.medium}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    padding: 0;
+    max-width: 100%;
+    margin-bottom: 0;
+  } 
+`
+
 export const RightSide = styled.div`
   flex-direction: column;
   display: flex;
-  border-left: 4px solid ${colors.portDivision};
-  flex: 1.8;
+  border-left: none;
+  flex: 1;
+  max-width: 400px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    max-width: 100%;
+    flex: 1.8;
+    border-left: 4px solid ${colors.portDivision};
+  } 
 `
 
 export const LeftSectionContainer = styled.div`
@@ -87,10 +95,11 @@ export const LanguagesRightColumn = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
-  width: 50%;
+  width: 100%;
   padding-left: 0; 
   @media (min-width: ${sizes.mdScreen}px) {
     padding-left: ${spacing.xSmall}px; 
+    width: 50%;
   } 
 `
 
@@ -98,10 +107,11 @@ export const LanguagesLeftColumn = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
-  width: 50%;
+  width: 100%;
   padding-right: 0;
   @media (min-width: ${sizes.mdScreen}px) {
     padding-right: ${spacing.xSmall}px;
+    width: 50%;
   } 
 `
 
@@ -137,15 +147,24 @@ export const ExperienceList = styled.ul`
 
 export const ExperienceListItem = styled.li`
   color: ${colors.portGray};
-  font-size: 16px;
+  font-size: 12px;
   font-weight: ${fontWeights.regular};
   margin-bottom: 4px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    font-size: 16px;
+  } 
 `
 
 export const ExperienceText = styled.span`
   color: ${colors.portGray};
-  font-size: 20px;
+  font-size: 14px;
   font-weight: ${fontWeights.regular};
+  @media (min-width: ${sizes.smScreen}px) {
+    font-size: 16px;
+  } 
+  @media (min-width: ${sizes.mdScreen}px) {
+    font-size: 20px;
+  } 
 `
 
 export const EducationDescription = styled.span`

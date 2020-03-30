@@ -1,11 +1,14 @@
 import styled, { css }  from 'styled-components'
-import { colors } from 'config/ui'
+import { colors, sizes, spacing } from 'config/ui'
 
 export const MeterRow = styled.div`
   display: flex;
-  width: 48%;
+  width: 125px;
   flex-direction: row;
   justify-content: space-between;
+  @media (min-width: ${sizes.mdScreen}px) {
+    width: 48%;
+  } 
 `
 
 export const Circle = styled.div`

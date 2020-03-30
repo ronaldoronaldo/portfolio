@@ -183,7 +183,7 @@ const Curriculum = () => {
           {renderExperienceTitle('Fullstack, Inceres', '2017 - 2019')}
           {renderExperienceList(inceresExperiences)}
           {renderExperienceTitle('Front-end and Designer Freelancer', '2015 - 2017')}
-          {renderExperienceTitle('Intern Engineering Consultant, Setepla', '2014 - 2015')}
+          {renderExperienceTitle('Intern Engineering at Setepla', '2014 - 2015')}
         </RightSectionContainer>
         <RightSectionContainer>
           {renderTitle('Education')}
