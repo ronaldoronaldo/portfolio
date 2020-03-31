@@ -1,5 +1,5 @@
 import styled  from 'styled-components'
-import { spacing, colors } from 'config/ui'
+import { fontWeights, spacing, colors } from 'config/ui'
 
 export const CardContainer = styled.div`
   display: flex;
@@ -8,6 +8,8 @@ export const CardContainer = styled.div`
   align-items: center;
   margin-left: ${spacing.xSmall}px;
   margin-right: ${spacing.xSmall}px;
+  position: relative;
+
   &:first-child {
     margin-left: 0;
   }
@@ -18,13 +20,21 @@ export const CardContainer = styled.div`
 
 export const CardHeader = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: ${spacing.xSmall}px ${spacing.xSmall}px 0 ${spacing.xSmall}px;
+  padding: ${spacing.xSmall}px;
   background-color: ${colors.black4};
-  height: 290px;
+  height: 190px;
+  width: 100%;
+`
+
+export const HeaderBox = styled.div`
+  display: flex;
+  flex: 1;
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 `
 
 export const ScreenImage = styled.img`
@@ -36,7 +46,7 @@ export const OpacityMask = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 130px;
+  height: 80px;
 `
 
 
@@ -46,7 +56,7 @@ export const CardFooter = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: transparent;
-  height: 190px;
+  height: 100px;
 `
 
 export const Label = styled.div`
@@ -61,5 +71,9 @@ export const Number = styled.div`
 
 export const ScreenTitle = styled.div`
   font-size: 28px;
-  color: ${colors.black2};
+  color: ${colors.black4};
+  position: absolute;
+  bottom: 0;
+  line-height: 0.6;
+  font-weight: ${fontWeights.bold};
 `

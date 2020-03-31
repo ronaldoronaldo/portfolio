@@ -7,7 +7,8 @@ import {
   Label,
   ScreenTitle,
   OpacityMask,
-  ScreenImage
+  ScreenImage,
+  HeaderBox
 } from './ScreenCard.style'
 import PropTypes from 'prop-types'
 
@@ -19,9 +20,11 @@ const ScreenCard = ({
   return (
     <CardContainer>
       <CardHeader>
-        <ScreenImage/>
-        <OpacityMask/>
-        <ScreenTitle>{title}</ScreenTitle>
+        <HeaderBox>
+          <ScreenImage/>
+          <OpacityMask/>
+          <ScreenTitle>{title.toUpperCase()}</ScreenTitle>
+        </HeaderBox>
       </CardHeader>
       <CardFooter>
         <Number>
