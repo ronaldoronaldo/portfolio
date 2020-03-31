@@ -88,7 +88,7 @@ const SelectStateAnswer = props => {
       <ContainerBackgroundStyle />
       <ContainerTitle>
         <Title
-          text="Em que estado fica a sua escola?"
+          text="In which state is located your school?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -99,21 +99,21 @@ const SelectStateAnswer = props => {
           items={['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia']}
           text={value}
           onChange={handleSelectValue}
-          searchInputLabel={'Busque por estado'}
-          headerTitle="Selecione um estado"
+          searchInputLabel={'Search for a state'}
+          headerTitle="Select a state"
           maxWidth={400}
-          label={'Selecione um estado'}
+          label={'Select a state'}
           activeSelectButton={enableButton}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           isEnabled={enableButton}
           onClick={sendSchoolState}
           style={{ marginTop: spacing.small }}
           loading={sendSchoolStateLoading}
         />
         <ContainerBulletsStyle>
-          <Bullets active={3} />
+          <Bullets active={2} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>

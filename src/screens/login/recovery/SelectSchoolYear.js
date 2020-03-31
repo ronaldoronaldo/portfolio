@@ -113,7 +113,7 @@ const SelectSchoolYear = props => {
           loading={sendSchoolYearLoading}
         />
         <ContainerBulletsStyle>
-          <Bullets active={6} />
+          <Bullets active={4} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>

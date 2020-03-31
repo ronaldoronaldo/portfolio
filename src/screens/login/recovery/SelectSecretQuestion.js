@@ -64,9 +64,6 @@ const SelectSecretQuestion = props => {
           lastButton
         />
       </NextButtonWrapper>
-      <ContainerBulletsStyle>
-        <Bullets active={1} />
-      </ContainerBulletsStyle>
     </ContainerStyle>
   )
 }

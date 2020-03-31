@@ -119,7 +119,7 @@ const SelectCityAnswer = props => {
           loading={sendSchoolCityLoading}
         />
         <ContainerBulletsStyle>
-          <Bullets active={4} />
+          <Bullets active={3} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>

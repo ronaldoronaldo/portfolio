@@ -3,7 +3,7 @@ import Bullet from './Bullet'
 import PropTypes from 'prop-types'
 
 const Bullets = ({ active }) => {
-  const bulletsArr = [1, 2, 3, 4, 5, 6, 7]
+  const bulletsArr = [1, 2, 3, 4, 5, 6]
   return bulletsArr.map((item, index) => {
     return (
       <Bullet

@@ -108,7 +108,7 @@ const UserFirstNameAnswer = props => {
           isEnabled={enableButton}
         />
         <ContainerBulletsStyle>
-          <Bullets active={7} />
+          <Bullets active={6} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>

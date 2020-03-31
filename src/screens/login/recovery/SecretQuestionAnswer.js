@@ -91,7 +91,7 @@ const SecretQuestionAnswer = props => {
           isEnabled={enableButton}
         />
         <ContainerBulletsStyle>
-          <Bullets active={2} />
+          <Bullets active={1} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>

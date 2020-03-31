@@ -112,7 +112,7 @@ const SchoolNameAnswer = props => {
           isEnabled={enableButton}
         />
         <ContainerBulletsStyle>
-          <Bullets active={5} />
+          <Bullets active={2} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>
