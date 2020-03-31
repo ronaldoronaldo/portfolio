@@ -11,7 +11,7 @@ import { Title } from 'components/lib/titles'
 import Bullets from 'components/lib/bullets'
 import { Button } from 'components/lib/buttons'
 import { Input } from 'components/lib/inputs'
-import { RECOVERY_SUCCESS_PATH, SELECT_SCHOOL_STATE_PATH } from 'routes'
+import { SELECT_SCHOOL_STATE_PATH } from 'routes'
 import Alert from 'components/lib/alerts/Alert'
 
 const SecretQuestionAnswer = props => {
@@ -37,41 +37,13 @@ const SecretQuestionAnswer = props => {
       return
     }
     setConfirmingSecretAnswerLoading(true)
-    //mock sendSecretAnswerQuery
     const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
-    const specificAnswer = 'pingu'
-    const commonAnswer = 'rex'
-    let mockedResponse = ''
-    if (value === specificAnswer) {
-      mockedResponse = 'user found'
-    }
-    if (value === commonAnswer) {
-      mockedResponse = 'valid information'
-    }
     wait(2000)
       .then(res => {
         setConfirmingSecretAnswerLoading(false)
-        if (mockedResponse === 'user found') {
-          props.history.push(RECOVERY_SUCCESS_PATH)
-          return
-        }
-        if (mockedResponse === 'valid information') {
-          props.history.push(SELECT_SCHOOL_STATE_PATH)
-          return
-        }
-        setAlertData({
-          title: 'Não encontrado',
-          message: 'Não encontramos nenhum usuário para essa resposta.',
-          textButton: 'fechar'
-        })
+        props.history.push(SELECT_SCHOOL_STATE_PATH)
       })
-      .catch(() => {
-        setAlertData({
-          title: 'Problema no servidor',
-          message: 'Algo deu errado, tente novamente mais tarde.',
-          textButton: 'fechar'
-        })
-      })
+      .catch(() => {})
   }
 
   return (
@@ -97,7 +69,7 @@ const SecretQuestionAnswer = props => {
       <ContainerBackgroundStyle />
       <ContainerTitle>
         <Title
-          text="Qual é o nome do seu primeiro animal de estimação?"
+          text="What is the name of your first pet?"
           size={3}
           sizeMobile={4}
           textAlignMobile={'center'}
@@ -107,13 +79,13 @@ const SecretQuestionAnswer = props => {
         <Input
           id={'animal'}
           value={value}
-          placeholder={'Sua resposta'}
+          placeholder={'Your answer'}
           onChange={handleValueInput}
           label={'Primeiro animal de estimação'}
           style={{ marginBottom: 16 }}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           onClick={sendSecretAnswer}
           loading={confirmingSecretAnswerLoading}
           isEnabled={enableButton}
