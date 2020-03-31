@@ -14,14 +14,15 @@ import PropTypes from 'prop-types'
 
 const ScreenCard = ({
   title,
-  numberOfPages
+  numberOfPages,
+  image
 }) => {
   const pages = numberOfPages === 1 ? 'page' : 'pages'
   return (
     <CardContainer>
       <CardHeader>
         <HeaderBox>
-          <ScreenImage/>
+          <ScreenImage src={image}/>
           <OpacityMask/>
           <ScreenTitle>{title.toUpperCase()}</ScreenTitle>
         </HeaderBox>

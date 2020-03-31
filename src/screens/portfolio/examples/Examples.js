@@ -8,27 +8,33 @@ import {
   SectionTitle
 } from './Examples.style'
 import ScreenCard from 'components/portfolio/screen-card/ScreenCard'
+import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
+import {LOGIN_PATH} from 'routes'
 
 const responsiveScreens = [
   {
     title: 'login',
-    image: '',
-    numberOfPages: 6
+    image: loginMobile,
+    numberOfPages: 6,
+    path: LOGIN_PATH
   },
   {
     title: 'library',
     image: '',
-    numberOfPages: 11
+    numberOfPages: 11,
+    path: LOGIN_PATH
   },
   {
     title: 'league',
     image: '',
-    numberOfPages: 2
+    numberOfPages: 2,
+    path: LOGIN_PATH
   },
   {
     title: 'vacation',
     image: '',
-    numberOfPages: 1
+    numberOfPages: 1,
+    path: LOGIN_PATH
   }
 ]
 
