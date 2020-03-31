@@ -27,12 +27,12 @@ const ScreenCard = ({
         </HeaderBox>
       </CardHeader>
       <CardFooter>
-        <Number>
-          {numberOfPages}
-        </Number>
-        <Label>
-          {pages}
-        </Label>
+        {/*<Number>*/}
+        {/*  {numberOfPages}*/}
+        {/*</Number>*/}
+        {/*<Label>*/}
+        {/*  {pages}*/}
+        {/*</Label>*/}
       </CardFooter>
     </CardContainer>
   )

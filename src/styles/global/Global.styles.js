@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   }  
   
   body.examples {
-    background-color: ${colors.black2};
+    background-color: ${colors.black1};
   }  
 
  #root {

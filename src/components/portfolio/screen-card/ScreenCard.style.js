@@ -22,7 +22,6 @@ export const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${spacing.xSmall}px;
   background-color: ${colors.black4};
   height: 190px;
   width: 100%;
@@ -42,11 +41,11 @@ export const ScreenImage = styled.img`
 `
 
 export const OpacityMask = styled.div`
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${colors.black2} 82%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${colors.black1} 78%);
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 130px;
 `
 
 
@@ -61,12 +60,12 @@ export const CardFooter = styled.div`
 
 export const Label = styled.div`
   font-size: 17px;
-  color: ${colors.black6};
+  color: ${colors.black5};
 `
 
 export const Number = styled.div`
   font-size: 24px;
-  color: ${colors.black6};
+  color: ${colors.black5};
 `
 
 export const ScreenTitle = styled.div`
