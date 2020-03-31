@@ -87,7 +87,7 @@ const SelectSchoolYear = props => {
       <ContainerBackgroundStyle />
       <ContainerTitle>
         <Title
-          text="Qual é o seu ano escolar?"
+          text="What is your school year?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -96,24 +96,24 @@ const SelectSchoolYear = props => {
       </ContainerTitle>
       <RecoveryContainerStyle>
         <Select
-          items={['Ensino infantil', '1º Ano', '2º Ano', '3º Ano', '4º Ano']}
+          items={['Kindergarten ', '1º year', '2º year', '3º year', '4º year', '5º year', '6º year']}
           text={value}
           onChange={handleSelectValue}
-          searchInputLabel={'Busque por ano escolar'}
-          headerTitle="Selecione o ano escolar"
+          searchInputLabel={'Search a school year'}
+          headerTitle="Select your school year"
           maxWidth={400}
-          label={'Selecione o ano escolar'}
+          label={'Select your school year'}
           activeSelectButton={enableButton}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           isEnabled={enableButton}
           onClick={sendSchoolYear}
           style={{ marginTop: spacing.small }}
           loading={sendSchoolYearLoading}
         />
         <ContainerBulletsStyle>
-          <Bullets active={4} />
+          <Bullets active={5} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>

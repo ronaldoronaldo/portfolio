@@ -37,29 +37,13 @@ const UserFirstNameAnswer = props => {
       return
     }
     setConfirmingUserFirstNameLoading(true)
-    //mock sendUserFirstNameQuery
-    let mockedResponse = ''
-    if (value === 'caio') {
-      mockedResponse = 'user found'
-    }
-
     const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
     wait(2000)
       .then(res => {
         setConfirmingUserFirstNameLoading(false)
-        if (mockedResponse === 'user found') {
-          props.history.push(RECOVERY_SUCCESS_PATH)
-        } else {
-          props.history.push(RECOVERY_ERROR_PATH)
-        }
+        props.history.push(RECOVERY_SUCCESS_PATH)
       })
-      .catch(() => {
-        setAlertData({
-          title: 'Problema no servidor',
-          message: 'Algo deu errado, tente novamente mais tarde.',
-          textButton: 'fechar'
-        })
-      })
+      .catch(() => {})
   }
 
   return (
@@ -85,7 +69,7 @@ const UserFirstNameAnswer = props => {
       <ContainerBackgroundStyle />
       <ContainerTitle>
         <Title
-          text="Qual é o seu primeiro nome?"
+          text="What is your first name?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -96,13 +80,13 @@ const UserFirstNameAnswer = props => {
         <Input
           id={'firstNameAnswer'}
           value={value}
-          placeholder={'Seu primeiro nome'}
+          placeholder={'Your first name'}
           onChange={handleValueInput}
-          label={'O seu primeiro nome'}
+          label={'Your first name'}
           style={{ marginBottom: 16 }}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           onClick={sendUserFirstName}
           loading={confirmingUserFirstNameLoading}
           isEnabled={enableButton}

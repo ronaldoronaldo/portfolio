@@ -33,5 +33,8 @@ export const ContainerBulletsStyle = styled.div`
   }
 `
 export const ContainerTitle = styled.div`
-  max-width: 80%;
+  max-width: 320px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    max-width: 360px;
+  }
 `

@@ -87,7 +87,7 @@ const SelectCityAnswer = props => {
       <ContainerTitle>
         <ContainerBackgroundStyle />
         <Title
-          text="Em que cidade fica a sua escola?"
+          text="In which city is your school?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -103,16 +103,16 @@ const SelectCityAnswer = props => {
             'Niterói',
             'Petrópolis'
           ]}
-          headerTitle={'Selecione uma cidade'}
+          headerTitle={'Select a city'}
           text={value}
           onChange={handleSelectValue}
-          searchInputLabel={'Busque por cidade'}
+          searchInputLabel={'Search for a city'}
           maxWidth={400}
-          label={'Selecione uma cidade'}
+          label={'Select a city'}
           activeSelectButton={enableButton}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           isEnabled={enableButton}
           onClick={sendSchoolCity}
           style={{ marginTop: spacing.small }}

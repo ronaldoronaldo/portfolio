@@ -89,7 +89,7 @@ const SchoolNameAnswer = props => {
       <ContainerTitle>
         <ContainerBackgroundStyle />
         <Title
-          text="Qual é o nome da sua escola?"
+          text="What is the name of your school?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -100,19 +100,19 @@ const SchoolNameAnswer = props => {
         <Input
           id={'schoolNameAnswer'}
           value={value}
-          placeholder={'Nome da sua escola'}
+          placeholder={'Your school\'s name'}
           onChange={handleValueInput}
           label={'O nome da sua escola'}
           style={{ marginBottom: 16 }}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           onClick={sendSchoolName}
           loading={confirmingSchoolNameLoading}
           isEnabled={enableButton}
         />
         <ContainerBulletsStyle>
-          <Bullets active={2} />
+          <Bullets active={4} />
         </ContainerBulletsStyle>
       </RecoveryContainerStyle>
     </ContainerStyle>
