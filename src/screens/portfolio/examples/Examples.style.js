@@ -22,7 +22,14 @@ export const Section = styled.div`
   flex: 1;
 `
 
+export const CardsSection = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+`
+
 export const ResponsiveScreens = styled(Section)`
+  flex-direction: column;
 `
 export const DesktopScreens = styled(Section)`
   display: none;
