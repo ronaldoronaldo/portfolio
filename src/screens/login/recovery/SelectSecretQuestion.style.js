@@ -49,6 +49,6 @@ export const TitleContainerStyle = styled.div`
   margin-top: 38px;
   @media (min-width: ${sizes.mdScreen}px) {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 360px;
   }
 `
