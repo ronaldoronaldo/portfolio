@@ -45,7 +45,7 @@ export const ContainerTitle = styled.div`
 
 export const DoNotHaveEmailText = styled.div`
   font-size: 16px;
-  margin-top: ${spacing.spacingLarge}px;
+  margin-top: ${spacing.large}px;
   color: ${colors.black3};
   text-align: center;
   a {

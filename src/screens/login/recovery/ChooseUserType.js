@@ -29,7 +29,7 @@ const ChooseUserType = props => {
           onClick={goBack}
           style={{
             marginTop: 32,
-            marginLeft: 16,
+            marginLeft: 32,
             position: 'absolute',
             left: 0,
             top: -15
@@ -40,7 +40,7 @@ const ChooseUserType = props => {
         <OptionContainer>
           <StudentImageContainer />
           <ChooseUserTypeButton
-            text={'Sou aluno'}
+            text={'I\'m a student'}
             onClick={goForward}
             bgColor={colors.purple3}
             bgColorHover={colors.purple3Light}
@@ -49,7 +49,7 @@ const ChooseUserType = props => {
         <OptionContainer>
           <TeacherImageContainer />
           <ChooseUserTypeButton
-            text={'Sou educador'}
+            text={'I\'m a teacher'}
             onClick={goForward}
             bgColor={colors.orange3}
             bgColorHover={colors.orange3Light}

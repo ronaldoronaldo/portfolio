@@ -13,10 +13,6 @@ export const ContainerStyle = styled.div`
 `
 
 export const ContainerBackButton = styled.div`
-  display: none;
-  @media (min-width: ${sizes.lgScreen}px) {
-    display: block;
-  }
 `
 
 export const StudentImageContainer = styled.div`
@@ -54,10 +50,11 @@ export const OptionContainer = styled.div`
   flex: 1;
   justify-content: center;
   align-items: center;
+  margin-right: 0;
   @media (min-width: ${sizes.mdScreen}px) {
-    margin-right: ${spacing.spacingMedium}px;
+    margin-right: ${spacing.medium}px;
     &:last-child {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 `

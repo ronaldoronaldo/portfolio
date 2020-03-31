@@ -3,8 +3,7 @@ import { sizes, colors } from 'config/ui'
 
 export const BackButtonStyle = styled.button`
   ${({ size, bgColor, flex, border, borderRadius }) => css`
-  flex: ${flex ? flex : 1}
-  width: 100%;
+  flex: ${flex ? flex : 1};
   background: ${bgColor ? bgColor : colors.white};
   display: flex;
   cursor: pointer;

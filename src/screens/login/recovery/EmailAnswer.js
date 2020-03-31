@@ -138,7 +138,7 @@ const EmailAnswer = ({ client, ...props }) => {
           onChange={handleValueInput}
           onKeyUp={handleKeyUp}
           label={'e-mail'}
-          style={{ marginBottom: spacing.spacingSmall }}
+          style={{ marginBottom: spacing.small }}
         />
         <Button
           text="Avançar"

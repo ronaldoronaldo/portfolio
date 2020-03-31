@@ -47,13 +47,13 @@ const RecoverPassword = props => {
         }}
       />
       <TitleContainerStyle>
-        <Title text="Como quer recuperar o acesso?" size={3} sizeMobile={4} />
+        <Title text="How would you like to recover your account?" size={3} sizeMobile={4} />
       </TitleContainerStyle>
       <RecoveryContainerStyle>
         <NextButtonWrapper>
           {!isTeacher && (
             <NextButton
-              text="Quero responder perguntas"
+              text="By answering some questions"
               textAlign="left"
               onClick={goToQuestions}
               color={colors.white}
@@ -63,13 +63,13 @@ const RecoverPassword = props => {
             />
           )}
           <NextButton
-            text="Tenho um e-mail vinculado"
+            text="With my e-mail"
             textAlign={'left'}
             onClick={goToEmailRecoveryMethod}
             style={{ width: '100%' }}
           />
           <NextButton
-            text="Tenho um celular vinculado"
+            text="With my cellphone"
             textAlign="left"
             onClick={goToCellphoneRecoveryMethod}
             lastButton

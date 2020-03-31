@@ -22,7 +22,7 @@ import {
   InputLogin,
 } from './Login.style'
 import GoogleLogin from 'react-google-login'
-import { RECOVER_VIA_EMAIL_PATH, SITE_PATH } from 'routes'
+import { CHOOSE_USER_TYPE_PATH, SITE_PATH } from 'routes'
 import IconButton from 'components/lib/buttons/IconButton'
 
 const Login = ({ client, ...props }) => {
@@ -182,7 +182,7 @@ const Login = ({ client, ...props }) => {
               iconImgSrc={logoMicrosoft}
             />
           </ContainerButtonsRow>
-          <ContainerButtonRecovery to={RECOVER_VIA_EMAIL_PATH}>
+          <ContainerButtonRecovery to={CHOOSE_USER_TYPE_PATH}>
             <Button
               text="Forgot my password"
               size="small"

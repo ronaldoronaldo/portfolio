@@ -3,14 +3,11 @@ import { sizes, colors, spacing } from 'config/ui'
 
 export const NextButtonStyle = styled.button`
   ${({
-    size,
-    flex,
     borderColor,
     borderRadius,
     lastButton,
     firstButton,
     bgColor,
-    marginBottom
   }) => css`
     background-color: ${bgColor ? bgColor : 'transparent'};
     display: flex;

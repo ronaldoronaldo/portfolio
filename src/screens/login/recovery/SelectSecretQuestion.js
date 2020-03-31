@@ -35,30 +35,30 @@ const SelectSecretQuestion = props => {
       />
       <TitleContainerStyle>
         <Title
-          text="Qual é a sua pergunta secreta?"
+          text="Which one is your secret question?"
           size={3}
           sizeMobile={4}
           textAlign="center"
         />
       </TitleContainerStyle>
-      <NextButtonWrapper marginBottom={spacing.spacingLarge}>
+      <NextButtonWrapper marginBottom={spacing.large}>
         <NextButton
-          text="Qual é o nome do seu primeiro animal de estimação?"
+          text="What is the name of your first pet?"
           textAlign={'left'}
           onClick={goForward}
         />
         <NextButton
-          text="Qual comida você mais gosta?"
+          text="Which food do you like the most?"
           textAlign="left"
           onClick={goForward}
         />
         <NextButton
-          text="Qual é o nome do seu melhor amigo ou amiga?"
+          text="What is the name of your best friend?"
           textAlign="left"
           onClick={goForward}
         />
         <NextButton
-          text="Qual fruta você mais gosta?"
+          text="what is your favorite fruit?"
           textAlign="left"
           onClick={goForward}
           lastButton
