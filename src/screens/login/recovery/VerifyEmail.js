@@ -18,10 +18,6 @@ import { LOGIN_PATH } from 'routes'
 
 import { withApollo } from 'react-apollo'
 
-import { sendPasswordRecoveryEmailQuery } from 'api/queries'
-
-const EMAIL_SUCCESSFULLY_SENT = 'Email successfully sent'
-
 const VerifyEmail = ({ client, ...props }) => {
   const [resendEmailLoading, setResendEmailLoading] = useState(false)
   const [userMail, setUserMail] = useState('')

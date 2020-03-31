@@ -1,47 +1,32 @@
 import React, { useState } from 'react'
 import {
   RecoveryContainerStyle,
-  ContainerBulletsStyle,
   ContainerStyle,
   ContainerTitle,
-  ContainerBackgroundStyle
 } from './CellphoneAnswer.style'
 import { BackButton } from 'components/lib/buttons'
 import { Title } from 'components/lib/titles'
-import Bullets from 'components/lib/bullets'
 import { Button } from 'components/lib/buttons'
 import { Input } from 'components/lib/inputs'
-import { spacing } from 'config/ui'
+import {colors, spacing} from 'config/ui'
 import { RECOVER_VIA_CELLPHONE_CONFIRMATION_PATH } from 'routes'
-import Alert from 'components/lib/alerts/Alert'
+import {ContainerLeftStyle} from "./VerifyCellphone.style"
+import {FontIcon} from "../../../components/lib/icons"
 
 const CellphoneAnswer = props => {
   const [value, setValue] = useState('')
   const [sendCellphoneLoading, setSendCellphoneLoading] = useState(false)
-  const [alertData, setAlertData] = useState(null)
   const [enableButton, setEnableButton] = useState(false)
 
   const sendCellphoneConfirmation = () => {
     setSendCellphoneLoading(true)
-    //mock sendCellphoneQuery
     const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
     wait(3000)
       .then(res => {
-        const mockedResponse = 'cellphone found'
-        setSendCellphoneLoading(false)
-        if (mockedResponse === 'cellphone found') {
+          setSendCellphoneLoading(false)
           props.history.push(RECOVER_VIA_CELLPHONE_CONFIRMATION_PATH)
-          return
         }
-        if (mockedResponse === 'cellphone not found') {
-          setAlertData({
-            title: 'Não encontrado',
-            message: 'Não encontramos nenhum usuário para esse Celular.',
-            textButton: 'fechar'
-          })
-        }
-      })
-      .catch(() => {})
+      ).catch(() => {})
   }
 
   const handleValueInput = evt => {
@@ -53,16 +38,14 @@ const CellphoneAnswer = props => {
     setValue(evt.target.value)
   }
 
+  const onKeyUp = e => {
+    if (e.key === 'Enter') {
+      sendCellphoneConfirmation()
+    }
+  }
+
   return (
     <ContainerStyle>
-      {alertData && (
-        <Alert
-          title={alertData.title}
-          message={alertData.message}
-          textButton={alertData.textButton}
-          onClick={() => setAlertData(null)}
-        />
-      )}
       <BackButton
         onClick={() => props.history.goBack()}
         style={{
@@ -73,10 +56,17 @@ const CellphoneAnswer = props => {
           top: -15
         }}
       />
-      <ContainerBackgroundStyle />
+        <ContainerLeftStyle>
+          <FontIcon
+            iconName="cellphone"
+            size={180}
+            sizeMobile={130}
+            color={colors.black2}
+          />
+        </ContainerLeftStyle>
       <ContainerTitle>
         <Title
-          text="Qual é o seu celular vinculado?"
+          text="What is your account's cellphone number?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -87,13 +77,14 @@ const CellphoneAnswer = props => {
         <Input
           id={'cellphoneAnswer'}
           value={value}
-          placeholder={'Celular vinculado'}
+          placeholder={'Cellphone'}
+          onKeyUp={onKeyUp}
           onChange={handleValueInput}
-          label={'Celular'}
+          label={'Cellphone'}
           style={{ marginBottom: spacing.small }}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           isEnabled={enableButton}
           onClick={() => sendCellphoneConfirmation()}
           loading={sendCellphoneLoading}

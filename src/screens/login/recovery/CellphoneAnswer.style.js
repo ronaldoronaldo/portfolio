@@ -10,14 +10,6 @@ export const ContainerStyle = styled(Container)`
   align-items: center;
   justify-content: center;
 `
-export const ContainerBackgroundStyle = styled.div`
-  width: 100%;
-  height: 40vh;
-  min-height: 250px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    display: none;
-  }
-`
 
 export const RecoveryContainerStyle = styled.div`
   width: 100%;

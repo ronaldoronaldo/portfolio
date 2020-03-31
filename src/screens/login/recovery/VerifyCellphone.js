@@ -12,6 +12,7 @@ import { Container, Column, Row } from 'components/lib/grid'
 import Title from 'components/lib/titles/Title'
 import { Spinner } from 'components/lib/loaders'
 import { LOGIN_PATH } from 'routes'
+import {FontIcon} from 'components/lib/icons'
 
 const VerifyCellphone = props => {
   const [resendCellphoneLoading, setResendCellphoneLoading] = useState(false)
@@ -51,26 +52,33 @@ const VerifyCellphone = props => {
     <Container>
       <Row flexstart>
         <Column lg={6}>
-          <ContainerLeftStyle />
+          <ContainerLeftStyle>
+            <FontIcon
+              iconName="cellphone"
+              size={200}
+              sizeMobile={150}
+              color={colors.black2}
+            />
+          </ContainerLeftStyle>
         </Column>
         <Column lg={6}>
           <ContainerRightStyle>
             <Title
-              text="Verifique seu celular"
+              text="Verify your cellphone"
               size={4}
               sizeMobile={4}
               textAlignMobile="center"
               style={{ margin: 0 }}
             />
             <CellphoneTextCodeStyle>{userPhone}</CellphoneTextCodeStyle>
-            <ButtonStyle text="Já verifiquei" onClick={goBackToLogin} />
+            <ButtonStyle text="Already did" onClick={goBackToLogin} />
             {resendCellphoneLoading ? (
               <ContainerSpinnerStyle>
                 <Spinner color={colors.primary} />
               </ContainerSpinnerStyle>
             ) : (
               <SendAgainButton
-                text="Enviar novamente"
+                text="Resend SMS"
                 size="small"
                 bgColorHover={'none'}
                 textColorHover={colors.black4Dark}
