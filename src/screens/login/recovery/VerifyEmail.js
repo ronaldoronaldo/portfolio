@@ -43,28 +43,14 @@ const VerifyEmail = ({ client, ...props }) => {
   const resendEmail = () => {
     setResendEmailLoading(true)
 
-    client
-      .query({
-        query: sendPasswordRecoveryEmailQuery,
-        variables: {
-          email: userMail
-        }
+    setTimeout(() => {
+      setAlertData({
+        title: 'Success',
+        message: 'E-mail sent to ' + userMail,
+        textButton: 'Got it!'
       })
-      .then(res => {
-        const { tokenAccountRecovery } = res.data
-
-        if (tokenAccountRecovery === EMAIL_SUCCESSFULLY_SENT) {
-          setAlertData({
-            title: 'Sucesso',
-            message: 'Email reenviado com sucesso.',
-            textButton: 'Entendi'
-          })
-          setResendEmailLoading(false)
-        }
-      })
-      .catch(err => {
-        setResendEmailLoading(false)
-      })
+      setResendEmailLoading(false)
+    }, 1000)
   }
 
   const goBackToLogin = () => {
@@ -101,21 +87,21 @@ const VerifyEmail = ({ client, ...props }) => {
         <Column lg={6}>
           <ContainerRightStyle>
             <Title
-              text="Verifique seu e-mail"
+              text="Verify your e-mail"
               size={4}
               sizeMobile={4}
               textAlignMobile="center"
               style={{ margin: 0 }}
             />
             <CellphoneTextCodeStyle>{userMail}</CellphoneTextCodeStyle>
-            <ButtonStyle text="Já verifiquei" onClick={() => goBackToLogin()} />
+            <ButtonStyle text="Already did" onClick={() => goBackToLogin()} />
             {resendEmailLoading ? (
               <ContainerSpinnerStyle>
                 <Spinner color={colors.primary} />
               </ContainerSpinnerStyle>
             ) : (
               <SendAgainButton
-                text="Enviar novamente"
+                text="Resend e-mail"
                 size="small"
                 bgColorHover={'none'}
                 textColorHover={colors.black4Dark}

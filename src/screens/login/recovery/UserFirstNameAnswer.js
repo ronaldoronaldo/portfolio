@@ -46,6 +46,12 @@ const UserFirstNameAnswer = props => {
       .catch(() => {})
   }
 
+  const handleKeyUp = e => {
+    if (e.key === 'Enter') {
+      sendUserFirstName()
+    }
+  }
+
   return (
     <ContainerStyle>
       {alertData && (
@@ -81,6 +87,7 @@ const UserFirstNameAnswer = props => {
           id={'firstNameAnswer'}
           value={value}
           placeholder={'Your first name'}
+          onKeyUp={handleKeyUp}
           onChange={handleValueInput}
           label={'Your first name'}
           style={{ marginBottom: 16 }}

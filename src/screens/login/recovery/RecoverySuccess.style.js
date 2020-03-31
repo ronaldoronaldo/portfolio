@@ -5,17 +5,18 @@ import { Button } from 'components/lib/buttons'
 
 export const ContainerLeftStyle = styled.div`
   width: 100%;
-  height: 50vh;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right:  50px;
+  justify-content: center;
+  padding-right:  0;
   background-size: 100% 100%;
+  height: 40vh;
   @media (min-width: ${sizes.lgScreen}px) {
+    padding-right:  50px;
     height: 100vh;
-    background-size: 100% 100%;
     background-position: 100%;
+    justify-content: flex-end;
   }
 `
 
@@ -49,7 +50,7 @@ export const ButtonNotMeStyle = styled(Button) `
   }
 
   @media (min-width: ${sizes.lgScreen}px) {
-    width: 101px;
+    width: 180px;
     align-items: flex-start;
     justify-content: flex-start;
     padding-left: 0px;

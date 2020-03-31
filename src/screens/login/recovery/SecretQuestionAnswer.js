@@ -46,6 +46,12 @@ const SecretQuestionAnswer = props => {
       .catch(() => {})
   }
 
+  const handleKeyUp = e => {
+    if (e.key === 'Enter') {
+      sendSecretAnswer()
+    }
+  }
+
   return (
     <ContainerStyle>
       {alertData && (
@@ -80,6 +86,7 @@ const SecretQuestionAnswer = props => {
           id={'animal'}
           value={value}
           placeholder={'Your answer'}
+          onKeyUp={handleKeyUp}
           onChange={handleValueInput}
           label={'Primeiro animal de estimação'}
           style={{ marginBottom: 16 }}

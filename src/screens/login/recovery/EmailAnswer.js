@@ -12,7 +12,6 @@ import { Button } from 'components/lib/buttons'
 import { Input } from 'components/lib/inputs'
 import { spacing } from 'config/ui'
 import { RECOVER_VIA_EMAIL_CONFIRMATION_PATH } from 'routes'
-import { sendPasswordRecoveryEmailQuery } from 'api/queries'
 import { withApollo } from 'react-apollo'
 import { Alert } from 'components/lib/alerts'
 import { FontIcon } from 'components/lib/icons'
@@ -22,7 +21,6 @@ import { colors } from 'config/ui'
 
 import { checkEmailIsValid } from 'utils/validations'
 
-const USER_NOT_FOUND = 'user not found'
 const EMAIL_SUCCESSFULLY_SENT = 'Recover password email sent successfully'
 
 const EmailAnswer = ({ client, ...props }) => {
@@ -38,49 +36,22 @@ const EmailAnswer = ({ client, ...props }) => {
 
     if (!checkEmailIsValid(value)) {
       setAlertData({
-        title: 'Ops... Algo deu errado',
-        message: 'O e-mail informado é inválido.',
-        textButton: 'Tente novamente'
+        title: 'Ops... somthing went wrong',
+        message: 'This is not a valid e-mail.',
+        textButton: 'Try again'
       })
 
       setSendEmailLoading(false)
       return null
     }
 
-    client
-      .query({
-        query: sendPasswordRecoveryEmailQuery,
-        variables: {
-          email: value
-        }
+    setTimeout(() => {
+      props.history.push({
+        pathname: RECOVER_VIA_EMAIL_CONFIRMATION_PATH,
+        state: { email: value }
       })
-      .then(res => {
-        const { tokenAccountRecovery } = res.data
-
-        if (tokenAccountRecovery === EMAIL_SUCCESSFULLY_SENT) {
-          props.history.push({
-            pathname: RECOVER_VIA_EMAIL_CONFIRMATION_PATH,
-            state: { email: value }
-          })
-          setSendEmailLoading(false)
-        }
-      })
-      .catch(err => {
-        if (err.graphQLErrors) {
-          const userNotFound = err.graphQLErrors.find(
-            graphqlError => graphqlError.message === USER_NOT_FOUND
-          )
-
-          if (userNotFound) {
-            setAlertData({
-              title: 'Ops... Algo deu errado',
-              message: 'Esse e-mail não foi encontrado.',
-              textButton: 'Tente novamente'
-            })
-          }
-        }
-        setSendEmailLoading(false)
-      })
+      setSendEmailLoading(false)
+    }, 1000)
   }
 
   const handleValueInput = evt => {
@@ -92,8 +63,8 @@ const EmailAnswer = ({ client, ...props }) => {
     setValue(evt.target.value)
   }
 
-  const handleKeyUp = key => {
-    if (key === 'Enter') {
+  const handleKeyUp = e => {
+    if (e.key === 'Enter') {
       sendEmailConfirmation()
     }
   }
@@ -123,7 +94,7 @@ const EmailAnswer = ({ client, ...props }) => {
       </ContainerBackgroundStyle>
       <ContainerTitle>
         <Title
-          text="Qual o seu e-mail de acesso?"
+          text="What is your account's e-mail?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
@@ -134,20 +105,20 @@ const EmailAnswer = ({ client, ...props }) => {
         <Input
           id={'emailAnswer'}
           value={value}
-          placeholder={'Seu e-mail'}
+          placeholder={'Your e-mail'}
           onChange={handleValueInput}
           onKeyUp={handleKeyUp}
-          label={'e-mail'}
+          label={'Your e-mail'}
           style={{ marginBottom: spacing.small }}
         />
         <Button
-          text="Avançar"
+          text="Submit"
           isEnabled={enableButton}
           onClick={sendEmailConfirmation}
           loading={sendEmailLoading}
         />
         <DoNotHaveEmailText>
-          Não tem e-mail de acesso? <a href="http://faq.arvoredelivros.com.br/pt-BR/articles/1147272-esqueci-meu-codigo-de-acesso-ou-minha-senha-como-faco">Clique aqui</a>
+          Do not have an account e-mail? <a href="/app/login">Click here</a>
         </DoNotHaveEmailText>
       </RecoveryContainerStyle>
     </ContainerStyle>

@@ -18,26 +18,26 @@ const RecoverySuccess = props => {
       <Row flexstart>
         <Column lg={6}>
           <ContainerLeftStyle>
-            <FontIcon iconName='mailbox' size={250} color={colors.black2} />
+            <FontIcon iconName='mailbox' sizeMobile={200} size={250} color={colors.black2} />
           </ContainerLeftStyle>
         </Column>
         <Column lg={6}>
           <ContainerRightStyle>
             <Title
-              text="Olá, Caio"
+              text="Hi, Jack"
               size={1}
               sizeMobile={3}
               textAlignMobile="center"
               style={{ margin: 0 }}
             />
             <ButtonNotMeStyle
-              text="Não é você?"
+              text="Are you not jack?"
               size="small"
               bgColorHover={'none'}
               textColorHover={colors.black4Dark}
-              onClick={() => console.log('ok')}
+              onClick={() => props.history.goBack()}
             />
-            <TextCodeStyle>Anote o seu código de acesso:</TextCodeStyle>
+            <TextCodeStyle>Your access code is:</TextCodeStyle>
             <Title
               text="CDA9834"
               size={2}
@@ -46,7 +46,7 @@ const RecoverySuccess = props => {
               style={{ margin: 0 }}
             />
             <ButtonStyle
-              text="Já anotei"
+              text="Back to login"
               onClick={() => props.history.push(LOGIN_PATH)}
               style={{ marginBottom: 16, marginTop: 44 }}
             />
