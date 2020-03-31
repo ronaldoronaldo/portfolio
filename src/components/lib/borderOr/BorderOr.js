@@ -12,7 +12,7 @@ const BorderOr = ({ style }) => {
   return (
     <div style={{ ...styleContainer, ...style }}>
       <BorderOrBefore />
-      <TextBorder>ou</TextBorder>
+      <TextBorder>or</TextBorder>
       <BorderOrAfter />
     </div>
   )

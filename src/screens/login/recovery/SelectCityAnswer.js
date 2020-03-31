@@ -115,7 +115,7 @@ const SelectCityAnswer = props => {
           text="Avançar"
           isEnabled={enableButton}
           onClick={sendSchoolCity}
-          style={{ marginTop: spacing.small }}
+          style={{ marginTop: spacing.spacingSmall }}
           loading={sendSchoolCityLoading}
         />
         <ContainerBulletsStyle>

@@ -41,7 +41,7 @@ const SelectSecretQuestion = props => {
           textAlign="center"
         />
       </TitleContainerStyle>
-      <NextButtonWrapper marginBottom={spacing.large}>
+      <NextButtonWrapper marginBottom={spacing.spacingLarge}>
         <NextButton
           text="Qual é o nome do seu primeiro animal de estimação?"
           textAlign={'left'}

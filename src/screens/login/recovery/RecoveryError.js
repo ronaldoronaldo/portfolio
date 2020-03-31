@@ -18,7 +18,7 @@ const RecoveryError = props => {
         style={{ marginBottom: 32 }}
       />
       <Button
-        text="Tentar Novamente"
+        text="Tente Novamente"
         onClick={() => props.history.push(FORGOT_LOGIN_PATH)}
       />
       <BorderOr style={{ marginTop: 8, marginBottom: 8 }} />

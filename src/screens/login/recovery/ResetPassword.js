@@ -44,11 +44,9 @@ const SchoolNameAnswer = ({ client, ...props }) => {
         const { validationTokenAccountRecovery } = res.data
         setDataRecovery(validationTokenAccountRecovery[0])
       })
-      .catch(err => {
-        console.log(err)
-      })
+      .catch(err => {})
 
-    if (newPassword.length >= 6 && confirmNewPassword.length >= 6) {
+    if (newPassword.length >= 1 && confirmNewPassword.length >= 1) {
       setEnableButton(true)
     } else {
       setEnableButton(false)
@@ -60,9 +58,16 @@ const SchoolNameAnswer = ({ client, ...props }) => {
   }
 
   const handleSaveNewPassword = () => {
-    if (newPassword.length < 6 || confirmNewPassword.length < 6) return null
-
     setIsLoading(true)
+
+    if (newPassword.length < 6 || confirmNewPassword.length < 6) {
+      setAlertData({
+        title: 'Ops',
+        message: 'A senha informada precisa ter ao menos 6 caracteres.',
+        textButton: 'Entendi'
+      })
+      setIsLoading(false)
+    }
 
     if (newPassword !== confirmNewPassword) {
       setAlertData({
@@ -114,14 +119,13 @@ const SchoolNameAnswer = ({ client, ...props }) => {
                 setAlertData({
                   title: 'Ops',
                   message:
-                    'A senha informada precisa ter ao menos 6 caracteres e uma letra maiúscula.',
+                    'A senha informada precisa ter ao menos 6 caracteres.',
                   textButton: 'Entendi'
                 })
               }
 
               setIsLoading(false)
             }
-            console.log(err)
           })
       }
     }
@@ -140,7 +144,7 @@ const SchoolNameAnswer = ({ client, ...props }) => {
         />
       )}
       <BackButton
-        onClick={() => props.history.goBack()}
+        onClick={() => props.history.push('/')}
         style={{
           marginTop: 32,
           marginLeft: 16,
@@ -168,6 +172,7 @@ const SchoolNameAnswer = ({ client, ...props }) => {
           label={'Nova Senha'}
           style={{ marginBottom: 33 }}
           type="password"
+          showPassword
         />
         <Input
           id={'confirmPassword'}
@@ -177,6 +182,7 @@ const SchoolNameAnswer = ({ client, ...props }) => {
           label={'Confirmar senha'}
           style={{ marginBottom: 33 }}
           type="password"
+          showPassword
         />
         <Button
           text="Avançar"

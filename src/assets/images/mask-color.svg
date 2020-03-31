@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="837px" height="170px" viewBox="0 0 837 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>mask-color</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage---Preview-Notícia" transform="translate(-281.000000, -160.000000)" fill="#FFFFFF">
+            <g id="Preview-Modal---Arvore" transform="translate(281.000000, 112.000000)">
+                <path d="M0,203 C28.6666667,190.666667 132.166667,153.75 310.5,92.25 C488.833333,30.75 664.333333,34 837,102 L837,218 L0,218 L0,203 Z" id="mask-color"></path>
+            </g>
+        </g>
+    </g>
+</svg>

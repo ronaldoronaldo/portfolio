@@ -109,7 +109,7 @@ const SelectStateAnswer = props => {
           text="Avançar"
           isEnabled={enableButton}
           onClick={sendSchoolState}
-          style={{ marginTop: spacing.small }}
+          style={{ marginTop: spacing.spacingSmall }}
           loading={sendSchoolStateLoading}
         />
         <ContainerBulletsStyle>

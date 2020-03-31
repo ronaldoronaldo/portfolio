@@ -8,15 +8,9 @@ export const ContainerStyle = styled(Container) `
   max-width: 600px;
   height: 100vh;
   display: flex;
-  min-height: 640px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-   @media (max-width: ${sizes.mdScreen}px) {
-    margin-top: 141px;
-    justify-content: flex-start;
-  }
 `
 
 export const RecoveryContainerStyle = styled.div`

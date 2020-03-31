@@ -41,7 +41,7 @@ const CellphoneAnswer = props => {
           })
         }
       })
-      .catch(() => console.log('error'))
+      .catch(() => {})
   }
 
   const handleValueInput = evt => {
@@ -90,7 +90,7 @@ const CellphoneAnswer = props => {
           placeholder={'Celular vinculado'}
           onChange={handleValueInput}
           label={'Celular'}
-          style={{ marginBottom: spacing.small }}
+          style={{ marginBottom: spacing.spacingSmall }}
         />
         <Button
           text="Avançar"

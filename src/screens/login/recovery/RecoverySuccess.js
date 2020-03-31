@@ -9,6 +9,7 @@ import {
 } from './RecoverySuccess.style'
 import { Container, Column, Row } from 'components/lib/grid'
 import Title from 'components/lib/titles/Title'
+import { FontIcon } from 'components/lib/icons'
 import { LOGIN_PATH } from 'routes'
 
 const RecoverySuccess = props => {
@@ -16,7 +17,9 @@ const RecoverySuccess = props => {
     <Container>
       <Row flexstart>
         <Column lg={6}>
-          <ContainerLeftStyle />
+          <ContainerLeftStyle>
+            <FontIcon iconName='mailbox' size={250} color={colors.black2} />
+          </ContainerLeftStyle>
         </Column>
         <Column lg={6}>
           <ContainerRightStyle>
@@ -43,7 +46,7 @@ const RecoverySuccess = props => {
               style={{ margin: 0 }}
             />
             <ButtonStyle
-              text="Entrar"
+              text="Já anotei"
               onClick={() => props.history.push(LOGIN_PATH)}
               style={{ marginBottom: 16, marginTop: 44 }}
             />

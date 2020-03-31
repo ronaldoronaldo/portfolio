@@ -12,6 +12,7 @@ import { Container, Column, Row } from 'components/lib/grid'
 import Title from 'components/lib/titles/Title'
 import { Spinner } from 'components/lib/loaders'
 import { Alert } from 'components/lib/alerts'
+import { FontIcon } from 'components/lib/icons'
 
 import { LOGIN_PATH } from 'routes'
 
@@ -32,6 +33,10 @@ const VerifyEmail = ({ client, ...props }) => {
     if (props.location.state) {
       const { email } = props.location.state
       setUserMail(email)
+    }
+    document.addEventListener('keyup', handleSubmit)
+    return () => {
+      document.removeEventListener('keyup', handleSubmit)
     }
   }, [])
 
@@ -58,13 +63,18 @@ const VerifyEmail = ({ client, ...props }) => {
         }
       })
       .catch(err => {
-        console.log(err)
         setResendEmailLoading(false)
       })
   }
 
   const goBackToLogin = () => {
     props.history.push(LOGIN_PATH)
+  }
+
+  const handleSubmit = event => {
+    if (event.key === 'Enter') {
+      goBackToLogin()
+    }
   }
 
   return (
@@ -79,12 +89,19 @@ const VerifyEmail = ({ client, ...props }) => {
       )}
       <Row flexstart>
         <Column lg={6}>
-          <ContainerLeftStyle />
+          <ContainerLeftStyle>
+            <FontIcon
+              iconName="mail-cascade"
+              size={200}
+              sizeMobile={150}
+              color={colors.black2}
+            />
+          </ContainerLeftStyle>
         </Column>
         <Column lg={6}>
           <ContainerRightStyle>
             <Title
-              text="Verifique e-mail"
+              text="Verifique seu e-mail"
               size={4}
               sizeMobile={4}
               textAlignMobile="center"

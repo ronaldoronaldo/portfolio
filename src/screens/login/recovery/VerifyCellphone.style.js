@@ -5,15 +5,17 @@ import { Button } from 'components/lib/buttons'
 
 export const ContainerLeftStyle = styled.div`
   width: 100%;
-  height: 55vh;
-  background-image: url(${backgroundMock});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  align-items: center;
   margin-bottom: 25px;
-  @media (min-width: ${sizes.lgScreen}px) {
-    height: 95vh;
-    background-size: 100% 100%;
-    background-position: 100%;
+
+  @media (max-width: ${sizes.lgScreen}px) {
+    justify-content: center;
+    padding-right: 0px;
+    height: 50vh;    
   }
 `
 
@@ -25,12 +27,12 @@ export const ContainerRightStyle = styled.div`
   margin: 0 auto;
   @media (min-width: ${sizes.lgScreen}px) {
     align-items: flex-start;
-    height: 95vh;
+    height: 100vh;
     margin-left: 0;
   }
 `
 
-export const ButtonStyle = styled(Button)`
+export const ButtonStyle = styled(Button) `
   @media (min-width: ${sizes.lgScreen}px) {
     text-align: left;
     width: 160px;
@@ -38,8 +40,8 @@ export const ButtonStyle = styled(Button)`
   }
 `
 
-export const SendAgainButton = styled(Button)`
-  color: ${colors.black5};
+export const SendAgainButton = styled(Button) `
+  color: ${colors.black3};
   background: ${colors.white};
   margin-top: 26px;
   &:active {

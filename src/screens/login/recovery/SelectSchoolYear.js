@@ -91,7 +91,7 @@ const SelectSchoolYear = props => {
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
-          style={{maxWidth: 360}}
+          style={{ maxWidth: 360 }}
         />
       </ContainerTitle>
       <RecoveryContainerStyle>
@@ -102,14 +102,14 @@ const SelectSchoolYear = props => {
           searchInputLabel={'Busque por ano escolar'}
           headerTitle="Selecione o ano escolar"
           maxWidth={400}
-          label={'Selecione o seu ano escolar'}
+          label={'Selecione o ano escolar'}
           activeSelectButton={enableButton}
         />
         <Button
           text="Avançar"
           isEnabled={enableButton}
           onClick={sendSchoolYear}
-          style={{ marginTop: spacing.small }}
+          style={{ marginTop: spacing.spacingSmall }}
           loading={sendSchoolYearLoading}
         />
         <ContainerBulletsStyle>

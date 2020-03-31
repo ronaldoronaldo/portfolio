@@ -1,19 +1,23 @@
 import styled from 'styled-components'
 import { Container } from 'components/lib/grid'
-import { sizes } from 'config/ui'
+import { sizes, colors, spacing } from 'config/ui'
 
-export const ContainerStyle = styled(Container)`
+export const ContainerStyle = styled(Container) `
   max-width: 600px;
-  height: 100vh;
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 `
 export const ContainerBackgroundStyle = styled.div`
   width: 100%;
-  height: 40vh;
   min-height: 250px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   @media (min-width: ${sizes.mdScreen}px) {
     display: none;
   }
@@ -36,5 +40,16 @@ export const ContainerTitle = styled.div`
   max-width: 80%;
   @media (min-width: ${sizes.mdScreen}px) {
     max-width: 100%;
+  }
+`
+
+export const DoNotHaveEmailText = styled.div`
+  font-size: 16px;
+  margin-top: ${spacing.spacingLarge}px;
+  color: ${colors.black3};
+  text-align: center;
+  a {
+    color: ${colors.black4};
+    text-decoration: underline;
   }
 `

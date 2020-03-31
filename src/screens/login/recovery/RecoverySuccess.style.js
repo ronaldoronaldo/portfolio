@@ -6,8 +6,11 @@ import { Button } from 'components/lib/buttons'
 export const ContainerLeftStyle = styled.div`
   width: 100%;
   height: 50vh;
-  background-image: url(${backgroundMock});
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right:  50px;
   background-size: 100% 100%;
   @media (min-width: ${sizes.lgScreen}px) {
     height: 100vh;
@@ -29,7 +32,7 @@ export const ContainerRightStyle = styled.div`
   }
 `
 
-export const ButtonStyle = styled(Button)`
+export const ButtonStyle = styled(Button) `
   @media (min-width: ${sizes.lgScreen}px) {
     text-align: left;
     width: 124px;
@@ -37,7 +40,7 @@ export const ButtonStyle = styled(Button)`
   }
 `
 
-export const ButtonNotMeStyle = styled(Button)`
+export const ButtonNotMeStyle = styled(Button) `
   color: ${colors.black5};
   background: ${colors.white};
 

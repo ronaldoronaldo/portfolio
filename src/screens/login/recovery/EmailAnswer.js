@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import {
   RecoveryContainerStyle,
-  ContainerBulletsStyle,
   ContainerStyle,
   ContainerTitle,
-  ContainerBackgroundStyle
+  ContainerBackgroundStyle,
+  DoNotHaveEmailText
 } from './EmailAnswer.style'
 import { BackButton } from 'components/lib/buttons'
 import { Title } from 'components/lib/titles'
-import Bullets from 'components/lib/bullets'
 import { Button } from 'components/lib/buttons'
 import { Input } from 'components/lib/inputs'
 import { spacing } from 'config/ui'
@@ -16,6 +15,10 @@ import { RECOVER_VIA_EMAIL_CONFIRMATION_PATH } from 'routes'
 import { sendPasswordRecoveryEmailQuery } from 'api/queries'
 import { withApollo } from 'react-apollo'
 import { Alert } from 'components/lib/alerts'
+import { FontIcon } from 'components/lib/icons'
+import { colors } from 'config/ui'
+
+
 
 import { checkEmailIsValid } from 'utils/validations'
 
@@ -35,9 +38,9 @@ const EmailAnswer = ({ client, ...props }) => {
 
     if (!checkEmailIsValid(value)) {
       setAlertData({
-        title: 'Ops',
-        message: 'O email informado é inválido.',
-        textButton: 'Entendi'
+        title: 'Ops... Algo deu errado',
+        message: 'O e-mail informado é inválido.',
+        textButton: 'Tente novamente'
       })
 
       setSendEmailLoading(false)
@@ -70,9 +73,9 @@ const EmailAnswer = ({ client, ...props }) => {
 
           if (userNotFound) {
             setAlertData({
-              title: 'Ops',
-              message: 'Usuário não encontrado.',
-              textButton: 'Entendi'
+              title: 'Ops... Algo deu errado',
+              message: 'Esse e-mail não foi encontrado.',
+              textButton: 'Tente novamente'
             })
           }
         }
@@ -87,6 +90,12 @@ const EmailAnswer = ({ client, ...props }) => {
       setEnableButton(false)
     }
     setValue(evt.target.value)
+  }
+
+  const handleKeyUp = key => {
+    if (key === 'Enter') {
+      sendEmailConfirmation()
+    }
   }
 
   return (
@@ -109,14 +118,16 @@ const EmailAnswer = ({ client, ...props }) => {
           top: -15
         }}
       />
-      <ContainerBackgroundStyle />
+      <ContainerBackgroundStyle>
+        <FontIcon iconName='mail' sizeMobile={48} color={colors.black2} />
+      </ContainerBackgroundStyle>
       <ContainerTitle>
         <Title
-          text="Qual é o seu email de acesso?"
+          text="Qual o seu e-mail de acesso?"
           size={3}
           sizeMobile={4}
           textAlignMobile="center"
-          style={{maxWidth: 300}}
+          style={{ maxWidth: 300 }}
         />
       </ContainerTitle>
       <RecoveryContainerStyle>
@@ -125,8 +136,9 @@ const EmailAnswer = ({ client, ...props }) => {
           value={value}
           placeholder={'Seu e-mail'}
           onChange={handleValueInput}
+          onKeyUp={handleKeyUp}
           label={'e-mail'}
-          style={{ marginBottom: spacing.small }}
+          style={{ marginBottom: spacing.spacingSmall }}
         />
         <Button
           text="Avançar"
@@ -134,6 +146,9 @@ const EmailAnswer = ({ client, ...props }) => {
           onClick={sendEmailConfirmation}
           loading={sendEmailLoading}
         />
+        <DoNotHaveEmailText>
+          Não tem e-mail de acesso? <a href="http://faq.arvoredelivros.com.br/pt-BR/articles/1147272-esqueci-meu-codigo-de-acesso-ou-minha-senha-como-faco">Clique aqui</a>
+        </DoNotHaveEmailText>
       </RecoveryContainerStyle>
     </ContainerStyle>
   )

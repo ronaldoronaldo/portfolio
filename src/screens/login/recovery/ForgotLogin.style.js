@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { sizes, colors, spacing } from 'config/ui'
 
 export const ContainerStyle = styled.div`
-  padding-top: ${spacing.large}px;
+  padding-top: ${spacing.spacingLarge}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding-top: 0;
     display: flex;
@@ -16,7 +16,7 @@ export const ContainerStyle = styled.div`
 export const RecoveryContainerStyle = styled.div`
   width: 100%;
   @media (min-width: ${sizes.mdScreen}px) {
-    max-width: 500px;
+    max-width: 501px;
     margin: 0 auto;
   }
 `

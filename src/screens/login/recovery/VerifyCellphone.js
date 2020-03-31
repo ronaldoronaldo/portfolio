@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { colors } from 'config/ui'
 import {
   CellphoneTextCodeStyle,
@@ -18,6 +18,13 @@ const VerifyCellphone = props => {
 
   const userPhone = '21 96409-5416'
 
+  useEffect(() => {
+    document.addEventListener('keyup', handleSubmit)
+    return () => {
+      document.removeEventListener('keyup', handleSubmit)
+    }
+  }, [])
+
   const resendCellphone = () => {
     setResendCellphoneLoading(true)
     //mock resendCellphoneQuery
@@ -27,11 +34,17 @@ const VerifyCellphone = props => {
         setResendCellphoneLoading(false)
         console.log('sms was resent')
       })
-      .catch(() => console.log('error'))
+      .catch(() => {})
   }
 
   const goBackToLogin = () => {
     props.history.push(LOGIN_PATH)
+  }
+
+  const handleSubmit = event => {
+    if (event.key === 'Enter') {
+      goBackToLogin()
+    }
   }
 
   return (
