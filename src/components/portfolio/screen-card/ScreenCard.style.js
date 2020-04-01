@@ -6,6 +6,7 @@ export const CardContainer = styled.div`
   width: 25%;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
   margin-left: ${spacing.xSmall}px;
   margin-right: ${spacing.xSmall}px;
   position: relative;
@@ -22,8 +23,6 @@ export const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${colors.black4};
-  height: 190px;
   width: 100%;
 `
 

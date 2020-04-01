@@ -15,11 +15,18 @@ import PropTypes from 'prop-types'
 const ScreenCard = ({
   title,
   numberOfPages,
-  image
+  image,
+  path,
+  ...props
 }) => {
   const pages = numberOfPages === 1 ? 'page' : 'pages'
+
+  const handleCardClick = () => {
+    props.history.push(path)
+  }
+
   return (
-    <CardContainer>
+    <CardContainer onClick={handleCardClick}>
       <CardHeader>
         <HeaderBox>
           <ScreenImage src={image}/>
