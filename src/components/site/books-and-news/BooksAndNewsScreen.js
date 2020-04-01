@@ -21,92 +21,107 @@ import {
   getBooksAndNewsRecommendationsQuery,
   getArvoreRecommendationsQuery,
   getGutenRecommendationsQuery,
-  getBooksAndNewsQuery
 } from 'api/queries'
 
+import image1 from 'assets/images/mock/Modelo_Colecao.jpg'
+import image2 from 'assets/images/mock/Modelo_Colecao_2.jpg'
+import image3 from 'assets/images/mock/Modelo_Colecao_3.jpg'
+import image4 from 'assets/images/mock/Modelo_Colecao_4.jpg'
+import image5 from 'assets/images/mock/Modelo_Colecao_5.jpg'
+import image6 from 'assets/images/mock/Modelo_Colecao_6.jpg'
+
+import books from 'components/shelf/books'
+import news from 'components/shelf/news.json'
+const collections = [
+  { image: image4, title: 'Histórias inspiradoras' },
+  { image: image1, title: 'Viajando sem sair de casa' },
+  { image: image6, title: 'Para abrir o apetite' },
+  { image: image5, title: 'Luz, câmera, ação!' },
+  { image: image2, title: 'Aventuras animais' },
+  { image: image3, title: 'Rumos do planeta' }
+]
+
+import BookImage from 'assets/images/book.svg'
+import NewsImage from 'assets/images/news.svg'
+const didactics = [
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore'
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: NewsImage
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore'
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore'
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: NewsImage
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore'
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore'
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: NewsImage
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore'
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: NewsImage
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: NewsImage
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    genre: 'Campo jornalístico/midiático',
+    image: NewsImage
+  }
+]
+
 const BooksAndNewsScreen = ({ client, ...props }) => {
-  const [data, setData] = useState(null)
-  const [recommendations, setRecommendations] = useState(null)
   const [loadingData, setLoadingData] = useState(true)
   const [loadingRecommendations, setLoadingRecommendations] = useState(true)
-  const [loadingRedirect, setLoadingRedirect] = useState(false)
-
-  const handleGetContents = () => {
-    client
-      .query({
-        query: getBooksAndNewsQuery
-      })
-      .then(res => {
-        setData(res.data)
-        setLoadingData(false)
-      })
-      .catch(err => {})
-  }
-
-  const handleGetRecommendations = () => {
-    if (!loadingData) {
-      const { categoryIds: categoryIdsArvore, title: termArvore } = data
-        .contentsArvore.lastViewedBook
-        ? data.contentsArvore.lastViewedBook
-        : []
-      const { categoryIds: categoryIdsGuten, title: termGuten } = data
-        .contentsGuten.lastViewedBook
-        ? data.contentsGuten.lastViewedBook
-        : []
-
-      if (categoryIdsArvore && categoryIdsGuten) {
-        getRecommendation(getBooksAndNewsRecommendationsQuery, {
-          categoryIdsArvore,
-          termArvore,
-          categoryIdsGuten,
-          termGuten
-        })
-      }
-
-      if (categoryIdsArvore && !categoryIdsGuten) {
-        getRecommendation(getGutenRecommendationsQuery, {
-          categoryIdsArvore,
-          termArvore
-        })
-      }
-
-      if (categoryIdsGuten && !categoryIdsArvore) {
-        getRecommendation(getArvoreRecommendationsQuery, {
-          categoryIdsGuten,
-          termGuten
-        })
-      }
-    }
-  }
-
-  const getRecommendation = (query, vars) => {
-    client
-      .query({
-        query: query,
-        variables: vars
-      })
-      .then(res => {
-        setRecommendations(res.data)
-        setLoadingRecommendations(false)
-      })
-      .catch(err => {
-        console.log('RES', err)
-      })
-  }
 
   useEffect(() => {
-    handleGetContents()
-    handleGetRecommendations()
+    setTimeout(()=> {
+      setLoadingData(false)
+      setLoadingRecommendations(false)
+    }, 2000)
   }, [loadingData])
-
-  const handleRedirectToPlatform = platform => {
-    setLoadingRedirect(platform)
-    redirectToPlatform(platform)
-  }
-
-  const haveRecommendations =
-    (data && data.contentsGuten.lastViewedBook) ||
-    (data && data.contentsArvore.lastViewedBook)
 
   return (
     <Container>
@@ -124,16 +139,16 @@ const BooksAndNewsScreen = ({ client, ...props }) => {
             iconImgSrc={LogoArvore}
             color={colors.black4}
             bgColorHover={colors.primaryLight}
-            onClick={() => handleRedirectToPlatform('arvore')}
+            onClick={() => console.log('arvore')}
             bgColor={colors.primary}
-            loading={loadingRedirect === 'arvore'}
+            loading={false}
           />
           <GutenButtonStyle
             iconImgSrc={LogoGuten}
             bgColor={colors.idGreen}
             bgColorHover={colors.idGreenLight}
-            onClick={() => handleRedirectToPlatform('guten')}
-            loading={loadingRedirect === 'guten'}
+            onClick={() => console.log('guten')}
+            loading={false}
           />
         </ContainerActionsStyle>
       </ContainerHeaderStyle>
@@ -142,7 +157,7 @@ const BooksAndNewsScreen = ({ client, ...props }) => {
         exploreMore
         title="Destaques da Árvore de Livros para você"
         titleMobile="Destaques da Árvore de Livros"
-        data={data && data.contentsArvore.highlights}
+        data={books}
         loading={loadingData}
       />
       <ItemsShelf
@@ -150,38 +165,30 @@ const BooksAndNewsScreen = ({ client, ...props }) => {
         exploreMore
         title="As atualidades do Guten News que você vai adorar"
         titleMobile="Atualidades do Guten News"
-        data={data && data.contentsGuten.highlights}
+        data={news}
         loading={loadingData}
       />
-      {/* <ItemsShelf collectionsShelf title="Nossas Coleções" /> */}
-      {haveRecommendations && (
-        <TitleStyle
-          text="Especiais para você"
-          textAlign="left"
-          style={{ color: colors.blue3, marginTop: 56, marginBottom: 0 }}
-          size={3}
-          sizeMobile={3}
-        />
-      )}
-      {data && data.contentsGuten.lastViewedBook && (
-        <ItemsShelf
-          slidesToShow={7.5}
-          booksShelf
-          exploreMore
-          title={`Por que você leu a matéria “${data.contentsGuten.lastViewedBook.title}”`}
-          data={recommendations && recommendations.recommendationsForArvore}
-          loading={loadingRecommendations}
-        />
-      )}
-      {data && data.contentsArvore.lastViewedBook && (
-        <ItemsShelf
-          newsShelf
-          exploreMore
-          title={`Por que você leu o livro “${data.contentsArvore.lastViewedBook.title}” `}
-          data={recommendations && recommendations.recommendationsForGuten}
-          loading={loadingRecommendations}
-        />
-      )}
+      <ItemsShelf
+        collectionsShelf
+        title="Nossas Coleções"
+        data={collections}
+        loading={loadingData}
+      />
+      <ItemsShelf
+        slidesToShow={7.5}
+        booksShelf
+        exploreMore
+        title={`Por que você leu a matéria “Descobertas literárias”`}
+        data={books}
+        loading={loadingRecommendations}
+      />
+      <ItemsShelf
+        newsShelf
+        exploreMore
+        title={`Por que você leu o livro “O Menino Maluquinho” `}
+        data={news}
+        loading={loadingRecommendations}
+      />
     </Container>
   )
 }

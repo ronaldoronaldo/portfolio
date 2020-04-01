@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Book } from 'components/shelf-itens/book'
 import { NewsItem } from 'components/shelf-itens/news-item'
@@ -16,6 +16,7 @@ import { withApollo } from 'react-apollo'
 import { PLATFORM } from 'config/vars'
 
 import image1 from 'assets/images/mock/collection-mock.jpg'
+import {ModalItemsShelfDetails} from "../lib/modals"
 
 const collections = [
   { image: image1, title: 'Histórias inspiradoras' },
@@ -42,30 +43,14 @@ const ItemsShelf = ({
   loading,
   ...props
 }) => {
-  const handleGetContentDetails = (item, type) => {
-    const [arvore, guten] = PLATFORM
-
-    props.setLoadingModal(true)
-
-    client
-      .query({
-        query: getContentDetails,
-        variables: {
-          contentId: item.id,
-          platform: type === 'book' ? arvore : guten
-        },
-        fetchPolicy: 'network-only'
-      })
-      .then(res => {
-        props.setItemModal(res.data.contentDetails, type)
-        props.setLoadingModal(false)
-      })
-      .catch(err => {})
-  }
+  const [showShelfItemDetails, setShowShelfItemDetails] = useState(false)
+  const [itemDetails, setItemDetails] = useState({})
+  const [type, setType] = useState('')
 
   const handleShowShelfItemDetails = (item, type) => {
-    props.showModal()
-    handleGetContentDetails(item, type)
+    setItemDetails(item)
+    setShowShelfItemDetails(true)
+    setType(type)
   }
 
   const renderBooksShelf = () => {
@@ -482,6 +467,13 @@ const ItemsShelf = ({
       {collectionsShelf && renderCollectionsShelf()}
       {projectsShelf && renderProjectsShelf()}
       {didacticsShelf && renderDidacticsCardsShelf()}
+      {showShelfItemDetails && (
+        <ModalItemsShelfDetails
+          item={itemDetails}
+          setShowShelfItemDetails={setShowShelfItemDetails}
+          type={type}
+        />
+      )}
     </>
   )
 }
