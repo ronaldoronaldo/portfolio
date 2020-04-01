@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import {
   StyledBook,
@@ -8,24 +8,42 @@ import {
   ImgStyle
 } from './ExploreMore.style'
 
-import Book from 'assets/images/book.svg'
-import News from 'assets/images/news.svg'
+import Book from 'assets/images/symbol-arvore.svg'
+import News from 'assets/images/symbol-guten.svg'
+
+import { redirectToPlatform } from 'utils/redirects'
 
 const ExploreMore = ({ arvore, ...rest }) => {
+  const [loadingRedirect, setLoadingRedirect] = useState(false)
+
+  const handleRedirect = () => {
+    const platform = arvore ? 'arvore' : 'guten'
+    setLoadingRedirect(platform)
+    redirectToPlatform(platform)
+  }
+
   return (
     <StyledBook {...rest} arvore={arvore}>
-      <ImgStyle src={arvore ? Book : News} />
-      <TitleStyle text="Explore mais!" size={3} sizeMobile={3} />
-      <DescriptionStyle>
+      <ImgStyle src={arvore ? Book : News} arvore={arvore} />
+      <TitleStyle
+        arvore={arvore}
+        text="Explore mais!"
+        size={3}
+        sizeMobile={3}
+      />
+      <DescriptionStyle arvore={arvore}>
         {arvore
-          ? 'Descubra novas leituras na Árvore de Livros!'
+          ? 'Novas leituras na Árvore de Livros!'
           : 'Leia outras notícias no Guten News!'}
       </DescriptionStyle>
       <ButtonStyle
         text="Acessar"
         size="medium"
         arvore={arvore}
-        onClick={() => console.log('Ok')}
+        onClick={handleRedirect}
+        loading={
+          arvore ? loadingRedirect === 'arvore' : loadingRedirect === 'guten'
+        }
       />
     </StyledBook>
   )

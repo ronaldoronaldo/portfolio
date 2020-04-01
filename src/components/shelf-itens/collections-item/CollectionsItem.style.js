@@ -1,54 +1,77 @@
 import styled from 'styled-components'
-import { sizes, colors, fontWeights } from 'config/ui'
+import { sizes, colors, fontWeights, shadows } from 'config/ui'
 import { Link } from 'react-router-dom'
 
-export const StyledNewsItem = styled.div`
+export const StyledCollectionsItem = styled.div`
   position: relative;
-  width: 100%;
-  max-width: 220px;
+  width: 236px;
   height: auto;
   margin-right: 16px;
+  outline: none;
+
   @media (max-width: ${sizes.mdScreen}px) {
-    max-width: 192px;
+    width: 168px;
+    margin-right: 8px;
   }
 `
 
 export const Cover = styled(Link)`
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  overflow: hidden;
-  border-radius: ${sizes.radius}px;
-  > img {
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    vertical-align: top;
-    border-radius: 10px;
-  }
-
+  box-shadow: ${shadows.shadowDown4};
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  width: 236px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  transition: all 0.2s ease-in;
 
-  &::after {
-  content: '${props => props.title}';
-    font-size: 20px;
-    color: ${colors.white};
-    max-width: 155px;
-    line-height: 1.5;
-    text-align: center;
-    position: absolute;
-    padding-bottom: 10%;
-    font-weight: ${fontWeights.bold};
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: ${shadows.shadowDown8};
+
+    div:nth-child(2) {
+      color: ${colors.black4};
+    }
+
+    img {
+      opacity: 0.75;
+    }
   }
 
   @media (max-width: ${sizes.mdScreen}px) {
-    max-width: 192px;
+    width: 168px;
+  }
+`
 
-    img {
-      max-width: 192px;
-    }
+export const ContImg = styled.div`
+  width: 100%;
+  position: relative;
+
+  > img {
+    transition: all 0.2s ease-in;
+    width: 100%;
+  }
+`
+
+export const ContText = styled.div`
+  width: 100%;
+  height: 88px;
+  padding: 16px;
+  background: #fff;
+  color: ${colors.black5};
+  font-weight: ${fontWeights.bold};
+  line-height: 25px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in;
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    font-size: 16px;
+    line-height: 23px;
+    padding: 16px 8px;
+    height: 78px;
   }
 `

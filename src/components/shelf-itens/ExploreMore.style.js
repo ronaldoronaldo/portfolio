@@ -4,27 +4,32 @@ import Title from 'components/lib/titles/Title'
 import Button from 'components/lib/buttons/Button'
 
 export const StyledBook = styled.div`
-  width: 100%;
-  max-width: 160px;
-  background: ${props => (props.arvore ? colors.primary1 : colors.white)};
-  padding: 20px 16px 16px 16px;
-  height: 228px;
+  width: 160px !important;
+  height: ${props => (props.arvore ? 228 : 213)}px;
   border-radius: 10px;
+  margin-right: 16px;
+  background: ${props => (props.arvore ? colors.primary1 : colors.idGreen1)};
+  padding: 16px;
+  outline: none;
 
   @media (max-width: ${sizes.mdScreen}px) {
-    padding: 10px 12px 8px 12px;
-    max-width: 130px;
-    height: 177px;
+    width: 120px !important;
+    height: ${props => (props.arvore ? 180 : 192)}px;
+
+    padding: 16px 8px 8px 8px;
+    margin-right: 16px;
   }
 `
 
 export const ImgStyle = styled.img`
-  width: 45px;
-  height: 45px;
+  width: 43px;
+  height: 43px;
+  margin-bottom: ${props => (props.arvore ? 24 : 8)}px;
 
   @media (max-width: ${sizes.mdScreen}px) {
     width: 32px;
     height: 32px;
+    margin-bottom: 8px;
   }
 `
 
@@ -32,29 +37,27 @@ export const TitleStyle = styled(Title)`
   color: ${colors.black5};
   font-size: ${sizes.text}px;
   font-weight: ${fontWeights.bold};
-  line-height: 1.75;
+  line-height: 28px;
   width: 126px;
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 8px;
+  margin-top: 0;
 
   @media (max-width: ${sizes.mdScreen}px) {
-    margin-bottom: 0px;
-    margin-top: 0;
+    margin-bottom: 0;
   }
 `
 
 export const DescriptionStyle = styled.p`
   margin: 0;
-  line-height: 1.25;
-  font-size: 13px;
+  line-height: 16px;
+  font-size: ${sizes.bodySmall}px;
   color: ${colors.black5};
   font-weight: ${fontWeights.regular};
-
   margin-bottom: 16px;
-
   @media (max-width: ${sizes.mdScreen}px) {
-    margin-bottom: 8px;
+    margin-bottom: ${props => (props.arvore ? 20 : 16)}px;
   }
 `
 

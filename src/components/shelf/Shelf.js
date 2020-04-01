@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Header, ShelfWrapper, TitleStyle } from './Shelf.style'
 import { Carousel } from 'components/lib/carousel'
 
-const Shelf = ({ title, titleMobile, children, ...props }) => {
+const Shelf = ({ title, titleMobile, children, settings, ...props }) => {
   if (!children || !children.length) return null
   return (
     <ShelfWrapper {...props}>
@@ -16,13 +16,7 @@ const Shelf = ({ title, titleMobile, children, ...props }) => {
           />
         </Header>
       )}
-      <Carousel
-        mdScreen
-        lgScreen
-        xlgScreen
-        xxlgScreen
-        newsShelf={props.newsShelf}
-      >
+      <Carousel settings={settings} newsShelf={props.newsShelf}>
         {children}
       </Carousel>
     </ShelfWrapper>

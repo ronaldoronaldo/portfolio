@@ -1,9 +1,164 @@
 import { gql } from 'apollo-boost'
 
-export const availableProductsQuery = gql`
+export const userSessionValidationQuery = gql`
   query {
     me {
-      availableProducts
+      products {
+        isActive
+        name
+      }
+      name
+      email
+      role
+      paymentInfo {
+        date
+        required
+      }
+    }
+  }
+`
+
+export const getTeachinMaterialsDataQuery = gql`
+  query {
+    readingProjects(limit: 20) {
+      image
+      id
+    }
+    teachingMaterial(limit: 10) {
+      highSchool {
+        degrees
+        icon
+        id
+        link
+        opId
+        subtitle
+        title
+      }
+      kinderGarden {
+        degrees
+        icon
+        id
+        link
+        opId
+        subtitle
+        title
+      }
+      sensiveThemes {
+        degrees
+        icon
+        id
+        link
+        opId
+        subtitle
+        title
+      }
+    }
+  }
+`
+
+export const getBooksAndNewsQuery = gql`
+  query {
+    contentsArvore: contents(platform: ARVORE, limit: 10) {
+      highlights {
+        id
+        image
+        slug
+        subtitle
+        title
+      }
+      lastViewedBook {
+        categoryIds
+        title
+      }
+    }
+    contentsGuten: contents(platform: GUTEN, limit: 10) {
+      highlights {
+        id
+        image
+        slug
+        subtitle
+        title
+      }
+      lastViewedBook {
+        categoryIds
+        title
+      }
+    }
+  }
+`
+
+export const getBooksAndNewsRecommendationsQuery = gql`
+  query recommendations(
+    $categoryIdsArvore: Int!
+    $categoryIdsGuten: Int!
+    $termArvore: String!
+    $termGuten: String!
+  ) {
+    recommendationsForGuten: recommendations(
+      categoryIds: $categoryIdsArvore
+      term: $termArvore
+      platform: ARVORE
+      limit: 10
+    ) {
+      id
+      image
+      slug
+      subtitle
+      title
+    }
+    recommendationsForArvore: recommendations(
+      categoryIds: $categoryIdsGuten
+      term: $termGuten
+      platform: GUTEN
+      limit: 10
+    ) {
+      id
+      image
+      slug
+      subtitle
+      title
+    }
+  }
+`
+
+export const getArvoreRecommendationsQuery = gql`
+  query recommendations($categoryIdsGuten: Int!, $termGuten: String!) {
+    recommendationsForArvore: recommendations(
+      term: $termGuten
+      categoryIds: $categoryIdsGuten
+      platform: GUTEN
+      limit: 10
+    ) {
+      id
+      image
+      slug
+      subtitle
+      title
+    }
+  }
+`
+
+export const getGutenRecommendationsQuery = gql`
+  query recommendations($categoryIdsArvore: Int!, $termArvore: String!) {
+    recommendationsForGuten: recommendations(
+      term: $termArvore
+      categoryIds: $categoryIdsArvore
+      platform: ARVORE
+      limit: 10
+    ) {
+      id
+      image
+      slug
+      subtitle
+      title
+    }
+  }
+`
+
+export const getHomeDataQuery = gql`
+  query {
+    me {
+      role
     }
   }
 `
@@ -86,5 +241,63 @@ export const sendPasswordRecoveryEmailQuery = gql`
 export const validationTokenAccountRecoveryQuery = gql`
   query validationTokenAccountRecovery($email: String!, $token: String!) {
     validationTokenAccountRecovery(email: $email, token: $token)
+  }
+`
+
+export const getContents = gql`
+  query contents($platform: String!, $limit: Int!) {
+    contents(platform: $platform, limit: $limit) {
+      highlights {
+        id
+        image
+        slug
+        subtitle
+        title
+      }
+      lastViewedBook {
+        categoryIds
+        title
+      }
+    }
+  }
+`
+
+export const getContentDetails = gql`
+  query contentDetails($contentId: Int!, $platform: String!) {
+    contentDetails(contentId: $contentId, platform: $platform) {
+      author
+      categoryIds
+      degrees
+      description
+      editorial
+      id
+      image
+      link
+      publishedAt
+      publisher
+      title
+    }
+  }
+`
+
+export const getRecommendations = gql`
+  query recommendations(
+    $categoryIds: Int!
+    $platform: String!
+    $term: String!
+    $limit: Int!
+  ) {
+    recommendations(
+      categoryIds: $categoryIds
+      platform: $platform
+      limit: $limit
+      term: $term
+    ) {
+      id
+      image
+      slug
+      subtitle
+      title
+    }
   }
 `

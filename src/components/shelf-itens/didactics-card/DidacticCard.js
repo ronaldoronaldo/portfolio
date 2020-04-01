@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   StyledDidacticCard,
+  LineColor,
   Cover,
   TitleStyle,
   HeaderCardStyle,
@@ -9,31 +10,61 @@ import {
   GenreStyle,
   TitleRecommendedForStyle,
   ContainerTagsStyle,
-  TagStyleCustom
+  TagStyleCustom,
+  ViewMore
 } from './DidacticCard.style'
-import { NewPlaceholder } from 'components/lib/loaders'
+import { DidacticsCardPlaceholder } from 'components/lib/loaders'
+import { redirectToPlatform } from 'utils/redirects'
 
-const DidacticCard = ({ didacticsCard, loading, onClickCover, ...rest }) => {
+import BookImage from 'assets/images/symbol-arvore.svg'
+import NewsImage from 'assets/images/symbol-guten.svg'
+
+const DidacticCard = ({ didacticsCard, loading, ...rest }) => {
   if (loading) {
-    return <NewPlaceholder />
+    return <DidacticsCardPlaceholder />
+  }
+
+  const onClickCover = () => {
+    if (didacticsCard.icon === 'arvore') {
+      redirectToPlatform('arvore', didacticsCard.link)
+    } else {
+      redirectToPlatform('guten', didacticsCard.link)
+    }
   }
 
   return (
     <StyledDidacticCard {...rest}>
-      <Cover onClick={onClickCover} platform={didacticsCard.platform}>
+      <Cover onClick={onClickCover} platform={didacticsCard.icon}>
+        <LineColor platform={didacticsCard.icon} />
         <HeaderCardStyle>
-          <TitleStyle>{didacticsCard.title}</TitleStyle>
+          <TitleStyle platform={didacticsCard.icon}>
+            {didacticsCard.title}
+          </TitleStyle>
           <ImageStyle
-            src={didacticsCard.image}
-            platform={didacticsCard.platform}
+            src={didacticsCard.icon === 'arvore' ? BookImage : NewsImage}
+            platform={didacticsCard.icon}
           />
         </HeaderCardStyle>
-        <GenreStyle>{didacticsCard.genre}</GenreStyle>
-        <TitleRecommendedForStyle>Recomendado para: </TitleRecommendedForStyle>
-        <ContainerTagsStyle>
-          <TagStyleCustom text={'1º ano'} noIcon />
-          <TagStyleCustom text={'2º ano'} noIcon />
-        </ContainerTagsStyle>
+        <GenreStyle>
+          {didacticsCard.icon === 'arvore'
+            ? didacticsCard.subtitle
+            : 'Campo jornalístico/midiático'}
+        </GenreStyle>
+        {didacticsCard.degrees && (
+          <>
+            <TitleRecommendedForStyle>
+              Recomendado para:
+            </TitleRecommendedForStyle>
+            <ContainerTagsStyle>
+              {didacticsCard.degrees.slice(0, 2).map(item => {
+                return <TagStyleCustom key={item} text={`${item}`} noIcon />
+              })}
+              {didacticsCard.degrees.length > 2 && (
+                <ViewMore>+{didacticsCard.degrees.length - 2}</ViewMore>
+              )}
+            </ContainerTagsStyle>
+          </>
+        )}
       </Cover>
     </StyledDidacticCard>
   )

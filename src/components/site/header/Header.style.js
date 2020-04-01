@@ -1,31 +1,28 @@
 import styled from 'styled-components'
-import { colors } from 'config/ui'
+import { colors, sizes, shadows } from 'config/ui'
 import ExpandableSearchInput from 'components/admin/user-management-panel/expandable-search-input/ExpandableSearchInput'
 import { Dropdown } from 'components/lib/dropdown'
-import {
-  SelectItemStyle,
-  SelectContainerStyle,
-  SelectContainerHeader,
-  TitleContainer,
-  ActionsButtonsContainer,
-  InputSearchStyle
-} from 'components/lib/dropdown/Dropdown.style'
+import RoundButton from 'components/admin/user-management-panel/round-button/RoundButton'
+import { Overlay } from 'styles/common/Common.styles'
 
 export const Container = styled.div`
   width: 100%;
-  background: ${colors.blue};
-  height: 64px;
+  background: ${colors.blue3};
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
+  position: relative;
+  top: 0;
 `
 
 export const Logo = styled.a`
   cursor: pointer;
+  margin-top: 3px;
   > img {
-    width: 185px;
-    height: auto;
+    width: 193px;
+    height: 24px;
   }
 `
 
@@ -43,12 +40,20 @@ export const WrapperInput = styled.div`
   span::before {
     color: ${colors.black5};
   }
+
+  @media (max-width: ${sizes.lgScreen}px) {
+    margin: 0 32px;
+  }
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    margin-left: 16px;
+    margin-right: 0;
+  }
 `
 
 export const ExpandableSearchInputStyle = styled(ExpandableSearchInput)`
   font-size: 16px;
   color: ${colors.black3};
-  font-weight.regular;
   border: none;
 
   &::-webkit-input-placeholder {
@@ -62,27 +67,91 @@ export const ContainerMenu = styled.div`
 
 export const UserDropdownContainer = styled.div`
   position: absolute;
-  width: 230px;
+  width: 195px;
   right: 16px;
-  top: 51px;
+  top: 59px;
+  z-index: 10;
 `
 
 export const PlatformsDropdownContainer = styled.div`
   position: absolute;
   width: 276px;
-  right: 111px;
-  top: 51px;
+  right: 64px;
+  top: 59px;
+  z-index: 10;
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    position: fixed;
+    top: inherit;
+    bottom: 72px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+  }
 `
 
 export const DropdownStyled = styled(Dropdown)`
   > button:nth-child(3) {
-      > div {
-        > span {
-          &:before {
-            font-size: 14px;
-          }
+    > div {
+      > span {
+        &:before {
+          font-size: 14px;
         }
       }
     }
   }
+`
+
+export const RoundButtonStyled = styled(RoundButton)`
+  transition: all 0.2s linear;
+  &:hover {
+    box-shadow: ${shadows.shadowDown4};
+    transform: scale(1.03);
+  }
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    display: none;
+  }
+`
+
+export const MenuMobile = styled.div`
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: ${colors.white};
+  display: flex;
+  border-top: 1px solid ${colors.black2};
+  padding: 0 ${sizes.padding}px;
+
+  @media (min-width: ${sizes.mdScreen}px) {
+    display: none;
+  }
+`
+
+export const ItemMenu = styled.a`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: ${sizes.label - 2}px;
+  color: ${colors.black4};
+  line-height: ${sizes.bodySmall}px;
+  width: 64px;
+  height: 56px;
+  justify-content: center;
+  padding-top: 4px;
+`
+
+export const ContainerItemMenu = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const OverlayWrapper = styled(Overlay)`
+  z-index: 1;
+  top: -56px;
 `

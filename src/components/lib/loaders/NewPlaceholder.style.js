@@ -1,15 +1,30 @@
 import styled from 'styled-components'
 import { AnimatedBg } from 'styles/common/Animation.styles'
+import { sizes } from 'config/ui'
+
+export const Container = styled.div`
+  width: 252px
+  margin-right: 16px;
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    width: 228px;
+  }
+`
 
 export const NewPlaceholderStyle = styled.div`
+  width: 252px;
+  margin-right: 16px;
   ${AnimatedBg};
-  width: 100%;
-  max-width: 244px;
+  border-radius: 10px;
   height: 145px;
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    width: 212px;
+  }
 `
 
 export const TitlePlaceholderStyle = styled.div`
-  width: 180px;
+  width: 90%;
   height: 12px;
   margin-top: 8px;
   margin-bottom: 6px;
@@ -21,7 +36,7 @@ export const SubTitlePlaceholderStyle = styled(TitlePlaceholderStyle)`
 `
 
 export const DescriptionPlaceholderStyle = styled.div`
-  width: 150px;
+  width: 80%;
   height: 8px;
   ${AnimatedBg};
 `

@@ -1,37 +1,62 @@
 import styled from 'styled-components'
-import { colors, fontWeights, sizes } from 'config/ui'
+import { colors, fontWeights, sizes, shadows } from 'config/ui'
 import {
   TitleRecommendedFor,
   ContainerTags,
   TagStyle
-} from '../ShelfItemDetails.style'
+} from '../ItemShelfDetails.style'
 
 export const StyledDidacticCard = styled.div`
   padding-right: 16px;
   width: 312px;
+  outline: none;
 
   @media (max-width: ${sizes.mdScreen}px) {
     width: 280px;
+    height: 170px;
   }
 `
 
 export const Cover = styled.a`
+  background: ${colors.white};
   width: 312px;
   border-radius: 10px;
   cursor: pointer;
   position: relative;
-  border: 1px solid ${colors.black2};
-  border-top: 7px solid
-    ${props => (props.platform === 'arvore' ? colors.primary : colors.idGreen)};
   padding: 16px;
-  box-shadow: 0 2px 15px 0 rgba(83, 101, 111, 0.18);
-  min-height: 184px;
+  box-shadow: ${shadows.shadowDown6};
+  min-height: 180px;
   height: auto;
   display: inline-block;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: ${shadows.shadowDown8};
+    position: relative;
+    z-index: 3;
+
+    h2 {
+      color: ${props =>
+        props.platform === 'arvore' ? colors.primary : colors.idGreen};
+    }
+  }
 
   @media (max-width: ${sizes.mdScreen}px) {
     width: 280px;
+    height: 17px;
   }
+`
+
+export const LineColor = styled.div`
+  width: 100%;
+  height: 4px;
+  background: ${props =>
+    props.platform === 'arvore' ? colors.primary : colors.idGreen};
+  position: absolute;
+  left: 0;
+  top: 0;
 `
 
 export const HeaderCardStyle = styled.div`
@@ -42,36 +67,65 @@ export const HeaderCardStyle = styled.div`
 
 export const TitleStyle = styled.h2`
   max-width: 220px;
-  font-size: 16px;
-  color: ${colors.black6};
+  font-size: ${sizes.text}px;
+  color: ${colors.black5};
   margin-bottom: 8px;
-  margin-top: 8px;
-  line-height: 1.75;
-  font-weight: ${fontWeights.regular};
+  margin-top: 0;
+  line-height: 28px;
+  font-weight: ${fontWeights.bold};
+  transition: all 0.2s ease-in;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 54px;
 `
 
 export const ImageStyle = styled.img`
-  width: 39px;
-  height: 39px;
+  width: 32px;
+  height: 32px;
 `
 
 export const GenreStyle = styled.p`
   color: ${colors.black4};
-  line-height: 1.25;
-  font-size: 13px;
+  line-height: 16px;
+  font-size: ${sizes.bodySmall}px;
   margin: 0;
   margin-bottom: 16px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  height: 18px;
 `
 
 export const TitleRecommendedForStyle = styled(TitleRecommendedFor)`
   margin: 0;
-  font-size: 13px;
-  line-height: 1.25;
+  line-height: 16px;
+  font-size: ${sizes.bodySmall}px;
   margin-bottom: 8px;
+
+  @media (max-width: ${sizes.mdScreen}px) {
+    margin-bottom: 8px;
+  }
 `
 
 export const ContainerTagsStyle = styled(ContainerTags)``
 
 export const TagStyleCustom = styled(TagStyle)`
-  margin-bottom: 0px;
+  margin-bottom: 6px;
+`
+
+export const ViewMore = styled.button`
+  background: ${colors.black1};
+  color: ${colors.black4};
+  border-radius: 16px;
+  padding: 0px 16px;
+  border: none;
+  font-size: 12px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
 `

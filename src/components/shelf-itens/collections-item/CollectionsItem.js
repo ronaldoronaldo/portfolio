@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledNewsItem, Cover } from './CollectionsItem.style'
+import {
+  StyledCollectionsItem,
+  Cover,
+  ContText,
+  ContImg
+} from './CollectionsItem.style'
 import { CollectionPlaceholder } from 'components/lib/loaders'
 
 const CollectionsItem = ({
@@ -19,11 +24,14 @@ const CollectionsItem = ({
   }
 
   return (
-    <StyledNewsItem {...rest}>
+    <StyledCollectionsItem {...rest}>
       <Cover onClick={handleNewsItemClick} title={collectionsItem.title}>
-        <img src={collectionsItem.image} />
+        <ContImg>
+          <img src={collectionsItem.image} />
+        </ContImg>
+        <ContText>{collectionsItem.title}</ContText>
       </Cover>
-    </StyledNewsItem>
+    </StyledCollectionsItem>
   )
 }
 

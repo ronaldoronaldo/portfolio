@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Container,
   NewPlaceholderStyle,
   TitlePlaceholderStyle,
   SubTitlePlaceholderStyle,
@@ -7,12 +8,12 @@ import {
 } from './NewPlaceholder.style'
 
 const NewPlaceholder = () => (
-  <>
+  <Container>
     <NewPlaceholderStyle />
     <TitlePlaceholderStyle />
     <SubTitlePlaceholderStyle />
     <DescriptionPlaceholderStyle />
-  </>
+  </Container>
 )
 
 export default NewPlaceholder

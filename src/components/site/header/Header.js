@@ -2,73 +2,46 @@ import React, { useState } from 'react'
 import {
   Container,
   Logo,
-  WrapperInput,
+  // WrapperInput,
   ContainerMenu,
-  ExpandableSearchInputStyle,
+  ContainerItemMenu,
+  MenuMobile,
+  ItemMenu,
+  // ExpandableSearchInputStyle,
   UserDropdownContainer,
   PlatformsDropdownContainer,
-  DropdownStyled
+  RoundButtonStyled,
+  OverlayWrapper
 } from './Header.style'
-import RoundButton from 'components/admin/user-management-panel/round-button/RoundButton'
 import iconArvore from 'assets/images/icon-arvore.svg'
+import symbolArvoreLivros from 'assets/images/symbol-arvore.svg'
+import symbolGutenNews from 'assets/images/symbol-guten.svg'
+import symbolEducacao from 'assets/images/symbol-educacao.svg'
 import { colors } from 'config/ui'
 import LogoArvoreEducacao from 'assets/images/logo-arvore-edu-white.svg'
-import { Dropdown } from 'components/lib/dropdown'
+import { DropdownEnd, Item } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'
-import { SITE_SEARCH_RESULTS_PATH, LOGOUT_PATH } from 'routes'
+import { LOGOUT_PATH, ROOT_PATH } from 'routes'
 import { redirectToPlatform } from 'utils/redirects'
+import { FontIcon } from 'components/lib/icons'
+import { Link } from 'react-router-dom'
 
 const Header = props => {
   const [userDropdown, setUserDropdown] = useState(false)
-  const [searchValue, setSearchValue] = useState('')
+  // const [searchValue, setSearchValue] = useState('')
   const [platformDropdown, setPlatformsDropdown] = useState(false)
+  const [platformDropdownMobile, setPlatformsDropdownMobile] = useState(false)
 
-  const userDropdownItems = [
-    {
-      text: 'Área do Professor',
-      onClick: () => console.log(''),
-      icon: 'user'
-    },
-    {
-      text: 'Alterar a senha',
-      onClick: () => console.log(''),
-      icon: 'bookmark',
-      iconSizeCompensation: -1
-    },
-    {
-      text: 'Sair',
-      onClick: () => props.history.push(LOGOUT_PATH),
-      icon: 'user'
-    }
-  ]
+  // const providerGoogleOrMicrosoft = localStorage.getItem('provider')
 
-  const platformsDropdownItems = [
-    {
-      text: 'Ir para a Árvore de Livros',
-      onClick: () => redirectToPlatform('arvore'),
-      icon: 'book'
-    },
-    {
-      text: 'Ir para o Guten News',
-      onClick: () => redirectToPlatform('guten'),
-      icon: 'newspaper'
-    },
-    {
-      text: 'Explorador de acervo',
-      onClick: () => console.log(''),
-      icon: 'star',
-      itemDisabled: true
-    }
-  ]
+  // const onSearchChange = value => {
+  //   setSearchValue(value)
+  // }
 
-  const onSearchChange = value => {
-    setSearchValue(value)
-  }
-
-  const handleSearch = () => {
-    props.history.push(SITE_SEARCH_RESULTS_PATH(searchValue))
-  }
+  // const handleSearch = () => {
+  //   props.history.push(`${SITE_SEARCH_PATH}/${searchValue}`)
+  // }
 
   return (
     <Container {...props}>
@@ -79,19 +52,18 @@ const Header = props => {
           fill={colors.white}
         />
       </Logo>
-      <WrapperInput>
+      {/* <WrapperInput>
         <ExpandableSearchInputStyle
-          open
           placeholder="Buscar por livros, notícias, autores…"
           iconSize={22}
           onChange={onSearchChange}
           value={searchValue}
           submitSearch={handleSearch}
         />
-      </WrapperInput>
+      </WrapperInput> */}
       <ContainerMenu>
         <ClickOutside onClickOutside={() => setPlatformsDropdown(false)}>
-          <RoundButton
+          <RoundButtonStyled
             style={{
               marginRight: 8
             }}
@@ -100,19 +72,31 @@ const Header = props => {
             borderColor={colors.white}
           />
         </ClickOutside>
-        <PlatformsDropdownContainer>
-          <Dropdown
-            items={platformsDropdownItems}
-            active={platformDropdown}
-            onChange={() => console.log('item click')}
-            closeDropdown={() => setPlatformsDropdown(false)}
-            style={{
-              borderRadius: 5,
-              maxHeight: 800
-            }}
-          />
-        </PlatformsDropdownContainer>
-        <RoundButton
+        {platformDropdown && (
+          <PlatformsDropdownContainer>
+            <DropdownEnd>
+              <Item
+                text="Ir para a Árvore de Livros"
+                imagePath={symbolArvoreLivros}
+                type="img-left-text-left"
+                onClick={() => redirectToPlatform('arvore')}
+              />
+              <Item
+                text="Ir para o Guten News"
+                imagePath={symbolGutenNews}
+                type="img-left-text-left"
+                onClick={() => redirectToPlatform('guten')}
+              />
+              <Item
+                text="Explorador de acervo"
+                imagePath={symbolEducacao}
+                type="img-left-text-left"
+                disabled
+              />
+            </DropdownEnd>
+          </PlatformsDropdownContainer>
+        )}
+        {/* <RoundButtonStyled
           style={{
             marginRight: 8
           }}
@@ -122,29 +106,99 @@ const Header = props => {
           bgColor={colors.blue}
           borderColor={colors.white}
           iconColor={colors.white}
-        />
+        /> */}
         <ClickOutside onClickOutside={() => setUserDropdown(false)}>
-          <RoundButton
+          <RoundButtonStyled
             iconName="user"
             onClick={() => setUserDropdown(!userDropdown)}
-            bgColor={colors.blue}
+            bgColor={colors.white}
             borderColor={colors.white}
-            iconColor={colors.white}
+            iconColor={colors.blue3}
           />
         </ClickOutside>
-        <UserDropdownContainer>
-          <DropdownStyled
-            items={userDropdownItems}
-            active={userDropdown}
-            onChange={() => console.log('item click')}
-            closeDropdown={() => setUserDropdown(false)}
-            style={{
-              borderRadius: 5,
-              maxHeight: 800
-            }}
-          />
-        </UserDropdownContainer>
+        {userDropdown && (
+          <UserDropdownContainer>
+            <DropdownEnd>
+              {/* <Item text="Perfil" iconName="user" type="icon-left-text-left" /> */}
+              <Item
+                text="Sair"
+                iconName="magazine"
+                type="icon-left-text-left"
+                to={LOGOUT_PATH}
+                as={Link}
+              />
+            </DropdownEnd>
+          </UserDropdownContainer>
+        )}
       </ContainerMenu>
+      <MenuMobile>
+        <ContainerItemMenu>
+          <ItemMenu as={Link} to={ROOT_PATH}>
+            <FontIcon
+              iconName="home"
+              size={15}
+              color={colors.black4}
+              style={{ marginBottom: 4 }}
+            />
+            Início
+          </ItemMenu>
+        </ContainerItemMenu>
+        <ClickOutside onClickOutside={() => setPlatformsDropdownMobile(false)}>
+          <ContainerItemMenu>
+            <ItemMenu
+              onClick={() =>
+                setPlatformsDropdownMobile(!platformDropdownMobile)
+              }
+            >
+              <FontIcon
+                iconName="Logo"
+                size={15}
+                color={colors.black4}
+                style={{ marginBottom: 4 }}
+              />
+              Explorar
+            </ItemMenu>
+          </ContainerItemMenu>
+        </ClickOutside>
+        {platformDropdownMobile && (
+          <>
+            <PlatformsDropdownContainer>
+              <DropdownEnd>
+                <Item
+                  text="Ir para a Árvore de Livros"
+                  imagePath={symbolArvoreLivros}
+                  type="img-left-text-left"
+                  onClick={() => redirectToPlatform('arvore')}
+                />
+                <Item
+                  text="Ir para o Guten News"
+                  imagePath={symbolGutenNews}
+                  type="img-left-text-left"
+                  onClick={() => redirectToPlatform('guten')}
+                />
+                <Item
+                  text="Explorador de acervo"
+                  imagePath={symbolEducacao}
+                  type="img-left-text-left"
+                  disabled
+                />
+              </DropdownEnd>
+            </PlatformsDropdownContainer>
+            <OverlayWrapper showOverlay={true} />
+          </>
+        )}
+        <ContainerItemMenu>
+          <ItemMenu as={Link} to={LOGOUT_PATH}>
+            <FontIcon
+              iconName="magazine"
+              size={15}
+              color={colors.black4}
+              style={{ marginBottom: 4 }}
+            />
+            Sair
+          </ItemMenu>
+        </ContainerItemMenu>
+      </MenuMobile>
     </Container>
   )
 }

@@ -18,10 +18,18 @@ export const colors = {
   primaryLight: `hsl(174, 60%, ${54 + lightness}%)`,
 
   primary1: `hsl(173, 60%, 91%)`,
+  primary2: `hsl(174, 60%, 75%)`,
+
+  idGreen1: `hsl(88, 71%, 92%)`,
+  idGreen2: `hsl(89, 69%, 77%)`,
 
   idGreen: `hsl(89, 69%, 57%)`,
   idGreenDark: `hsl(89, 69%, ${57 - lightness}%)`,
   idGreenLight: `hsl(89, 69%, ${57 + lightness}%)`,
+
+  blue1: `hsl(187, 50%, 91%)`,
+  blue2: `hsl(188, 50%, 74%)`,
+  blue3: `hsl(188, 50%, 51%)`,
 
   blue: `hsl(188, 50%, 51%)`,
   blueDark: `hsl(188, 50%, ${51 - lightness}%)`,
@@ -66,6 +74,9 @@ export const colors = {
   purple1Dark: `hsl(273, 100%, ${96 - lightness}%)`,
   purple1Light: `hsl(273, 100%, ${96 + lightness}%)`,
 
+  purpleSaturation: `hsl(271, 100%, 67%)`,
+  paleOrange: `hsl(23, 100%, 68%)`,
+
   orange3: `hsl(17, 100%, 74%)`,
   orange3Dark: `hsl(17, 100%, ${74 - lightness}%)`,
   orange3Light: `hsl(17, 100%, ${74 + lightness}%)`,
@@ -85,7 +96,9 @@ export const colors = {
   yellow1: `hsl(38, 100%, 96%)`,
 
   white: `hsl(0, 0%, 100%)`,
-  whiteDark: `hsl(0, 0%, ${100 - lightness}%)`
+  whiteDark: `hsl(0, 0%, ${100 - lightness}%)`,
+
+  blackBg: '#F9FBFF'
 }
 
 export const sizes = {
@@ -93,33 +106,31 @@ export const sizes = {
   padding: 16,
   text: 16,
   smScreen: 480,
-  mdScreen: 854,
+  mdScreen: 768,
   lgScreen: 992,
   xlgScreen: 1200,
   xxlgScreen: 1400,
   h: {
-    1: { size: 56, lineHeight: 70 },
-    2: { size: 40, lineHeight: 50 },
-    3: { size: 32, lineHeight: 40 },
-    4: { size: 24, lineHeight: 30 },
+    1: { size: 48.8, lineHeight: 70 },
+    2: { size: 39.1, lineHeight: 50 },
+    3: { size: 31.3, lineHeight: 40 },
+    4: { size: 25, lineHeight: 30 },
     5: { size: 20, lineHeight: 30 }
   },
   label: 12,
-  buttonText: { size: 15, lineHeight: 22, letterSpacing: 1 },
-  bodySmall: { size: 13, lineHeight: 22, letterSpacing: 1 },
+  buttonText: 16,
+  bodySmall: 12.8,
   inputSizes: {
-    xSmall: 24,
+    xsmall: 24,
     small: 32,
     medium: 40, // default size
-    large: 48,
-    xLarge: 64
+    large: 48
   },
   buttonSizes: {
-    xSmall: 24,
+    xsmall: 24,
     small: 32,
     medium: 40, // default size
-    large: 48,
-    xLarge: 64
+    large: 48
   }
 }
 
@@ -129,4 +140,10 @@ export const spacing = {
   small: 16,
   medium: 32,
   large: 56
+}
+
+export const shadows = {
+  shadowDown4: '0 4px 5px 0 rgba(0, 0, 0, 0.06)',
+  shadowDown6: '0 6px 10px 1px rgba(0, 0, 0, 0.06)',
+  shadowDown8: '0 8px 10px 1px rgba(0, 0, 0, 0.06)'
 }

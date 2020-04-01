@@ -13,11 +13,11 @@ export const Header = styled.div`
   margin-bottom: 16px;
 `
 
-export const TitleStyle = styled.div`
-    color: ${colors.black6};
+export const TitleStyle = styled.h5`
+    color: ${colors.black5};
     margin: 0;
     font-weight: ${fontWeights.bold};
-    line-height: 1.75;
+    line-height: 30px;
     font-size: 20px;
   
   &::before {
@@ -31,7 +31,7 @@ export const TitleStyle = styled.div`
 
     &::before {
       content: '${props =>
-        props.titleMobile ? props.titleMobile : props.title}'; 
+    props.titleMobile ? props.titleMobile : props.title}'; 
     }
   }
 `

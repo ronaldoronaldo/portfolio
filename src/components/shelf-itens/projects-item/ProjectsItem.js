@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyledProjects, Cover } from './ProjectsItem.style'
 import PropTypes from 'prop-types'
-import { CollectionPlaceholder } from 'components/lib/loaders'
+import { ProjectsPlaceholder } from 'components/lib/loaders'
 
-const ProjectsItem = ({ project, onClickCover, loading, ...rest }) => {
+const ProjectsItem = ({ project, loading, onClickCover, ...rest }) => {
   if (loading) {
-    return <CollectionPlaceholder />
+    return <ProjectsPlaceholder />
   }
 
   return (
@@ -21,7 +21,6 @@ const ProjectsItem = ({ project, onClickCover, loading, ...rest }) => {
 
 ProjectsItem.propTypes = {
   project: PropTypes.object.isRequired,
-  onClickCover: PropTypes.func,
   loading: PropTypes.bool
 }
 

@@ -1,5 +1,6 @@
 import ApolloClient from 'apollo-boost'
-import { API_ENDPOINT } from 'config/vars'
+import { API_ENDPOINT, LOGIN_JWT } from 'config/vars'
+import { LOGIN_PATH } from 'routes'
 
 const client = new ApolloClient({
   uri: API_ENDPOINT,
@@ -20,6 +21,18 @@ const client = new ApolloClient({
   onError: ({ graphQLErrors, networkError }) => {
     if (graphQLErrors) {
       console.log('graphQLErrors', graphQLErrors)
+
+      const unauthorized = graphQLErrors.find(
+        graphqlError =>
+          graphqlError.extensions &&
+          graphqlError.extensions.status_code === 'unauthorized'
+      )
+
+      if (unauthorized) {
+        localStorage.removeItem(LOGIN_JWT)
+        global.alert('Sua sessão expirou, por favor faça login novamente.')
+        global.location = LOGIN_PATH
+      }
     }
 
     if (networkError) {

@@ -43,15 +43,15 @@ export const SubtitleStyle = styled.p`
 export const ModalFilterStyle = styled(ModalFilter)`
   ${TitleStyle} {
       color: ${colors.blue};
-      margin-top: ${spacing.large}px;
-      margin-bottom: ${spacing.medium}px !important;
+      margin-top: ${spacing.spacingLarge}px;
+      margin-bottom: ${spacing.spacingMedium}px !important;
     }
   ${CheckboxWrapper} {
-    margin-bottom: ${spacing.medium}px;
+    margin-bottom: ${spacing.spacingMedium}px;
     ${TitleStyle} {
       color: ${colors.black6};
       margin-top: 0;
-      margin-bottom: ${spacing.small}px !important;
+      margin-bottom: ${spacing.spacingSmall}px !important;
     }
     ${CheckboxContainer} { 
       > span {

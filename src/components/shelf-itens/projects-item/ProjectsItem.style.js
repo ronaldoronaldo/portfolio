@@ -1,36 +1,54 @@
 import styled from 'styled-components'
-import { sizes } from 'config/ui'
+import { sizes, shadows } from 'config/ui'
 
 export const StyledProjects = styled.div`
-  width: 100%;
-  height: auto;
+  height: 273px;
   padding-right: 16px;
-  max-width: 429px;
+  width: 414px;
+  outline: none;
 
-  @media (max-width: ${sizes.mdScreen}px) {
-    max-width: 278px;
+  @media (max-width: ${sizes.lgScreen}px) {
+    width: 280px;
+    height: 200px;
   }
 `
 
 export const Cover = styled.a`
-  width: 100%;
-  max-width: 429px;
-  height: auto;
+  width: 414px;
+  height: 273px;
   overflow: hidden;
-  border-radius: ${sizes.radius}px;
   cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  box-shadow: ${shadows.shadowDown4};
+  background: #fff;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.03);
+    position: relative;
+    z-index: 3;
+    box-shadow: ${shadows.shadowDown4};
+
+    > img {
+      opacity: 0.75;
+    }
+  }
+
   > img {
-    width: 100%;
-    max-width: 429px;
+    width: 414px;
     height: auto;
     vertical-align: top;
     border-radius: 10px;
+    transition: opacity 0.2s ease-in;
   }
 
-  @media (max-width: ${sizes.mdScreen}px) {
-    max-width: 278px;
+  @media (max-width: ${sizes.lgScreen}px) {
+    width: 280px;
+    height: auto;
+
     > img {
-      max-width: 278px;
+      width: 280px;
     }
   }
 `

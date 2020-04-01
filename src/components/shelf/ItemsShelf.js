@@ -1,102 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
 import { Book } from 'components/shelf-itens/book'
 import { NewsItem } from 'components/shelf-itens/news-item'
 import { CollectionsItem } from 'components/shelf-itens/collections-item'
 import { ProjectsItem } from 'components/shelf-itens/projects-item'
 import { DidacticCard } from 'components/shelf-itens/didactics-card'
 import ExploreMore from 'components/shelf-itens/ExploreMore'
-import ShelfItemDetails from 'components/shelf-itens/ShelfItemDetails'
-import { Overlay } from 'styles/common/Common.styles'
-
 import Shelf from './Shelf'
+import { sizes } from 'config/ui'
+import fakeShelf from './fake'
 
-import image1 from 'assets/images/mock/Modelo_Colecao.jpg'
-import image2 from 'assets/images/mock/Modelo_Colecao_2.jpg'
-import image3 from 'assets/images/mock/Modelo_Colecao_3.jpg'
-import image4 from 'assets/images/mock/Modelo_Colecao_4.jpg'
-import image5 from 'assets/images/mock/Modelo_Colecao_5.jpg'
-import image6 from 'assets/images/mock/Modelo_Colecao_6.jpg'
+import { showModal, setItemModal, setLoadingModal } from 'ducks/modal'
+import { getContentDetails } from 'api/queries'
+import { withApollo } from 'react-apollo'
+import { PLATFORM } from 'config/vars'
 
-import books from './books.json'
-import news from './news.json'
+import image1 from 'assets/images/mock/collection-mock.jpg'
+
 const collections = [
-  { image: image4, title: 'Histórias inspiradoras' },
+  { image: image1, title: 'Histórias inspiradoras' },
   { image: image1, title: 'Viajando sem sair de casa' },
-  { image: image6, title: 'Para abrir o apetite' },
-  { image: image5, title: 'Luz, câmera, ação!' },
-  { image: image2, title: 'Aventuras animais' },
-  { image: image3, title: 'Rumos do planeta' }
-]
-
-import BookImage from 'assets/images/book.svg'
-import NewsImage from 'assets/images/news.svg'
-const didactics = [
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  }
+  { image: image1, title: 'Para abrir o apetite' },
+  { image: image1, title: 'Luz, câmera, ação!' },
+  { image: image1, title: 'Aventuras animais' },
+  { image: image1, title: 'Rumos do planeta' }
 ]
 
 const ItemsShelf = ({
@@ -108,135 +35,458 @@ const ItemsShelf = ({
   collectionsShelf,
   projectsShelf,
   didacticsShelf,
+  data,
+  settings,
+  client,
+  exploreMore,
+  loading,
   ...props
 }) => {
-  const [showShelfItemDetails, setShowShelfItemDetails] = useState(false)
-  const [itemDetails, setItemDetails] = useState({})
-  const [type, setType] = useState('')
-  const [loading, setLoading] = useState({
-    book: true,
-    news: true,
-    collections: true,
-    projects: true,
-    didactics: true
-  })
+  const handleGetContentDetails = (item, type) => {
+    const [arvore, guten] = PLATFORM
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading({
-        book: false,
-        news: false,
-        collections: false,
-        projects: false,
-        didactics: false
+    props.setLoadingModal(true)
+
+    client
+      .query({
+        query: getContentDetails,
+        variables: {
+          contentId: item.id,
+          platform: type === 'book' ? arvore : guten
+        },
+        fetchPolicy: 'network-only'
       })
-    }, 1000)
-  }, [])
+      .then(res => {
+        props.setItemModal(res.data.contentDetails, type)
+        props.setLoadingModal(false)
+      })
+      .catch(err => {})
+  }
 
   const handleShowShelfItemDetails = (item, type) => {
-    setItemDetails(item)
-    setShowShelfItemDetails(true)
-    setType(type)
+    props.showModal()
+    handleGetContentDetails(item, type)
   }
 
-  const renderBooks = () => {
-    return books.map((book, index) => {
+  const renderBooksShelf = () => {
+    const books = data
+
+    const booksCarouselConfig = settings
+      ? settings
+      : {
+          slidesToScroll: 7,
+          slidesToShow: 7.5,
+          responsive: [
+            {
+              breakpoint: sizes.xxlgScreen,
+              settings: {
+                slidesToScroll: 6,
+                slidesToShow: 6.5
+              }
+            },
+            {
+              breakpoint: sizes.xlgScreen,
+              settings: {
+                slidesToScroll: 5,
+                slidesToShow: 5.2
+              }
+            },
+            {
+              breakpoint: sizes.lgScreen,
+              settings: {
+                slidesToScroll: 3,
+                slidesToShow: 3.8
+              }
+            },
+            {
+              breakpoint: sizes.mdScreen,
+              settings: {
+                slidesToScroll: 3,
+                slidesToShow: 4
+              }
+            },
+            {
+              breakpoint: sizes.smScreen,
+              settings: {
+                slidesToScroll: 2,
+                slidesToShow: 2,
+                arrows: false
+              }
+            }
+          ]
+        }
+
+    if (!loading && !books) return
+
+    if (loading) {
       return (
-        <Book
-          key={index}
-          book={book}
-          percentage={book.percentage}
-          loading={loading.book}
-          onClickCover={() => handleShowShelfItemDetails(book, 'book')}
-        />
+        <Shelf
+          title={title}
+          titleMobile={titleMobile}
+          settings={booksCarouselConfig}
+        >
+          {fakeShelf.map((item, index) => (
+            <Book loading={loading} key={index} />
+          ))}
+        </Shelf>
       )
-    })
+    }
+
+    if (books && books.length) {
+      return (
+        <Shelf
+          title={title}
+          titleMobile={titleMobile}
+          settings={booksCarouselConfig}
+          {...props}
+        >
+          {books.map((book, index) => (
+            <Book
+              key={index}
+              book={book}
+              percentage={book.percentage}
+              onClickCover={() => handleShowShelfItemDetails(book, 'book')}
+              loading={false}
+            />
+          ))}
+          {exploreMore && <ExploreMore arvore />}
+        </Shelf>
+      )
+    }
   }
 
-  const renderNews = () => {
-    return news.map((newsItem, index) => {
+  const renderNewsShelf = () => {
+    const news = data
+
+    const newsCarouselConfig = settings
+      ? settings
+      : {
+          slidesToScroll: 4,
+          slidesToShow: 4.8,
+          responsive: [
+            {
+              breakpoint: sizes.xxlgScreen,
+              settings: {
+                slidesToScroll: 4,
+                slidesToShow: 4.1
+              }
+            },
+            {
+              breakpoint: sizes.xlgScreen,
+              settings: {
+                slidesToScroll: 3,
+                slidesToShow: 3.3
+              }
+            },
+            {
+              breakpoint: sizes.lgScreen,
+              settings: {
+                slidesToScroll: 2,
+                slidesToShow: 2.4
+              }
+            },
+            {
+              breakpoint: sizes.mdScreen,
+              settings: {
+                slidesToScroll: 2,
+                slidesToShow: 2.4
+              }
+            },
+            {
+              breakpoint: sizes.smScreen,
+              settings: {
+                slidesToScroll: 1,
+                slidesToShow: 1.7,
+                arrows: false
+              }
+            }
+          ]
+        }
+
+    if (!loading && !news) return
+
+    if (loading) {
       return (
-        <NewsItem
-          key={index}
-          newsItem={newsItem}
-          percentage={newsItem.percentage}
-          loading={loading.news}
-          onClickCover={() => handleShowShelfItemDetails(newsItem, 'newsItem')}
-        />
+        <Shelf
+          title={title}
+          titleMobile={titleMobile}
+          settings={newsCarouselConfig}
+          newsShelf={newsShelf}
+        >
+          {fakeShelf.map((item, index) => (
+            <NewsItem loading={loading} key={index} />
+          ))}
+        </Shelf>
       )
-    })
+    }
+
+    if (news && news.length) {
+      return (
+        <Shelf
+          title={title}
+          titleMobile={titleMobile}
+          newsShelf={newsShelf}
+          settings={newsCarouselConfig}
+          {...props}
+        >
+          {news.map((newsItem, index) => (
+            <NewsItem
+              key={index}
+              newsItem={newsItem}
+              percentage={newsItem.percentage}
+              loading={false}
+              onClickCover={() =>
+                handleShowShelfItemDetails(newsItem, 'newsItem')
+              }
+            />
+          ))}
+          {exploreMore && <ExploreMore />}
+        </Shelf>
+      )
+    }
   }
 
-  const renderCollections = () => {
-    return collections.map((collectionsItem, index) => {
-      return (
-        <CollectionsItem
-          key={index}
-          collectionsItem={collectionsItem}
-          loading={loading.collections}
-          onClickCover={onClickItemShelf}
-        />
-      )
-    })
+  const renderCollectionsShelf = () => {
+    return (
+      <Shelf
+        title={title}
+        titleMobile={titleMobile}
+        settings={{
+          slidesToScroll: 5,
+          slidesToShow: 5.1,
+          responsive: [
+            {
+              breakpoint: sizes.xxlgScreen,
+              settings: {
+                slidesToScroll: 5,
+                slidesToShow: 5.1
+              }
+            },
+            {
+              breakpoint: sizes.xlgScreen,
+              settings: {
+                slidesToScroll: 4,
+                slidesToShow: 4.2
+              }
+            },
+            {
+              breakpoint: sizes.lgScreen,
+              settings: {
+                slidesToScroll: 3,
+                slidesToShow: 3.1
+              }
+            },
+            {
+              breakpoint: sizes.mdScreen,
+              settings: {
+                slidesToScroll: 3,
+                slidesToShow: 3.4
+              }
+            },
+            {
+              breakpoint: sizes.smScreen,
+              settings: {
+                slidesToScroll: 2,
+                slidesToShow: 2.5,
+                arrows: false
+              }
+            }
+          ]
+        }}
+        {...props}
+      >
+        {collections.map((collectionsItem, index) => {
+          return (
+            <CollectionsItem
+              key={index}
+              collectionsItem={collectionsItem}
+              loading={true}
+              onClickCover={onClickItemShelf}
+            />
+          )
+        })}
+      </Shelf>
+    )
   }
 
-  const renderProjects = () => {
-    return collections.map((project, index) => {
+  const renderProjectsShelf = () => {
+    if (!loading && !data) return
+
+    const projectsCarouselConfig = {
+      slidesToScroll: 1,
+      slidesToShow: 3,
+
+      responsive: [
+        {
+          breakpoint: sizes.xxlgScreen,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2.5
+          }
+        },
+        {
+          breakpoint: sizes.xlgScreen,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2.1
+          }
+        },
+        {
+          breakpoint: sizes.lgScreen,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2.3
+          }
+        },
+        {
+          breakpoint: sizes.mdScreen,
+          settings: {
+            slidesToScroll: 1,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: sizes.smScreen,
+          settings: {
+            slidesToScroll: 1,
+            slidesToShow: 1.07,
+            arrows: false
+          }
+        }
+      ]
+    }
+
+    if (loading) {
       return (
-        <ProjectsItem
-          key={index}
-          project={project}
-          loading={loading.projects}
-          onClickCover={() => console.log('Ok')}
-        />
+        <Shelf
+          title={title}
+          titleMobile={titleMobile}
+          settings={projectsCarouselConfig}
+          {...props}
+        >
+          {fakeShelf.map((item, index) => (
+            <ProjectsItem loading={loading} project={item} key={index} />
+          ))}
+        </Shelf>
       )
-    })
+    }
+
+    return (
+      <Shelf
+        title={title}
+        titleMobile={titleMobile}
+        settings={projectsCarouselConfig}
+        {...props}
+      >
+        {data.map((project, index) => {
+          return (
+            <ProjectsItem
+              key={index}
+              project={project}
+              onClickCover={() => handleShowShelfItemDetails(project, 'book')}
+              loading={loading}
+            />
+          )
+        })}
+      </Shelf>
+    )
   }
 
-  const renderDidacticsCards = () => {
-    return didactics.map((didacticsCard, index) => {
+  const renderDidacticsCardsShelf = () => {
+    const didactics = data
+
+    const didacticsCarouselConfig = {
+      slidesToScroll: 3,
+      slidesToShow: 3.8,
+      responsive: [
+        {
+          breakpoint: sizes.xxlgScreen,
+          settings: {
+            slidesToScroll: 3,
+            slidesToShow: 3.3
+          }
+        },
+        {
+          breakpoint: sizes.xlgScreen,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2.8
+          }
+        },
+        {
+          breakpoint: sizes.lgScreen,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: sizes.mdScreen,
+          settings: {
+            slidesToScroll: 1,
+            slidesToShow: 1.8
+          }
+        },
+        {
+          breakpoint: sizes.smScreen,
+          settings: {
+            slidesToScroll: 1,
+            slidesToShow: 1.3,
+            arrows: false
+          }
+        }
+      ]
+    }
+
+    if (!loading && !didactics) return
+
+    if (loading) {
       return (
-        <DidacticCard
-          key={index}
-          didacticsCard={didacticsCard}
-          loading={loading.didactics}
-          onClickCover={() => console.log('Ok')}
-        />
+        <Shelf
+          title={title}
+          titleMobile={titleMobile}
+          settings={didacticsCarouselConfig}
+          {...props}
+        >
+          {fakeShelf.map((item, index) => (
+            <DidacticCard loading={loading} didacticsCard={item} key={index} />
+          ))}
+        </Shelf>
       )
-    })
+    }
+
+    return (
+      <Shelf
+        title={title}
+        titleMobile={titleMobile}
+        settings={didacticsCarouselConfig}
+        {...props}
+      >
+        {didactics.map((didacticsCard, index) => {
+          return (
+            <DidacticCard
+              key={index}
+              didacticsCard={didacticsCard}
+              loading={loading}
+            />
+          )
+        })}
+      </Shelf>
+    )
   }
 
   return (
     <>
-      <Shelf
-        title={title}
-        titleMobile={titleMobile}
-        newsShelf={newsShelf}
-        {...props}
-      >
-        {booksShelf && renderBooks()}
-        {newsShelf && renderNews()}
-        {collectionsShelf && renderCollections()}
-        {projectsShelf && renderProjects()}
-        {didacticsShelf && renderDidacticsCards()}
-        {booksShelf ? <ExploreMore arvore /> : newsShelf ? <ExploreMore /> : ''}
-      </Shelf>
-      <Overlay
-        showOverlay={showShelfItemDetails}
-        flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="center"
-      >
-        {showShelfItemDetails && (
-          <ShelfItemDetails
-            item={itemDetails}
-            setShowShelfItemDetails={setShowShelfItemDetails}
-            type={type}
-          />
-        )}
-      </Overlay>
+      {booksShelf && renderBooksShelf()}
+      {newsShelf && renderNewsShelf()}
+      {collectionsShelf && renderCollectionsShelf()}
+      {projectsShelf && renderProjectsShelf()}
+      {didacticsShelf && renderDidacticsCardsShelf()}
     </>
   )
 }
 
-export default ItemsShelf
+export default connect(
+  null,
+  { showModal, setItemModal, setLoadingModal }
+)(withApollo(ItemsShelf))

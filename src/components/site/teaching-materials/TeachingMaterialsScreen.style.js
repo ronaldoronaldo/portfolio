@@ -2,6 +2,12 @@ import styled from 'styled-components'
 import { sizes } from 'config/ui'
 import Title from 'components/lib/titles/Title'
 
+export const Container = styled.div`
+  @media (max-width: ${sizes.mdScreen}px) {
+    padding-bottom: 40px;
+  }
+`
+
 export const ContainerHeaderStyle = styled.div`
   display: flex;
   justify-content: space-between;
