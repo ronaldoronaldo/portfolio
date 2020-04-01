@@ -5,7 +5,7 @@ import InputSearch from 'components/lib/inputs/InputSearch'
 
 export const SelectContainerStyle = styled.div`
   ${({ border, borderRadius, bgColor, maxWidth, mobileStyle, checkbox }) => css`
-    margin-top: ${spacing.spacingXSmall}px;
+    margin-top: ${spacing.xSmall}px;
     border: ${border ? border : `1px solid ${colors.black2}`};
     border-radius: ${borderRadius ? borderRadius : 6}px;
     overflow-y: auto;

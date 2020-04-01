@@ -1,19 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  StyledCollectionsItem,
-  Cover,
-  ContText,
-  ContImg
-} from './CollectionsItem.style'
+import { StyledNewsItem, Cover } from './CollectionsItem.style'
 import { CollectionPlaceholder } from 'components/lib/loaders'
 
 const CollectionsItem = ({
-  collectionsItem,
-  loading,
-  onClickCover,
-  ...rest
-}) => {
+                           collectionsItem,
+                           loading,
+                           onClickCover,
+                           ...rest
+                         }) => {
   const handleNewsItemClick = () => {
     console.log('Ok')
     // onClickCover && onClickCover(newsItem.slug)
@@ -24,14 +19,11 @@ const CollectionsItem = ({
   }
 
   return (
-    <StyledCollectionsItem {...rest}>
+    <StyledNewsItem {...rest}>
       <Cover onClick={handleNewsItemClick} title={collectionsItem.title}>
-        <ContImg>
-          <img src={collectionsItem.image} />
-        </ContImg>
-        <ContText>{collectionsItem.title}</ContText>
+        <img src={collectionsItem.image} />
       </Cover>
-    </StyledCollectionsItem>
+    </StyledNewsItem>
   )
 }
 

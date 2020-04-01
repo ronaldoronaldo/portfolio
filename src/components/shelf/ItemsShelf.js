@@ -280,12 +280,12 @@ const ItemsShelf = ({
         }}
         {...props}
       >
-        {collections.map((collectionsItem, index) => {
+        {data.map((collectionsItem, index) => {
           return (
             <CollectionsItem
               key={index}
               collectionsItem={collectionsItem}
-              loading={true}
+              loading={loading}
               onClickCover={onClickItemShelf}
             />
           )

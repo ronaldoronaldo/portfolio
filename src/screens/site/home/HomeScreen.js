@@ -3,7 +3,6 @@ import { WrapperMenu, MenuItem, ContainerStyle } from './HomeScreen.style'
 
 import { BooksAndNewsScreen } from 'components/site/books-and-news'
 import { TeachingMaterialsScreen } from 'components/site/teaching-materials'
-import { ModalItemsShelfDetails } from 'components/lib/modals'
 
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
