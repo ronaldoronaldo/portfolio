@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { connect } from 'react-redux'
-import { closeModal } from 'ducks/modal'
 import ItemShelfDetails from 'components/shelf-itens/ItemShelfDetails'
 import {
   Container,
@@ -9,27 +7,21 @@ import {
 } from './ModalItemsShelfDetails.styles'
 import { IconButtonClose } from './ModalItemsShelfDetails.styles'
 import ColorThief from 'colorthief/dist/color-thief'
-import { ModalLoader } from 'components/loader'
 
-const ModalItemsShelfDetails = ({ item, type, ...props }) => {
+const ModalItemsShelfDetails = ({ item, type, active, onClose }) => {
   const [background, setBackground] = useState(null)
 
   useEffect(() => {
-    if (item && Object.keys(item).length) {
-      const colorThief = new ColorThief()
-      const img = new Image()
-      img.addEventListener('load', function() {
-        const result = colorThief.getColor(img)
-
-        setBackground(result)
-      })
-
-      const googleProxyURL =
-        'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url='
-      img.crossOrigin = 'Anonymous'
-      img.src = googleProxyURL + encodeURIComponent(item.data.image)
-    }
-
+    const colorThief = new ColorThief()
+    const img = new Image()
+    img.addEventListener('load', function() {
+      const result = colorThief.getColor(img)
+      setBackground(result)
+    })
+    const googleProxyURL =
+      'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url='
+    img.crossOrigin = 'Anonymous'
+    img.src = googleProxyURL + encodeURIComponent(item.image)
     return () => setBackground(null)
   }, [item])
 
@@ -39,17 +31,9 @@ const ModalItemsShelfDetails = ({ item, type, ...props }) => {
     return () => (document.body.style.overflow = 'visible')
   }, [])
 
-  const handleClose = () => {
-    props.closeModal()
-  }
-
-  if (!item || !Object.keys(item).length || props.modal.loading) {
-    return <ModalLoader />
-  }
-
   return (
-    <Container show={props.modal.isShowing} onClose={handleClose}>
-      <IconButtonClose iconName="cancel" onClick={handleClose} />
+    <Container show={active} onClose={onClose}>
+      <IconButtonClose iconName="cancel" onClick={onClose} />
 
       <BackgroundContainerTop
         background={
@@ -60,18 +44,11 @@ const ModalItemsShelfDetails = ({ item, type, ...props }) => {
           }
         }
       >
-        <ImageGetColor src={item.data.image} crossorigin="anonymous" />
+        <ImageGetColor src={item.image} crossorigin="anonymous" />
       </BackgroundContainerTop>
-      <ItemShelfDetails item={item} type={type} />
+      <ItemShelfDetails item={item} type={type} onClose={onClose} />
     </Container>
   )
 }
 
-const mapStateToProps = state => ({
-  modal: state.modal
-})
-
-export default connect(
-  mapStateToProps,
-  { closeModal }
-)(ModalItemsShelfDetails)
+export default ModalItemsShelfDetails

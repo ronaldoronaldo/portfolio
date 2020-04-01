@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StyledNewsItem, Cover } from './CollectionsItem.style'
 import { CollectionPlaceholder } from 'components/lib/loaders'
+import {SITE_SEARCH_RESULTS_PATH} from "../../../routes"
 
 const CollectionsItem = ({
                            collectionsItem,
@@ -20,7 +21,7 @@ const CollectionsItem = ({
 
   return (
     <StyledNewsItem {...rest}>
-      <Cover onClick={handleNewsItemClick} title={collectionsItem.title}>
+      <Cover onClick={handleNewsItemClick} title={collectionsItem.title} to={SITE_SEARCH_RESULTS_PATH(collectionsItem.title)}>
         <img src={collectionsItem.image} />
       </Cover>
     </StyledNewsItem>

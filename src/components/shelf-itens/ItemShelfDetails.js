@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, Fragment} from 'react'
 
 import {
   WrapperStyle,
@@ -20,84 +20,26 @@ import {
   ContainerButtonMobile
 } from './ItemShelfDetails.style'
 import { ItemsShelf } from 'components/shelf'
-import SpinnerLoader from 'components/loader'
 import { colors } from 'config/ui'
-
 import LogoGuten from 'assets/images/logo-guten-white.svg'
 import LogoArvore from 'assets/images/logo-arvore.svg'
 import MaskBook from 'assets/images/mask_book.png'
-
-import { redirectToPlatform } from 'utils/redirects'
-import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
-
-import { PLATFORM } from 'config/vars'
-
-import { getRecommendations } from 'api/queries'
 import { sizes } from 'config/ui'
-
 import { readMore } from 'utils/readMore.js'
-import { format, parseISO } from 'date-fns'
+import books from 'components/shelf/books'
+import news from 'components/shelf/news.json'
 
 const ShelfItemDetails = ({
   item,
-  loading,
-  setShowShelfItemDetails,
   type,
-  client,
-  ...props
+  onClose
 }) => {
-  const [recommendations, setRecommendations] = useState([])
-  const [loadingRecommendations, setLoadingRecommendations] = useState(true)
-  const [loadingRedirect, setLoadingRedirect] = useState(false)
   const [descriptionSize, setDescriptionSize] = useState(430)
   const isBook = type === 'book'
 
-  const handleGetRecommendations = () => {
-    const [arvore, guten] = PLATFORM
-    const categoryIds = item.data && item.data.categoryIds
-    const term = item.data && item.data.title
-
-    if (categoryIds && term) {
-      client
-        .query({
-          query: getRecommendations,
-          variables: {
-            categoryIds,
-            term,
-            platform: isBook ? arvore : guten,
-            limit: 10
-          }
-        })
-        .then(res => {
-          setRecommendations(res.data.recommendations)
-          setLoadingRecommendations(false)
-        })
-        .catch(err => {})
-    }
-  }
-
-  useEffect(() => {
-    setRecommendations([])
-    handleGetRecommendations()
-  }, [item])
-
   const handleRead = () => {
-    setLoadingRedirect(true)
-
-    if (isBook) {
-      redirectToPlatform('reader', item.data.link)
-    } else {
-      redirectToPlatform('guten', item.data.link)
-    }
-  }
-
-  if (!item.data) {
-    return <SpinnerLoader />
-  }
-
-  if (props.modal.loading) {
-    return <SpinnerLoader />
+    onClose()
   }
 
   const handleReadMore = () => {
@@ -112,47 +54,47 @@ const ShelfItemDetails = ({
     return (
       <CoverStyle isBook={isBook}>
         {isBook && <Mask src={MaskBook} />}
-        <img src={item.data.image} className="cover" />
+        <img alt="" src={item.image} className="cover" />
       </CoverStyle>
     )
   }
 
   const renderBookInfo = () => {
     return (
-      <>
+      <Fragment>
         <BookInfoStyle>
           <span>{isBook ? 'Autor' : 'Matéria'}: </span>
-          {isBook ? item.data.author : item.data.id}
+          {isBook ? item.author : item.id}
         </BookInfoStyle>
         <BookInfoStyle>
           <span>{isBook ? 'Editora' : 'Editoria'}: </span>
-          {isBook ? item.data.publisher : item.data.editorial}
+          {isBook ? item.publisher : item.editorial}
         </BookInfoStyle>
         <BookInfoStyle>
           <span>Publicado em: </span>
-          {format(parseISO(item.data.publishedAt), 'dd/MM/yyyy')}
+          {item.publishedAt}
         </BookInfoStyle>
-        {item.data.degrees.length > 0 && (
+        {item.degrees.length > 0 && (
           <>
             <TitleRecommendedFor>Recomendado para: </TitleRecommendedFor>
             <ContainerTags>
-              {item.data.degrees.map(item => (
+              {item.degrees.map(item => (
                 <TagStyle text={item} key={item} noIcon />
               ))}
             </ContainerTags>
           </>
         )}
-      </>
+      </Fragment>
     )
   }
 
   const renderBookDescription = () => {
     return (
       <>
-        <TitleStyle text={item.data.title} size={3} sizeMobile={5} />
+        <TitleStyle text={item.title} size={3} sizeMobile={5} />
         <DescriptionStyle>
-          {readMore(item.data.description, descriptionSize)}
-          {item.data.description.length > descriptionSize && (
+          {readMore(item.description, descriptionSize)}
+          {item.description.length > descriptionSize && (
             <ViewMore onClick={handleReadMore}>
               {descriptionSize ? 'Ver mais' : 'Ver menos'}
             </ViewMore>
@@ -184,8 +126,8 @@ const ShelfItemDetails = ({
             newsShelf
             title="Você também pode gostar:"
             style={{ marginBottom: 0 }}
-            data={recommendations}
-            loading={loadingRecommendations}
+            data={news}
+            loading={false}
           />
         )}
         {!isBook && (
@@ -207,8 +149,8 @@ const ShelfItemDetails = ({
             booksShelf
             title="Você também pode gostar:"
             style={{ marginBottom: 0 }}
-            data={recommendations}
-            loading={loadingRecommendations}
+            data={books}
+            loading={false}
           />
         )}
       </>
@@ -216,10 +158,10 @@ const ShelfItemDetails = ({
   }
 
   return (
-    item.data && (
+    item && (
       <>
         <Container>
-          <WrapperStyle recommendations={recommendations.length}>
+          <WrapperStyle recommendations={true}>
             <LeftContainer>
               {renderCover()}
               {renderBookInfo()}
@@ -229,7 +171,7 @@ const ShelfItemDetails = ({
               <ArvoreButtonStyle
                 text={isBook ? 'Leia agora na' : 'Leia agora no'}
                 iconImgSrc={isBook ? LogoArvore : LogoGuten}
-                loading={loadingRedirect}
+                loading={false}
                 isBook={isBook}
                 color={colors.white}
                 textColorHover={colors.white}
@@ -253,7 +195,7 @@ const ShelfItemDetails = ({
             <ArvoreButtonStyle
               text={isBook ? 'Leia agora na' : 'Leia agora no'}
               iconImgSrc={isBook ? LogoArvore : LogoGuten}
-              loading={loadingRedirect}
+              loading={false}
               color={colors.white}
               isBook={isBook}
               textColorHover={colors.white}
@@ -268,8 +210,4 @@ const ShelfItemDetails = ({
   )
 }
 
-const mapStateToProps = state => ({
-  modal: state.modal
-})
-
-export default connect(mapStateToProps)(withApollo(ShelfItemDetails))
+export default withApollo(ShelfItemDetails)

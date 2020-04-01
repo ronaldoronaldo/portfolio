@@ -470,8 +470,9 @@ const ItemsShelf = ({
       {showShelfItemDetails && (
         <ModalItemsShelfDetails
           item={itemDetails}
-          setShowShelfItemDetails={setShowShelfItemDetails}
+          active={showShelfItemDetails}
           type={type}
+          onClose={() => setShowShelfItemDetails(false)}
         />
       )}
     </>

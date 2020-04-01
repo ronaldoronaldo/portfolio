@@ -13,16 +13,7 @@ import { ItemsShelf } from 'components/shelf'
 import { colors } from 'config/ui'
 import LogoGuten from 'assets/images/logo-guten-white.svg'
 import LogoArvore from 'assets/images/logo-arvore.svg'
-
-import { redirectToPlatform } from 'utils/redirects'
-
 import { withApollo } from 'react-apollo'
-import {
-  getBooksAndNewsRecommendationsQuery,
-  getArvoreRecommendationsQuery,
-  getGutenRecommendationsQuery,
-} from 'api/queries'
-
 import image1 from 'assets/images/mock/Modelo_Colecao.jpg'
 import image2 from 'assets/images/mock/Modelo_Colecao_2.jpg'
 import image3 from 'assets/images/mock/Modelo_Colecao_3.jpg'
