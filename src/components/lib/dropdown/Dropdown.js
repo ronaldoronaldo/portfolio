@@ -5,7 +5,10 @@ import {
   SelectContainerHeader,
   TitleContainer,
   ActionsButtonsContainer,
-  InputSearchStyle
+  InputSearchStyle,
+  ContainerIcon,
+  ContainerImage,
+  Image
 } from './Dropdown.style'
 import { IconButtonStyled } from 'styles/common/Common.styles'
 import PropTypes from 'prop-types'
@@ -38,6 +41,8 @@ const Dropdown = ({
 
   const selectItems = () => {
     return filteredItems.map((item, index) => {
+      if (!item) return
+
       if (checked && checked.indexOf(item.text || item) !== -1) {
         return
       }
@@ -50,6 +55,7 @@ const Dropdown = ({
           color={itemsColor}
           iconItems={!!item.icon}
           itemDisabled={item.itemDisabled}
+          image={item.image}
         >
           {checkbox && (
             <Checkbox
@@ -58,23 +64,24 @@ const Dropdown = ({
             />
           )}
           {item.icon ? (
-            <div
-              style={{
-                position: 'relative',
-                left: item.iconSizeCompensation
-              }}>
+            <ContainerIcon>
               <FontIcon
                 iconName={item.icon}
-                size={15}
-                sizeMobile={15}
-                color={colors.black5Light}
+                size={16}
+                sizeMobile={16}
+                color={colors.black5}
                 style={{
                   fontWeight: fontWeights.bold,
-                  marginRight: spacing.small + 4
+                  marginRight: spacing.spacingSmall
                 }}
               />
               {item.text}
-            </div>
+            </ContainerIcon>
+          ) : item.image ? (
+            <ContainerImage>
+              <Image src={item.image} disabled={item.itemDisabled} />
+              {item.text}
+            </ContainerImage>
           ) : (
             item
           )}

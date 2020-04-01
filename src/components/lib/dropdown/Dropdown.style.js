@@ -5,7 +5,7 @@ import InputSearch from 'components/lib/inputs/InputSearch'
 
 export const SelectContainerStyle = styled.div`
   ${({ border, borderRadius, bgColor, maxWidth, mobileStyle, checkbox }) => css`
-    margin-top: ${spacing.xSmall}px;
+    margin-top: ${spacing.spacingXSmall}px;
     border: ${border ? border : `1px solid ${colors.black2}`};
     border-radius: ${borderRadius ? borderRadius : 6}px;
     overflow-y: auto;
@@ -27,7 +27,7 @@ export const SelectContainerStyle = styled.div`
     width: ${mobileStyle ? '350px' : 'auto'};
     background: ${bgColor ? bgColor : colors.white};
     top: ${mobileStyle ? '0' : 'auto'};
-    box-shadow: 0 2px 15px 0 rgba(83, 101, 111, 0.18);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.06);
     right: ${mobileStyle ? '0' : 'auto'};
     border: ${mobileStyle ? '0' : 'auto'};
     z-index: 3;
@@ -83,41 +83,52 @@ export const SelectItemStyle = styled.button`
     outline,
     checkbox,
     iconItems,
-    itemDisabled
+    itemDisabled,
+    image
   }) => css`
     width: 100%;
     height: ${size === 'x-small'
-      ? `${sizes.buttonSizes.xSmall}px`
+      ? `${sizes.buttonSizes.xsmall}px`
       : size === 'small'
       ? `${sizes.buttonSizes.small}px`
       : size === 'medium'
       ? `${sizes.buttonSizes.medium}px`
       : `${sizes.buttonSizes.large}px`};
-    background: ${itemDisabled ? colors.black1 : bgColor ? bgColor : colors.white};
+    background: ${itemDisabled
+      ? colors.black1
+      : bgColor
+      ? bgColor
+      : colors.white};
     border: none;
     border-bottom: ${border ? border : `1px solid ${colors.black2}`};
     color: ${itemDisabled ? colors.black3 : color ? color : colors.black5};
     font-size: ${sizes.text}px;
     font-weight: ${fontWeights.regular};
     text-align: ${textAlign ? textAlign : 'left'};
-    padding: ${sizes.padding}px;
+    padding: ${!image ? `0 ${sizes.padding}px` : '0 8px'};
     cursor: pointer;
     outline: ${outline ? outline : 'none'};
-    transition: background 0.2s linear;
+    transition: background-color 0.2s linear;
     display: flex;
     justify-content: ${checkbox ? 'flex-start' : 'space-between'};
     align-items: center;
     line-height: 16px;
-    
-    >div{
+
+    > div {
       > span {
         &:before {
-          color: ${itemDisabled ? colors.black3 : color ? color : colors.black5};
+          color: ${itemDisabled
+            ? colors.black3
+            : color
+            ? color
+            : colors.black5};
+          font-size: 18px !important;
         }
       }
     }
 
-    ${!iconItems && `span {
+    ${!iconItems &&
+      `span {
       color: ${colors.black3};
       font-size: 12px;
     }`}
@@ -131,7 +142,7 @@ export const SelectItemStyle = styled.button`
     }
 
     &:hover {
-      background: ${colors.whiteDark};
+      background: ${itemDisabled ? colors.black1 : colors.whiteDark};
     }
 
     &:active {
@@ -154,4 +165,21 @@ export const ActionsButtonsContainer = styled.div`
   margin-top: 465px;
   margin-bottom: 19px;
   justify-content: flex-end;
+`
+
+export const ContainerIcon = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const ContainerImage = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const Image = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  opacity: ${props => props.disabled && '90%'};
 `
