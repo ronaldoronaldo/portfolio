@@ -3,8 +3,7 @@ import { Wrapper } from './League.styles'
 import LeagueBoards from 'components/league/league-boards'
 
 const League = () => {
-  const [currentPoints, setCurrentPoints] = useState(293)
-  console.log('here')
+  const [currentPoints, setCurrentPoints] = useState(892)
   return (
     <Wrapper>
       <LeagueBoards currentPoints={currentPoints} />

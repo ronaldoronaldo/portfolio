@@ -235,19 +235,55 @@ class LeagueBoards extends Component {
     }
     const overallRanking = {
       __typename: 'Ranking',
-      percentage: 84.356,
+      percentage: 0.74,
       rankingUsers: [
         {
           entityId: 2,
           profileId: 3,
           rankPosition: 1235,
           rootName: 'Santo Agostinho',
-          tier: 'diamond',
-          totalTimeSpent: 298,
+          tier: 'gold',
+          totalTimeSpent: 6956,
           userName: 'Alef Xavier'
+        },
+        {
+          entityId: 2,
+          profileId: 3,
+          rankPosition: 1234,
+          rootName: 'Colégio Santa Marcelina',
+          tier: 'gold',
+          totalTimeSpent: 6900,
+          userName: 'Stefany Alves'
+        },
+        {
+          entityId: 2,
+          profileId: 189,
+          rankPosition: 1233,
+          rootName: 'Escola São Paulo',
+          tier: 'diamond',
+          totalTimeSpent: 6850,
+          userName: 'Rafael Weiss'
+        },
+        {
+          entityId: 2,
+          profileId: 3,
+          rankPosition: 1232,
+          rootName: 'Santo Agostinho',
+          tier: 'diamond',
+          totalTimeSpent: 6800,
+          userName: 'Régis Armond Lauriano'
+        },
+        {
+          entityId: 2,
+          profileId: 3,
+          rankPosition: 1231,
+          rootName: 'Anglo Americano',
+          tier: 'diamond',
+          totalTimeSpent: 6780,
+          userName: 'Ricardo Siqueira'
         }
       ],
-      tier: 'diamond'
+      tier: 'gold'
     }
     const overallRankingHistory = [
       {
