@@ -21,6 +21,7 @@ import bookOpen from 'assets/images/portfolio/book-open.svg'
 import trophy from 'assets/images/portfolio/trophy.svg'
 import { Row } from 'components/league/flexboxgrid'
 import { ThemeProvider } from "styled-components"
+import GoBackHeader from "../../components/league/go-back-header"
 
 const vacationTheme = {
   wrapper: {
@@ -62,7 +63,7 @@ const LeagueVacation = () => {
 
           <Container>
             <TopWrapper>
-              {/*<StyledGoBackHeader bgColor={colors.leagueOnVacationPurple1} />*/}
+              <GoBackHeader goBack={() => window.location.replace('/app/liga')} bgColor={colors.leagueOnVacationPurple1} />
               <Title>A Liga de Leitores está de férias!</Title>
               <Subtitle>Estamos contando os dias para o retorno da Liga:</Subtitle>
               <ThemeProvider theme={vacationTheme}>
