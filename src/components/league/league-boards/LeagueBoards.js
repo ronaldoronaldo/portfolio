@@ -97,117 +97,97 @@ class LeagueBoards extends Component {
     }
 
     const entity = {
-      rankingEntity: [
+      rankingEntity:[
         {
           __typename: 'RankingReader',
           facebookUid: null,
-          profileId: 552116,
+          profileId: 512306,
           rankPosition: 1,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '3597',
-          userName: 'Caroline dos Santos Maciel Silva'
+          totalTimeSpent: '8452',
+          userName: 'José Alberto'
         },
         {
-          __typename: 'RankingReader',
-          facebookUid: null,
-          profileId: 204828,
-          rankPosition: 2,
-          rootName: 'Time Árvore',
-          tier: null,
-          totalTimeSpent: '3255',
-          userName: 'Barbara Aguiar'
+          entityId: 2,
+          profileId: 189,
+          rankPosition: 1,
+          rootName: 'Escola São Paulo',
+          tier: 'diamond',
+          totalTimeSpent: 6850,
+          userName: 'Rafael Weiss'
         },
         {
           __typename: 'RankingReader',
           facebookUid: null,
           profileId: 512306,
           rankPosition: 3,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '2985',
-          userName: 'Mariana'
+          totalTimeSpent: 1500,
+          userName: 'Mariana Gonçalves'
         },
         {
           __typename: 'RankingReader',
           facebookUid: '2218851198134002',
           profileId: 215181,
           rankPosition: 4,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '1930',
-          userName: 'Anderson Konzen'
+          totalTimeSpent: 1480,
+          userName: 'Thais Oliveira'
         },
         {
           __typename: 'RankingReader',
           facebookUid: null,
           profileId: 614294,
           rankPosition: 5,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '1405',
-          userName: 'Leonardo Ippolito da Silva'
-        },
-        {
-          __typename: 'RankingReader',
-          facebookUid: null,
-          profileId: 614295,
-          rankPosition: 6,
-          rootName: 'Time Árvore',
-          tier: null,
-          totalTimeSpent: '684',
-          userName: 'Mariana Morais Graça Pereira'
-        },
-        {
-          __typename: 'RankingReader',
-          facebookUid: null,
-          profileId: 512042,
-          rankPosition: 7,
-          rootName: 'Time Árvore',
-          tier: null,
-          totalTimeSpent: '438',
-          userName: 'Maria Drummond'
+          totalTimeSpent: 1400,
+          userName: 'Larissa'
         }
       ],
       rankingRoot: [
+
         {
           __typename: 'RankingReader',
           facebookUid: null,
-          profileId: 552116,
+          profileId: 512306,
           rankPosition: 1,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '3597',
-          userName: 'Caroline dos Santos Maciel Silva'
+          totalTimeSpent: '8452',
+          userName: 'José Alberto'
         },
         {
           __typename: 'RankingReader',
           facebookUid: null,
           profileId: 204828,
           rankPosition: 2,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '3255',
+          totalTimeSpent: '7965',
           userName: 'Barbara Aguiar'
         },
         {
           __typename: 'RankingReader',
           facebookUid: null,
-          profileId: 512306,
+          profileId: 189,
           rankPosition: 3,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '2985',
-          userName: 'Mariana'
+          totalTimeSpent: '6850',
+          userName: 'Rafael Weiss'
         },
         {
           __typename: 'RankingReader',
           facebookUid: '2218851198134002',
           profileId: 215181,
           rankPosition: 4,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '1930',
+          totalTimeSpent: '5500',
           userName: 'Anderson Konzen'
         },
         {
@@ -215,20 +195,10 @@ class LeagueBoards extends Component {
           facebookUid: null,
           profileId: 614294,
           rankPosition: 5,
-          rootName: 'Time Árvore',
+          rootName: 'Escola São Paulo',
           tier: null,
-          totalTimeSpent: '1405',
+          totalTimeSpent: '4852',
           userName: 'Leonardo Ippolito da Silva'
-        },
-        {
-          __typename: 'RankingReader',
-          facebookUid: null,
-          profileId: 656945,
-          rankPosition: 6,
-          rootName: 'Time Árvore',
-          tier: null,
-          totalTimeSpent: '838',
-          userName: 'BB'
         }
       ],
       degree: 'F'
