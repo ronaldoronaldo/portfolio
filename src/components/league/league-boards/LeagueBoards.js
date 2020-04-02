@@ -3,7 +3,7 @@ import { colors, sizes } from 'config/ui'
 import { reducedUserName } from 'utils/username'
 import { LEAGUE_RANK_LEGEND, getTotalPoints } from 'utils/league'
 import { LEAGUE_TUTORIAL_PATH } from 'routes'
-import { Carousel } from 'components/lib/carousel'
+import Carousel from 'components/league/carousel'
 import MonthCountdown from 'components/league/month-countdown'
 import {
   fundamental1DegreeMap,

@@ -94,7 +94,7 @@ export const MonthGhostIcon = styled.i`
 `
 
 export const RankTier = styled.span`
-  font-size: ${sizes.h[5]}px;
+  font-size: ${sizes.h[5].size}px;
   font-weight: ${fontWeights.bold};
   letter-spacing: 0.2px;
   text-align: center;
