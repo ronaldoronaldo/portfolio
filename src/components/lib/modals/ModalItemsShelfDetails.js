@@ -8,7 +8,7 @@ import {
 import { IconButtonClose } from './ModalItemsShelfDetails.styles'
 import ColorThief from 'colorthief/dist/color-thief'
 
-const ModalItemsShelfDetails = ({ item, type, active, onClose }) => {
+const ModalItemsShelfDetails = ({ item, type, active, onClose, openNewModal }) => {
   const [background, setBackground] = useState(null)
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const ModalItemsShelfDetails = ({ item, type, active, onClose }) => {
       >
         <ImageGetColor src={item.image} crossorigin="anonymous" />
       </BackgroundContainerTop>
-      <ItemShelfDetails item={item} type={type} onClose={onClose} />
+      <ItemShelfDetails item={item} type={type} openNewModal={openNewModal} onClose={onClose} />
     </Container>
   )
 }

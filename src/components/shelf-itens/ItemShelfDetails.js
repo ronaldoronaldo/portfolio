@@ -33,7 +33,8 @@ import news from 'components/shelf/news.json'
 const ShelfItemDetails = ({
   item,
   type,
-  onClose
+  onClose,
+  openNewModal
 }) => {
   const [descriptionSize, setDescriptionSize] = useState(430)
   const isBook = type === 'book'
@@ -74,7 +75,7 @@ const ShelfItemDetails = ({
           <span>Publicado em: </span>
           {item.publishedAt}
         </BookInfoStyle>
-        {item.degrees.length > 0 && (
+        {item.degrees && item.degrees.length > 0 && (
           <>
             <TitleRecommendedFor>Recomendado para: </TitleRecommendedFor>
             <ContainerTags>
@@ -91,7 +92,7 @@ const ShelfItemDetails = ({
   const renderBookDescription = () => {
     return (
       <>
-        <TitleStyle text={item.title} size={3} sizeMobile={5} />
+        <TitleStyle text={item.title || item.name} size={3} sizeMobile={5} />
         <DescriptionStyle>
           {readMore(item.description, descriptionSize)}
           {item.description.length > descriptionSize && (
@@ -128,6 +129,9 @@ const ShelfItemDetails = ({
             style={{ marginBottom: 0 }}
             data={news}
             loading={false}
+            typeModal={'news'}
+            openNewModal={openNewModal}
+
           />
         )}
         {!isBook && (
@@ -146,6 +150,8 @@ const ShelfItemDetails = ({
                 }
               ]
             }}
+            openNewModal={openNewModal}
+            typeModal={'book'}
             booksShelf
             title="Você também pode gostar:"
             style={{ marginBottom: 0 }}

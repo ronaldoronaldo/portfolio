@@ -9,23 +9,9 @@ import ExploreMore from 'components/shelf-itens/ExploreMore'
 import Shelf from './Shelf'
 import { sizes } from 'config/ui'
 import fakeShelf from './fake'
-
 import { showModal, setItemModal, setLoadingModal } from 'ducks/modal'
-import { getContentDetails } from 'api/queries'
 import { withApollo } from 'react-apollo'
-import { PLATFORM } from 'config/vars'
-
-import image1 from 'assets/images/mock/collection-mock.jpg'
 import {ModalItemsShelfDetails} from "../lib/modals"
-
-const collections = [
-  { image: image1, title: 'Histórias inspiradoras' },
-  { image: image1, title: 'Viajando sem sair de casa' },
-  { image: image1, title: 'Para abrir o apetite' },
-  { image: image1, title: 'Luz, câmera, ação!' },
-  { image: image1, title: 'Aventuras animais' },
-  { image: image1, title: 'Rumos do planeta' }
-]
 
 const ItemsShelf = ({
   title,
@@ -41,6 +27,8 @@ const ItemsShelf = ({
   client,
   exploreMore,
   loading,
+  openNewModal,
+  typeModal,
   ...props
 }) => {
   const [showShelfItemDetails, setShowShelfItemDetails] = useState(false)
@@ -48,9 +36,19 @@ const ItemsShelf = ({
   const [type, setType] = useState('')
 
   const handleShowShelfItemDetails = (item, type) => {
+    if(openNewModal){
+      openNewModal(item, typeModal)
+      return
+    }
     setItemDetails(item)
     setShowShelfItemDetails(true)
     setType(type)
+  }
+
+  const openNew = (newItem, newType) => {
+    console.log(newItem)
+    setItemDetails(newItem)
+    setType(newType)
   }
 
   const renderBooksShelf = () => {
@@ -472,6 +470,7 @@ const ItemsShelf = ({
           item={itemDetails}
           active={showShelfItemDetails}
           type={type}
+          openNewModal={openNew}
           onClose={() => setShowShelfItemDetails(false)}
         />
       )}

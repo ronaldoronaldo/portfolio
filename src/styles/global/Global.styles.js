@@ -2,8 +2,29 @@ import { createGlobalStyle } from 'styled-components'
 import { colors, sizes } from 'config/ui'
 import './icons.css'
 
+import AvertaRegular from '../fonts/Averta-Regular.otf'
+import AvertaSemiBold from '../fonts/Averta-Semibold.otf'
+import AvertaBold from '../fonts/Averta-Bold.otf'
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: Averta;
+    font-weight: 400;
+    src: url('${AvertaRegular}') ;
+  }
+
+  @font-face {
+    font-family: Averta;
+    font-weight: 600;
+    src: url('${AvertaSemiBold}');
+  }
+
+  @font-face {
+    font-family: Averta;
+    font-weight: 700;
+    src: url('${AvertaBold}') ;
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -11,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Averta, sans-serif;
     font-size: ${sizes.text}px;
     color: ${colors.black6};
     -webkit-font-smoothing: antialiased;

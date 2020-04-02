@@ -151,7 +151,7 @@ const Header = props => {
               }
             >
               <FontIcon
-                iconName="Logo"
+                iconName="eye"
                 size={15}
                 color={colors.black4}
                 style={{ marginBottom: 4 }}
@@ -168,13 +168,13 @@ const Header = props => {
                   text="Ir para a Árvore de Livros"
                   imagePath={symbolArvoreLivros}
                   type="img-left-text-left"
-                  onClick={() => redirectToPlatform('arvore')}
+                  onClick={() => setPlatformsDropdownMobile(false)}
                 />
                 <Item
                   text="Ir para o Guten News"
                   imagePath={symbolGutenNews}
                   type="img-left-text-left"
-                  onClick={() => redirectToPlatform('guten')}
+                  onClick={() => setPlatformsDropdownMobile(false)}
                 />
                 <Item
                   text="Explorador de acervo"

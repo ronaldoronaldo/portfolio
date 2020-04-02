@@ -1,452 +1,452 @@
 [
-    {
-      "ID": 19773,
+    {"publishedAt": "11/08/1992",
+      "id": 19773,
       "title": "Prêmio Puskás",
       "subtitle": "Brasileiro concorre a gol mais bonito do ano ",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_7439441159.jpg",
       "author": "Por André Schröder",
       "title_text": "O gol mais bonito do ano",
-      "subtitle_text": "Jogador Wendell Lira está entre finalistas do Prêmio Puskás após ter marcado golaço no campeonato goiano"
+      "description": "Jogador Wendell Lira está entre finalistas do Prêmio Puskás após ter marcado golaço no campeonato goiano"
     },
-    {
-      "ID": 19772,
+    {"publishedAt": "11/08/1992",
+      "id": 19772,
       "title": "Escola de Papai Noel",
       "subtitle": "Cursos transformam gente comum no “bom velhinho”",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_246274317.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Como virar Papai Noel",
-      "subtitle_text": "Você sabia que há cursos para ensinar a arte de ser Papai Noel? O Guten News achou uma escola desse tipo em São Paulo e conversou com um Papai Noel profissional!"
+      "description": "Você sabia que há cursos para ensinar a arte de ser Papai Noel? O Guten News achou uma escola desse tipo em São Paulo e conversou com um Papai Noel profissional!"
     },
-    {
-      "ID": 19771,
+    {"publishedAt": "11/08/1992",
+      "id": 19771,
       "title": "Castelo dos livros",
       "subtitle": "Biblioteca da Letônia é eleita a melhor do mundo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_4134689900.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Recanto cultural",
-      "subtitle_text": "Com acervo de 4,5 milhões de obras, Biblioteca Nacional da Letônia é eleita melhor espaço de leitura do planeta"
+      "description": "Com acervo de 4,5 milhões de obras, Biblioteca Nacional da Letônia é eleita melhor espaço de leitura do planeta"
     },
-    {
-      "ID": 19770,
+    {"publishedAt": "11/08/1992",
+      "id": 19770,
       "title": "Onde começa a corrupção",
       "subtitle": "Você sabe o que são atitudes corruptas?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_8989279209.jpg",
       "author": "Por Livia Goro - Edição de Guilherme Pavarin",
       "title_text": "O que é corrupção?",
-      "subtitle_text": "A palavra não é exclusividade da política. Veja como essa ação pode aparecer no dia a dia"
+      "description": "A palavra não é exclusividade da política. Veja como essa ação pode aparecer no dia a dia"
     },
-    {
-      "ID": 19769,
+    {"publishedAt": "11/08/1992",
+      "id": 19769,
       "title": "Tatuagem medicinal",
       "subtitle": "Cientistas criam tattoo capaz de monitorar a saúde",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_3199698864.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Tattoo inteligente",
-      "subtitle_text": "Nova tinta de tatuagem muda de cor ao detectar alterações no organismo e pode ser benéfica para pessoas com diabetes"
+      "description": "Nova tinta de tatuagem muda de cor ao detectar alterações no organismo e pode ser benéfica para pessoas com diabetes"
     },
-    {
-      "ID": 19768,
+    {"publishedAt": "11/08/1992",
+      "id": 19768,
       "title": "Pela liberdade de se expressar como quiser",
       "subtitle": "Entenda a reação dos franceses ao atentado ao jornal francês de humor Charlie Hebdo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9907748168.jpg",
       "author": "Por Livia Goro - Edição de Guilherme Pavarin",
       "title_text": "Pela liberdade de se expressar como quiser",
-      "subtitle_text": "Entenda a reação dos franceses ao atentado ao jornal francês de humor Charlie Hebdo"
+      "description": "Entenda a reação dos franceses ao atentado ao jornal francês de humor Charlie Hebdo"
     },
-    {
-      "ID": 19767,
+    {"publishedAt": "11/08/1992",
+      "id": 19767,
       "title": "Sertão sem chuva",
       "subtitle": "Nordeste enfrenta maior seca em mais de cem anos",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_6850590892.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Cadê a água?",
-      "subtitle_text": "Maior estiagem em um século mata animais, prejudica plantações, reduz nível de barragens e coloca sertão nordestino em emergência"
+      "description": "Maior estiagem em um século mata animais, prejudica plantações, reduz nível de barragens e coloca sertão nordestino em emergência"
     },
-    {
-      "ID": 19766,
+    {"publishedAt": "11/08/1992",
+      "id": 19766,
       "title": "50 anos de Mafalda",
       "subtitle": "Quem é essa baixinha argentina que adora falar coisas profundas?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9064730657.jpg",
       "author": "Por Livia Goro - Edição de Guilherme Pavarin",
       "title_text": "O mundo de Mafalda",
-      "subtitle_text": "A pequena argentina que odeia sopa e gosta de falar de filosofia"
+      "description": "A pequena argentina que odeia sopa e gosta de falar de filosofia"
     },
-    {
-      "ID": 19765,
+    {"publishedAt": "11/08/1992",
+      "id": 19765,
       "title": "Livres para dirigir",
       "subtitle": "Mulheres sauditas são autorizadas a guiar veículos",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_2148524210.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Fim da proibição",
-      "subtitle_text": "Rei da Arábia Saudita autoriza mulheres a dirigir a partir de junho de 2018"
+      "description": "Rei da Arábia Saudita autoriza mulheres a dirigir a partir de junho de 2018"
     },
-    {
-      "ID": 19764,
+    {"publishedAt": "11/08/1992",
+      "id": 19764,
       "title": "Procurando Dory",
       "subtitle": "Lançamento de animação preocupa ambientalistas",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_363370766.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Onde está a Dory?",
-      "subtitle_text": "Ambientalistas temem que animação da Disney/Pixar aumente a busca por espécies de peixes retiradas de maneira agressiva dos corais em que vivem"
+      "description": "Ambientalistas temem que animação da Disney/Pixar aumente a busca por espécies de peixes retiradas de maneira agressiva dos corais em que vivem"
     },
-    {
-      "ID": 19763,
+    {"publishedAt": "11/08/1992",
+      "id": 19763,
       "title": "Escola de Papai Noel",
       "subtitle": "Cursos transformam gente comum no “bom velhinho”",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_246274317.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Como virar Papai Noel",
-      "subtitle_text": "Você sabia que há cursos para ensinar a arte de ser Papai Noel? O Guten News achou uma escola desse tipo em São Paulo e conversou com um Papai Noel profissional!"
+      "description": "Você sabia que há cursos para ensinar a arte de ser Papai Noel? O Guten News achou uma escola desse tipo em São Paulo e conversou com um Papai Noel profissional!"
     },
-    {
-      "ID": 19762,
+    {"publishedAt": "11/08/1992",
+      "id": 19762,
       "title": "Heróis negros brasileiros",
       "subtitle": "Jovem conta no YouTube a história de ídolos negros",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_4933140054.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Cultura negra ",
-      "subtitle_text": "Pedro Henrique Côrtes, o PhCôrtes, apresenta no YouTube personagens históricos da cultura negra que merecem destaque. Você sabe quem foi Zumbi? E Dandara?"
+      "description": "Pedro Henrique Côrtes, o PhCôrtes, apresenta no YouTube personagens históricos da cultura negra que merecem destaque. Você sabe quem foi Zumbi? E Dandara?"
     },
-    {
-      "ID": 19761,
+    {"publishedAt": "11/08/1992",
+      "id": 19761,
       "title": "Trem invisível",
       "subtitle": "Ferrovia japonesa terá vagão imperceptível em 2018",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9992956435.jpg",
       "author": "Por André Schröder",
       "title_text": "Camaleão dos trilhos",
-      "subtitle_text": "Empresa japonesa anuncia a construção de trem invisível, projeto em que os vagões vão refletir a paisagem ao seu redor"
+      "description": "Empresa japonesa anuncia a construção de trem invisível, projeto em que os vagões vão refletir a paisagem ao seu redor"
     },
-    {
-      "ID": 19760,
+    {"publishedAt": "11/08/1992",
+      "id": 19760,
       "title": "Destroços do Kestrel",
       "subtitle": "Veleiro naufragado em 1895 reaparece em praia paulista",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_5216465340.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Surpresa na areia",
-      "subtitle_text": "Após ondas fortes e maré baixa, carcaça de veleiro inglês encalhado no final do século 19 ressurge em praia de Santos"
+      "description": "Após ondas fortes e maré baixa, carcaça de veleiro inglês encalhado no final do século 19 ressurge em praia de Santos"
     },
-    {
-      "ID": 19759,
+    {"publishedAt": "11/08/1992",
+      "id": 19759,
       "title": "Novos mundos",
       "subtitle": "Cientistas encontram planetas parecidos com a Terra",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_3835750999.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Em busca de vida",
-      "subtitle_text": "Nasa encontra planetas parecidos com a Terra e quer descobrir se neles pode haver alguma forma de vida"
+      "description": "Nasa encontra planetas parecidos com a Terra e quer descobrir se neles pode haver alguma forma de vida"
     },
-    {
-      "ID": 19758,
+    {"publishedAt": "11/08/1992",
+      "id": 19758,
       "title": "Cidade à venda",
       "subtitle": "Que tal comprar um vilarejo turístico na Tasmânia?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_1559770619.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Sem moradores",
-      "subtitle_text": "A cidade de Tarraleah, na Tasmânia, está à venda. Conheça a história do vilarejo que já teve mais de dois mil moradores e que hoje está vazio"
+      "description": "A cidade de Tarraleah, na Tasmânia, está à venda. Conheça a história do vilarejo que já teve mais de dois mil moradores e que hoje está vazio"
     },
-    {
-      "ID": 19757,
+    {"publishedAt": "11/08/1992",
+      "id": 19757,
       "title": "A moda dos orgânicos",
       "subtitle": "Saiba a importância de ter uma alimentação livre de agrotóxicos",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_4093645103.jpg",
       "author": "Por Livia Goro - Edição de Guilherme Pavarin",
       "title_text": "Sem agrotóxicos, por favor",
-      "subtitle_text": "Os alimentos orgânicos podem ser uma alternativa saudável para sua dieta"
+      "description": "Os alimentos orgânicos podem ser uma alternativa saudável para sua dieta"
     },
-    {
-      "ID": 19756,
+    {"publishedAt": "11/08/1992",
+      "id": 19756,
       "title": "Neymar em baixa",
       "subtitle": "O que aconteceu com o maior craque brasileiro?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_5965934246.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Fama de “cai-cai”",
-      "subtitle_text": "Após eliminação na Copa e críticas por simulações, Neymar fica fora da lista dos dez indicados ao prêmio de melhor do mundo"
+      "description": "Após eliminação na Copa e críticas por simulações, Neymar fica fora da lista dos dez indicados ao prêmio de melhor do mundo"
     },
-    {
-      "ID": 19755,
+    {"publishedAt": "11/08/1992",
+      "id": 19755,
       "title": "Sertão sem chuva",
       "subtitle": "Nordeste enfrenta maior seca em mais de cem anos",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_6850590892.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Cadê a água?",
-      "subtitle_text": "Maior estiagem em um século mata animais, prejudica plantações, reduz nível de barragens e coloca sertão nordestino em emergência"
+      "description": "Maior estiagem em um século mata animais, prejudica plantações, reduz nível de barragens e coloca sertão nordestino em emergência"
     },
-    {
-      "ID": 19754,
+    {"publishedAt": "11/08/1992",
+      "id": 19754,
       "title": "Pokémon Go!",
       "subtitle": "Conheça o game japonês que virou febre mundial",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_8880463829.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Capturando pokémon",
-      "subtitle_text": "Novo game de realidade aumentada é sucesso em vários países. Saiba como funciona essa tecnologia e qual é a lógica do jogo japonês"
+      "description": "Novo game de realidade aumentada é sucesso em vários países. Saiba como funciona essa tecnologia e qual é a lógica do jogo japonês"
     },
-    {
-      "ID": 19753,
+    {"publishedAt": "11/08/1992",
+      "id": 19753,
       "title": "Ator em cena",
       "subtitle": "João Côrtes fala sobre a sua carreira",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9014547718.jpg",
       "author": "Por Livia Goro",
       "title_text": "Em cena",
-      "subtitle_text": "João Côrtes fala sobre a sua carreira e sobre a paixão pela atuação"
+      "description": "João Côrtes fala sobre a sua carreira e sobre a paixão pela atuação"
     },
-    {
-      "ID": 19752,
+    {"publishedAt": "11/08/1992",
+      "id": 19752,
       "title": "Sardar Patel",
       "subtitle": "Índia homenageia herói com maior estátua do mundo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_5576701434.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Estátua da unidade",
-      "subtitle_text": "Com 182 metros de altura, imagem do líder indiano Sardar Patel é maior estátua do mundo"
+      "description": "Com 182 metros de altura, imagem do líder indiano Sardar Patel é maior estátua do mundo"
     },
-    {
-      "ID": 19751,
+    {"publishedAt": "11/08/1992",
+      "id": 19751,
       "title": "Receita da vovó",
       "subtitle": "Qual é o segredo do sabor da comida dos avós?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_2583447452.png",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Sabores únicos",
-      "subtitle_text": "Pratos preparados por avós sempre trazem sabores especiais. Mas qual é o segredo deles? Um projeto francês tenta decifrar esse mistério reunindo vídeos de avós cozinhando"
+      "description": "Pratos preparados por avós sempre trazem sabores especiais. Mas qual é o segredo deles? Um projeto francês tenta decifrar esse mistério reunindo vídeos de avós cozinhando"
     },
-    {
-      "ID": 19750,
+    {"publishedAt": "11/08/1992",
+      "id": 19750,
       "title": "Jogo das trombadas",
       "subtitle": "Estudo liga danos cerebrais ao futebol americano",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_281272986.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Paixão perigosa",
-      "subtitle_text": "Pesquisa aponta que atletas de futebol americano, esporte mais popular dos Estados Unidos, desenvolvem doença que causa perda de memória, depressão e demência"
+      "description": "Pesquisa aponta que atletas de futebol americano, esporte mais popular dos Estados Unidos, desenvolvem doença que causa perda de memória, depressão e demência"
     },
-    {
-      "ID": 19749,
+    {"publishedAt": "11/08/1992",
+      "id": 19749,
       "title": "Testando os limites",
       "subtitle": "Por que é tão comum atletas profissionais sofrerem lesões?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_6613896139.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "As lesões do esporte",
-      "subtitle_text": "Atletas de alto desempenho estão expostos a mais riscos na busca por resultados"
+      "description": "Atletas de alto desempenho estão expostos a mais riscos na busca por resultados"
     },
-    {
-      "ID": 19748,
+    {"publishedAt": "11/08/1992",
+      "id": 19748,
       "title": "Eleições 2018",
       "subtitle": "Partidos assinam acordo contra notícias falsas",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_3942485661.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Sem mentiras",
-      "subtitle_text": "Tribunal Superior Eleitoral fecha acordo com 30 partidos políticos para combater as fake news na campanha eleitoral de 2018"
+      "description": "Tribunal Superior Eleitoral fecha acordo com 30 partidos políticos para combater as fake news na campanha eleitoral de 2018"
     },
-    {
-      "ID": 19747,
+    {"publishedAt": "11/08/1992",
+      "id": 19747,
       "title": "Solução tecnológica",
       "subtitle": "Árvore artificial pode limpar ar de grandes cidades",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_4279134534.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Comedora de poluição",
-      "subtitle_text": "Instalado em 25 cidades pelo mundo, viveiro de musgos ajuda a filtrar a poluição do ar"
+      "description": "Instalado em 25 cidades pelo mundo, viveiro de musgos ajuda a filtrar a poluição do ar"
     },
-    {
-      "ID": 19746,
+    {"publishedAt": "11/08/1992",
+      "id": 19746,
       "title": "Geração desatenta?",
       "subtitle": "Estudo liga uso de mídias digitais a déficit de atenção",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_8642327506.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Conectados demais",
-      "subtitle_text": "Pesquisa estabelece relação entre o alto uso de plataformas de mídias digitais e o Transtorno de Déficit de Atenção com Hiperatividade em adolescentes"
+      "description": "Pesquisa estabelece relação entre o alto uso de plataformas de mídias digitais e o Transtorno de Déficit de Atenção com Hiperatividade em adolescentes"
     },
-    {
-      "ID": 19745,
+    {"publishedAt": "11/08/1992",
+      "id": 19745,
       "title": "Folclore natalino",
       "subtitle": "Pelznickel é figura folclórica do Natal alemão",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_4208469986.jpg",
       "author": "Por André Schröder",
       "title_text": "Quem tem medo do Pelznickel?",
-      "subtitle_text": "Conheça o Pelznickel, um monstro peludo que há séculos entrega presentes e também cobra obediência das crianças na cultura alemã "
+      "description": "Conheça o Pelznickel, um monstro peludo que há séculos entrega presentes e também cobra obediência das crianças na cultura alemã "
     },
-    {
-      "ID": 19744,
+    {"publishedAt": "11/08/1992",
+      "id": 19744,
       "title": "Academia para o cérebro",
       "subtitle": "Será que exercícios para o cérebro funcionam mesmo?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_6022519697.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Exercite a sua mente",
-      "subtitle_text": "Academia para o cérebro está fazendo sucesso no Japão. Será que isso funciona?"
+      "description": "Academia para o cérebro está fazendo sucesso no Japão. Será que isso funciona?"
     },
-    {
-      "ID": 19743,
+    {"publishedAt": "11/08/1992",
+      "id": 19743,
       "title": "Impeachment",
       "subtitle": "Deputados votam pelo afastamento de Dilma",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9508398920.jpg",
       "author": "Por André Schröder",
       "title_text": "Pedaladas fiscais",
-      "subtitle_text": "Deputados aprovam a ida do processo de impeachment da presidente Dilma Rousseff para o Senado. O motivo são as chamadas pedaladas fiscais. Entenda o que é isso"
+      "description": "Deputados aprovam a ida do processo de impeachment da presidente Dilma Rousseff para o Senado. O motivo são as chamadas pedaladas fiscais. Entenda o que é isso"
     },
-    {
-      "ID": 19742,
+    {"publishedAt": "11/08/1992",
+      "id": 19742,
       "title": "Saborosas criações",
       "subtitle": "Restaurante italiano é escolhido o melhor do mundo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_3006540695.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Alta gastronomia",
-      "subtitle_text": "Comandada pelo chefe Massimo Bottura, Osteria Francescana conquista o título de melhor restaurante do mundo em 2018"
+      "description": "Comandada pelo chefe Massimo Bottura, Osteria Francescana conquista o título de melhor restaurante do mundo em 2018"
     },
-    {
-      "ID": 19741,
+    {"publishedAt": "11/08/1992",
+      "id": 19741,
       "title": "Monumento vivo",
       "subtitle": "Botânico tenta salvar árvore mais antiga de São Paulo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_2804979798.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Figueira das lágrimas",
-      "subtitle_text": "Mudas da árvore mais antiga de São Paulo são plantadas em dois parques da capital paulista"
+      "description": "Mudas da árvore mais antiga de São Paulo são plantadas em dois parques da capital paulista"
     },
-    {
-      "ID": 19740,
+    {"publishedAt": "11/08/1992",
+      "id": 19740,
       "title": "Meu amigo porco",
       "subtitle": "Um bichinho de estimação exótico, muito carinhoso e inteligente",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_5041451840.jpg",
       "author": "Por Livia Goro - Edição de Guilherme Pavarin",
       "title_text": "Os dois porquinhos",
-      "subtitle_text": "Conheça Jamon e Nero, dois exóticos bichinhos de estimação que mais parecem celebridades"
+      "description": "Conheça Jamon e Nero, dois exóticos bichinhos de estimação que mais parecem celebridades"
     },
-    {
-      "ID": 19739,
+    {"publishedAt": "11/08/1992",
+      "id": 19739,
       "title": "Registros históricos",
       "subtitle": "Museu americano reúne fotos mais antigas do mundo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_6542013213.jpg",
       "author": "Por André Schröder",
       "title_text": "Arquivo de fotos",
-      "subtitle_text": "Imagens e objetos que contam a história da fotografia estão liberados para consulta no site do Museu George Eastman"
+      "description": "Imagens e objetos que contam a história da fotografia estão liberados para consulta no site do Museu George Eastman"
     },
-    {
-      "ID": 19738,
+    {"publishedAt": "11/08/1992",
+      "id": 19738,
       "title": "Novos sabores",
       "subtitle": "Conheça plantas comestíveis pouco conhecidas",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_5566305462.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Plantas não convencionais",
-      "subtitle_text": "Os humanos comem menos de 1% dos vegetais que oferecem bons nutrientes. Que tal mudar essa lógica e provar alguma planta comestível pouco conhecida?"
+      "description": "Os humanos comem menos de 1% dos vegetais que oferecem bons nutrientes. Que tal mudar essa lógica e provar alguma planta comestível pouco conhecida?"
     },
-    {
-      "ID": 19737,
+    {"publishedAt": "11/08/1992",
+      "id": 19737,
       "title": "Onda coreana",
       "subtitle": "Grupo de k-pop lidera lista de mais vendidos nos EUA",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9622979988.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "K-pop no topo",
-      "subtitle_text": "Com 135 mil cópias vendidas em uma semana, disco “Love Yourself: Tear”, do grupo coreano BTS, alcança a primeira posição de ranking americano"
+      "description": "Com 135 mil cópias vendidas em uma semana, disco “Love Yourself: Tear”, do grupo coreano BTS, alcança a primeira posição de ranking americano"
     },
-    {
-      "ID": 19736,
+    {"publishedAt": "11/08/1992",
+      "id": 19736,
       "title": "Desafio milionário",
       "subtitle": "Coca-Cola pede ajuda para trocar açúcar da bebida",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_1617436320.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Novo açúcar",
-      "subtitle_text": "Para tornar refrigerante menos prejudicial à saúde, Coca-Cola oferece um milhão de dólares a quem encontrar substituto saudável para o açúcar tradicional"
+      "description": "Para tornar refrigerante menos prejudicial à saúde, Coca-Cola oferece um milhão de dólares a quem encontrar substituto saudável para o açúcar tradicional"
     },
-    {
-      "ID": 19735,
+    {"publishedAt": "11/08/1992",
+      "id": 19735,
       "title": "Pela liberdade de se expressar como quiser",
       "subtitle": "Entenda a reação dos franceses ao atentado ao jornal francês de humor Charlie Hebdo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9907748168.jpg",
       "author": "Por Livia Goro - Edição de Guilherme Pavarin",
       "title_text": "Pela liberdade de se expressar como quiser",
-      "subtitle_text": "Entenda a reação dos franceses ao atentado ao jornal francês de humor Charlie Hebdo"
+      "description": "Entenda a reação dos franceses ao atentado ao jornal francês de humor Charlie Hebdo"
     },
-    {
-      "ID": 19734,
+    {"publishedAt": "11/08/1992",
+      "id": 19734,
       "title": "Luz, câmera, ação!",
       "subtitle": "Descubra como é a rotina de um artista mirim",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_7986639686.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Vida de artista",
-      "subtitle_text": "Entrevistamos Filipe Bragança, de Chiquititas, e Any Gabrielly, do Buuu para descobrir como é a rotina de um artista mirim"
+      "description": "Entrevistamos Filipe Bragança, de Chiquititas, e Any Gabrielly, do Buuu para descobrir como é a rotina de um artista mirim"
     },
-    {
-      "ID": 19733,
+    {"publishedAt": "11/08/1992",
+      "id": 19733,
       "title": "Bicharada",
       "subtitle": "Crônica da Nathalie",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_5634995750.jpg",
       "author": "Por Nathalie Lourenço",
       "title_text": "Bicharada",
-      "subtitle_text": ""
+      "description": ""
     },
-    {
-      "ID": 19732,
+    {"publishedAt": "11/08/1992",
+      "id": 19732,
       "title": "Meio humano, meio robô",
       "subtitle": "Estamos vivendo com ciborgues?",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_8962501622.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Ciborgues do bem",
-      "subtitle_text": "Sucesso na ficção, ciborgues já existem no mundo real. Você conhece algum deles?"
+      "description": "Sucesso na ficção, ciborgues já existem no mundo real. Você conhece algum deles?"
     },
-    {
-      "ID": 19731,
+    {"publishedAt": "11/08/1992",
+      "id": 19731,
       "title": "A força da matéria",
       "subtitle": "Exposição traz obras de Joan Miró a São Paulo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_540527324.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Joan Miró e a busca por liberdade",
-      "subtitle_text": "Brasil recebe exposição inédita de um dos artistas mais importantes do mundo"
+      "description": "Brasil recebe exposição inédita de um dos artistas mais importantes do mundo"
     },
-    {
-      "ID": 19730,
+    {"publishedAt": "11/08/1992",
+      "id": 19730,
       "title": "Abaporu",
       "subtitle": "Quadro brasileiro mais valioso “passeia” pelo país",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_3955265064.jpg",
       "author": "Por André Schröder",
       "title_text": "Obra-prima brasileira",
-      "subtitle_text": "A tela “Abaporu”, de Tarsila do Amaral, ficou exposta no Rio por alguns dias. Conheça um pouco mais sobre o quadro mais valioso já pintado por um artista brasileiro"
+      "description": "A tela “Abaporu”, de Tarsila do Amaral, ficou exposta no Rio por alguns dias. Conheça um pouco mais sobre o quadro mais valioso já pintado por um artista brasileiro"
     },
-    {
-      "ID": 19729,
+    {"publishedAt": "11/08/1992",
+      "id": 19729,
       "title": "Mães jovens",
       "subtitle": "Índice de gravidez na adolescência no Brasil é alto",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_4129320043.jpg",
       "author": "Por Melissa Schröder / Edição de André Schröder",
       "title_text": "Acima da média",
-      "subtitle_text": "Relatório mostra que 68,4 em cada mil brasileiras de 15 a 19 anos ficaram grávidas e tiveram seus bebês entre 2010 e 2015"
+      "description": "Relatório mostra que 68,4 em cada mil brasileiras de 15 a 19 anos ficaram grávidas e tiveram seus bebês entre 2010 e 2015"
     },
-    {
-      "ID": 19728,
+    {"publishedAt": "11/08/1992",
+      "id": 19728,
       "title": "Sinfonias esquecidas",
       "subtitle": "Projeto revisa e grava obras de Heitor Villa-Lobos",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_7218439369.jpg",
       "author": "Por Melissa Schröder - Edição de André Schröder",
       "title_text": "Música brasileira",
-      "subtitle_text": "Orquestra Sinfônica do Estado de São Paulo revisa e grava as sinfonias completas de Heitor Villa-Lobos quase 60 anos após a morte do compositor"
+      "description": "Orquestra Sinfônica do Estado de São Paulo revisa e grava as sinfonias completas de Heitor Villa-Lobos quase 60 anos após a morte do compositor"
     },
-    {
-      "ID": 19727,
+    {"publishedAt": "11/08/1992",
+      "id": 19727,
       "title": "Altas ondas",
       "subtitle": "Surfista cria piscina com onda artificial perfeita",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_464950161.jpg",
       "author": "Por André Schröder",
       "title_text": "Onda perfeita",
-      "subtitle_text": "Kelly Slater, o maior surfista de todos os tempos, criou a primeira onda artificial de nível profissional. Conheça o projeto que pode mudar o futuro do surfe"
+      "description": "Kelly Slater, o maior surfista de todos os tempos, criou a primeira onda artificial de nível profissional. Conheça o projeto que pode mudar o futuro do surfe"
     },
-    {
-      "ID": 19726,
+    {"publishedAt": "11/08/1992",
+      "id": 19726,
       "title": "Que tal uma partida?",
       "subtitle": "Mesas de pingue-pongue viram ponto de encontro em SP",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_6784803397.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Pingpoint",
-      "subtitle_text": "Casal de arquitetos instala mesas de pingue-pongue em praças de São Paulo. Saiba como isso pode mudar a cidade"
+      "description": "Casal de arquitetos instala mesas de pingue-pongue em praças de São Paulo. Saiba como isso pode mudar a cidade"
     },
-    {
-      "ID": 19725,
+    {"publishedAt": "11/08/1992",
+      "id": 19725,
       "title": "Perigo no ar",
       "subtitle": "Poluição é a quarta maior causa de mortes no mundo",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_2084825308.png",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "O ar que respiramos",
-      "subtitle_text": "Pesquisa aponta que ar sujo é a quarta maior causa de mortes no mundo. Você sabe como a poluição é medida?"
+      "description": "Pesquisa aponta que ar sujo é a quarta maior causa de mortes no mundo. Você sabe como a poluição é medida?"
     },
-    {
-      "ID": 19724,
+    {"publishedAt": "11/08/1992",
+      "id": 19724,
       "title": "Museu das cores",
       "subtitle": "Coleção reúne mais de 2.500 pigmentos nos EUA",
       "image": "https://cdnguten.gutennews.com.br/repositorio/img/sections/cover/675_image_9058278244.jpg",
       "author": "Por Livia Goro - Edição de André Schröder",
       "title_text": "Tesouro colorido",
-      "subtitle_text": "Centro de pesquisa na Universidade de Harvard, nos Estados Unidos, possui coleção com mais de 2.500 pigmentos diferentes de cores naturais e sintéticas"
+      "description": "Centro de pesquisa na Universidade de Harvard, nos Estados Unidos, possui coleção com mais de 2.500 pigmentos diferentes de cores naturais e sintéticas"
     }
   ]
