@@ -76,19 +76,19 @@ const Header = props => {
           <PlatformsDropdownContainer>
             <DropdownEnd>
               <Item
-                text="Ir para a Árvore de Livros"
+                text="Go to league page"
                 imagePath={symbolArvoreLivros}
                 type="img-left-text-left"
-                onClick={() => redirectToPlatform('arvore')}
+                onClick={() => window.location.replace('/app/liga')}
               />
               <Item
-                text="Ir para o Guten News"
+                text="Go to library page"
                 imagePath={symbolGutenNews}
                 type="img-left-text-left"
-                onClick={() => redirectToPlatform('guten')}
+                onClick={() => window.location.replace('/app/biblioteca')}
               />
               <Item
-                text="Explorador de acervo"
+                text="Disabled button example"
                 imagePath={symbolEducacao}
                 type="img-left-text-left"
                 disabled
@@ -165,19 +165,19 @@ const Header = props => {
             <PlatformsDropdownContainer>
               <DropdownEnd>
                 <Item
-                  text="Ir para a Árvore de Livros"
+                  text="Go to league page"
                   imagePath={symbolArvoreLivros}
                   type="img-left-text-left"
-                  onClick={() => setPlatformsDropdownMobile(false)}
+                  onClick={() => window.location.replace('/app/liga')}
                 />
                 <Item
-                  text="Ir para o Guten News"
+                  text="Go to library page"
                   imagePath={symbolGutenNews}
                   type="img-left-text-left"
-                  onClick={() => setPlatformsDropdownMobile(false)}
+                  onClick={() => window.location.replace('/app/biblioteca')}
                 />
                 <Item
-                  text="Explorador de acervo"
+                  text="Disabled button example"
                   imagePath={symbolEducacao}
                   type="img-left-text-left"
                   disabled
