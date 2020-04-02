@@ -38,13 +38,12 @@ class Carousel extends Component {
   render() {
     const { forceAlignLeftAndHideArrows, hideArrowRight } = this.state
     const items = this.getChildren()
-    const { centralizeButtonOnBook } = this.props
     const settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      nextArrow: <NextButton reposition={centralizeButtonOnBook} />,
-      prevArrow: <PrevButton reposition={centralizeButtonOnBook} />,
+      nextArrow: <NextButton/>,
+      prevArrow: <PrevButton/>,
       variableWidth: true,
       slidesToScroll: 1,
       ...this.props.carouselSettings

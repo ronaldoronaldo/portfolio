@@ -16,6 +16,7 @@ import {
 } from './RankingHistoryCard.styles'
 import { LEAGUE_RANK_LEGEND } from 'utils/league'
 import {colors} from 'config/ui'
+import {FontIcon} from "../../lib/icons"
 
 // start months at index 1 to prevent month+1
 const months = [
@@ -41,7 +42,7 @@ const RankingHistoryCard = ({ item, index }) => {
   if (item.month >= currentMonth) {
     return (
       <MonthGhost key={index}>
-        <MonthGhostIcon className="icon-query_builder" />
+        <FontIcon iconName={'time'} size={34} sizeMobile={34} color={colors.gray4}/>
         <MonthGhostLabel>{months[item.month]}</MonthGhostLabel>
       </MonthGhost>
     )
