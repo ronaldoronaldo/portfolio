@@ -131,6 +131,7 @@ import WrapperPanel from 'screens/admin/user-management-panel/WrapperPanel'
 import WrapperSite from 'screens/site/WrapperSite'
 import WrapperPortfolio from 'screens/portfolio/WrapperPortfolio'
 import League from 'screens/league'
+import LeagueTutorial from 'screens/league-tutorial'
 
 const Routes = () => (
   <BrowserRouter>
@@ -199,7 +200,8 @@ const Routes = () => (
     <Route path={SITE_PATH} component={WrapperSite} />
 
     {/*site home routes*/}
-    <Route path={LEAGUE_PATH} component={League} />
+    <Route path={LEAGUE_PATH} exact component={League} />
+    <Route path={LEAGUE_TUTORIAL_PATH} exact component={LeagueTutorial} />
 
     {/*portfolio routes*/}
     <Route path={PORTFOLIO_PATH} component={WrapperPortfolio} />

@@ -5,10 +5,12 @@ import {
   InstructionBox,
   InstructionNumber,
   InstructionText,
-  InstructionTextContainer
+  InstructionTextContainer,
+  Spacing
 } from './LeagueTutorial.styles'
-import ComboAccordion from 'components/lib/combo-accordion/ComboAccordion'
-import { Column, Grid, Row } from 'components/lib/flexboxgrid'
+import ComboAccordion from 'components/league/combo-accordion/ComboAccordion'
+import { Column, Grid, Row } from 'components/league/flexboxgrid'
+import {Header} from "../../components/site/header"
 
 const renderSection = instructions => {
   return instructions.map((instruction, index) => {
@@ -109,25 +111,30 @@ class LeagueTutorial extends Component {
 
   render() {
     return (
-      <Grid>
-        <Row>
-          <Column s={12} m={10} l={8} xl={6} style={{ padding: 0 }}>
-            <Title>Como funciona a Liga</Title>
-            <AccordionWrapper>
-              {sections.map((section, index) => (
-                <ComboAccordion
-                  isOpen={section.isOpen}
-                  key={index}
-                  headerTitle={section.title}
-                  handleClick={this.handleSectionClick.bind(this, index)}
-                >
-                  {section.content}
-                </ComboAccordion>
-              ))}
-            </AccordionWrapper>
-          </Column>
-        </Row>
-      </Grid>
+      <>
+        <Header/>
+        <Spacing/>
+        <Grid>
+          <Row>
+            <Column s={12} m={10} l={8} xl={6} style={{ padding: 0 }}>
+              <Title>Como funciona a Liga</Title>
+              <AccordionWrapper>
+                {sections.map((section, index) => (
+                  <ComboAccordion
+                    isOpen={section.isOpen}
+                    key={index}
+                    headerTitle={section.title}
+                    handleClick={this.handleSectionClick.bind(this, index)}
+                  >
+                    {section.content}
+                  </ComboAccordion>
+                ))}
+              </AccordionWrapper>
+            </Column>
+          </Row>
+        </Grid>
+      </>
+
     )
   }
 }

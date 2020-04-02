@@ -54,6 +54,11 @@ export const InstructionNumber = styled.div`
 
 export const InstructionTextContainer = styled.div``
 
+export const Spacing = styled.div`
+  width: 100%;
+  height: ${spacing.large}px;
+`
+
 export const InstructionText = styled.div`
   color: ${colors.black5};
   font-size: ${sizes.text}px;

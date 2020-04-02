@@ -621,7 +621,6 @@ class LeagueBoards extends Component {
               <LeagueBanner
                 to={LEAGUE_TUTORIAL_PATH}
                 noSpacingTop
-                onClick={() => showTutorial()}
               >
                 <LeagueBannerTitle>
                   Entenda como funciona a Liga!

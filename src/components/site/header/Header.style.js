@@ -6,15 +6,17 @@ import RoundButton from 'components/admin/user-management-panel/round-button/Rou
 import { Overlay } from 'styles/common/Common.styles'
 
 export const Container = styled.div`
-  width: 100%;
-  background: ${colors.blue3};
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  position: relative;
-  top: 0;
+  ${({ bgColor }) => `
+    width: 100%;
+    background: ${bgColor ? bgColor : colors.blue3};
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    position: relative;
+    top: 0;
+  `}
 `
 
 export const Logo = styled.a`

@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 import { Wrapper } from './League.styles'
 import LeagueBoards from 'components/league/league-boards'
+import {Header} from "../../components/site/header"
+import { colors } from 'config/ui'
 
 const League = () => {
   const [currentPoints, setCurrentPoints] = useState(892)
   return (
-    <Wrapper>
-      <LeagueBoards currentPoints={currentPoints} />
-    </Wrapper>
+    <>
+      <Header bgColor={colors.purple3}/>
+      <Wrapper>
+        <LeagueBoards currentPoints={currentPoints} />
+      </Wrapper>
+    </>
   )
 }
 
