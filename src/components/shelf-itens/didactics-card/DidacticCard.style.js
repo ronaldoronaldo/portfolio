@@ -32,8 +32,8 @@ export const Cover = styled.a`
   transition: all 0.2s ease-in;
 
   &:hover {
-    transform: scale(1.04);
-    box-shadow: ${shadows.shadowDown8};
+    transform: scale(1.05);
+    box-shadow: none;
     position: relative;
     z-index: 3;
 

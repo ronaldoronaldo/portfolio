@@ -24,17 +24,9 @@ const DidacticCard = ({ didacticsCard, loading, ...rest }) => {
     return <DidacticsCardPlaceholder />
   }
 
-  const onClickCover = () => {
-    if (didacticsCard.icon === 'arvore') {
-      redirectToPlatform('arvore', didacticsCard.link)
-    } else {
-      redirectToPlatform('guten', didacticsCard.link)
-    }
-  }
-
   return (
     <StyledDidacticCard {...rest}>
-      <Cover onClick={onClickCover} platform={didacticsCard.icon}>
+      <Cover platform={didacticsCard.icon}>
         <LineColor platform={didacticsCard.icon} />
         <HeaderCardStyle>
           <TitleStyle platform={didacticsCard.icon}>

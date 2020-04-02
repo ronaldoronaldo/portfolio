@@ -7,22 +7,107 @@ import {
 import { colors } from 'config/ui'
 import { ItemsShelf } from 'components/shelf'
 import { withApollo } from 'react-apollo'
-import { getTeachinMaterialsDataQuery } from 'api/queries'
+
+import BookImage from 'assets/images/book.svg'
+import NewsImage from 'assets/images/news.svg'
+
+const didactics = [
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  }
+]
+
 
 const TeachingMaterialsScreen = ({ client, ...props }) => {
   const [data, setData] = useState([])
   const [loadingData, setLoadingData] = useState(true)
 
   useEffect(() => {
-    client
-      .query({
-        query: getTeachinMaterialsDataQuery
-      })
-      .then(res => {
-        setData(res.data)
-        setLoadingData(false)
-      })
-      .catch(err => {})
+    setTimeout(()=>{
+      setLoadingData(false)
+      setData(didactics)
+    }, 500)
   }, [])
 
   return (
@@ -37,31 +122,24 @@ const TeachingMaterialsScreen = ({ client, ...props }) => {
         />
       </ContainerHeaderStyle>
       <ItemsShelf
-        slidesToShow={3}
-        projectsShelf
-        title="Projetos para despertar grandes leitores"
-        data={data.readingProjects}
-        loading={loadingData}
-      />
-      <ItemsShelf
         slidesToShow={3.8}
         didacticsShelf
         title="Planos e sequências para inspirar pequenos leitores (EI e EF1)"
-        data={data.teachingMaterial && data.teachingMaterial.kinderGarden}
+        data={data}
         loading={loadingData}
       />
       <ItemsShelf
         slidesToShow={3.8}
         didacticsShelf
         title="Planos e sequências para encantar jovens leitores (F2 e EM)"
-        data={data.teachingMaterial && data.teachingMaterial.highSchool}
+        data={data}
         loading={loadingData}
       />
       <ItemsShelf
         slidesToShow={3.8}
         didacticsShelf
         title="Sequências didáticas para abordar temas sensíveis"
-        data={data.teachingMaterial && data.teachingMaterial.sensiveThemes}
+        data={data}
         loading={loadingData}
       />
     </Container>

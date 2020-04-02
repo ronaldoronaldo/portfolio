@@ -5,13 +5,15 @@ export const TagStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 8px 6px 8px;
+  padding: 0px 8px;
+  height: 24px;
   font-size: 12px;
+  line-height: 12px;
   color: ${colors.purple3};
-  background-color: ${colors.purple1};
+  background-color: ${colors.white};
   margin-left: 8px;
   border-radius: 16px;
   font-weight: ${fontWeights.bold};
   margin-bottom: 10px;
-  border: ${props => (props.border ? `1px solid ${colors.purple2}` : 'none')};
+  border: 1px solid ${colors.purple2};
 `
