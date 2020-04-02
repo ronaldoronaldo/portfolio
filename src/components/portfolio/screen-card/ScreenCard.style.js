@@ -1,14 +1,14 @@
 import styled  from 'styled-components'
-import { fontWeights, spacing, colors } from 'config/ui'
+import { fontWeights, spacing, colors,shadows } from 'config/ui'
 
 export const CardContainer = styled.div`
   display: flex;
-  width: 25%;
+  width: 33%;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  margin-left: ${spacing.xSmall}px;
-  margin-right: ${spacing.xSmall}px;
+  margin-left: ${spacing.mSmall}px;
+  margin-right: ${spacing.mSmall}px;
   position: relative;
 
   &:first-child {
@@ -37,14 +37,19 @@ export const HeaderBox = styled.div`
 
 export const ScreenImage = styled.img`
   width: 100%;
+  transition: all 0.2s ease-in;
+   &:hover {
+    transform: scale(1.04);
+  }
 `
 
 export const OpacityMask = styled.div`
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${colors.black1} 78%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${colors.black1} 70%);
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 130px;
+  bottom: -10px;
+  width: 105%;
+  transition: all 0.2s ease-in;
+  height: 145px;
 `
 
 
