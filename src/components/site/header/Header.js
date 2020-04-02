@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import {
   Container,
   Logo,
-  // WrapperInput,
   ContainerMenu,
   ContainerItemMenu,
   MenuMobile,
   ItemMenu,
-  // ExpandableSearchInputStyle,
   UserDropdownContainer,
   PlatformsDropdownContainer,
   RoundButtonStyled,
@@ -22,45 +20,22 @@ import LogoArvoreEducacao from 'assets/images/logo-arvore-edu-white.svg'
 import { DropdownEnd, Item } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'
-import { LOGOUT_PATH, ROOT_PATH } from 'routes'
-import { redirectToPlatform } from 'utils/redirects'
+import {LOGIN_PATH, ROOT_PATH} from 'routes'
 import { FontIcon } from 'components/lib/icons'
 import { Link } from 'react-router-dom'
 
 const Header = props => {
   const [userDropdown, setUserDropdown] = useState(false)
-  // const [searchValue, setSearchValue] = useState('')
   const [platformDropdown, setPlatformsDropdown] = useState(false)
   const [platformDropdownMobile, setPlatformsDropdownMobile] = useState(false)
-
-  // const providerGoogleOrMicrosoft = localStorage.getItem('provider')
-
-  // const onSearchChange = value => {
-  //   setSearchValue(value)
-  // }
-
-  // const handleSearch = () => {
-  //   props.history.push(`${SITE_SEARCH_PATH}/${searchValue}`)
-  // }
-
   return (
     <Container {...props}>
       <Logo href="">
         <img
           src={LogoArvoreEducacao}
           alt="Arvore educação"
-          fill={colors.white}
         />
       </Logo>
-      {/* <WrapperInput>
-        <ExpandableSearchInputStyle
-          placeholder="Buscar por livros, notícias, autores…"
-          iconSize={22}
-          onChange={onSearchChange}
-          value={searchValue}
-          submitSearch={handleSearch}
-        />
-      </WrapperInput> */}
       <ContainerMenu>
         <ClickOutside onClickOutside={() => setPlatformsDropdown(false)}>
           <RoundButtonStyled
@@ -74,39 +49,51 @@ const Header = props => {
         </ClickOutside>
         {platformDropdown && (
           <PlatformsDropdownContainer>
-            <DropdownEnd>
-              <Item
-                text="Go to league page"
-                imagePath={symbolArvoreLivros}
-                type="img-left-text-left"
-                onClick={() => window.location.replace('/app/liga')}
-              />
-              <Item
-                text="Go to library page"
-                imagePath={symbolGutenNews}
-                type="img-left-text-left"
-                onClick={() => window.location.replace('/app/biblioteca')}
-              />
-              <Item
-                text="Disabled button example"
-                imagePath={symbolEducacao}
-                type="img-left-text-left"
-                disabled
-              />
-            </DropdownEnd>
+              <DropdownEnd>
+                <Item
+                  text="Go to league page"
+                  imagePath={symbolGutenNews}
+                  type="img-left-text-left"
+                  onClick={() => window.location.replace('/app/liga')}
+                />
+                <Item
+                  text="Go to league vacation"
+                  imagePath={symbolGutenNews}
+                  type="img-left-text-left"
+                  onClick={() => window.location.replace('/app/liga/ferias')}
+                />
+                <Item
+                  text="Go to library page"
+                  imagePath={symbolArvoreLivros}
+                  type="img-left-text-left"
+                  onClick={() => window.location.replace('/app/biblioteca')}
+                />
+                <Item
+                  text="Back to portfolio"
+                  imagePath={symbolEducacao}
+                  type="img-left-text-left"
+                  onClick={() => window.location.replace('/app/biblioteca')}
+                />
+                <Item
+                  text="Disabled button example"
+                  imagePath={symbolGutenNews}
+                  type="img-left-text-left"
+                  disabled
+                />
+              </DropdownEnd>
           </PlatformsDropdownContainer>
         )}
-        {/* <RoundButtonStyled
+        <RoundButtonStyled
           style={{
             marginRight: 8
           }}
           iconName="bell"
           numberOfNotifications="10"
           onClick={() => console.log('news')}
-          bgColor={colors.blue}
+          bgColor={colors.white}
           borderColor={colors.white}
-          iconColor={colors.white}
-        /> */}
+          iconColor={colors.blue3}
+        />
         <ClickOutside onClickOutside={() => setUserDropdown(false)}>
           <RoundButtonStyled
             iconName="user"
@@ -124,7 +111,7 @@ const Header = props => {
                 text="Sair"
                 iconName="magazine"
                 type="icon-left-text-left"
-                to={LOGOUT_PATH}
+                to={LOGIN_PATH}
                 as={Link}
               />
             </DropdownEnd>
@@ -166,19 +153,31 @@ const Header = props => {
               <DropdownEnd>
                 <Item
                   text="Go to league page"
-                  imagePath={symbolArvoreLivros}
+                  imagePath={symbolGutenNews}
                   type="img-left-text-left"
                   onClick={() => window.location.replace('/app/liga')}
                 />
                 <Item
-                  text="Go to library page"
+                  text="Go to league vacation"
                   imagePath={symbolGutenNews}
+                  type="img-left-text-left"
+                  onClick={() => window.location.replace('/app/liga/ferias')}
+                />
+                <Item
+                  text="Go to library page"
+                  imagePath={symbolArvoreLivros}
+                  type="img-left-text-left"
+                  onClick={() => window.location.replace('/app/biblioteca')}
+                />
+                <Item
+                  text="Back to portfolio"
+                  imagePath={symbolEducacao}
                   type="img-left-text-left"
                   onClick={() => window.location.replace('/app/biblioteca')}
                 />
                 <Item
                   text="Disabled button example"
-                  imagePath={symbolEducacao}
+                  imagePath={symbolGutenNews}
                   type="img-left-text-left"
                   disabled
                 />
@@ -188,7 +187,7 @@ const Header = props => {
           </>
         )}
         <ContainerItemMenu>
-          <ItemMenu as={Link} to={LOGOUT_PATH}>
+          <ItemMenu as={Link} to={LOGIN_PATH}>
             <FontIcon
               iconName="magazine"
               size={15}
