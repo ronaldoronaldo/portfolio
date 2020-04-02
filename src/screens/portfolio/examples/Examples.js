@@ -9,6 +9,7 @@ import {
 } from './Examples.style'
 import ScreenCard from 'components/portfolio/screen-card/ScreenCard'
 import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
+import libraryMobile from 'assets/images/portfolio/pages/libraryMobile.png'
 import {LOGIN_PATH} from 'routes'
 
 const responsiveScreens = [
@@ -20,7 +21,7 @@ const responsiveScreens = [
   },
   {
     title: 'library',
-    image: '',
+    image: libraryMobile,
     numberOfPages: 11,
     path: LOGIN_PATH
   },

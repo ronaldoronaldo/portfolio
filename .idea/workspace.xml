@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/portfolio-rw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfolio-rw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/libraryDesktop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/libraryMobile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/vars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/vars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,17 +25,19 @@
     </option>
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="2160" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
-  </component>
+  <component name="ProjectId" id="1ZwaPpeORMZAQxpIZlUs13DEdG6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/portfolio/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,19 +49,19 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/assets/src/styles/common/Common.styles.js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/lib" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/site" />
-      <recent name="$PROJECT_DIR$/src/screens/site" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/src" />
       <recent name="$PROJECT_DIR$/assets/src/components/lib" />
       <recent name="$PROJECT_DIR$/assets/src/components/admin/user-management-panel" />
       <recent name="$PROJECT_DIR$/assets/src/styles/global" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images/portfolio/pages" />
+      <recent name="$PROJECT_DIR$/src/components/admin/user-management-panel" />
+      <recent name="$PROJECT_DIR$/src/styles/fonts" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src/components/shelf" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -174,48 +177,7 @@
       <workItem from="1577555223788" duration="3303000" />
       <workItem from="1577641265468" duration="3236000" />
       <workItem from="1577718806572" duration="3448000" />
-    </task>
-    <task id="LOCAL-00227" summary="frontend feature/list-users filter">
-      <created>1576011316944</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1576011316945</updated>
-    </task>
-    <task id="LOCAL-00228" summary="frontend feature/list-users filter working properly for students">
-      <created>1576030641436</created>
-      <option name="number" value="00228" />
-      <option name="presentableId" value="LOCAL-00228" />
-      <option name="project" value="LOCAL" />
-      <updated>1576030641436</updated>
-    </task>
-    <task id="LOCAL-00229" summary="frontend feature/list-users filter working properly for teachers">
-      <created>1576032264996</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
-      <option name="project" value="LOCAL" />
-      <updated>1576032264996</updated>
-    </task>
-    <task id="LOCAL-00230" summary="frontend feature/list-users filter working properly for directors">
-      <created>1576032644583</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1576032644583</updated>
-    </task>
-    <task id="LOCAL-00231" summary="frontend feature/site-home-user-dropdown-menu missing icons only">
-      <created>1576075667910</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1576075667910</updated>
-    </task>
-    <task id="LOCAL-00232" summary="frontend feature/site-home-user-dropdown-menu icons and items as objects">
-      <created>1576086491242</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1576086491242</updated>
+      <workItem from="1585752599026" duration="15548000" />
     </task>
     <task id="LOCAL-00233" summary="frontend feature/site-home-user-dropdown-menu logout screen">
       <created>1576088014347</created>
@@ -518,7 +480,49 @@
       <option name="project" value="LOCAL" />
       <updated>1585712329362</updated>
     </task>
-    <option name="localTasksCounter" value="276" />
+    <task id="LOCAL-00276" summary="vars">
+      <created>1585712350228</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1585712350228</updated>
+    </task>
+    <task id="LOCAL-00277" summary="show">
+      <created>1585712441986</created>
+      <option name="number" value="00277" />
+      <option name="presentableId" value="LOCAL-00277" />
+      <option name="project" value="LOCAL" />
+      <updated>1585712441986</updated>
+    </task>
+    <task id="LOCAL-00278" summary="collections">
+      <created>1585777479669</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1585777479669</updated>
+    </task>
+    <task id="LOCAL-00279" summary="book details">
+      <created>1585783276973</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1585783276973</updated>
+    </task>
+    <task id="LOCAL-00280" summary="o brabo tem nome">
+      <created>1585788498311</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1585788498311</updated>
+    </task>
+    <task id="LOCAL-00281" summary="o brabo tem nome mesmo">
+      <created>1585790769339</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1585790769339</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,12 +558,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="frontend feature/home-search-results title and button" />
-    <MESSAGE value="frontend feature/home-search-results page shelves" />
-    <MESSAGE value="frontend feature/home-search-results filter" />
-    <MESSAGE value="frontend feature/home-search-results search key up evt" />
-    <MESSAGE value="frontend feature/home-search-results ...props" />
-    <MESSAGE value="frontend feature/home-search-results styles" />
     <MESSAGE value="frontend feature/home-search-results enable button" />
     <MESSAGE value="frontend feature/home-search-results details" />
     <MESSAGE value="frontend fix/list-users-new-roles new roles" />
@@ -579,24 +577,42 @@
     <MESSAGE value="login done" />
     <MESSAGE value="login images" />
     <MESSAGE value="52 files" />
-    <option name="LAST_COMMIT_MESSAGE" value="52 files" />
+    <MESSAGE value="vars" />
+    <MESSAGE value="show" />
+    <MESSAGE value="collections" />
+    <MESSAGE value="book details" />
+    <MESSAGE value="o brabo tem nome" />
+    <MESSAGE value="o brabo tem nome mesmo" />
+    <option name="LAST_COMMIT_MESSAGE" value="o brabo tem nome mesmo" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1585712329307">
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1585790769261">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585712329307" />
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585790769261" />
+    <state x="778" y="2471" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585712959128">
+      <screen x="0" y="2160" width="1920" height="1080" />
+    </state>
+    <state x="778" y="2471" width="424" height="491" key="FileChooserDialogImpl/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585712959128" />
+    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog" timestamp="1585781117053">
+      <screen x="0" y="2160" width="1920" height="1080" />
+    </state>
+    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585781117053" />
     <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585695463861">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585695463861" />
-    <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585696985066">
+    <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585789603984">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585696985066" />
-    <state x="643" y="2444" width="704" height="538" key="find.popup" timestamp="1585711815171">
+    <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585789603984" />
+    <state x="643" y="2444" width="863" height="538" key="find.popup" timestamp="1585791125242">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="643" y="2444" width="704" height="538" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585711815171" />
+    <state x="643" y="2444" width="863" height="538" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585791125242" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1585790106290">
+      <screen x="0" y="2160" width="1920" height="1080" />
+    </state>
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585790106290" />
   </component>
 </project>
