@@ -37,9 +37,9 @@ const months = [
 
 const RankingHistoryCard = ({ item, index }) => {
 
-  const currentMonth = new Date().getMonth() + 1
+  // const currentMonth = new Date().getMonth() + 1
 
-  if (item.month >= currentMonth) {
+  if (item.month >= 10) {
     return (
       <MonthGhost key={index}>
         <FontIcon iconName={'time'} size={34} sizeMobile={34} color={colors.gray4}/>

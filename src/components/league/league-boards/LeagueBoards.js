@@ -283,7 +283,7 @@ class LeagueBoards extends Component {
           userName: 'Ricardo Siqueira'
         }
       ],
-      tier: 'gold'
+      tier: 'diamond'
     }
     const overallRankingHistory = [
       {
@@ -304,7 +304,7 @@ class LeagueBoards extends Component {
         points: 220,
         month: 5,
         rankPosition: 2153,
-        tier: 'silver',
+        tier: 'declassified',
         __typename: 'RankingReaderHistory'
       },
       {
@@ -332,7 +332,7 @@ class LeagueBoards extends Component {
         points: 1068,
         month: 9,
         rankPosition: 259,
-        tier: 'diamond',
+        tier: 'waiting',
         declassified: true,
         __typename: 'RankingReaderHistory'
       },
@@ -445,48 +445,48 @@ class LeagueBoards extends Component {
               carouselSettings={{
                 variableWidth: false,
                 slidesToShow: 2.7,
-                slidesToScroll: 3,
+                slidesToScroll: 2.7,
                 responsive: [
                   {
                     breakpoint: sizes.xlScreen,
                     settings: {
                       slidesToShow: 2.3,
-                      slidesToScroll: 2
+                      slidesToScroll: 2.3
                     }
                   },
                   {
                     breakpoint: sizes.lScreen,
                     settings: {
                       slidesToShow: 1.8,
-                      slidesToScroll: 2
+                      slidesToScroll: 1.8
                     }
                   },
                   {
                     breakpoint: sizes.mScreen,
                     settings: {
                       slidesToShow: 2.6,
-                      slidesToScroll: 2
+                      slidesToScroll: 2.6
                     }
                   },
                   {
                     breakpoint: sizes.sScreen,
                     settings: {
                       slidesToShow: 2.3,
-                      slidesToScroll: 2
+                      slidesToScroll: 2.3
                     }
                   },
                   {
                     breakpoint: sizes.xsScreen,
                     settings: {
                       slidesToShow: 1.7,
-                      slidesToScroll: 1
+                      slidesToScroll: 1.7
                     }
                   },
                   {
                     breakpoint: sizes.xxsScreen,
                     settings: {
                       slidesToShow: 1.4,
-                      slidesToScroll: 1
+                      slidesToScroll: 1.4
                     }
                   }
                 ]
