@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
-import { Countdown, StyledDots } from './MonthCountdown.styles'
+import {
+  StyledDots,
+  CountdownWrapper,
+  UnityBox,
+  UnityLabel,
+  UnityNumber
+} from './MonthCountdown.styles'
 import {
   endOfMonth,
   endOfDay,
@@ -29,30 +35,37 @@ class MonthCountdown extends Component {
   }
 
   render() {
+    const { endDate, removeSeparators } = this.props
     const now = Date.now()
-    const days = differenceInDays(endOfMonth(now), now).toString()
-    const hours = differenceInHours(endOfDay(now), now).toString()
-    const minutes = differenceInMinutes(endOfHour(now), now).toString()
-    const seconds = differenceInSeconds(endOfMinute(now), now).toString()
+    const countdown = {
+      dias: differenceInDays(
+        endOfMonth(endDate ? endDate : now),
+        now
+      ).toString(),
+      horas: differenceInHours(endOfDay(now), now).toString(),
+      min: differenceInMinutes(endOfHour(now), now).toString(),
+      seg: differenceInSeconds(endOfMinute(now), now).toString()
+    }
+
+    const renderUnityBox = label => {
+      return (
+        <UnityBox isTheFirstBox={label==='dias'}>
+          <UnityNumber>{this.formateInfo(countdown[label])}</UnityNumber>
+          <UnityLabel>{label}</UnityLabel>
+        </UnityBox>
+      )
+    }
 
     return (
-      <Countdown>
-        <span>
-          {this.formateInfo(days)} <span>dias</span>
-        </span>
-        <StyledDots>{` : `}</StyledDots>
-        <span>
-          {this.formateInfo(hours)} <span>horas</span>
-        </span>
-        <StyledDots>{` : `}</StyledDots>
-        <span>
-          {this.formateInfo(minutes)} <span>min</span>
-        </span>
-        <StyledDots>{` : `}</StyledDots>
-        <span>
-          {this.formateInfo(seconds)} <span>seg</span>
-        </span>
-      </Countdown>
+      <CountdownWrapper>
+        {renderUnityBox('dias')}
+        {!removeSeparators && <StyledDots>{` : `}</StyledDots>}
+        {renderUnityBox('horas')}
+        {!removeSeparators && <StyledDots>{` : `}</StyledDots>}
+        {renderUnityBox('min')}
+        {!removeSeparators && <StyledDots>{` : `}</StyledDots>}
+        {renderUnityBox('seg')}
+      </CountdownWrapper>
     )
   }
 }

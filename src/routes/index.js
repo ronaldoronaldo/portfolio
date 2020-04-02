@@ -14,6 +14,7 @@ export const SITE_SEARCH_RESULTS_PATH = term =>
 //LEAGUE ROUTES
 export const LEAGUE_PATH = ROOT_PATH + '/liga'
 export const LEAGUE_TUTORIAL_PATH = LEAGUE_PATH + '/tutorial'
+export const LEAGUE_VACATION_PATH = LEAGUE_PATH + '/ferias'
 
 //LOGIN ROUTES
 export const LOGIN_PATH = `${ROOT_PATH}/login`
@@ -132,6 +133,7 @@ import WrapperSite from 'screens/site/WrapperSite'
 import WrapperPortfolio from 'screens/portfolio/WrapperPortfolio'
 import League from 'screens/league'
 import LeagueTutorial from 'screens/league-tutorial'
+import LeagueVacation from 'screens/league-vacation'
 
 const Routes = () => (
   <BrowserRouter>
@@ -202,6 +204,7 @@ const Routes = () => (
     {/*site home routes*/}
     <Route path={LEAGUE_PATH} exact component={League} />
     <Route path={LEAGUE_TUTORIAL_PATH} exact component={LeagueTutorial} />
+    <Route path={LEAGUE_VACATION_PATH} exact component={LeagueVacation} />
 
     {/*portfolio routes*/}
     <Route path={PORTFOLIO_PATH} component={WrapperPortfolio} />

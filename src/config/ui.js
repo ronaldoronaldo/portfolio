@@ -127,7 +127,11 @@ export const colors = {
   orange: '#FFAA68',
   purpleHover: '#6b42c7',
   paleGrayFour: '#f3f6fd',
-  black01: `rgba(0, 0, 0, 0.1)`
+  black01: `rgba(0, 0, 0, 0.1)`,
+
+  leagueOnVacationPurple1: '#8553f4',
+  leagueOnVacationPurple2: '#6b42c7',
+  leagueOnVacationYellow: '#ffe268'
 }
 
 export const sizes = {
