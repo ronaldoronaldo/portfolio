@@ -8,7 +8,12 @@ export const PORTFOLIO_PATH = ROOT_PATH + '/home'
 
 //SITE ROUTES
 export const SITE_PATH = ROOT_PATH + '/biblioteca'
-export const SITE_SEARCH_RESULTS_PATH = term => `${SITE_PATH}/busca/${term || ':term'}`
+export const SITE_SEARCH_RESULTS_PATH = term =>
+  `${SITE_PATH}/busca/${term || ':term'}`
+
+//LEAGUE ROUTES
+export const LEAGUE_PATH = ROOT_PATH + '/liga'
+export const LEAGUE_TUTORIAL_PATH = LEAGUE_PATH + '/tutorial'
 
 //LOGIN ROUTES
 export const LOGIN_PATH = `${ROOT_PATH}/login`
@@ -125,21 +130,19 @@ import {
 import WrapperPanel from 'screens/admin/user-management-panel/WrapperPanel'
 import WrapperSite from 'screens/site/WrapperSite'
 import WrapperPortfolio from 'screens/portfolio/WrapperPortfolio'
+import League from 'screens/league'
 
 const Routes = () => (
   <BrowserRouter>
     <Route path={'/'} exact render={() => <Redirect to={PORTFOLIO_PATH} />} />
-    <Route path={ROOT_PATH} exact render={() => <Redirect to={PORTFOLIO_PATH} />} />
     <Route
-      path={FORGOT_LOGIN_PATH}
+      path={ROOT_PATH}
       exact
-      component={ForgotLogin} />
-    <Route path={LOGIN_PATH} component={Login} />
-    <Route
-      path={LOGOUT_PATH}
-      exact
-      component={Logout}
+      render={() => <Redirect to={PORTFOLIO_PATH} />}
     />
+    <Route path={FORGOT_LOGIN_PATH} exact component={ForgotLogin} />
+    <Route path={LOGIN_PATH} component={Login} />
+    <Route path={LOGOUT_PATH} exact component={Logout} />
     <Route path={CHOOSE_RECOVER_METHOD_PATH} exact component={ForgotLogin} />
     <Route
       path={SECRET_QUESTION_ANSWER_PATH}
@@ -194,6 +197,9 @@ const Routes = () => (
 
     {/*site home routes*/}
     <Route path={SITE_PATH} component={WrapperSite} />
+
+    {/*site home routes*/}
+    <Route path={LEAGUE_PATH} component={League} />
 
     {/*portfolio routes*/}
     <Route path={PORTFOLIO_PATH} component={WrapperPortfolio} />

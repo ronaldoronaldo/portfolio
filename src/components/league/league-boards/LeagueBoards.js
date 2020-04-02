@@ -1,16 +1,10 @@
 import React, { Component, Fragment } from 'react'
-import { withRouter } from 'react-router-dom'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { withApollo } from 'react-apollo'
-import { CrownIcon } from 'components/lib/icons'
 import { colors, sizes } from 'config/ui'
 import { reducedUserName } from 'utils/username'
-import { overallRankingHistoryQuery} from 'api/queries'
 import { LEAGUE_RANK_LEGEND, getTotalPoints } from 'utils/league'
 import { LEAGUE_TUTORIAL_PATH } from 'routes'
-import Carousel from 'components/lib/carousel'
-import MonthCountdown from 'components/month-countdown'
+import { Carousel } from 'components/lib/carousel'
+import MonthCountdown from 'components/league/month-countdown'
 import {
   fundamental1DegreeMap,
   fundamental2DegreeMap,
@@ -35,7 +29,6 @@ import {
   ProgressBar,
   LevelImage,
   ProgressBarWrapper,
-  FirstPlace,
   MonthCountdownWrapper,
   Month,
   RankingHistoryContainer,
@@ -62,7 +55,7 @@ import {
   LeagueBannerSubtitle,
   StyledColumn
 } from './LeagueBoards.styles'
-import RankingHistoryCard from 'components/lib/ranking-history-card'
+import RankingHistoryCard from 'components/league/ranking-history-card'
 
 const getLeagueNameFromDegree = degree => {
   if (fundamental1DegreeMap.includes(degree)) {
@@ -91,33 +84,243 @@ const numberOfPointsToEnterTheLeague = 80
 
 class LeagueBoards extends Component {
   state = {
-    overallRankingHistory: [],
     activeRank: 0,
     rankListScope: 'arvoreRank'
   }
 
-  componentWillMount() {
-    this.props.client
-      .query({
-        query: overallRankingHistoryQuery
-      })
-      .then(res => {
-        this.setState({
-          overallRankingHistory: res.data.me.reader.overallRankingHistory
-        })
-      })
-      .catch(err => console.log(err))
-  }
-
   render() {
-    const { user, currentPoints } = this.props
-    const { reader } = user
-    const { overallRanking, entity } = reader
-    const { overallRankingHistory, activeRank } = this.state
+    const { currentPoints } = this.props
+    const { activeRank } = this.state
 
-    const userDontHaveEnoughPoints = currentPoints < numberOfPointsToEnterTheLeague
+    const reader = {
+      id: 189
+    }
+
+    const entity = {
+      rankingEntity: [
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 552116,
+          rankPosition: 1,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '3597',
+          userName: 'Caroline dos Santos Maciel Silva'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 204828,
+          rankPosition: 2,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '3255',
+          userName: 'Barbara Aguiar'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 512306,
+          rankPosition: 3,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '2985',
+          userName: 'Mariana'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: '2218851198134002',
+          profileId: 215181,
+          rankPosition: 4,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '1930',
+          userName: 'Anderson Konzen'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 614294,
+          rankPosition: 5,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '1405',
+          userName: 'Leonardo Ippolito da Silva'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 614295,
+          rankPosition: 6,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '684',
+          userName: 'Mariana Morais Graça Pereira'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 512042,
+          rankPosition: 7,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '438',
+          userName: 'Maria Drummond'
+        }
+      ],
+      rankingRoot: [
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 552116,
+          rankPosition: 1,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '3597',
+          userName: 'Caroline dos Santos Maciel Silva'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 204828,
+          rankPosition: 2,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '3255',
+          userName: 'Barbara Aguiar'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 512306,
+          rankPosition: 3,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '2985',
+          userName: 'Mariana'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: '2218851198134002',
+          profileId: 215181,
+          rankPosition: 4,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '1930',
+          userName: 'Anderson Konzen'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 614294,
+          rankPosition: 5,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '1405',
+          userName: 'Leonardo Ippolito da Silva'
+        },
+        {
+          __typename: 'RankingReader',
+          facebookUid: null,
+          profileId: 656945,
+          rankPosition: 6,
+          rootName: 'Time Árvore',
+          tier: null,
+          totalTimeSpent: '838',
+          userName: 'BB'
+        }
+      ],
+      degree: 'F'
+    }
+    const overallRanking = {
+      __typename: 'Ranking',
+      percentage: 84.356,
+      rankingUsers: [
+        {
+          entityId: 2,
+          profileId: 3,
+          rankPosition: 1235,
+          rootName: 'Santo Agostinho',
+          tier: 'diamond',
+          totalTimeSpent: 298,
+          userName: 'Alef Xavier'
+        }
+      ],
+      tier: 'diamond'
+    }
+    const overallRankingHistory = [
+      {
+        points: 89,
+        month: 3,
+        rankPosition: 3159,
+        tier: 'bronze',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 153,
+        month: 4,
+        rankPosition: 2658,
+        tier: 'silver',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 220,
+        month: 5,
+        rankPosition: 2153,
+        tier: 'silver',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 359,
+        month: 6,
+        rankPosition: 1895,
+        tier: 'gold',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 559,
+        month: 7,
+        rankPosition: 1135,
+        tier: 'platinum',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 1320,
+        month: 8,
+        rankPosition: 201,
+        tier: 'diamond',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 1068,
+        month: 9,
+        rankPosition: 259,
+        tier: 'diamond',
+        declassified: true,
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 155,
+        month: 10,
+        rankPosition: 3159,
+        tier: 'bronze',
+        __typename: 'RankingReaderHistory'
+      },
+      {
+        points: 357,
+        month: 11,
+        rankPosition: 2986,
+        tier: 'bronze',
+        __typename: 'RankingReaderHistory'
+      }
+    ]
+
+    const userDontHaveEnoughPoints =
+      currentPoints < numberOfPointsToEnterTheLeague
     const userWaitingToEnterLeague =
-      currentPoints >= numberOfPointsToEnterTheLeague && !overallRanking.rankingUsers.length
+      currentPoints >= numberOfPointsToEnterTheLeague &&
+      !overallRanking.rankingUsers.length
 
     const unrankedMenssage = userWaitingToEnterLeague ? (
       'Parabéns, você atingiu a pontuação mínima! Em alguns minutos você entrará no ranking do mês!'
@@ -254,7 +457,7 @@ class LeagueBoards extends Component {
               }}
             >
               {overallRankingHistory.map((item, index) => {
-                return <RankingHistoryCard item={item} index={index}/>
+                return <RankingHistoryCard item={item} index={index} />
               })}
             </Carousel>
           </RankingHistoryContainer>
@@ -268,8 +471,8 @@ class LeagueBoards extends Component {
         rankListScope === 'arvoreRank'
           ? overallRanking.rankingUsers
           : rankListScope === 'schoolRank'
-            ? rankingRootFiltered
-            : rankingEntityFiltered
+          ? rankingRootFiltered
+          : rankingEntityFiltered
 
       return listData.map((item, index) => {
         const isCurrentUser = item.profileId.toString() === reader.id.toString()
@@ -279,10 +482,7 @@ class LeagueBoards extends Component {
             <Infos>
               <Position>{item.rankPosition}º</Position>
               <UserInfo featured={isCurrentUser}>
-                <span>
-                  {reducedUserName(item.userName)}
-                  {/* item.withCrown && <CrownIcon color={colors.yellow} /> */}
-                </span>
+                <span>{reducedUserName(item.userName)}</span>
                 <span>{item.rootName}</span>
               </UserInfo>
             </Infos>
@@ -322,31 +522,22 @@ class LeagueBoards extends Component {
               <LevelAndPoints>
                 <div>
                   {rankLegend && rankLegend.title}{' '}
-                  <span>{getLeagueNameFromDegree(reader.entity.degree)}</span>
+                  <span>{getLeagueNameFromDegree(entity.degree)}</span>
                 </div>
                 <div>
                   {currentPoints} <span>pts</span>
                 </div>
               </LevelAndPoints>
-
               <Progress>
-                {percentage === 100 && (
-                  <FirstPlace>
-                    <CrownIcon color={colors.yellow} /> Uau, parabéns!!! Você
-                    está em primeiro lugar!
-                  </FirstPlace>
-                )}
-                {percentage < 100 && (
-                  <ProgressBarWrapper>
-                    <ProgressBar percentage={percentage} />
-                    <ProgressBarLabel>
-                      <div>{rankLegend.title}</div>
-                      <div>
-                        {nextRankLegend ? nextRankLegend.title : '1º Lugar'}
-                      </div>
-                    </ProgressBarLabel>
-                  </ProgressBarWrapper>
-                )}
+                <ProgressBarWrapper>
+                  <ProgressBar percentage={percentage} />
+                  <ProgressBarLabel>
+                    <div>{rankLegend.title}</div>
+                    <div>
+                      {nextRankLegend ? nextRankLegend.title : '1º Lugar'}
+                    </div>
+                  </ProgressBarLabel>
+                </ProgressBarWrapper>
               </Progress>
             </UserLevelInfo>
           </LeagueInfo>
@@ -358,7 +549,7 @@ class LeagueBoards extends Component {
               <LevelAndPoints>
                 <div>
                   {rankLegend && rankLegend.title}{' '}
-                  <span>{getLeagueNameFromDegree(reader.entity.degree)}</span>
+                  <span>{getLeagueNameFromDegree(entity.degree)}</span>
                 </div>
                 <div>
                   {currentPoints} <span>pts</span>
@@ -366,23 +557,15 @@ class LeagueBoards extends Component {
               </LevelAndPoints>
             </UserLevelInfoMobile>
             <Progress>
-              {percentage === 100 && (
-                <FirstPlace>
-                  <CrownIcon color={colors.yellow} /> Uau, parabéns!!! Você está
-                  em primeiro lugar!
-                </FirstPlace>
-              )}
-              {percentage < 100 && (
-                <ProgressBarWrapper>
-                  <ProgressBar percentage={percentage} />
-                  <ProgressBarLabel>
-                    <div>{rankLegend.title}</div>
-                    <div>
-                      {nextRankLegend ? nextRankLegend.title : '1º Lugar'}
-                    </div>
-                  </ProgressBarLabel>
-                </ProgressBarWrapper>
-              )}
+              <ProgressBarWrapper>
+                <ProgressBar percentage={percentage} />
+                <ProgressBarLabel>
+                  <div>{rankLegend.title}</div>
+                  <div>
+                    {nextRankLegend ? nextRankLegend.title : '1º Lugar'}
+                  </div>
+                </ProgressBarLabel>
+              </ProgressBarWrapper>
             </Progress>
           </LeagueInfoMobile>
         </Fragment>
@@ -443,7 +626,11 @@ class LeagueBoards extends Component {
                   }
                 />
               </LeagueBanner>
-              <LeagueBanner to={LEAGUE_TUTORIAL_PATH} bgColor={colors.red1} detectiveBanner>
+              <LeagueBanner
+                to={LEAGUE_TUTORIAL_PATH}
+                bgColor={colors.red1}
+                detectiveBanner
+              >
                 <LeagueRedBannerImage
                   detectiveBanner
                   src={
@@ -479,12 +666,4 @@ class LeagueBoards extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.user
-})
-
-export default compose(
-  withRouter,
-  withApollo,
-  connect(mapStateToProps)
-)(LeagueBoards)
+export default LeagueBoards

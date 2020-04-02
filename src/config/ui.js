@@ -98,7 +98,36 @@ export const colors = {
   white: `hsl(0, 0%, 100%)`,
   whiteDark: `hsl(0, 0%, ${100 - lightness}%)`,
 
-  blackBg: '#F9FBFF'
+  blackBg: '#F9FBFF',
+
+  //old colors
+  purple: '#8553f4',
+  yellow: '#FFE268',
+  green: '#58D68D',
+  green_light: '#d8fee8',
+  red: '#FF7D78',
+  blue_light: '#c5ecff',
+  blue_hover: '#16a4e8',
+  darkBlue: '#34495E',
+  ultraLightGray: '#f5f5f5',
+  lightGray: 'rgba(0, 0, 0, 0.1)',
+  gray: 'rgba(0, 0, 0, 0.4)',
+  darkGray: 'rgba(0, 0, 0, 0.7)',
+  black: 'rgba(0, 0, 0, 0.9)',
+  border: 'rgba(0, 0, 0, 0.2)',
+  avatarBg: '#e1e7ea',
+  avatarText: '#7d97ad',
+  gray05: '#F2F4F5',
+  gray1: '#DFE5E9',
+  gray4: '#9EAEB7',
+  gray5: '#F5F5F5',
+  gray7: '#53656F',
+  gray9: '#293841',
+  arvore: '#45D0C1',
+  orange: '#FFAA68',
+  purpleHover: '#6b42c7',
+  paleGrayFour: '#f3f6fd',
+  black01: `rgba(0, 0, 0, 0.1)`
 }
 
 export const sizes = {
@@ -131,7 +160,15 @@ export const sizes = {
     small: 32,
     medium: 40, // default size
     large: 48
-  }
+  },
+  //old screen sizes
+
+  xxsScreen: 350,
+  xsScreen: 480,
+  sScreen: 768,
+  mScreen: 992,
+  lScreen: 1200,
+  xlScreen: 1600
 }
 
 export const spacing = {

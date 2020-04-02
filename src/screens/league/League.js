@@ -1,18 +1,15 @@
-import React, {useState} from 'react'
-import {
-  Wrapper
-} from './League.styles'
+import React, { useState } from 'react'
+import { Wrapper } from './League.styles'
 import LeagueBoards from 'components/league/league-boards'
 
-const League = () =>{
+const League = () => {
   const [currentPoints, setCurrentPoints] = useState(293)
-
+  console.log('here')
   return (
     <Wrapper>
       <LeagueBoards currentPoints={currentPoints} />
     </Wrapper>
   )
-
 }
 
 export default League

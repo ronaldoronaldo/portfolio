@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { colors, sizes, fontWeights, spacing } from 'config/ui'
-import { Grid, Row, Column } from 'components/lib/flexboxgrid'
+import { Grid, Row, Column } from 'components/league/flexboxgrid'
 import { Link } from 'react-router-dom'
 
 export const StyledGrid = styled(Grid)`
