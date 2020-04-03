@@ -13,21 +13,31 @@ export const ExampleHeader = styled.div`
   flex-direction: row;
   padding: 8px;
   justify-content: space-between;
-  border-top: 2px solid ${colors.black2};
+  border-bottom: 2px solid ${colors.black2};
+  cursor: pointer;
+  &:first-child {
+    border-top: 2px solid ${colors.black2};    
+  }
+`
+
+export const ExampleBodyContainer = styled.div`
+  ${({ show }) => `
+    height: auto;
+    overflow: hidden;
+    max-height: ${show ? '500px' : '0'};
+    transition: max-height 0.4s ease-in-out
+  `}
 `
 
 export const ExampleBody = styled.div`
-  ${({ show }) => `
     display: flex;
     overflow: hidden;
-    height: ${show ? 'auto' : '0px'};
     flex: 1;
     flex-direction: column;
     padding: 8px;
     justify-content: center;;
     border: 2px solid ${colors.black2};
-    border-bottom: none;
-  `}
+    border-top: none;
 `
 
 

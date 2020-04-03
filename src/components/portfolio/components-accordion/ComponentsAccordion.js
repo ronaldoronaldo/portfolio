@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, ExampleBody, ExampleHeader, Title } from './ComponentsAccordion.style'
+import {Container, ExampleBody, ExampleBodyContainer, ExampleHeader, Title} from './ComponentsAccordion.style'
 import PropTypes from 'prop-types'
 import {FontIcon} from 'components/lib/icons'
 import { colors } from 'config/ui'
@@ -13,17 +13,19 @@ const ComponentsAccordion = ({
 }) => {
   return (
     <Container>
-      <ExampleHeader>
+      <ExampleHeader onClick={onClose}>
         <Title>{title}</Title>
         <FontIcon
           iconName={open ? 'caret-down' : 'caret-right'}
-          onClick={onClose}
-          color={colors.black4}
+          size={15}
+          color={colors.black3}
         />
       </ExampleHeader>
-      <ExampleBody show={open}>
-        {children}
-      </ExampleBody>
+      <ExampleBodyContainer show={open}>
+        <ExampleBody >
+          {children}
+        </ExampleBody>
+      </ExampleBodyContainer>
     </Container>
   )
 }

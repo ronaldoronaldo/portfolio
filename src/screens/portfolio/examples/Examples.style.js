@@ -9,7 +9,8 @@ export const ExamplesContainer = styled.div`
   top: 134px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 2000px;
   align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
     top: 212px;
@@ -47,7 +48,7 @@ export const DesktopScreens = styled(Section)`
 export const ComponentsSection = styled(Section)`
   flex-direction: column;
   margin-top: ${spacing.large + 32}px;
-  margin-bottom: ${spacing.small}px;
+  margin-bottom: ${spacing.large*2}px;
 `
 
 export const SectionTitle = styled.span`
