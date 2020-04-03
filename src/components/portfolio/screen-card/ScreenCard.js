@@ -12,13 +12,9 @@ import PropTypes from 'prop-types'
 const ScreenCard = ({ title, image, path }) => {
   return (
     <CardContainer to={path}>
-      <CardHeader>
-        <HeaderBox>
-          <ScreenImage src={image} />
-          <OpacityMask />
-          <ScreenTitle>{title}</ScreenTitle>
-        </HeaderBox>
-      </CardHeader>
+      <ScreenImage src={image} />
+      <OpacityMask />
+      <ScreenTitle>{title}</ScreenTitle>
     </CardContainer>
   )
 }
