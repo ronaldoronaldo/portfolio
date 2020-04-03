@@ -90,16 +90,6 @@ export default class GithubTiles extends React.PureComponent {
         const filteredData = this.filterData();
         return (
             <div className='github-tiles'>
-                
-                <div className='github-tiles-days'>
-                    <div className='github-tiles-day'/>
-                    <div className='github-tiles-day'>Mon</div>
-                    <div className='github-tiles-day'/>
-                    <div className='github-tiles-day'>Wed</div>
-                    <div className='github-tiles-day'/>
-                    <div className='github-tiles-day'>Fri</div>
-                    <div className='github-tiles-day'/>
-                </div>
                 {this.mountTiles(filteredData)}
             </div>
         );

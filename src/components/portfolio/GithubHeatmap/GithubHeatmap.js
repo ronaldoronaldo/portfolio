@@ -5,7 +5,13 @@ import ReactTooltip from 'react-tooltip'
 import GithubMonths from './GithubMonths'
 import GithubTiles from './GithubTiles'
 import GithubTile from './GithubTile'
-import {GithubHeatmapBox, GithubHeatmapControls, GithubHeatmapHeader} from './GithubHeatmap.style'
+import {
+  GithubHeatmapBox,
+  GithubHeatmapControls,
+  GithubHeatmapHeader,
+  OpacityMask,
+  StyledRow
+} from './GithubHeatmap.style'
 
 export default class GithubHeatmap extends React.PureComponent {
   static propTypes = {
@@ -90,29 +96,41 @@ export default class GithubHeatmap extends React.PureComponent {
         <GithubHeatmapHeader>
           <h2 className='total-contributions'>{totalYearContribution} contributions in {contributionYear}</h2>
         </GithubHeatmapHeader>
-        <GithubHeatmapBox>
-          <ReactTooltip key={`tooltip-key-${year}`} html/>
-
-          <GithubMonths startsAt={startsAt} />
-          <GithubTiles data={data} startDate={startDate} endDate={endDate}/>
-          <div className='github-heatmap-footer'>
-            <a className="learn-how-link" href="https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile">Learn how we count contributions</a>
-            <div className="legend">
-              <span className="legend-label">Less </span>
-              <div className="legend-tiles">
-                <GithubTile colorTone='nothing' description/>
-                <GithubTile colorTone='weak' description/>
-                <GithubTile colorTone='light' description/>
-                <GithubTile colorTone='normal' description/>
-                <GithubTile colorTone='dark' description/>
-              </div>
-              <span className="legend-label">More</span>
-            </div>
+        <StyledRow>
+          <div className='github-tiles-days'>
+            <div className='github-tiles-day'/>
+            <div className='github-tiles-day'>Mon</div>
+            <div className='github-tiles-day'/>
+            <div className='github-tiles-day'>Wed</div>
+            <div className='github-tiles-day'/>
+            <div className='github-tiles-day'>Fri</div>
+            <div className='github-tiles-day'/>
           </div>
-        </GithubHeatmapBox>
-        <GithubHeatmapControls>
-          {this.mountSelectYears()}
-        </GithubHeatmapControls>
+          <OpacityMask/>
+          <GithubHeatmapBox>
+            <ReactTooltip key={`tooltip-key-${year}`} html/>
+
+            <GithubMonths startsAt={startsAt} />
+            <GithubTiles data={data} startDate={startDate} endDate={endDate}/>
+            <div className='github-heatmap-footer'>
+              <a className="learn-how-link" href="https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile">Learn how we count contributions</a>
+              <div className="legend">
+                <span className="legend-label">Less </span>
+                <div className="legend-tiles">
+                  <GithubTile colorTone='nothing' description/>
+                  <GithubTile colorTone='weak' description/>
+                  <GithubTile colorTone='light' description/>
+                  <GithubTile colorTone='normal' description/>
+                  <GithubTile colorTone='dark' description/>
+                </div>
+                <span className="legend-label">More</span>
+              </div>
+            </div>
+          </GithubHeatmapBox>
+          <GithubHeatmapControls>
+            {this.mountSelectYears()}
+          </GithubHeatmapControls>
+        </StyledRow>
       </React.Fragment>
     )
   }
