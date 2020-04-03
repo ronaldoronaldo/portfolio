@@ -64,17 +64,19 @@ export const GithubHeatmapBox = styled.div`
   border-radius: 3px;
   vertical-align:center;
   .github-months-box{
-      margin-bottom: 10px;
-      margin-top: 10px;
-      .github-months-box-item{
-          display: inline-block;
-          width: 74px;
-          font-size: 12px;
-          color: #767676;
-          &:nth-of-type(1){
-              margin-left: 91px;
-          }
-      }
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position: relative;
+    right: -40px;
+    .github-months-box-item{
+        display: inline-block;
+        width: 74px;
+        font-size: 12px;
+        color: #767676;
+        &:nth-of-type(1){
+          margin-left: 91px;
+        }
+    }
   }
   .github-heatmap-footer{
     width: 100%;
@@ -102,12 +104,18 @@ export const GithubHeatmapBox = styled.div`
         }
     }
   }
-
+  
+  .__react_component_tooltip {
+    background-color: ${colors.black6} !important;
+    opacity: 0.85 !important;
+    color: ${colors.white} !important;
+  }
+  
   .github-tiles{
       display: flex;
       flex-wrap: wrap;
       position: relative;
-      left: 20px;
+      left: 60px;
   }
 
   .github-tiles-column{
