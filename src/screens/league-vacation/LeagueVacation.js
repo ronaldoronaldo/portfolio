@@ -11,17 +11,14 @@ import {
   RoundIconContainerTop,
   RoundIconContainerBot,
   DivisionImageTop,
-  DivisionImageBot,
-  StyledGrid,
-  StyledColumn
+  DivisionImageBot
 } from './LeagueVacation.styles'
 import { colors, sizes } from 'config/ui'
 import MonthCountdown from 'components/league/month-countdown'
 import bookOpen from 'assets/images/portfolio/book-open.svg'
 import trophy from 'assets/images/portfolio/trophy.svg'
-import { Row } from 'components/league/flexboxgrid'
-import { ThemeProvider } from "styled-components"
-import GoBackHeader from "../../components/league/go-back-header"
+import { ThemeProvider } from 'styled-components'
+import GoBackHeader from '../../components/league/go-back-header'
 
 const vacationTheme = {
   wrapper: {
@@ -60,46 +57,47 @@ const LeagueVacation = () => {
   const vacationEndDate = new Date(year, month - 1)
 
   return (
-
-          <Container>
-            <TopWrapper>
-              <GoBackHeader goBack={() => window.location.replace('/app/liga')} bgColor={colors.leagueOnVacationPurple1} />
-              <Title>A Liga de Leitores está de férias!</Title>
-              <Subtitle>Estamos contando os dias para o retorno da Liga:</Subtitle>
-              <ThemeProvider theme={vacationTheme}>
-                <MonthCountdown endDate={vacationEndDate} removeSeparators />
-              </ThemeProvider>
-              <RoundIconContainerTop>
-                <img alt={''} src={trophy} />
-              </RoundIconContainerTop>
-              <DivisionImageTop
-                src={
-                  'https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/liga/curva-dep-baixo_2.png'
-                }
-              />
-            </TopWrapper>
-            <MidWrapper>
-              <MidText>
-                A partir de 01 de março de 2020, a Liga estará de volta e novos
-                desafios serão lançados. Aguarde as novidades!
-              </MidText>
-            </MidWrapper>
-            <BotWrapper>
-              <DivisionImageBot
-                src={
-                  'https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/liga/curva-dep-baixo.png'
-                }
-              />
-              <RoundIconContainerBot>
-                <img alt={''} src={bookOpen} />
-              </RoundIconContainerBot>
-              <BotText>
-                Enquanto isso, aproveite para relaxar e ler seus livros preferidos na
-                Árvore.
-              </BotText>
-            </BotWrapper>
-          </Container>
-
+    <Container>
+      <TopWrapper>
+        <GoBackHeader
+          goBack={() => window.location.replace('/app/liga')}
+          bgColor={colors.leagueOnVacationPurple1}
+        />
+        <Title>A Liga de Leitores está de férias!</Title>
+        <Subtitle>Estamos contando os dias para o retorno da Liga:</Subtitle>
+        <ThemeProvider theme={vacationTheme}>
+          <MonthCountdown endDate={vacationEndDate} removeSeparators />
+        </ThemeProvider>
+        <RoundIconContainerTop>
+          <img alt={''} src={trophy} />
+        </RoundIconContainerTop>
+        <DivisionImageTop
+          src={
+            'https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/liga/curva-dep-baixo_2.png'
+          }
+        />
+      </TopWrapper>
+      <MidWrapper>
+        <MidText>
+          A partir de 01 de março de 2020, a Liga estará de volta e novos
+          desafios serão lançados. Aguarde as novidades!
+        </MidText>
+      </MidWrapper>
+      <BotWrapper>
+        <DivisionImageBot
+          src={
+            'https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/liga/curva-dep-baixo.png'
+          }
+        />
+        <RoundIconContainerBot>
+          <img alt={''} src={bookOpen} />
+        </RoundIconContainerBot>
+        <BotText>
+          Enquanto isso, aproveite para relaxar e ler seus livros preferidos na
+          Árvore.
+        </BotText>
+      </BotWrapper>
+    </Container>
   )
 }
 

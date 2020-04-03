@@ -10,7 +10,8 @@ import {
 } from './LeagueTutorial.styles'
 import ComboAccordion from 'components/league/combo-accordion/ComboAccordion'
 import { Column, Grid, Row } from 'components/league/flexboxgrid'
-import {Header} from "../../components/site/header"
+import { Header } from '../../components/site/header'
+import { colors } from '../../config/ui'
 
 const renderSection = instructions => {
   return instructions.map((instruction, index) => {
@@ -112,8 +113,8 @@ class LeagueTutorial extends Component {
   render() {
     return (
       <>
-        <Header/>
-        <Spacing/>
+        <Header leagueHeader bgColor={colors.purple3} />
+        <Spacing />
         <Grid>
           <Row>
             <Column s={12} m={10} l={8} xl={6} style={{ padding: 0 }}>
@@ -134,7 +135,6 @@ class LeagueTutorial extends Component {
           </Row>
         </Grid>
       </>
-
     )
   }
 }

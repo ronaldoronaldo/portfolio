@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { colors, spacing, fontWeights, sizes } from 'config/ui'
-import {Grid, Column} from 'components/league/flexboxgrid'
+import { Grid, Column } from 'components/league/flexboxgrid'
 
 export const StyledGrid = styled(Grid)`
   padding: 0;
@@ -76,7 +76,7 @@ export const Subtitle = styled.span`
   font-size: 12px;
   color: ${colors.leagueOnVacationYellow};
   @media (min-width: ${sizes.mScreen}px) {
-    max-width: 259px;;
+    max-width: 259px;
   }
 `
 
@@ -95,8 +95,7 @@ export const Text = styled.span`
 export const BotText = styled(Text)`
   color: ${colors.leagueOnVacationPurple2};
 `
-export const MidText = styled(Text)`
-`
+export const MidText = styled(Text)``
 
 export const RoundIconContainer = styled.div`
   width: 44px;
@@ -120,25 +119,25 @@ export const RoundIconContainer = styled.div`
 `
 
 export const RoundIconContainerTop = styled(RoundIconContainer)`
-   background-color: ${colors.leagueOnVacationYellow};
-   border: 4.3px solid ${colors.leagueOnVacationPurple1};
-   position: relative;
-   z-index: 2;
-   bottom: -64px;
-   @media (min-width: ${sizes.mScreen}px) {
-    bottom: -120px;
+  background-color: ${colors.leagueOnVacationYellow};
+  border: 4.3px solid ${colors.leagueOnVacationPurple1};
+  position: relative;
+  z-index: 2;
+  bottom: -14px;
+  @media (min-width: ${sizes.mScreen}px) {
+    bottom: -67px;
   }
 `
 
 export const RoundIconContainerBot = styled(RoundIconContainer)`
-   background-color: ${colors.leagueOnVacationPurple2};
-   border: 4.3px solid ${colors.leagueOnVacationYellow};
-   position: relative;
-   z-index: 2;
-   top: -28px;
-   @media (min-width: ${sizes.mScreen}px) {
+  background-color: ${colors.leagueOnVacationPurple2};
+  border: 4.3px solid ${colors.leagueOnVacationYellow};
+  position: relative;
+  z-index: 2;
+  top: -28px;
+  @media (min-width: ${sizes.mScreen}px) {
     top: -95px;
-   }
+  }
 `
 
 export const DivisionImage = styled.img`

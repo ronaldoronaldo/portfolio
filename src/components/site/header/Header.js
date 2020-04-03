@@ -20,7 +20,7 @@ import LogoArvoreEducacao from 'assets/images/logo-arvore-edu-white.svg'
 import { DropdownEnd, Item } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'
-import {LOGIN_PATH, ROOT_PATH} from 'routes'
+import { LOGIN_PATH, ROOT_PATH } from 'routes'
 import { FontIcon } from 'components/lib/icons'
 import { Link } from 'react-router-dom'
 
@@ -31,56 +31,53 @@ const Header = props => {
   return (
     <Container {...props}>
       <Logo href="">
-        <img
-          src={LogoArvoreEducacao}
-          alt="Arvore educação"
-        />
+        <img src={LogoArvoreEducacao} alt="Arvore educação" />
       </Logo>
       <ContainerMenu>
         <ClickOutside onClickOutside={() => setPlatformsDropdown(false)}>
           <RoundButtonStyled
-            style={{
-              marginRight: 8
-            }}
-            img={iconArvore}
+            style={{ marginRight: 8 }}
+            iconName="browser-code" //aqui
             onClick={() => setPlatformsDropdown(!platformDropdown)}
+            bgColor={colors.white}
             borderColor={colors.white}
+            iconColor={props.bgColor || colors.blue3}
           />
         </ClickOutside>
         {platformDropdown && (
           <PlatformsDropdownContainer>
-              <DropdownEnd>
-                <Item
-                  text="Go to league page"
-                  imagePath={symbolGutenNews}
-                  type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/liga')}
-                />
-                <Item
-                  text="Go to league vacation"
-                  imagePath={symbolGutenNews}
-                  type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/liga/ferias')}
-                />
-                <Item
-                  text="Go to library page"
-                  imagePath={symbolArvoreLivros}
-                  type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/biblioteca')}
-                />
-                <Item
-                  text="Back to portfolio"
-                  imagePath={symbolEducacao}
-                  type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/biblioteca')}
-                />
-                <Item
-                  text="Disabled button example"
-                  imagePath={symbolGutenNews}
-                  type="img-left-text-left"
-                  disabled
-                />
-              </DropdownEnd>
+            <DropdownEnd>
+              <Item
+                text="Go to league page"
+                imagePath={symbolGutenNews}
+                type="img-left-text-left"
+                onClick={() => window.location.replace('/app/liga')}
+              />
+              <Item
+                text="Go to league vacation"
+                imagePath={symbolGutenNews}
+                type="img-left-text-left"
+                onClick={() => window.location.replace('/app/liga/ferias')}
+              />
+              <Item
+                text="Go to library page"
+                imagePath={symbolArvoreLivros}
+                type="img-left-text-left"
+                onClick={() => window.location.replace('/app/biblioteca')}
+              />
+              <Item
+                text="Back to portfolio"
+                imagePath={symbolEducacao}
+                type="img-left-text-left"
+                onClick={() => window.location.replace('/app/home')}
+              />
+              <Item
+                text="Disabled button example"
+                imagePath={symbolGutenNews}
+                type="img-left-text-left"
+                disabled
+              />
+            </DropdownEnd>
           </PlatformsDropdownContainer>
         )}
         <RoundButtonStyled
@@ -92,30 +89,34 @@ const Header = props => {
           onClick={() => console.log('news')}
           bgColor={colors.white}
           borderColor={colors.white}
-          iconColor={colors.blue3}
+          iconColor={props.bgColor || colors.blue3}
         />
-        <ClickOutside onClickOutside={() => setUserDropdown(false)}>
-          <RoundButtonStyled
-            iconName="user"
-            onClick={() => setUserDropdown(!userDropdown)}
-            bgColor={colors.white}
-            borderColor={colors.white}
-            iconColor={colors.blue3}
-          />
-        </ClickOutside>
-        {userDropdown && (
-          <UserDropdownContainer>
-            <DropdownEnd>
-              {/* <Item text="Perfil" iconName="user" type="icon-left-text-left" /> */}
-              <Item
-                text="Sair"
-                iconName="magazine"
-                type="icon-left-text-left"
-                to={LOGIN_PATH}
-                as={Link}
+        {!props.leagueHeader && (
+          <>
+            <ClickOutside onClickOutside={() => setUserDropdown(false)}>
+              <RoundButtonStyled
+                iconName="user"
+                onClick={() => setUserDropdown(!userDropdown)}
+                bgColor={colors.white}
+                borderColor={colors.white}
+                iconColor={props.bgColor || colors.blue3}
               />
-            </DropdownEnd>
-          </UserDropdownContainer>
+            </ClickOutside>
+            {userDropdown && (
+              <UserDropdownContainer>
+                <DropdownEnd>
+                  {/* <Item text="Perfil" iconName="user" type="icon-left-text-left" /> */}
+                  <Item
+                    text="Sair"
+                    iconName="magazine"
+                    type="icon-left-text-left"
+                    to={LOGIN_PATH}
+                    as={Link}
+                  />
+                </DropdownEnd>
+              </UserDropdownContainer>
+            )}
+          </>
         )}
       </ContainerMenu>
       <MenuMobile>

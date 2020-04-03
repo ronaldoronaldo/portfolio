@@ -1,10 +1,7 @@
 import React from 'react'
 import {
   CardContainer,
-  CardFooter,
   CardHeader,
-  Number,
-  Label,
   ScreenTitle,
   OpacityMask,
   ScreenImage,
@@ -12,43 +9,27 @@ import {
 } from './ScreenCard.style'
 import PropTypes from 'prop-types'
 
-const ScreenCard = ({
-  title,
-  numberOfPages,
-  image,
-  path,
-  ...props
-}) => {
-  const pages = numberOfPages === 1 ? 'page' : 'pages'
-
+const ScreenCard = ({ title, image, path }) => {
   const handleCardClick = () => {
-    props.history.push(path)
+    window.location.replace(path)
   }
 
   return (
     <CardContainer onClick={handleCardClick}>
       <CardHeader>
         <HeaderBox>
-          <ScreenImage src={image}/>
-          <OpacityMask/>
+          <ScreenImage src={image} />
+          <OpacityMask />
           <ScreenTitle>{title.toUpperCase()}</ScreenTitle>
         </HeaderBox>
       </CardHeader>
-      <CardFooter>
-        {/*<Number>*/}
-        {/*  {numberOfPages}*/}
-        {/*</Number>*/}
-        {/*<Label>*/}
-        {/*  {pages}*/}
-        {/*</Label>*/}
-      </CardFooter>
     </CardContainer>
   )
 }
 
 ScreenCard.propTypes = {
   title: PropTypes.string.isRequired,
-  numberOfPages: PropTypes.number.isRequired,
+  numberOfPages: PropTypes.number.isRequired
 }
 
 export default ScreenCard
