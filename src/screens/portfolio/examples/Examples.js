@@ -16,19 +16,19 @@ import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
 const Examples = () => {
   const responsiveScreens = [
     {
-      title: 'login',
+      title: 'Login',
       image: loginMobile,
       numberOfPages: 6,
       path: LOGIN_PATH
     },
     {
-      title: 'library',
+      title: 'Library',
       image: libraryMobile,
       numberOfPages: 11,
       path: SITE_PATH
     },
     {
-      title: 'league',
+      title: 'League',
       image: leagueMobile,
       numberOfPages: 2,
       path: LEAGUE_PATH

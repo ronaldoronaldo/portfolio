@@ -1,6 +1,6 @@
-import styled  from 'styled-components'
+import styled from 'styled-components'
 import { fontWeights, spacing, colors } from 'config/ui'
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 export const CardContainer = styled(Link)`
   display: flex;
@@ -39,20 +39,22 @@ export const HeaderBox = styled.div`
 export const ScreenImage = styled.img`
   width: 100%;
   transition: all 0.2s ease-in;
-   &:hover {
+  ${CardContainer}:hover & {
     transform: scale(1.04);
   }
 `
 
 export const OpacityMask = styled.div`
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${colors.black1} 70%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    ${colors.black1} 70%
+  );
   position: absolute;
   bottom: -10px;
   width: 105%;
-  transition: all 0.2s ease-in;
   height: 145px;
 `
-
 
 export const CardFooter = styled.div`
   display: flex;
@@ -75,9 +77,13 @@ export const Number = styled.div`
 
 export const ScreenTitle = styled.div`
   font-size: 28px;
-  color: ${colors.black4};
+  color: ${colors.black2Dark};
   position: absolute;
-  bottom: 0;
+  bottom: -16px;
   line-height: 0.6;
   font-weight: ${fontWeights.bold};
+  transition: all 0.2s ease-in;
+  ${CardContainer}:hover & {
+    color: ${colors.black4};
+  }
 `

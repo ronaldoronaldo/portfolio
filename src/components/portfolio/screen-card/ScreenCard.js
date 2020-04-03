@@ -16,7 +16,7 @@ const ScreenCard = ({ title, image, path }) => {
         <HeaderBox>
           <ScreenImage src={image} />
           <OpacityMask />
-          <ScreenTitle>{title.toUpperCase()}</ScreenTitle>
+          <ScreenTitle>{title}</ScreenTitle>
         </HeaderBox>
       </CardHeader>
     </CardContainer>

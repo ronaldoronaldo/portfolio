@@ -33,6 +33,8 @@ export const CardsSection = styled.div`
 
 export const ResponsiveScreens = styled(Section)`
   flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 16px;
 `
 export const DesktopScreens = styled(Section)`
   display: none;
@@ -54,5 +56,5 @@ export const SectionSubtitle = styled.span`
   font-size: 18px;
   font-weight: ${fontWeights.regular};
   text-align: center;
-  margin-bottom: ${spacing.large}px;
+  margin-bottom: ${spacing.large + 16}px;
 `
