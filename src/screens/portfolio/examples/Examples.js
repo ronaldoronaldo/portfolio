@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
   CardsSection,
   ComponentsSection,
@@ -15,8 +15,18 @@ import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
 
 import GithubHeatmap from 'components/portfolio/GithubHeatmap/GithubHeatmap'
 import arvore from 'components/portfolio/GithubHeatmap/arvore'
+import ComponentsAccordion from 'components/portfolio/components-accordion/ComponentsAccordion'
 
 const Examples = () => {
+  const [components, setComponents] = useState([
+    {
+      title: 'Github Commit Map',
+      content: <GithubHeatmap data={arvore}/>,
+      show: false
+    },
+  ])
+
+
   const responsiveScreens = [
     {
       title: 'Login',
@@ -39,9 +49,25 @@ const Examples = () => {
   ]
 
   const renderCards = cards => {
-    console.log(cards)
     return cards.map(card => {
       return <ScreenCard {...card} />
+    })
+  }
+
+  const onCloseAccordion = index => {
+    let tempArray = [...components]
+    tempArray[index].show = !components[index].show
+    setComponents(tempArray)
+  }
+
+  const renderComponents = () => {
+    return components.map((component, index) => {
+      const {title, show, content} = component
+      return (
+        <ComponentsAccordion title={title} open={show} onClose={() => onCloseAccordion(index)}>
+          {content}
+        </ComponentsAccordion>
+      )
     })
   }
 
@@ -60,7 +86,7 @@ const Examples = () => {
         <SectionSubtitle>
           Everything here in this website is fully handmade by me, every animation and functionality, with almost zero external libs used.
         </SectionSubtitle>
-        <GithubHeatmap data={arvore}/>
+        {renderComponents()}
       </ComponentsSection>
     </ExamplesContainer>
   )

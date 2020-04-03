@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
+    <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="style">
+      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/ComponentsAccordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/ComponentsAccordion.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lib/inputs/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/inputs/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lib/inputs/Input.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/inputs/Input.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lib/inputs/InputSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/inputs/InputSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lib/inputs/InputSearch.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/inputs/InputSearch.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/site/home/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/site/home/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/portfolio" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -52,19 +50,19 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/assets/src/styles/common/Common.styles.js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/lib" />
-      <recent name="$PROJECT_DIR$/src/assets/images/portfolio/pages" />
-      <recent name="$PROJECT_DIR$/src/components/league" />
-      <recent name="$PROJECT_DIR$/src/assets/images/portfolio" />
-      <recent name="$PROJECT_DIR$/src/screens/league-vacation" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/league" />
       <recent name="$PROJECT_DIR$/src/screens/league-vacation" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/src" />
       <recent name="$PROJECT_DIR$/assets/src/components/lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/portfolio" />
+      <recent name="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap" />
+      <recent name="$PROJECT_DIR$/src/assets/images/portfolio/pages" />
+      <recent name="$PROJECT_DIR$/src/components/lib" />
+      <recent name="$PROJECT_DIR$/src/components/league" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -181,112 +179,8 @@
       <workItem from="1577641265468" duration="3236000" />
       <workItem from="1577718806572" duration="3448000" />
       <workItem from="1585752599026" duration="17857000" />
-      <workItem from="1585833731931" duration="29742000" />
-    </task>
-    <task id="LOCAL-00248" summary="frontend feature/home-search-results path">
-      <created>1576182427531</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1576182427531</updated>
-    </task>
-    <task id="LOCAL-00249" summary="frontend feature/home-search-results title and button">
-      <created>1576184786278</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1576184786278</updated>
-    </task>
-    <task id="LOCAL-00250" summary="frontend feature/home-search-results page shelves">
-      <created>1576185428444</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1576185428444</updated>
-    </task>
-    <task id="LOCAL-00251" summary="frontend feature/home-search-results filter">
-      <created>1576189926617</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1576189926617</updated>
-    </task>
-    <task id="LOCAL-00252" summary="frontend feature/home-search-results search key up evt">
-      <created>1576249732323</created>
-      <option name="number" value="00252" />
-      <option name="presentableId" value="LOCAL-00252" />
-      <option name="project" value="LOCAL" />
-      <updated>1576249732323</updated>
-    </task>
-    <task id="LOCAL-00253" summary="frontend feature/home-search-results details">
-      <created>1576256456783</created>
-      <option name="number" value="00253" />
-      <option name="presentableId" value="LOCAL-00253" />
-      <option name="project" value="LOCAL" />
-      <updated>1576256456783</updated>
-    </task>
-    <task id="LOCAL-00254" summary="frontend feature/home-search-results ...props">
-      <created>1576256886898</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1576256886898</updated>
-    </task>
-    <task id="LOCAL-00255" summary="frontend feature/home-search-results styles">
-      <created>1576259390120</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1576259390120</updated>
-    </task>
-    <task id="LOCAL-00256" summary="frontend feature/home-search-results enable button">
-      <created>1576261369844</created>
-      <option name="number" value="00256" />
-      <option name="presentableId" value="LOCAL-00256" />
-      <option name="project" value="LOCAL" />
-      <updated>1576261369844</updated>
-    </task>
-    <task id="LOCAL-00257" summary="frontend feature/home-search-results details">
-      <created>1576270302404</created>
-      <option name="number" value="00257" />
-      <option name="presentableId" value="LOCAL-00257" />
-      <option name="project" value="LOCAL" />
-      <updated>1576270302405</updated>
-    </task>
-    <task id="LOCAL-00258" summary="frontend fix/list-users-new-roles new roles">
-      <created>1576272412643</created>
-      <option name="number" value="00258" />
-      <option name="presentableId" value="LOCAL-00258" />
-      <option name="project" value="LOCAL" />
-      <updated>1576272412643</updated>
-    </task>
-    <task id="LOCAL-00259" summary="frontend feature/home-search-results more details">
-      <created>1576290573213</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1576290573214</updated>
-    </task>
-    <task id="LOCAL-00260" summary="frontend feature/home-search-results disbaled button color">
-      <created>1576291073257</created>
-      <option name="number" value="00260" />
-      <option name="presentableId" value="LOCAL-00260" />
-      <option name="project" value="LOCAL" />
-      <updated>1576291073257</updated>
-    </task>
-    <task id="LOCAL-00261" summary="frontend feature/home-search-results removing unnecessary functions">
-      <created>1576291456782</created>
-      <option name="number" value="00261" />
-      <option name="presentableId" value="LOCAL-00261" />
-      <option name="project" value="LOCAL" />
-      <updated>1576291456782</updated>
-    </task>
-    <task id="LOCAL-00262" summary="frontend feature/home-search-results routes after rebase">
-      <created>1576292179802</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1576292179802</updated>
+      <workItem from="1585833731931" duration="45166000" />
+      <workItem from="1585919147070" duration="16075000" />
     </task>
     <task id="LOCAL-00263" summary="frontend feature/home-search-results modal position fixed">
       <created>1576292987439</created>
@@ -526,7 +420,112 @@
       <option name="project" value="LOCAL" />
       <updated>1585874742558</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="só vitoria">
+      <created>1585875553637</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1585875553637</updated>
+    </task>
+    <task id="LOCAL-00298" summary="o homem é mt brabo">
+      <created>1585876257293</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1585876257293</updated>
+    </task>
+    <task id="LOCAL-00299" summary="o homem é mt brabo">
+      <created>1585877511032</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1585877511032</updated>
+    </task>
+    <task id="LOCAL-00300" summary="style">
+      <created>1585879024296</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1585879024296</updated>
+    </task>
+    <task id="LOCAL-00301" summary="code architecture">
+      <created>1585879973217</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1585879973217</updated>
+    </task>
+    <task id="LOCAL-00302" summary="Examples.js">
+      <created>1585881659709</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1585881659709</updated>
+    </task>
+    <task id="LOCAL-00303" summary="cool stuff">
+      <created>1585882626936</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1585882626936</updated>
+    </task>
+    <task id="LOCAL-00304" summary="style">
+      <created>1585883809167</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1585883809167</updated>
+    </task>
+    <task id="LOCAL-00305" summary="style">
+      <created>1585888335874</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1585888335874</updated>
+    </task>
+    <task id="LOCAL-00306" summary="doidera, githeatmap">
+      <created>1585891245199</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1585891245199</updated>
+    </task>
+    <task id="LOCAL-00307" summary="style">
+      <created>1585929505267</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1585929505267</updated>
+    </task>
+    <task id="LOCAL-00308" summary="style">
+      <created>1585938057273</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1585938057273</updated>
+    </task>
+    <task id="LOCAL-00309" summary="header SearchResults.js">
+      <created>1585940913339</created>
+      <option name="number" value="00309" />
+      <option name="presentableId" value="LOCAL-00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1585940913339</updated>
+    </task>
+    <task id="LOCAL-00310" summary="top, header ta top">
+      <created>1585941673718</created>
+      <option name="number" value="00310" />
+      <option name="presentableId" value="LOCAL-00310" />
+      <option name="project" value="LOCAL" />
+      <updated>1585941673718</updated>
+    </task>
+    <task id="LOCAL-00311" summary="style">
+      <created>1585944750232</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1585944750232</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,14 +561,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="frontend feature/site-home-platforms-menu" />
-    <MESSAGE value="frontend feature/site-home-platforms-menu reconnecting logout route to&#10;user menu and improving styles" />
-    <MESSAGE value="pet question" />
-    <MESSAGE value="state" />
-    <MESSAGE value="state2" />
-    <MESSAGE value="email" />
-    <MESSAGE value="login done" />
-    <MESSAGE value="login images" />
     <MESSAGE value="52 files" />
     <MESSAGE value="vars" />
     <MESSAGE value="show" />
@@ -587,36 +578,52 @@
     <MESSAGE value="GG" />
     <MESSAGE value="images" />
     <MESSAGE value="só vitoria" />
-    <option name="LAST_COMMIT_MESSAGE" value="só vitoria" />
+    <MESSAGE value="o homem é mt brabo" />
+    <MESSAGE value="code architecture" />
+    <MESSAGE value="Examples.js" />
+    <MESSAGE value="cool stuff" />
+    <MESSAGE value="doidera, githeatmap" />
+    <MESSAGE value="header SearchResults.js" />
+    <MESSAGE value="top, header ta top" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1585874741714">
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1585949405465">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585874741714" />
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585949405465" />
+    <state x="217" y="2270" width="1536" height="901" key="DiffContextDialog" timestamp="1585944738509">
+      <screen x="0" y="2160" width="1920" height="1080" />
+    </state>
+    <state x="217" y="2270" width="1536" height="901" key="DiffContextDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585944738509" />
     <state x="778" y="2471" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585712959128">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="778" y="2471" width="424" height="491" key="FileChooserDialogImpl/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585712959128" />
-    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog" timestamp="1585862522115">
+    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog" timestamp="1585944740038">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585862522115" />
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585870289433">
+    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585944740038" />
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585948404733">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585870289433" />
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585948404733" />
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585789603984">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585789603984" />
-    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1585870537169">
+    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1585947180447">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585870537169" />
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1585872259740">
+    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585947180447" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1585946988414">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585872259740" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585946988414" />
+    <state x="720" y="2594" width="540" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585885415803">
+      <screen x="0" y="2160" width="1920" height="1080" />
+    </state>
+    <state x="720" y="2594" width="540" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585885415803" />
   </component>
 </project>
