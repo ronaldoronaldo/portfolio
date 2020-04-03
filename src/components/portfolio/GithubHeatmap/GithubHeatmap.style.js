@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { colors } from 'config/ui'
+import { colors, sizes } from 'config/ui'
 
 export const GithubHeatmapHeader = styled.div`
   width: 100%;
   display: inline-flex;
-  .total-contributions{
+  .total-contributions {
     color: ${colors.black5};
     font-size: 26px;
     font-weight: 400;
@@ -32,26 +32,26 @@ export const StyledRow = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
-  .github-tiles-days{
-      position: absolute;
-      height: 100%;
-      left: 0;
-      width: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;;
-      padding-top: 38px;
-      font-size: 12px;
-      z-index: 5;
-      background-color: ${colors.white};
-      border-top: 1px solid ${colors.black2};
-      border-left: 1px solid ${colors.black2};
-      border-bottom: 1px solid ${colors.black2};
-      .github-tiles-day{
-          height: 14px;
-          margin-bottom: 3px;
-          color: #767676;
-      }
+  .github-tiles-days {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 38px;
+    font-size: 12px;
+    z-index: 5;
+    background-color: ${colors.white};
+    border-top: 1px solid ${colors.black2};
+    border-left: 1px solid ${colors.black2};
+    border-bottom: 1px solid ${colors.black2};
+    .github-tiles-day {
+      height: 14px;
+      margin-bottom: 3px;
+      color: #767676;
+    }
   }
 `
 
@@ -62,101 +62,104 @@ export const GithubHeatmapBox = styled.div`
   display: inline-block;
   background-color: ${colors.white};
   border-radius: 3px;
-  vertical-align:center;
-  .github-months-box{
+  vertical-align: center;
+  .github-months-box {
     margin-bottom: 10px;
     margin-top: 10px;
     position: relative;
     right: -40px;
-    .github-months-box-item{
-        display: inline-block;
-        width: 74px;
-        font-size: 12px;
-        color: #767676;
-        &:nth-of-type(1){
-          margin-left: 91px;
-        }
+    .github-months-box-item {
+      display: inline-block;
+      width: 74px;
+      font-size: 12px;
+      color: #767676;
+      &:nth-of-type(1) {
+        margin-left: 91px;
+      }
     }
   }
-  .github-heatmap-footer{
+  .github-heatmap-footer {
     width: 100%;
     margin-top: 15px;
-    div{
-        display: inline-block;
-        margin-right: 3px;
+    div {
+      display: inline-block;
+      margin-right: 3px;
     }
-    .learn-how-link{
-        position: relative;
-        left: 32px;
+    .learn-how-link {
+      position: relative;
+      left: 32px;
     }
-    .legend{
-        float: right;
+    .legend {
+      float: right;
+      position: relative;
+      right: 25px;
+      .legend-label {
+        color: #888888;
+        margin-right: 5px;
+        margin-left: 4px;
+      }
+      .legend-tiles {
         position: relative;
-        right: 25px;
-        .legend-label{
-            color: #888888;
-            margin-right: 5px;
-            margin-left: 4px;
-        }
-        .legend-tiles{
-            position: relative;
-            top: 4px;
-        }
+        top: 4px;
+      }
     }
   }
-  
+
   .__react_component_tooltip {
     background-color: ${colors.black6} !important;
     opacity: 0.85 !important;
     color: ${colors.white} !important;
   }
-  
-  .github-tiles{
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;
-      left: 60px;
+
+  .github-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 60px;
   }
 
-  .github-tiles-column{
-      position: relative;
+  .github-tiles-column {
+    position: relative;
   }
 
-  .github-tile{
-      width: 14px;
-      height: 14px;
-      margin-right: 3px;
-      margin-bottom: 3px;
-      transition: background-color 0.6s ease;
-      &.github-color-tone-dark{
-          background-color: #196127;
-      }
+  .github-tile {
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    transition: background-color 0.6s ease;
+    &.github-color-tone-dark {
+      background-color: #196127;
+    }
 
-      &.github-color-tone-normal{
-          background-color: #239a3b
-      }
+    &.github-color-tone-normal {
+      background-color: #239a3b;
+    }
 
-      &.github-color-tone-light{
-          background-color: #7bc96f;
-      }
+    &.github-color-tone-light {
+      background-color: #7bc96f;
+    }
 
-      &.github-color-tone-weak{
-          background-color: #c6e48b;
-      }
+    &.github-color-tone-weak {
+      background-color: #c6e48b;
+    }
 
-      &.github-color-tone-nothing{
-          background-color: #ebedf0;
-      }
+    &.github-color-tone-nothing {
+      background-color: #ebedf0;
+    }
   }
 `
 
 export const GithubHeatmapControls = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 15%
   height: 175px;
   vertical-align: top;
   position: relative;
+  @media (min-width: ${sizes.mdScreen}px) {
+    display: flex;
+  }
   ul{
       display: inline-block;
   }
@@ -195,4 +198,3 @@ export const GithubHeatmapControls = styled.div`
       }
   }
 `
-
