@@ -36,15 +36,17 @@ export const ResponsiveScreens = styled(Section)`
   margin-top: 16px;
   margin-bottom: 16px;
 `
+
 export const DesktopScreens = styled(Section)`
   display: none;
   @media (min-width: ${sizes.mdScreen}px) {
     display: flex;
   }
 `
+
 export const ComponentsSection = styled(Section)`
   flex-direction: column;
-  margin-top: ${spacing.large}px;
+  margin-top: ${spacing.large + 32}px;
   margin-bottom: ${spacing.small}px;
 `
 
