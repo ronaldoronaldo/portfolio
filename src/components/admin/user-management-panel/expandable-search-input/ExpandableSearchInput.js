@@ -19,6 +19,7 @@ const ExpandableSearchInput = ({
   iconSize,
   bgColor,
   open,
+                                 removeWhenMobile,
   ...rest
 }) => {
   const [isFocused, setIsFocused] = useState(false)
@@ -35,7 +36,7 @@ const ExpandableSearchInput = ({
 
   return (
     <ClickOutside onClickOutside={() => setIsFocused(false)}>
-      <ContainerTextInputStyle>
+      <ContainerTextInputStyle removeWhenMobile={removeWhenMobile}>
         <SearchIconContainer
           isFocused={open ? true : isFocused}
           onClick={() => setIsFocused(true)}

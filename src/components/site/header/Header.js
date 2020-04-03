@@ -9,9 +9,8 @@ import {
   UserDropdownContainer,
   PlatformsDropdownContainer,
   RoundButtonStyled,
-  OverlayWrapper
+  OverlayWrapper, WrapperInput, ExpandableSearchInputStyle
 } from './Header.style'
-import iconArvore from 'assets/images/icon-arvore.svg'
 import symbolArvoreLivros from 'assets/images/symbol-arvore.svg'
 import symbolGutenNews from 'assets/images/symbol-guten.svg'
 import symbolEducacao from 'assets/images/symbol-educacao.svg'
@@ -20,19 +19,43 @@ import LogoArvoreEducacao from 'assets/images/logo-arvore-edu-white.svg'
 import { DropdownEnd, Item } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'
-import {LEAGUE_PATH, LEAGUE_VACATION_PATH, LOGIN_PATH, PORTFOLIO_PATH, ROOT_PATH, SITE_PATH} from 'routes'
+import {LEAGUE_PATH, LEAGUE_VACATION_PATH, LOGIN_PATH, PORTFOLIO_PATH, SITE_PATH} from 'routes'
 import { FontIcon } from 'components/lib/icons'
 import { Link } from 'react-router-dom'
+import {SITE_SEARCH_RESULTS_PATH} from "../../../routes"
 
 const Header = props => {
   const [userDropdown, setUserDropdown] = useState(false)
   const [platformDropdown, setPlatformsDropdown] = useState(false)
   const [platformDropdownMobile, setPlatformsDropdownMobile] = useState(false)
+  const [searchValue, setSearchValue] = useState('')
+
+  const onSearchChange = value => {
+    setSearchValue(value)
+  }
+
+  const handleSearch = () => {
+    if(searchValue.length) {
+      props.history.push(`${SITE_SEARCH_RESULTS_PATH(searchValue)}`)
+    }
+  }
+
   return (
     <Container {...props}>
       <Logo href="">
         <img src={LogoArvoreEducacao} alt="Arvore educação" />
       </Logo>
+      <WrapperInput>
+        <ExpandableSearchInputStyle
+          placeholder="Buscar por livros, notícias, autores…"
+          iconSize={22}
+          onChange={onSearchChange}
+          value={searchValue}
+          open
+          removeWhenMobile
+          submitSearch={handleSearch}
+        />
+      </WrapperInput>
       <ContainerMenu>
         <ClickOutside onClickOutside={() => setPlatformsDropdown(false)}>
           <RoundButtonStyled

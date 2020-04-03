@@ -2,11 +2,16 @@ import styled, { css } from 'styled-components'
 import { sizes, colors } from 'config/ui'
 
 export const ContainerTextInputStyle = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  position: relative;
+  ${({ removeWhenMobile }) => css`
+    width: 100%;
+    display: ${removeWhenMobile ? 'none': 'flex'};
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    @media (min-width: ${sizes.mdScreen}px) {
+      display: flex;
+    }
+  `}
 `
 
 export const TextInputStyle = styled.input`

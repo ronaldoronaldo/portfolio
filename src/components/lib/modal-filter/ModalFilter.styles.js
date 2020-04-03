@@ -25,7 +25,7 @@ export const ContainerStyle = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 0 32px 44px 32px;
+  padding: 0 32px 44px 64px;
 `
 
 export const FilterContainer = styled.div`

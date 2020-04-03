@@ -57,7 +57,6 @@ export const ExpandableSearchInputStyle = styled(ExpandableSearchInput)`
   font-size: 16px;
   color: ${colors.black3};
   border: none;
-
   &::-webkit-input-placeholder {
     color: ${colors.black3};
   }

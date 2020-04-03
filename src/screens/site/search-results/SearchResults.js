@@ -11,6 +11,98 @@ import { ItemsShelf } from 'components/shelf'
 import { Container } from 'components/lib/grid'
 import { colors } from 'config/ui'
 
+import books from 'components/shelf/books'
+import news from 'components/shelf/news.json'
+import BookImage from 'assets/images/book.svg'
+import NewsImage from 'assets/images/news.svg'
+
+const didactics = [
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: BookImage,
+    platform: 'arvore',
+    icon: 'arvore',
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  },
+  {
+    title: 'Redes sociais, celular e internet: o gênero Notícia',
+    subtitle: 'Campo jornalístico/midiático',
+    image: NewsImage,
+    degrees: ['1º ano', '2º ano', 'Ensino Médio', 'Ensino Fundamental']
+  }
+]
+
 const SearchResults = props => {
   const [term, setTerm] = useState('')
   const [resultsNumber, setResultsNumber] = useState('')
@@ -30,10 +122,10 @@ const SearchResults = props => {
     {
       title: 'Categorias',
       options: [
-        "Ciencia e Tecnologia",
-        "Ciencia e Tecnologia",
-        "Ciencia e Tecnologia",
-        "Ciencia e Tecnologia",
+        "Ciencias da natureza",
+        "Artes",
+        "Autoajuda",
+        "Ficção científica",
       ]
     },
     {
@@ -86,16 +178,19 @@ const SearchResults = props => {
           slidesToShow={7.5}
           booksShelf
           title="Livros"
+          data={books}
         />
         <ItemsShelf
           slidesToShow={4.7}
           newsShelf
           title="Notícias"
+          data={news}
         />
         <ItemsShelf
           slidesToShow={3.8}
           didacticsShelf
           title="Materiais Pedagógicos"
+          data={didactics}
         />
       </Container>
     </>
