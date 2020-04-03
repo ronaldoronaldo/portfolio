@@ -5,7 +5,8 @@ import {
   ExamplesContainer,
   ResponsiveScreens,
   SectionSubtitle,
-  SectionTitle
+  SectionTitle,
+  ComponentsContainer
 } from './Examples.style'
 import ScreenCard from 'components/portfolio/screen-card/ScreenCard'
 import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
@@ -21,6 +22,16 @@ const Examples = () => {
   const [components, setComponents] = useState([
     {
       title: 'Github Commit Map',
+      content: <GithubHeatmap data={arvore}/>,
+      show: false
+    },
+    {
+      title: 'The Shelf',
+      content: <GithubHeatmap data={arvore}/>,
+      show: false
+    },
+    {
+      title: 'Drop PDF zone',
       content: <GithubHeatmap data={arvore}/>,
       show: false
     },
@@ -86,7 +97,9 @@ const Examples = () => {
         <SectionSubtitle>
           Everything here in this website is fully handmade by me, every animation and functionality, with almost zero external libs used.
         </SectionSubtitle>
-        {renderComponents()}
+        <ComponentsContainer>
+          {renderComponents()}
+        </ComponentsContainer>
       </ComponentsSection>
     </ExamplesContainer>
   )

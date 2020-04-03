@@ -9,6 +9,8 @@ export const GithubHeatmapHeader = styled.div`
     font-size: 26px;
     font-weight: 400;
     width: 100%;
+    line-height: 26px;
+    margin-top: 0;
   }
 `
 export const OpacityMask = styled.div`

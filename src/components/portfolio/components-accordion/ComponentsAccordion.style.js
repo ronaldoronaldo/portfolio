@@ -11,13 +11,10 @@ export const ExampleHeader = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row;
-  padding: 8px 16px;
+  padding: 8px 16px 8px 0;
   justify-content: space-between;
   border-bottom: 2px solid ${colors.black2};
   cursor: pointer;
-  &:first-child {
-    border-top: 2px solid ${colors.black2};    
-  }
 `
 
 export const ExampleBodyContainer = styled.div`
@@ -34,10 +31,9 @@ export const ExampleBody = styled.div`
     overflow: hidden;
     flex: 1;
     flex-direction: column;
-    padding: 16px;
-    justify-content: center;;
-    border: 2px solid ${colors.black2};
-    border-top: none;
+    padding: 56px 0;
+    justify-content: center;
+    border-bottom: 2px solid ${colors.black2};
 `
 
 

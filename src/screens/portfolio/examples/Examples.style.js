@@ -24,6 +24,13 @@ export const Section = styled.div`
   width: 100%;
 `
 
+export const ComponentsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid ${colors.black2};
+  width: 100%;
+`
+
 export const CardsSection = styled.div`
   display: flex;
   flex: 1;
