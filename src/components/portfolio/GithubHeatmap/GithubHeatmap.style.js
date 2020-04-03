@@ -153,15 +153,15 @@ export const GithubHeatmapBox = styled.div`
 export const GithubHeatmapControls = styled.div`
   display: none;
   flex-direction: column;
-  width: 15%
-  height: 175px;
   vertical-align: top;
   position: relative;
+  padding-left: 16px;
   @media (min-width: ${sizes.mdScreen}px) {
     display: flex;
   }
   ul{
-      display: inline-block;
+    padding: 0;
+    display: inline-block;
   }
   .year-button-class{
       cursor: pointer;
@@ -174,7 +174,7 @@ export const GithubHeatmapControls = styled.div`
       text-decoration: none;
       text-overflow: ellipsis;
       white-space: nowrap;
-      width: 120px;
+      width: 100px;
       height: 40px;
       line-height: 30px;
       font-weight: bold;

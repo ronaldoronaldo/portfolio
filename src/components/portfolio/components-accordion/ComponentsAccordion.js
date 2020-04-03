@@ -14,7 +14,7 @@ const ComponentsAccordion = ({
   return (
     <Container>
       <ExampleHeader onClick={onClose}>
-        <Title>{title}</Title>
+        <Title show={open}>{title}</Title>
         <FontIcon
           iconName={open ? 'caret-down' : 'caret-right'}
           size={15}
@@ -22,7 +22,7 @@ const ComponentsAccordion = ({
         />
       </ExampleHeader>
       <ExampleBodyContainer show={open}>
-        <ExampleBody >
+        <ExampleBody>
           {children}
         </ExampleBody>
       </ExampleBodyContainer>

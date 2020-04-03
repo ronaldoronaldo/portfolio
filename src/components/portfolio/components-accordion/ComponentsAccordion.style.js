@@ -11,7 +11,7 @@ export const ExampleHeader = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row;
-  padding: 8px;
+  padding: 8px 16px;
   justify-content: space-between;
   border-bottom: 2px solid ${colors.black2};
   cursor: pointer;
@@ -34,7 +34,7 @@ export const ExampleBody = styled.div`
     overflow: hidden;
     flex: 1;
     flex-direction: column;
-    padding: 8px;
+    padding: 16px;
     justify-content: center;;
     border: 2px solid ${colors.black2};
     border-top: none;
@@ -42,6 +42,11 @@ export const ExampleBody = styled.div`
 
 
 export const Title = styled.div`
-  font-size: 16px;
-  color: ${colors.black4};
+  ${({ show }) => `
+    font-size: 16px;
+    color: ${show ? colors.black5 : colors.black4};
+    ${ExampleHeader}:hover & {
+      color: ${colors.black5};
+    }
+  `}
 `
