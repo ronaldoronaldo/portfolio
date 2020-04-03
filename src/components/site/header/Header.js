@@ -20,7 +20,7 @@ import LogoArvoreEducacao from 'assets/images/logo-arvore-edu-white.svg'
 import { DropdownEnd, Item } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'
-import { LOGIN_PATH, ROOT_PATH } from 'routes'
+import {LEAGUE_PATH, LEAGUE_VACATION_PATH, LOGIN_PATH, PORTFOLIO_PATH, ROOT_PATH, SITE_PATH} from 'routes'
 import { FontIcon } from 'components/lib/icons'
 import { Link } from 'react-router-dom'
 
@@ -51,25 +51,25 @@ const Header = props => {
                 text="Go to league page"
                 imagePath={symbolGutenNews}
                 type="img-left-text-left"
-                onClick={() => window.location.replace('/app/liga')}
+                path={LEAGUE_PATH}
               />
               <Item
                 text="Go to league vacation"
                 imagePath={symbolGutenNews}
                 type="img-left-text-left"
-                onClick={() => window.location.replace('/app/liga/ferias')}
+                path={LEAGUE_VACATION_PATH}
               />
               <Item
                 text="Go to library page"
                 imagePath={symbolArvoreLivros}
                 type="img-left-text-left"
-                onClick={() => window.location.replace('/app/biblioteca')}
+                path={SITE_PATH}
               />
               <Item
                 text="Back to portfolio"
                 imagePath={symbolEducacao}
                 type="img-left-text-left"
-                onClick={() => window.location.replace('/app/home')}
+                to={PORTFOLIO_PATH}
               />
               <Item
                 text="Disabled button example"
@@ -156,25 +156,25 @@ const Header = props => {
                   text="Go to league page"
                   imagePath={symbolGutenNews}
                   type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/liga')}
+                  path={LEAGUE_PATH}
                 />
                 <Item
                   text="Go to league vacation"
                   imagePath={symbolGutenNews}
                   type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/liga/ferias')}
+                  path={LEAGUE_VACATION_PATH}
                 />
                 <Item
                   text="Go to library page"
                   imagePath={symbolArvoreLivros}
                   type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/biblioteca')}
+                  path={SITE_PATH}
                 />
                 <Item
                   text="Back to portfolio"
                   imagePath={symbolEducacao}
                   type="img-left-text-left"
-                  onClick={() => window.location.replace('/app/biblioteca')}
+                  to={PORTFOLIO_PATH}
                 />
                 <Item
                   text="Disabled button example"

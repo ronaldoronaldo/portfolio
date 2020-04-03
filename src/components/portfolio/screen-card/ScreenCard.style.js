@@ -1,7 +1,8 @@
 import styled  from 'styled-components'
-import { fontWeights, spacing, colors,shadows } from 'config/ui'
+import { fontWeights, spacing, colors } from 'config/ui'
+import {Link} from "react-router-dom"
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(Link)`
   display: flex;
   width: 33%;
   flex-direction: column;

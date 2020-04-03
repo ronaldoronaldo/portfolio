@@ -10,10 +10,11 @@ const Item = ({
   type,
   disabled,
   iconName,
+  path,
   ...props
 }) => {
   return (
-    <Container disabled={disabled} onClick={onClick} {...props}>
+    <Container disabled={disabled} to={path} {...props}>
       {type === 'img-left-text-left' && (
         <>
           <ItemImage disabled={disabled} src={imagePath} />

@@ -4,10 +4,10 @@ import { colors } from 'config/ui'
 import FontIcon from 'components/lib/icons/FontIcon'
 
 const GoBackHeader = ({ ...props }) => {
-  const { bgColor, color, title, goBack } = props
+  const { bgColor, color, title, path } = props
   return (
     <Header bgColor={bgColor}>
-      <GoBackButton onClick={goBack}>
+      <GoBackButton to={path}>
         <FontIcon
           iconName={'arrow-left'}
           size={30}

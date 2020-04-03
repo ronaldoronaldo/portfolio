@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { colors, sizes, fontWeights } from 'config/ui'
+import {Link} from "react-router-dom"
 
 export const Header = styled.div`
   ${({ bgColor }) => `
@@ -14,7 +15,7 @@ export const Header = styled.div`
   `};
 `
 
-export const GoBackButton = styled.button`
+export const GoBackButton = styled(Link)`
   position: absolute;
   left: 16px;
   top: 12px;

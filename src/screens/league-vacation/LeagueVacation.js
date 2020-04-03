@@ -19,6 +19,7 @@ import bookOpen from 'assets/images/portfolio/book-open.svg'
 import trophy from 'assets/images/portfolio/trophy.svg'
 import { ThemeProvider } from 'styled-components'
 import GoBackHeader from '../../components/league/go-back-header'
+import {LEAGUE_PATH} from "../../routes"
 
 const vacationTheme = {
   wrapper: {
@@ -60,7 +61,7 @@ const LeagueVacation = () => {
     <Container>
       <TopWrapper>
         <GoBackHeader
-          goBack={() => window.location.replace('/app/liga')}
+          path={LEAGUE_PATH}
           bgColor={colors.leagueOnVacationPurple1}
         />
         <Title>A Liga de Leitores está de férias!</Title>

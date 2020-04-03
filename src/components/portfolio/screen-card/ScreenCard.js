@@ -10,12 +10,8 @@ import {
 import PropTypes from 'prop-types'
 
 const ScreenCard = ({ title, image, path }) => {
-  const handleCardClick = () => {
-    window.location.replace(path)
-  }
-
   return (
-    <CardContainer onClick={handleCardClick}>
+    <CardContainer to={path}>
       <CardHeader>
         <HeaderBox>
           <ScreenImage src={image} />
