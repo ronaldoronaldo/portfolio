@@ -80,17 +80,17 @@ const Header = props => {
             </DropdownEnd>
           </PlatformsDropdownContainer>
         )}
-        <RoundButtonStyled
-          style={{
-            marginRight: 8
-          }}
-          iconName="bell"
-          numberOfNotifications="10"
-          onClick={() => console.log('news')}
-          bgColor={colors.white}
-          borderColor={colors.white}
-          iconColor={props.bgColor || colors.blue3}
-        />
+        {/*<RoundButtonStyled*/}
+        {/*  style={{*/}
+        {/*    marginRight: 8*/}
+        {/*  }}*/}
+        {/*  iconName="bell"*/}
+        {/*  numberOfNotifications="10"*/}
+        {/*  onClick={() => console.log('news')}*/}
+        {/*  bgColor={colors.white}*/}
+        {/*  borderColor={colors.white}*/}
+        {/*  iconColor={props.bgColor || colors.blue3}*/}
+        {/*/>*/}
         {!props.leagueHeader && (
           <>
             <ClickOutside onClickOutside={() => setUserDropdown(false)}>
@@ -121,7 +121,7 @@ const Header = props => {
       </ContainerMenu>
       <MenuMobile>
         <ContainerItemMenu>
-          <ItemMenu as={Link} to={ROOT_PATH}>
+          <ItemMenu as={Link} to={SITE_PATH}>
             <FontIcon
               iconName="home"
               size={15}

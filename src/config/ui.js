@@ -65,6 +65,7 @@ export const colors = {
   red1Light: `hsl(0, 86%, ${97 + lightness}%)`,
 
   purple3: `hsl(271, 47%, 66%)`,
+  purple4: '#7e5f9b' ,
   purple3Dark: `hsl(271, 47%, ${66 - lightness}%)`,
   purple3Light: `hsl(271, 47%, ${66 + lightness}%)`,
   purple2: `hsl(271, 66%, 84%)`,

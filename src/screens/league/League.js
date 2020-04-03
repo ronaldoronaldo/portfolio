@@ -8,7 +8,7 @@ const League = () => {
   const [currentPoints, setCurrentPoints] = useState(892)
   return (
     <>
-      <Header leagueHeader bgColor={colors.purple3} />
+      <Header leagueHeader bgColor={colors.purple4} />
       <Wrapper>
         <LeagueBoards currentPoints={currentPoints} />
       </Wrapper>
