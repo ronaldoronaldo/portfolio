@@ -1,11 +1,9 @@
 import React from 'react'
 import {
   CardContainer,
-  CardHeader,
   ScreenTitle,
   OpacityMask,
   ScreenImage,
-  HeaderBox
 } from './ScreenCard.style'
 import PropTypes from 'prop-types'
 
@@ -21,7 +19,13 @@ const ScreenCard = ({ title, image, path }) => {
 
 ScreenCard.propTypes = {
   title: PropTypes.string.isRequired,
-  numberOfPages: PropTypes.number.isRequired
+  image: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default ScreenCard
+
+
+
+
+
