@@ -8,8 +8,10 @@ import {
 import PropTypes from 'prop-types'
 
 const ScreenCard = ({ title, image, path }) => {
+  const body = document.body
+
   return (
-    <CardContainer to={path}>
+    <CardContainer to={path} onClick={()=>body.setAttribute("class", "")}>
       <ScreenImage src={image} />
       <OpacityMask />
       <ScreenTitle>{title}</ScreenTitle>

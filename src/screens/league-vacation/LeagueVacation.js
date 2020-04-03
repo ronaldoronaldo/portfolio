@@ -54,8 +54,8 @@ const vacationTheme = {
 const LeagueVacation = () => {
   const now = new Date()
   const month = now.getMonth()
-  const year = month < 2 ? now.getFullYear() : now.getFullYear() + 1
-  const vacationEndDate = new Date(year, month - 1)
+  const year = now.getFullYear()
+  const vacationEndDate = new Date(year, month + 2)
 
   return (
     <Container>

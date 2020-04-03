@@ -77,6 +77,7 @@ export const Subtitle = styled.span`
   color: ${colors.leagueOnVacationYellow};
   @media (min-width: ${sizes.mScreen}px) {
     max-width: 259px;
+    font-size: 16px;
   }
 `
 
@@ -121,11 +122,11 @@ export const RoundIconContainer = styled.div`
 export const RoundIconContainerTop = styled(RoundIconContainer)`
   background-color: ${colors.leagueOnVacationYellow};
   border: 4.3px solid ${colors.leagueOnVacationPurple1};
-  position: relative;
+  position: absolute;
   z-index: 2;
-  bottom: -14px;
+  bottom: 11px;
   @media (min-width: ${sizes.mScreen}px) {
-    bottom: -67px;
+    bottom: 0;
   }
 `
 
@@ -147,7 +148,7 @@ export const DivisionImage = styled.img`
 `
 
 export const DivisionImageTop = styled(DivisionImage)`
-  bottom: 0;
+  bottom: -11px;
   @media (min-width: ${sizes.mScreen}px) {
     bottom: -12px;
   }
