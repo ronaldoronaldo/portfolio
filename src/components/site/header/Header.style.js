@@ -22,6 +22,9 @@ export const Container = styled.div`
 export const Logo = styled.a`
   cursor: pointer;
   margin-top: 3px;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
   > img {
     width: 193px;
     height: 24px;
@@ -29,10 +32,11 @@ export const Logo = styled.a`
 `
 
 export const WrapperInput = styled.div`
-  width: 100%;
-  max-width: 620px;
-
+  display: flex;
+  flex: 2;
+  justify-content: center;
   > div {
+    width: 100%;
     > div {
       > div {
         top: 0;
@@ -57,6 +61,7 @@ export const ExpandableSearchInputStyle = styled(ExpandableSearchInput)`
   font-size: 16px;
   color: ${colors.black3};
   border: none;
+  width: 100%;
   &::-webkit-input-placeholder {
     color: ${colors.black3};
   }
@@ -64,6 +69,8 @@ export const ExpandableSearchInputStyle = styled(ExpandableSearchInput)`
 
 export const ContainerMenu = styled.div`
   display: flex;
+  flex: 1;
+  justify-content: flex-end;
 `
 
 export const UserDropdownContainer = styled.div`
