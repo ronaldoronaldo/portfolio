@@ -43,7 +43,9 @@ export const DesktopScreens = styled(Section)`
   }
 `
 export const ComponentsSection = styled(Section)`
+  flex-direction: column;
   margin-top: ${spacing.large}px;
+  margin-bottom: ${spacing.small}px;
 `
 
 export const SectionTitle = styled.span`

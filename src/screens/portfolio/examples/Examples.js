@@ -47,13 +47,16 @@ const Examples = () => {
       <ResponsiveScreens>
         <SectionTitle>Responsive Screens</SectionTitle>
         <SectionSubtitle>
-          3 different environments, each one with at least 3 pages, everything
+          Three different environments, each one with at least three pages where you can navigate between. Everything
           works in any screen size.
         </SectionSubtitle>
         <CardsSection>{renderCards(responsiveScreens)}</CardsSection>
       </ResponsiveScreens>
       <ComponentsSection>
         <SectionTitle>Components Examples</SectionTitle>
+        <SectionSubtitle>
+          Everything here in this website is fully handmade by me, every animation and functionality, with almost zero external libs used.
+        </SectionSubtitle>
       </ComponentsSection>
     </ExamplesContainer>
   )

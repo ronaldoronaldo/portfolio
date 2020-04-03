@@ -12,7 +12,7 @@ export const CardContainer = styled(Link)`
   margin-right: ${spacing.mSmall}px;
   position: relative;
   height: 464px;
-  border: 2px solid ${colors.black2Dark};
+  border: 3px solid ${colors.black2Dark};
   transition: all 0.2s ease-in;
   &:first-child {
     margin-left: 0;

@@ -97,7 +97,7 @@ export const IconsBorder = styled.div`
     selectedPage === 'curriculum' ?
       colors.portGreen :
       selectedPage === 'about-me' ?
-        colors.black3 : colors.black4
+        colors.black3 : colors.black2Dark
     };
     width: ${selectedPage === '' ? 0 : 100}%;
     transition: width 0.5s ease-out;
@@ -111,7 +111,7 @@ export const IconsBorder = styled.div`
       selectedPage === 'curriculum' ?
         colors.portGreen :
         selectedPage === 'about-me' ?
-          colors.black3 : colors.black4
+          colors.black3 : colors.black2Dark
       };
     } 
   `}
