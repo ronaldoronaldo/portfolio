@@ -4,9 +4,12 @@ import {
   TextInputStyle,
   LabelStyle,
   DisabledStyle,
-  NotRequiredLabel
+  NotRequiredLabel,
+  EyeIcon
 } from './Input.style'
 import PropTypes from 'prop-types'
+import { FontIcon } from 'components/lib/icons'
+import { colors } from 'config/ui'
 
 const Input = ({
   size,
@@ -22,13 +25,16 @@ const Input = ({
   disabled,
   notRequired,
   id,
+  showPassword,
+  onKeyUp,
   ...rest
 }) => {
   const [isFocused, setIsFocused] = useState(false)
   const [labelFloat, setLabelFloat] = useState(false)
+  const [typeInput, setTypeInput] = useState(null)
 
   useEffect(() => {
-    if (value && value.length > 1) {
+    if (value && value.length >= 1) {
       setLabelFloat(true)
     } else {
       setLabelFloat(false)
@@ -48,8 +54,22 @@ const Input = ({
     }
   }
 
+  const handleOnKeyUp = key => {
+    if (onKeyUp) {
+      onKeyUp(key)
+    }
+  }
+
+  const handleEyeIcon = () => {
+    if (typeInput === 'text') {
+      setTypeInput('password')
+    } else {
+      setTypeInput('text')
+    }
+  }
+
   return (
-    <ContainerTextInputStyle>
+    <ContainerTextInputStyle {...rest}>
       {disabled && <DisabledStyle>{'. ' + placeholder + ' .'}</DisabledStyle>}
       <LabelStyle
         htmlFor={id}
@@ -60,9 +80,18 @@ const Input = ({
       >
         {placeholder}
       </LabelStyle>
+      {showPassword && (
+        <EyeIcon onClick={handleEyeIcon}>
+          <FontIcon
+            iconName={typeInput === 'text' ? 'eye' : 'eye-off'}
+            size={16}
+            color={colors.black3}
+          />
+        </EyeIcon>
+      )}
       <TextInputStyle
         id={id}
-        type={type ? type : 'text'}
+        type={typeInput ? typeInput : type ? type : 'text'}
         size={size}
         style={style}
         isFocused={isFocused}
@@ -73,6 +102,7 @@ const Input = ({
         onFocus={handleFocus}
         onBlur={handleBlur}
         onChange={onChange}
+        onKeyUp={evt => handleOnKeyUp(evt.key)}
         disabled={disabled}
       />
       {notRequired && <NotRequiredLabel>Não obrigatório</NotRequiredLabel>}
@@ -82,7 +112,7 @@ const Input = ({
 
 Input.propTypes = {
   value: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
   error: PropTypes.bool,
   success: PropTypes.bool,
   outline: PropTypes.string,

@@ -4,10 +4,6 @@ import { WrapperMenu, MenuItem, ContainerStyle } from './HomeScreen.style'
 import { BooksAndNewsScreen } from 'components/site/books-and-news'
 import { TeachingMaterialsScreen } from 'components/site/teaching-materials'
 
-import { connect } from 'react-redux'
-import { withApollo } from 'react-apollo'
-import { compose } from 'redux'
-
 const HomeScreen = ({ client, ...props }) => {
   const [active, setActive] = useState(0)
   const [showScreen, setShowScreen] = useState('books')
@@ -49,11 +45,4 @@ const HomeScreen = ({ client, ...props }) => {
   )
 }
 
-const mapStateToProps = state => ({
-  modal: state.modal
-})
-
-export default compose(
-  withApollo,
-  connect(mapStateToProps)
-)(HomeScreen)
+export default HomeScreen

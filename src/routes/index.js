@@ -198,16 +198,16 @@ const Routes = () => (
     {/*admin routes*/}
     <Route path={USER_MANAGEMENT_ROOT_PATH} component={WrapperPanel} />
 
-    {/*site home routes*/}
+    {/*library routes*/}
     <Route path={SITE_PATH} component={WrapperSite} />
 
-    {/*site home routes*/}
+    {/*league routes*/}
     <Route path={LEAGUE_PATH} exact component={League} />
     <Route path={LEAGUE_TUTORIAL_PATH} exact component={LeagueTutorial} />
     <Route path={LEAGUE_VACATION_PATH} exact component={LeagueVacation} />
 
     {/*portfolio routes*/}
-    <Route path={PORTFOLIO_PATH} component={WrapperPortfolio} />
+    <Route path={PORTFOLIO_PATH} exact component={WrapperPortfolio} />
   </BrowserRouter>
 )
 

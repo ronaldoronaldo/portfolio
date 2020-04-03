@@ -29,6 +29,8 @@ export const TextInputStyle = styled.input`
     outline: ${outline ? outline : 0};
     color: ${disabled ? colors.black4 : colors.black6};
     background: ${disabled && colors.black1};
+    font-size: ${sizes.text}px;
+
     border: 1px solid
       ${isFocused
         ? colors.primary
@@ -39,7 +41,7 @@ export const TextInputStyle = styled.input`
         : colors.black2};
 
     height: ${size === 'x-small'
-      ? `${sizes.inputSizes.xSmall}px`
+      ? `${sizes.inputSizes.xsmall}px`
       : size === 'small'
       ? `${sizes.inputSizes.small}px`
       : size === 'medium'
@@ -97,4 +99,16 @@ export const NotRequiredLabel = styled.span`
   color: ${colors.black3};
   bottom: -18px;
   left: 16px;
+`
+
+export const EyeIcon = styled.a`
+  width: 32px;
+  height: 48px;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 `

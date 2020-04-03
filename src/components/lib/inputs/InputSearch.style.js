@@ -7,13 +7,13 @@ export const ContainerTextInputStyle = styled.div`
   border-radius: 5px;
   height: ${
     size === 'x-small'
-      ? `${sizes.inputSizes.xSmall}px`
+      ? `${sizes.inputSizes.xsmall}px`
       : size === 'small'
-        ? `${sizes.inputSizes.small}px`
-        : size === 'large'
-          ? `${sizes.inputSizes.large}px`
-          : `${sizes.inputSizes.medium}px`
-    };
+      ? `${sizes.inputSizes.small}px`
+      : size === 'large'
+      ? `${sizes.inputSizes.large}px`
+      : `${sizes.inputSizes.medium}px`
+  };
   `}
   margin: 0 ${sizes.padding}px;
   justify-content: center;
@@ -27,18 +27,18 @@ justify-content: center;
 padding-left: ${sizes.padding}px;
 padding-right: ${sizes.padding}px;
 font-size: ${sizes.text}
-border-radius: 9px;
-color: ${colors.black6}
+border-radius: 10px;
+color: ${colors.black6};
 
 height: ${
     size === 'x-small'
-      ? `${sizes.inputSizes.xSmall}px`
+      ? `${sizes.inputSizes.xsmall}px`
       : size === 'small'
-        ? `${sizes.inputSizes.small}px`
-        : size === 'medium'
-          ? `${sizes.inputSizes.medium}px`
-          : `${sizes.inputSizes.large}px`
-    };
+      ? `${sizes.inputSizes.small}px`
+      : size === 'medium'
+      ? `${sizes.inputSizes.medium}px`
+      : `${sizes.inputSizes.large}px`
+  };
 `}
 `
 
