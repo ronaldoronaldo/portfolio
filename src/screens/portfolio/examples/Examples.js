@@ -13,6 +13,9 @@ import libraryMobile from 'assets/images/portfolio/pages/libraryMobile.png'
 import leagueMobile from 'assets/images/portfolio/pages/leagueMobile.png'
 import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
 
+import GithubHeatmap from 'components/portfolio/GithubHeatmap/GithubHeatmap'
+import arvore from 'components/portfolio/GithubHeatmap/arvore'
+
 const Examples = () => {
   const responsiveScreens = [
     {
@@ -57,6 +60,7 @@ const Examples = () => {
         <SectionSubtitle>
           Everything here in this website is fully handmade by me, every animation and functionality, with almost zero external libs used.
         </SectionSubtitle>
+        <GithubHeatmap data={arvore}/>
       </ComponentsSection>
     </ExamplesContainer>
   )
