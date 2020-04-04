@@ -14,6 +14,7 @@ const ButtonSelect = ({
   label,
   active,
   labelColor,
+  noMarginLeft,
   ...rest
 }) => {
   return (
@@ -23,6 +24,7 @@ const ButtonSelect = ({
       {...rest}
       active={active}
       labelColor={labelColor}
+      noMarginLeft={noMarginLeft}
     >
       <span>{label}</span>
       {active && text}

@@ -6,7 +6,7 @@ export const StyledIconButton = styled(ButtonStyle)`
     margin-right: ${props =>
       props.margin ? props.margin : props.text ? 10 : 0}px;
     color: ${props => props.color};
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   > img {

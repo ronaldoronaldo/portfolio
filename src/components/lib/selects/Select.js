@@ -18,6 +18,7 @@ const Select = ({
   iconNext,
   marginBottom,
   dropdownStyle,
+  noMarginLeft,
   ...rest
 }) => {
   const [active, setActive] = useState(false)
@@ -39,6 +40,7 @@ const Select = ({
           onClick={() => setActive(!active)}
           iconDirection={active}
           marginBottom={marginBottom}
+          noMarginLeft={noMarginLeft}
         />
       </ClickOutside>
       {items.length > 0 && (

@@ -29,6 +29,7 @@ export const WrapperStyle = styled.div`
   background: ${colors.white};
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
+  padding: 0 56px;
 `
 
 export const HeaderStyle = styled.div`
@@ -107,7 +108,6 @@ export const ResetPasswordButton = styled(IconButton)`
 `
 
 export const InputStyle = styled(Input)`
-  margin-bottom: 36px;
   font-size: ${sizes.text}px;
   color: ${colors.black5};
   border-color: ${colors.black3};
@@ -154,11 +154,11 @@ export const ContainerPlatform = styled.div`
 `
 
 export const LeftColumnStyle = styled(Column)`
-  padding: 0 12px 0 0;
+  margin-left: 0 !important;
+  padding: 0;
 `
 
 export const RightColumnStyle = styled(Column)`
-  padding: 0 0 0 12px;
 `
 
 export const DisabledInputStyle = styled(Input)`
@@ -173,11 +173,11 @@ export const AlertRecovery = styled.p`
   font-weight: ${fontWeights.regular};
   width: 100%;
   height: ${props => (props.open ? sizes.inputSizes.medium : 0)}px;
-  padding-left: 16px;
   display: flex;
   align-items: center;
   margin-bottom: 36px;
   border-radius: 4px;
+  padding-left: 16px;
   transition: all 0.3s linear;
 `
 
@@ -225,7 +225,6 @@ export const AccessCodeLabel = styled.div`
 export const LabelAccordionStyle = styled.p`
   color: ${colors.blue};
   font-weight: ${fontWeights.bold};
-  padding-left: 16px;
   margin-bottom: 0px;
 `
 
@@ -252,7 +251,6 @@ export const ScholarshipSwitchContainer = styled.div`
 export const InputSearchStyle = styled(InputSearch)``
 
 export const ContainerAccordionMenu = styled.div`
-  padding-right: 50px;
 `
 
 export const SpinnerContainer = styled(Container)`

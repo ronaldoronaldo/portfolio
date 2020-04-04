@@ -4,7 +4,11 @@ import IconButton from 'components/lib/buttons/IconButton'
 
 export const AccordionMenuContainer = styled.div`
   width: 100%;
-  display: ${props => (props.open ? 'block' : 'none')};
+  display: block;
+  height: auto;
+  overflow: hidden;
+  max-height: ${props => (props.open ? '1000px' : '0')};
+  transition: max-height 0.4s ease-in-out;
 `
 
 export const IconButtonStyle = styled(IconButton)`
@@ -19,5 +23,9 @@ export const IconButtonStyle = styled(IconButton)`
   justify-content: space-between;
   height: ${spacing.large}px;
   border-radius: 0;
+  padding: 0;
+  padding-right: 16px;
   font-size: 20px;
+  margin-bottom: ${props =>
+  props.open ? 16 : 0}px;
 `

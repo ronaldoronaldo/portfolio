@@ -12,7 +12,8 @@ export const ButtonSelectStyle = styled.button`
     color,
     labelColor,
     outline,
-    active
+    active,
+  noMarginLeft
   }) => css`
     background: ${bgColor ? bgColor : colors.white};
     cursor: pointer;
@@ -48,6 +49,7 @@ export const ButtonSelectStyle = styled.button`
       padding: 5px ${active ? 5 : 0}px;
       color: ${labelColor};
     }
+    ${noMarginLeft && `margin-left: 0 !important;`}
   `}
 `
 export const SelectIcon = styled.div`
