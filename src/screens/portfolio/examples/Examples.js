@@ -19,6 +19,7 @@ import CollectionShelf from 'components/portfolio/collections-shelf/CollectionSh
 import GithubHeatmap from 'components/portfolio/GithubHeatmap/GithubHeatmap'
 import arvore from 'components/portfolio/GithubHeatmap/arvore'
 import ComponentsAccordion from 'components/portfolio/components-accordion/ComponentsAccordion'
+import {FileDropzone} from "../../../components/portfolio/file-dropzone"
 const collections = [
   {
     name: 'Garotas no comando',
@@ -88,7 +89,7 @@ const Examples = () => {
     },
     {
       title: 'PDF Drop Zone',
-      content: <GithubHeatmap data={arvore}/>,
+      content: <FileDropzone/>,
       show: false
     },
   ])
