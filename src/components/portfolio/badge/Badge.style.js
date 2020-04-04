@@ -3,9 +3,9 @@ import { colors, spacing } from 'config/ui'
 
 export const BadgeContainer = styled.div`
   display: flex;
-  width: 240px;
+  width: 200px;
   padding: 32px 16px;
-  justify-contents: space-between;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 `
@@ -13,9 +13,10 @@ export const BadgeContainer = styled.div`
 export const BadgeTitleBox = styled.div`
   display: flex;
   width: 150px;
-  justify-contents: center;
+  justify-content: center;
+  padding: 8px;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 6px;
   margin-top: ${spacing.medium}px;
   background-color: ${colors.red2};
 `
@@ -25,13 +26,13 @@ export const BadgeImage = styled.img`
 `
 
 export const BadgeIcon = styled.img`
-  width: 100pxpx;
+  width: 100px;
   position: absolute;
   top: 88px;
 `
 
-export const BadgeTitle = styled.span`
+export const BadgeTitle = styled.div`
   font-size: 16px;
   text-align: center;
-  color: ${colors.black5}
+  color: ${colors.white}
 `
