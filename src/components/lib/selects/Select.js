@@ -45,6 +45,7 @@ const Select = ({
       </ClickOutside>
       {items.length > 0 && (
         <Dropdown
+          noMarginLeft={noMarginLeft}
           items={items}
           active={active}
           onChange={onChange}

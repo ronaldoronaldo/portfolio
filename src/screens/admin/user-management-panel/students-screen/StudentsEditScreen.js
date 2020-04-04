@@ -261,6 +261,7 @@ const StudentsEditScreen = props => {
           </LeftColumnStyle>
         </ContainerAccordionMenu>
       </AccordionMenu>
+
       <AccordionMenu text="Teacher responsibilities">
         <ContainerAccordionMenu>
           <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
@@ -285,13 +286,12 @@ const StudentsEditScreen = props => {
               text={userType}
               items={['Admin', 'Professor']}
               onChange={handleSelectValue}
-              maxWidth={620}
               label="Tipo de usuário"
               activeSelectButton={userType}
               labelColor={colors.black3}
               dropdownStyle={{
                 top: 43,
-                width: 556
+                width: '100%'
               }}
               style={{
                 borderColor: colors.black3,

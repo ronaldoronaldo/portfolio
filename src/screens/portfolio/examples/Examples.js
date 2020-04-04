@@ -16,7 +16,6 @@ import libraryMobile from 'assets/images/portfolio/pages/libraryMobile.png'
 import leagueMobile from 'assets/images/portfolio/pages/leagueMobile.png'
 import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
 import CollectionShelf from 'components/portfolio/collections-shelf/CollectionShelf'
-
 import GithubHeatmap from 'components/portfolio/GithubHeatmap/GithubHeatmap'
 import arvore from 'components/portfolio/GithubHeatmap/arvore'
 import ComponentsAccordion from 'components/portfolio/components-accordion/ComponentsAccordion'
@@ -92,7 +91,7 @@ const Examples = () => {
       column: true
     },
     {
-      title: 'PDF Drop Zone',
+      title: 'File Drag & Drop',
       content: <FileDropzone />,
       show: false
     }

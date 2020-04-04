@@ -4,7 +4,7 @@ import { colors, sizes, fontWeights, spacing } from 'config/ui'
 import InputSearch from 'components/lib/inputs/InputSearch'
 
 export const SelectContainerStyle = styled.div`
-  ${({ border, borderRadius, bgColor, maxWidth, mobileStyle, checkbox }) => css`
+  ${({ border, borderRadius, bgColor, maxWidth, mobileStyle, checkbox, noMarginLeft }) => css`
     margin-top: ${spacing.xSmall}px;
     border: ${border ? border : `1px solid ${colors.black2}`};
     border-radius: ${borderRadius ? borderRadius : 6}px;
@@ -47,6 +47,7 @@ export const SelectContainerStyle = styled.div`
       border: 0;
       max-width: 100%;
     }
+    ${noMarginLeft && `margin-left: 0 !important;`}
   `}
 `
 
