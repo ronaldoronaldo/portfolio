@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTyes from 'prop-types'
-import { Header, Title, ViewAll, ShelfWrapper } from './Shelf.styles'
+import { ShelfWrapper } from './Shelf.styles'
 import Carousel from 'components/league/carousel'
 
 const Shelf = ({
@@ -20,6 +20,7 @@ const Shelf = ({
         className="shelf-items"
         carouselSettings={carouselSettings}
         centralizeButtonOnBook
+        clippedButton
       >
         {children}
       </Carousel>

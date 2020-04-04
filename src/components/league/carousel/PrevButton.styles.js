@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { colors } from 'config/ui'
 
 export const StyledButton = styled.button`
+  ${({ clippedButton }) => `
   position: absolute;
   padding: 0;
-  left: -19px;
+  left: ${clippedButton ? 13 : -19}px;;
   outline: none;
   z-index: 2;
   cursor: pointer;
@@ -18,5 +19,5 @@ export const StyledButton = styled.button`
   background-color: ${colors.white};
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;`}
 `

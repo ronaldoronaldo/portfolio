@@ -4,7 +4,13 @@ import Collection from './collection/Collection'
 import Shelf from './Shelf'
 import { sizes } from 'config/ui'
 
-const CollectionShelf = ({ onClickCollection, title, data, loading, ...rest }) => {
+const CollectionShelf = ({
+  onClickCollection,
+  title,
+  data,
+  loading,
+  ...rest
+}) => {
   return (
     <Shelf
       title={title}
@@ -17,29 +23,36 @@ const CollectionShelf = ({ onClickCollection, title, data, loading, ...rest }) =
           {
             breakpoint: sizes.xlScreen,
             settings: {
-              slidesToShow: 5.8,
-              slidesToScroll: 5
+              slidesToShow: 2.8,
+              slidesToScroll: 2.8
             }
           },
           {
             breakpoint: sizes.lScreen,
             settings: {
-              slidesToShow: 4.6,
-              slidesToScroll: 4
+              slidesToShow: 2.8,
+              slidesToScroll: 2.8
             }
           },
           {
             breakpoint: sizes.mScreen,
             settings: {
-              slidesToShow: 3.2,
-              slidesToScroll: 3
+              slidesToShow: 2.8,
+              slidesToScroll: 2.8
+            }
+          },
+          {
+            breakpoint: sizes.sScreen,
+            settings: {
+              slidesToShow: 2.4,
+              slidesToScroll: 2.4
             }
           },
           {
             breakpoint: sizes.xsScreen,
             settings: {
               slidesToShow: 1.8,
-              slidesToScroll: 2
+              slidesToScroll: 1.8
             }
           }
         ]
@@ -75,7 +88,7 @@ CollectionShelf.propTyes = {
 
 CollectionShelf.defaultProps = {
   data: [],
-  loading: true,
+  loading: true
 }
 
 export default CollectionShelf

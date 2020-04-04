@@ -10,7 +10,8 @@ class Carousel extends Component {
   static propTypes = {
     gutter: PropTypes.number,
     carouselSettings: PropTypes.object,
-    centralizeButtonOnBook: PropTypes.bool
+    centralizeButtonOnBook: PropTypes.bool,
+    clippedButton: PropTypes.bool
   }
 
   static defaultProps = {
@@ -42,8 +43,8 @@ class Carousel extends Component {
       dots: false,
       infinite: false,
       speed: 500,
-      nextArrow: <NextButton/>,
-      prevArrow: <PrevButton/>,
+      nextArrow: <NextButton clippedButton={this.props.clippedButton} />,
+      prevArrow: <PrevButton clippedButton={this.props.clippedButton} />,
       variableWidth: true,
       slidesToScroll: 1,
       ...this.props.carouselSettings
