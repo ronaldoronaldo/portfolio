@@ -22,18 +22,20 @@ export const ExampleBodyContainer = styled.div`
     height: auto;
     overflow: hidden;
     max-height: ${show ? '500px' : '0'};
-    transition: max-height 0.4s ease-in-out
+    transition: max-height 0.4s ease-in-out;
   `}
 `
 
 export const ExampleBody = styled.div`
+  ${({ column }) => `
     display: flex;
     overflow: hidden;
     flex: 1;
-    flex-direction: column;
+    flex-direction: ${column ? 'column' : 'row'};
     padding: 56px 0;
     justify-content: center;
     border-bottom: 2px solid ${colors.black2};
+    `}
 `
 
 

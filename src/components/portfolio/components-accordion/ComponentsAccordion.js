@@ -9,7 +9,8 @@ const ComponentsAccordion = ({
   title,
   open,
   onClose,
-  children
+  children,
+  column
 }) => {
   return (
     <Container>
@@ -22,7 +23,7 @@ const ComponentsAccordion = ({
         />
       </ExampleHeader>
       <ExampleBodyContainer show={open}>
-        <ExampleBody>
+        <ExampleBody column={column}>
           {children}
         </ExampleBody>
       </ExampleBodyContainer>

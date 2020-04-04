@@ -13,22 +13,78 @@ import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
 import libraryMobile from 'assets/images/portfolio/pages/libraryMobile.png'
 import leagueMobile from 'assets/images/portfolio/pages/leagueMobile.png'
 import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
+import CollectionShelf from 'components/portfolio/collections-shelf/CollectionShelf'
+
 
 import GithubHeatmap from 'components/portfolio/GithubHeatmap/GithubHeatmap'
 import arvore from 'components/portfolio/GithubHeatmap/arvore'
 import ComponentsAccordion from 'components/portfolio/components-accordion/ComponentsAccordion'
+const collections = [
+  {
+    name: 'Garotas no comando',
+    image: 'girl_power',
+    index: 1
+  },
+  {
+    name: 'Bullying e autoaceitação',
+    image: 'bullying',
+    index: 2
+  },
+  {
+    name: 'Meio ambiente',
+    image: 'meio_ambiente',
+    index: 3
+  },
+  {
+    name: 'Livros premiados',
+    image: 'premiados',
+    index: 4
+  },
+  {
+    name: 'Contos de fadas e maravilhosos',
+    image: 'contos_de_fada',
+    index: 5
+  },
+  {
+    name: 'Viraram filme',
+    image: 'filmes',
+    index: 6
+  },
+  {
+    name: 'Vida e Carreira',
+    image: 'carreira',
+    index: 7
+  },
+  {
+    name: 'Cultura Geek',
+    image: 'geek',
+    index: 8
+  },
+  {
+    name: 'Enem e Vestibular',
+    image: 'vestibular_enem',
+    index: 9
+  }
+]
 
 const Examples = () => {
   const [components, setComponents] = useState([
     {
       title: 'Github Commit Map',
       content: <GithubHeatmap data={arvore}/>,
-      show: false
+      show: false,
+      column: true
     },
     {
       title: 'The Shelf',
-      content: <GithubHeatmap data={arvore}/>,
-      show: false
+      content: <CollectionShelf
+        key="collections"
+        title=""
+        loading={false}
+        data={collections}
+      />,
+      show: false,
+      column: true
     },
     {
       title: 'Drop PDF zone',
@@ -73,9 +129,9 @@ const Examples = () => {
 
   const renderComponents = () => {
     return components.map((component, index) => {
-      const {title, show, content} = component
+      const {title, show, content, column} = component
       return (
-        <ComponentsAccordion title={title} open={show} onClose={() => onCloseAccordion(index)}>
+        <ComponentsAccordion column={column} title={title} open={show} onClose={() => onCloseAccordion(index)}>
           {content}
         </ComponentsAccordion>
       )
