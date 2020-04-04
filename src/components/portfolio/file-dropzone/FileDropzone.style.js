@@ -10,18 +10,18 @@ export const PublishersAddBookFiles = styled.div`
 `
 
 export const PublishersAddBookFilesBox = styled.div`
-  margin-top: 30px;
-  width: 49.1%;
+  width: 48.5%;
   height: 400px;
   display: flex;
   background-color: ${colors.white};
-  border: 1px solid ${colors.gray1};
+  border: 2px solid ${colors.black2};
   border-radius: 3px;
   padding: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 `
 
 export const PublishersAddBookDropzoneContent = styled.div`
@@ -36,24 +36,36 @@ export const PublishersAddBookDropzoneContent = styled.div`
 export const DropzoneContentFileType = styled.div`
   font-size: 15px;
   color: ${props => (props.blocked ? colors.gray1 : colors.gray9)};
-  margin-bottom: 19px;
+  margin-bottom: 32px;
 `
 
 export const DropzoneContentFileName = styled.div`
-  color: ${props => (props.blocked ? colors.gray1 : colors.gray4)};
+  color: ${colors.black2Dark};
+  opacity: 1;
+  font-size: 20px;
+  position: absolute;
+  bottom: 24px;
+`
+
+export const DragAndDropText = styled.span`
+  color: ${colors.black2};
+  opacity: 0.8;
+  font-size: 30px;
+  position: absolute;
+  bottom: 24px;
 `
 
 export const DropzoneContentTitle = styled.div`
   font-size: 22px;
   color: ${props => (props.blocked ? colors.gray1 : colors.gray9)};
   font-weight: ${fontWeights.bold};
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `
 
 export const DropzoneContentIcon = styled.i`
   font-size: 101px;
   color: ${colors.gray1};
-  margin-bottom: 13px;
+  margin-bottom: 32px;
 `
 
 export const DropzoneContentButton = styled.button`

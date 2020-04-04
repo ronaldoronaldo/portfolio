@@ -7,7 +7,7 @@ import {
   DropzoneContentButton,
   DropzoneContentFileType,
   DropzoneContentTitle,
-  DropzoneContentFileName
+  DropzoneContentFileName, DragAndDropText
 } from './FileDropzone.style'
 import UploadDropzone from "./upload-dropzone"
 import Input from "../../lib/inputs/Input"
@@ -19,7 +19,7 @@ const FileDropzone = () => {
 
   const handleBookFile = files => {
     if (files.length > 1) {
-      alert('Apenas um arquivo (EPUB ou PDF) por livro por favor.')
+      alert('Only one file for the book content, PDF or EPUB.')
     } else {
       const file = files[0]
       if (file.type.includes('application/epub')) {
@@ -28,7 +28,7 @@ const FileDropzone = () => {
         setFileReceived(file)
       } else {
         alert(
-          'Para o arquivo do livro, por favor insira um arquivo do tipo EPUB ou PDF'
+          'For the book content file, please insert a PDF or EPUB file type.'
         )
       }
     }
@@ -36,14 +36,14 @@ const FileDropzone = () => {
 
   const handleCoverFile = files => {
     if (files.length > 1) {
-      alert('Apenas um arquivo (JPG ou PNG) por livro por favor.')
+      alert('Only one file for the book content, JPG or PNG.')
     } else {
       const file = files[0]
       if (file.type.includes('image/jpeg') || file.type.includes('image/png')) {
         setCoverFileName(file.name)
       } else {
         alert(
-          'Para capa do livro, por favor insira um arquivo de imagem do tipo PNG ou JPG'
+          'For the book cover image file, please insert a JPG or PNG file type.'
         )
       }
     }
@@ -74,7 +74,7 @@ const FileDropzone = () => {
               }}
               blocked={bookFile === 'block'}
             >
-              Escolher arquivo
+              Choose file
             </DropzoneContentButton>
             <Input
               id="bookInput"
@@ -88,9 +88,13 @@ const FileDropzone = () => {
             />
           </PublishersAddBookDropzoneContent>
         </UploadDropzone>
-        <DropzoneContentFileName blocked={bookFile === 'block'}>
-          {bookFileName}
-        </DropzoneContentFileName>
+        {bookFileName ? (
+          <DropzoneContentFileName blocked={bookFile === 'block'}>
+            {bookFileName}
+          </DropzoneContentFileName>
+        ) : (
+          <DragAndDropText> or drag and drop</DragAndDropText>
+        )}
       </PublishersAddBookFilesBox>
       <PublishersAddBookFilesBox>
         <UploadDropzone handleDrop={handleCoverFile}>
@@ -103,7 +107,7 @@ const FileDropzone = () => {
                 document.getElementById('coverInput').click()
               }}
             >
-              Escolher arquivo
+              Choose file
             </DropzoneContentButton>
             <Input
               id="coverInput"
@@ -117,9 +121,13 @@ const FileDropzone = () => {
             />
           </PublishersAddBookDropzoneContent>
         </UploadDropzone>
-        <DropzoneContentFileName>
-          {coverFileName}
-        </DropzoneContentFileName>
+        {coverFileName ? (
+          <DropzoneContentFileName>
+            {coverFileName}
+          </DropzoneContentFileName>
+        ) : (
+          <DragAndDropText> or drag and drop</DragAndDropText>
+        )}
       </PublishersAddBookFilesBox>
     </PublishersAddBookFiles>
   )
