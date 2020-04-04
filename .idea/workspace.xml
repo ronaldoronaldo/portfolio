@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="style">
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/ComponentsAccordion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/ComponentsAccordion.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/index.js" afterDir="false" />
+    <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsEditScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsEditScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/common/Common.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/common/Common.styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/portfolio/file-dropzone/upload-dropzone" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,18 +51,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/portfolio/collections-shelf" />
+      <recent name="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection" />
       <recent name="$PROJECT_DIR$/src/components/league" />
       <recent name="$PROJECT_DIR$/src/screens/league-vacation" />
       <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/assets/src" />
-      <recent name="$PROJECT_DIR$/assets/src/components/lib" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/portfolio/file-dropzone/upload-dropzone" />
+      <recent name="$PROJECT_DIR$/src/components/portfolio/file-dropzone" />
+      <recent name="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection" />
+      <recent name="$PROJECT_DIR$/src/components/portfolio/collections-shelf" />
       <recent name="$PROJECT_DIR$/src/components/portfolio" />
-      <recent name="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap" />
-      <recent name="$PROJECT_DIR$/src/assets/images/portfolio/pages" />
-      <recent name="$PROJECT_DIR$/src/components/lib" />
-      <recent name="$PROJECT_DIR$/src/components/league" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -180,70 +180,7 @@
       <workItem from="1577718806572" duration="3448000" />
       <workItem from="1585752599026" duration="17857000" />
       <workItem from="1585833731931" duration="45166000" />
-      <workItem from="1585919147070" duration="16075000" />
-    </task>
-    <task id="LOCAL-00263" summary="frontend feature/home-search-results modal position fixed">
-      <created>1576292987439</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1576292987439</updated>
-    </task>
-    <task id="LOCAL-00264" summary="frontend feature/home-search-results modal filter in lib folder">
-      <created>1576348678458</created>
-      <option name="number" value="00264" />
-      <option name="presentableId" value="LOCAL-00264" />
-      <option name="project" value="LOCAL" />
-      <updated>1576348678458</updated>
-    </task>
-    <task id="LOCAL-00265" summary="frontend feature/home-search-results missing path on refactor">
-      <created>1576348953989</created>
-      <option name="number" value="00265" />
-      <option name="presentableId" value="LOCAL-00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1576348953989</updated>
-    </task>
-    <task id="LOCAL-00266" summary="frontend feature/site-home-platforms-menu">
-      <created>1576364043226</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1576364043226</updated>
-    </task>
-    <task id="LOCAL-00267" summary="frontend feature/site-home-platforms-menu reconnecting logout route to&#10;user menu and improving styles">
-      <created>1576514385558</created>
-      <option name="number" value="00267" />
-      <option name="presentableId" value="LOCAL-00267" />
-      <option name="project" value="LOCAL" />
-      <updated>1576514385558</updated>
-    </task>
-    <task id="LOCAL-00268" summary="pet question">
-      <created>1585690471733</created>
-      <option name="number" value="00268" />
-      <option name="presentableId" value="LOCAL-00268" />
-      <option name="project" value="LOCAL" />
-      <updated>1585690471733</updated>
-    </task>
-    <task id="LOCAL-00269" summary="state">
-      <created>1585692116986</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1585692116986</updated>
-    </task>
-    <task id="LOCAL-00270" summary="state2">
-      <created>1585693028041</created>
-      <option name="number" value="00270" />
-      <option name="presentableId" value="LOCAL-00270" />
-      <option name="project" value="LOCAL" />
-      <updated>1585693028042</updated>
-    </task>
-    <task id="LOCAL-00271" summary="email">
-      <created>1585696672417</created>
-      <option name="number" value="00271" />
-      <option name="presentableId" value="LOCAL-00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1585696672417</updated>
+      <workItem from="1585919147070" duration="34531000" />
     </task>
     <task id="LOCAL-00272" summary="login done">
       <created>1585697437840</created>
@@ -525,7 +462,70 @@
       <option name="project" value="LOCAL" />
       <updated>1585944750232</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="exampoles componet">
+      <created>1585949406933</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1585949406933</updated>
+    </task>
+    <task id="LOCAL-00313" summary="ComponentsAccordion.js">
+      <created>1585954709574</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1585954709574</updated>
+    </task>
+    <task id="LOCAL-00314" summary="style">
+      <created>1585955726528</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1585955726528</updated>
+    </task>
+    <task id="LOCAL-00315" summary="so vitoria">
+      <created>1585958092814</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1585958092814</updated>
+    </task>
+    <task id="LOCAL-00316" summary="so vitoria">
+      <created>1585960430543</created>
+      <option name="number" value="00316" />
+      <option name="presentableId" value="LOCAL-00316" />
+      <option name="project" value="LOCAL" />
+      <updated>1585960430543</updated>
+    </task>
+    <task id="LOCAL-00317" summary="shelf">
+      <created>1585961568977</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1585961568977</updated>
+    </task>
+    <task id="LOCAL-00318" summary="collections de 80">
+      <created>1585965692386</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1585965692386</updated>
+    </task>
+    <task id="LOCAL-00319" summary="jesus">
+      <created>1585968895589</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1585968895589</updated>
+    </task>
+    <task id="LOCAL-00320" summary="um deus tem nome">
+      <created>1585970272560</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1585970272560</updated>
+    </task>
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,13 +561,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="52 files" />
-    <MESSAGE value="vars" />
-    <MESSAGE value="show" />
-    <MESSAGE value="collections" />
-    <MESSAGE value="book details" />
-    <MESSAGE value="o brabo tem nome" />
-    <MESSAGE value="o brabo tem nome mesmo" />
     <MESSAGE value="image" />
     <MESSAGE value="more league stuff" />
     <MESSAGE value="league boards done" />
@@ -585,14 +578,21 @@
     <MESSAGE value="doidera, githeatmap" />
     <MESSAGE value="header SearchResults.js" />
     <MESSAGE value="top, header ta top" />
+    <MESSAGE value="exampoles componet" />
+    <MESSAGE value="ComponentsAccordion.js" />
     <MESSAGE value="style" />
-    <option name="LAST_COMMIT_MESSAGE" value="style" />
+    <MESSAGE value="so vitoria" />
+    <MESSAGE value="shelf" />
+    <MESSAGE value="collections de 80" />
+    <MESSAGE value="jesus" />
+    <MESSAGE value="um deus tem nome" />
+    <option name="LAST_COMMIT_MESSAGE" value="um deus tem nome" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1585949405465">
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1585974537633">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585949405465" />
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585974537633" />
     <state x="217" y="2270" width="1536" height="901" key="DiffContextDialog" timestamp="1585944738509">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
@@ -601,26 +601,30 @@
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="778" y="2471" width="424" height="491" key="FileChooserDialogImpl/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585712959128" />
-    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog" timestamp="1585944740038">
+    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog" timestamp="1585964976220">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585944740038" />
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585948404733">
+    <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585964976220" />
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585968116403">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585948404733" />
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585968116403" />
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585789603984">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585789603984" />
-    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1585947180447">
+    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1585961877701">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585947180447" />
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1585946988414">
+    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585961877701" />
+    <state x="659" y="1332" key="run.anything.popup" timestamp="1585965542552">
+      <screen x="70" y="0" width="3770" height="2160" />
+    </state>
+    <state x="659" y="1332" key="run.anything.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585965542552" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1585968546357">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585946988414" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585968546357" />
     <state x="720" y="2594" width="540" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585885415803">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>

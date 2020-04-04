@@ -54,7 +54,7 @@ const StudentsEditScreen = props => {
   const [student, setStudent] = useState({ scholarship: false })
 
   useEffect(() => {
-    const { id } = props.match.params
+    const { id } = 2
 
     // from the backend
     if (id && id !== ':id') {
@@ -132,222 +132,217 @@ const StudentsEditScreen = props => {
   const { scholarship } = student
 
   return (
-    <Container>
-      <WrapperStyle>
-        <HeaderEdit title={nameInputValue} />
-        <BodyStyle>
-          <AlertRecovery open={notificationOpen}>
-            E-mail enviado para caio.avila@arvoreeducacao.com.br
-          </AlertRecovery>
-          <InputStyle
-            id={'directorsName'}
-            placeholder="Nome completo"
-            value={nameInputValue}
-            onChange={handleNameChange}
-            style={{ marginBottom: 50 }}
+    <WrapperStyle>
+      <BodyStyle>
+        <AlertRecovery open={notificationOpen}>
+          E-mail enviado para caio.avila@arvoreeducacao.com.br
+        </AlertRecovery>
+        <InputStyle
+          id={'directorsName'}
+          placeholder="Nome completo"
+          value={nameInputValue}
+          onChange={handleNameChange}
+          style={{ marginBottom: 50 }}
+        />
+        <AccessCodeLabel>
+          <h3>Código de acesso</h3>
+          <h2>CDA8236</h2>
+        </AccessCodeLabel>
+        <AccordionMenu text="Outras alternativas de acesso">
+          <ContainerAccordionMenu>
+            <LabelAccordionStyle>E-mail e senha</LabelAccordionStyle>
+            <RowStyle style={{ marginBottom: 50 }}>
+              <LeftColumnStyle sm={7.5} style={{ padding: 0, margin: 16 }}>
+                <InputStyle
+                  id={'directorsEmail'}
+                  style={{ marginBottom: 0 }}
+                  placeholder="E-mail"
+                  value={emailInputValue}
+                  onChange={handleEmailChange}
+                />
+              </LeftColumnStyle>
+              <RightColumnStyle sm={4.5} style={{ padding: 0, margin: 0 }}>
+                <ResetPasswordButton
+                  text="Redefinir senha"
+                  bgColor={colors.purple3}
+                  bgColorHover={colors.purple3Dark}
+                  color={colors.white}
+                  textColorHover={colors.white}
+                  iconName="mail"
+                  onClick={resetPassword}
+                />
+              </RightColumnStyle>
+            </RowStyle>
+
+            <LabelAccordionStyle>
+              Identificador e senha pública
+            </LabelAccordionStyle>
+            <RowStyle style={{ marginBottom: 50 }}>
+              <LeftColumnStyle sm={7.5} style={{ padding: 0, margin: 16 }}>
+                <InputStyle
+                  id={'identifier'}
+                  style={{ marginBottom: 0 }}
+                  placeholder="Identificador"
+                  value={'caio.avila'}
+                />
+              </LeftColumnStyle>
+              <RightColumnStyle sm={4.5} style={{ padding: 0, margin: 0 }}>
+                <InputStyle
+                  id={'publicKey'}
+                  style={{ marginBottom: 0 }}
+                  placeholder="Senha pública"
+                  value={'arvore12345'}
+                />
+              </RightColumnStyle>
+            </RowStyle>
+          </ContainerAccordionMenu>
+        </AccordionMenu>
+        <AccordionMenu text="Responsabilidades">
+          <ContainerAccordionMenu>
+            <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
+              <Select
+                text={units}
+                items={['Unidade Norte 02']}
+                onChange={handleSelectUnits}
+                maxWidth={620}
+                label="Unidade"
+                activeSelectButton={units}
+                labelColor={colors.black3}
+                dropdownStyle={{
+                  top: 43,
+                  width: 556,
+                  marginLeft: 16
+                }}
+                style={{
+                  borderColor: colors.black3,
+                  color: colors.black5,
+                  marginBottom: 32,
+                  marginLeft: 16,
+                  width: 556
+                }}
+              />
+              <RowStyle
+                style={{
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  marginBottom: -20,
+                  paddingLeft: 16
+                }}
+              >
+                <ShowTags
+                  tags={linkedItems}
+                  label="Turmas desse aluno"
+                  removeTag={removeLinkedItem}
+                  style={{ minHeight: 108 }}
+                />
+                <PagedListHeader style={{ width: '100%' }}>
+                  <ColumnStyle sm={6}>
+                    <Title
+                      text="Turmas da unidade"
+                      size={5}
+                      sizeMobile={5}
+                      textAlign="left"
+                      style={{ color: colors.black5, margin: 0 }}
+                    />
+                  </ColumnStyle>
+                  <ColumnStyle sm={6}>
+                    <InputSearchStyle
+                      value={''}
+                      onChange={handleSearchInput}
+                      placeholder="Buscar turmas"
+                    />
+                  </ColumnStyle>
+                </PagedListHeader>
+                <PagedList
+                  items={unlinkedItems}
+                  onItemClicked={addLinkedItem}
+                  emptyLabel="unidades"
+                />
+              </RowStyle>
+            </LeftColumnStyle>
+          </ContainerAccordionMenu>
+        </AccordionMenu>
+        <AccordionMenu text="Informações secundárias" haveBorderBottom>
+          <ContainerAccordionMenu>
+            <LeftColumnStyle>
+              <Select
+                text={userType}
+                items={['Admin', 'Professor']}
+                onChange={handleSelectValue}
+                maxWidth={620}
+                label="Tipo de usuário"
+                activeSelectButton={userType}
+                labelColor={colors.black3}
+                dropdownStyle={{
+                  top: 43,
+                  width: 556
+                }}
+                style={{
+                  borderColor: colors.black3,
+                  color: colors.black5
+                }}
+              />
+              <AlertRecovery open={true} color="#595A5C" bgColor="#FFF5F1">
+                Esses dados podem ser importantes para recuperação de senha
+              </AlertRecovery>
+              <RowStyle>
+                <LeftColumnStyle sm={8}>
+                  <InputStyle
+                    id={'secondaryEmail'}
+                    style={{ marginBottom: 0 }}
+                    placeholder="E-mail secundário"
+                    value={''}
+                  />
+                </LeftColumnStyle>
+                <RightColumnStyle sm={4}>
+                  <InputStyle
+                    id={'phoneNumber'}
+                    style={{ marginBottom: 0 }}
+                    placeholder="Número celular"
+                    value={''}
+                  />
+                </RightColumnStyle>
+              </RowStyle>
+
+              <LabelAccordionStyle>Esse aluno é bolsista?</LabelAccordionStyle>
+              <ScholarshipSwitchContainer>
+                <div>
+                  <span>Esse aluno é bolsista!</span>
+                  <ToggleSwitch
+                    active={scholarship}
+                    onChange={toggleScholarshipSwitch}
+                    disabled={scholarshipDisabled}
+                  />
+                </div>
+              </ScholarshipSwitchContainer>
+            </LeftColumnStyle>
+          </ContainerAccordionMenu>
+        </AccordionMenu>
+
+        <FinishButtons>
+          <IconButtonStyled
+            text="Cancelar"
+            color={colors.black4}
+            iconName=""
+            style={{ border: 'none' }}
+            onClick={() => console.log('cancel')}
           />
-          <AccessCodeLabel>
-            <h3>Código de acesso</h3>
-            <h2>CDA8236</h2>
-          </AccessCodeLabel>
-          <AccordionMenu text="Outras alternativas de acesso">
-            <ContainerAccordionMenu>
-              <LabelAccordionStyle>E-mail e senha</LabelAccordionStyle>
-              <RowStyle style={{ marginBottom: 50 }}>
-                <LeftColumnStyle sm={7.5} style={{ padding: 0, margin: 16 }}>
-                  <InputStyle
-                    id={'directorsEmail'}
-                    style={{ marginBottom: 0 }}
-                    placeholder="E-mail"
-                    value={emailInputValue}
-                    onChange={handleEmailChange}
-                  />
-                </LeftColumnStyle>
-                <RightColumnStyle sm={4.5} style={{ padding: 0, margin: 0 }}>
-                  <ResetPasswordButton
-                    text="Redefinir senha"
-                    bgColor={colors.purple3}
-                    bgColorHover={colors.purple3Dark}
-                    color={colors.white}
-                    textColorHover={colors.white}
-                    iconName="mail"
-                    onClick={resetPassword}
-                  />
-                </RightColumnStyle>
-              </RowStyle>
-
-              <LabelAccordionStyle>
-                Identificador e senha pública
-              </LabelAccordionStyle>
-              <RowStyle style={{ marginBottom: 50 }}>
-                <LeftColumnStyle sm={7.5} style={{ padding: 0, margin: 16 }}>
-                  <InputStyle
-                    id={'identifier'}
-                    style={{ marginBottom: 0 }}
-                    placeholder="Identificador"
-                    value={'caio.avila'}
-                  />
-                </LeftColumnStyle>
-                <RightColumnStyle sm={4.5} style={{ padding: 0, margin: 0 }}>
-                  <InputStyle
-                    id={'publicKey'}
-                    style={{ marginBottom: 0 }}
-                    placeholder="Senha pública"
-                    value={'arvore12345'}
-                  />
-                </RightColumnStyle>
-              </RowStyle>
-            </ContainerAccordionMenu>
-          </AccordionMenu>
-          <AccordionMenu text="Responsabilidades">
-            <ContainerAccordionMenu>
-              <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
-                <Select
-                  text={units}
-                  items={['Unidade Norte 02']}
-                  onChange={handleSelectUnits}
-                  maxWidth={620}
-                  label="Unidade"
-                  activeSelectButton={units}
-                  labelColor={colors.black3}
-                  dropdownStyle={{
-                    top: 43,
-                    width: 556,
-                    marginLeft: 16
-                  }}
-                  style={{
-                    borderColor: colors.black3,
-                    color: colors.black5,
-                    marginBottom: 32,
-                    marginLeft: 16,
-                    width: 556
-                  }}
-                />
-                <RowStyle
-                  style={{
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    marginBottom: -20,
-                    paddingLeft: 16
-                  }}
-                >
-                  <ShowTags
-                    tags={linkedItems}
-                    label="Turmas desse aluno"
-                    removeTag={removeLinkedItem}
-                    style={{ minHeight: 108 }}
-                  />
-                  <PagedListHeader style={{ width: '100%' }}>
-                    <ColumnStyle sm={6}>
-                      <Title
-                        text="Turmas da unidade"
-                        size={5}
-                        sizeMobile={5}
-                        textAlign="left"
-                        style={{ color: colors.black5, margin: 0 }}
-                      />
-                    </ColumnStyle>
-                    <ColumnStyle sm={6}>
-                      <InputSearchStyle
-                        value={''}
-                        onChange={handleSearchInput}
-                        placeholder="Buscar turmas"
-                      />
-                    </ColumnStyle>
-                  </PagedListHeader>
-                  <PagedList
-                    items={unlinkedItems}
-                    onItemClicked={addLinkedItem}
-                    emptyLabel="unidades"
-                  />
-                </RowStyle>
-              </LeftColumnStyle>
-            </ContainerAccordionMenu>
-          </AccordionMenu>
-          <AccordionMenu text="Informações secundárias" haveBorderBottom>
-            <ContainerAccordionMenu>
-              <LeftColumnStyle>
-                <Select
-                  text={userType}
-                  items={['Admin', 'Professor']}
-                  onChange={handleSelectValue}
-                  maxWidth={620}
-                  label="Tipo de usuário"
-                  activeSelectButton={userType}
-                  labelColor={colors.black3}
-                  dropdownStyle={{
-                    top: 43,
-                    width: 556
-                  }}
-                  style={{
-                    borderColor: colors.black3,
-                    color: colors.black5
-                  }}
-                />
-                <AlertRecovery open={true} color="#595A5C" bgColor="#FFF5F1">
-                  Esses dados podem ser importantes para recuperação de senha
-                </AlertRecovery>
-                <RowStyle>
-                  <LeftColumnStyle sm={8}>
-                    <InputStyle
-                      id={'secondaryEmail'}
-                      style={{ marginBottom: 0 }}
-                      placeholder="E-mail secundário"
-                      value={''}
-                    />
-                  </LeftColumnStyle>
-                  <RightColumnStyle sm={4}>
-                    <InputStyle
-                      id={'phoneNumber'}
-                      style={{ marginBottom: 0 }}
-                      placeholder="Número celular"
-                      value={''}
-                    />
-                  </RightColumnStyle>
-                </RowStyle>
-
-                <LabelAccordionStyle>
-                  Esse aluno é bolsista?
-                </LabelAccordionStyle>
-                <ScholarshipSwitchContainer>
-                  <div>
-                    <span>Esse aluno é bolsista!</span>
-                    <ToggleSwitch
-                      active={scholarship}
-                      onChange={toggleScholarshipSwitch}
-                      disabled={scholarshipDisabled}
-                    />
-                  </div>
-                </ScholarshipSwitchContainer>
-              </LeftColumnStyle>
-            </ContainerAccordionMenu>
-          </AccordionMenu>
-
-          <FinishButtons>
-            <IconButtonStyled
-              text="Cancelar"
-              color={colors.black4}
-              iconName=""
-              style={{ border: 'none' }}
-              onClick={() => console.log('cancel')}
-            />
-            <Button
-              iconName="add"
-              text="Salvar"
-              primary
-              onClick={() => console.log('save')}
-              iconSize={16}
-              style={{
-                width: 80,
-                height: 40,
-                marginLeft: 8
-              }}
-            />
-          </FinishButtons>
-          <div style={{ height: 56 }} />
-        </BodyStyle>
-      </WrapperStyle>
-    </Container>
+          <Button
+            iconName="add"
+            text="Salvar"
+            primary
+            onClick={() => console.log('save')}
+            iconSize={16}
+            style={{
+              width: 80,
+              height: 40,
+              marginLeft: 8
+            }}
+          />
+        </FinishButtons>
+        <div style={{ height: 56 }} />
+      </BodyStyle>
+    </WrapperStyle>
   )
 }
 

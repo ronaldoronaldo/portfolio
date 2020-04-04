@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {
   CardsSection,
   ComponentsSection,
@@ -6,7 +6,9 @@ import {
   ResponsiveScreens,
   SectionSubtitle,
   SectionTitle,
-  ComponentsContainer
+  ComponentsContainer,
+  FormSection,
+  FormContainer
 } from './Examples.style'
 import ScreenCard from 'components/portfolio/screen-card/ScreenCard'
 import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
@@ -15,11 +17,11 @@ import leagueMobile from 'assets/images/portfolio/pages/leagueMobile.png'
 import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
 import CollectionShelf from 'components/portfolio/collections-shelf/CollectionShelf'
 
-
 import GithubHeatmap from 'components/portfolio/GithubHeatmap/GithubHeatmap'
 import arvore from 'components/portfolio/GithubHeatmap/arvore'
 import ComponentsAccordion from 'components/portfolio/components-accordion/ComponentsAccordion'
-import {FileDropzone} from "../../../components/portfolio/file-dropzone"
+import { FileDropzone } from '../../../components/portfolio/file-dropzone'
+import { StudentsEditScreen } from '../../admin/user-management-panel/students-screen'
 const collections = [
   {
     name: 'Garotas no comando',
@@ -72,28 +74,29 @@ const Examples = () => {
   const [components, setComponents] = useState([
     {
       title: 'Github Commit Map',
-      content: <GithubHeatmap data={arvore}/>,
+      content: <GithubHeatmap data={arvore} />,
       show: false,
       column: true
     },
     {
       title: 'The Carousel',
-      content: <CollectionShelf
-        key="collections"
-        title=""
-        loading={false}
-        data={collections}
-      />,
+      content: (
+        <CollectionShelf
+          key="collections"
+          title=""
+          loading={false}
+          data={collections}
+        />
+      ),
       show: false,
       column: true
     },
     {
       title: 'PDF Drop Zone',
-      content: <FileDropzone/>,
+      content: <FileDropzone />,
       show: false
-    },
+    }
   ])
-
 
   const responsiveScreens = [
     {
@@ -130,9 +133,14 @@ const Examples = () => {
 
   const renderComponents = () => {
     return components.map((component, index) => {
-      const {title, show, content, column} = component
+      const { title, show, content, column } = component
       return (
-        <ComponentsAccordion column={column} title={title} open={show} onClose={() => onCloseAccordion(index)}>
+        <ComponentsAccordion
+          column={column}
+          title={title}
+          open={show}
+          onClose={() => onCloseAccordion(index)}
+        >
           {content}
         </ComponentsAccordion>
       )
@@ -144,20 +152,30 @@ const Examples = () => {
       <ResponsiveScreens>
         <SectionTitle>Responsive Screens</SectionTitle>
         <SectionSubtitle>
-          Three different environments, each one with at least three pages where you can navigate between. Everything
-          works in any screen size.
+          Three different environments, each one with at least three pages where
+          you can navigate between. Everything works in any screen size.
         </SectionSubtitle>
         <CardsSection>{renderCards(responsiveScreens)}</CardsSection>
       </ResponsiveScreens>
       <ComponentsSection>
         <SectionTitle>Components Examples</SectionTitle>
         <SectionSubtitle>
-          Everything here in this website is fully handmade by me, every animation and functionality, with almost zero external libs used.
+          Everything here in this website is fully handmade by me, every
+          animation and functionality, with almost zero external libs used.
         </SectionSubtitle>
-        <ComponentsContainer>
-          {renderComponents()}
-        </ComponentsContainer>
+        <ComponentsContainer>{renderComponents()}</ComponentsContainer>
       </ComponentsSection>
+      <FormSection>
+        <SectionTitle>Form Example</SectionTitle>
+        <SectionSubtitle>
+          A complete form component with plenty of different functionality and
+          those floating label inputs that I love so much. This form simulates a
+          student register formulary.
+        </SectionSubtitle>
+        <FormContainer>
+          <StudentsEditScreen />
+        </FormContainer>
+      </FormSection>
     </ExamplesContainer>
   )
 }

@@ -31,6 +31,10 @@ export const ComponentsContainer = styled.div`
   width: 100%;
 `
 
+export const FormContainer = styled(ComponentsContainer)`
+  border-top: none;
+`
+
 export const CardsSection = styled.div`
   display: flex;
   flex: 1;
@@ -45,17 +49,16 @@ export const ResponsiveScreens = styled(Section)`
   margin-bottom: 16px;
 `
 
-export const DesktopScreens = styled(Section)`
-  display: none;
-  @media (min-width: ${sizes.mdScreen}px) {
-    display: flex;
-  }
-`
-
 export const ComponentsSection = styled(Section)`
   flex-direction: column;
+  margin-top: ${spacing.large * 2}px;
+  margin-bottom: ${spacing.large * 2}px;
+`
+
+export const FormSection = styled(Section)`
+  flex-direction: column;
   margin-top: ${spacing.large + 32}px;
-  margin-bottom: ${spacing.large*2}px;
+  margin-bottom: ${spacing.large * 2}px;
 `
 
 export const SectionTitle = styled.span`

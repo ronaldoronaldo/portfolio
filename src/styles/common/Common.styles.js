@@ -27,7 +27,6 @@ export const Main = styled.div`
 export const WrapperStyle = styled.div`
   width: 100%;
   background: ${colors.white};
-  margin-top: 32px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
 `
@@ -262,4 +261,3 @@ export const SpinnerContainer = styled(Container)`
   justify-content: center;
   height: 80vh;
 `
-
