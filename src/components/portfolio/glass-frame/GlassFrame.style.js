@@ -21,7 +21,7 @@ export const ReflexMask = styled.div`
     background: linear-gradient(
       to right,
       transparent,
-      rgba(255,255,255,0.7) 50%,
+      rgba(255,255,255,0.5) 50%,
       transparent 100%
     );
   `}

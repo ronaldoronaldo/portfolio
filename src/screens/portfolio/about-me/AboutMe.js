@@ -15,6 +15,16 @@ const AboutMe = () => {
   const [animate, setAnimate] = useState(false)
   const [animate2, setAnimate2] = useState(false)
 
+  const randomLoop = () => {
+    console.log('oi')
+    const rand = Math.round(Math.random() * (3000 - 500)) + 500
+    setTimeout(function () {
+      triggerAnimation()
+      randomLoop()
+    }, rand)
+  }
+
+
   const triggerAnimation = () => {
       setAnimate(true)
     setTimeout(() => {
@@ -23,7 +33,7 @@ const AboutMe = () => {
     setTimeout(() => {
       setAnimate(false)
       setAnimate2(false)
-    }, 3000)
+    }, 1500)
   }
 
   useEffect(() => {
