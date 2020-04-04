@@ -1,11 +1,13 @@
 import React from 'react'
 import {
-  FrameContainer,
+  FrameContainer, ReflexMask, SmallerReflexMask
 } from './GlassFrame.style'
 
-const GlassFrame = ({ children, ...rest }) => {
+const GlassFrame = ({ children, animate, animate2, ...rest }) => {
   return (
     <FrameContainer {...rest}>
+      <ReflexMask animate={animate}/>
+      <SmallerReflexMask animate={animate2}/>
       {children}
     </FrameContainer>
   )
