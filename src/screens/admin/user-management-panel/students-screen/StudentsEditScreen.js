@@ -28,6 +28,7 @@ import PagedList from 'components/admin/user-management-panel/paged-list/PagedLi
 import { AccordionMenu } from 'components/admin/user-management-panel/accordion-menu'
 import Select from 'components/lib/selects/Select'
 import ToggleSwitch from 'components/lib/toggleSwitch'
+import {ResponsabilitiesCard} from "../../../../components/admin/user-management-panel/responsabilities-card"
 
 const mockedLinked = ['Turma 401']
 const mockedUnlinked = [
@@ -146,7 +147,7 @@ const StudentsEditScreen = props => {
         <h3>Código de acesso</h3>
         <h2>CDA8236</h2>
       </AccessCodeLabel>
-      <AccordionMenu text="Outras alternativas de acesso">
+      <AccordionMenu text="Access information">
         <ContainerAccordionMenu>
           <LabelAccordionStyle>E-mail e senha</LabelAccordionStyle>
           <RowStyle style={{ marginBottom: 50 }}>
@@ -195,7 +196,7 @@ const StudentsEditScreen = props => {
           </RowStyle>
         </ContainerAccordionMenu>
       </AccordionMenu>
-      <AccordionMenu text="Responsabilidades">
+      <AccordionMenu text="Student classes to enroll">
         <ContainerAccordionMenu>
           <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
             <Select
@@ -260,7 +261,24 @@ const StudentsEditScreen = props => {
           </LeftColumnStyle>
         </ContainerAccordionMenu>
       </AccordionMenu>
-      <AccordionMenu text="Informações secundárias" haveBorderBottom>
+      <AccordionMenu text="Teacher responsibilities">
+        <ContainerAccordionMenu>
+          <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
+            <RowStyle
+              style={{
+                flexDirection: 'column',
+                alignItems: 'flex-start',
+                marginBottom: 55,
+                marginTop: 26
+              }}
+            >
+              <ResponsabilitiesCard setupByClasses />
+            </RowStyle>
+          </LeftColumnStyle>
+        </ContainerAccordionMenu>
+      </AccordionMenu>
+
+      <AccordionMenu text="Secondary information" haveBorderBottom>
         <ContainerAccordionMenu>
           <LeftColumnStyle>
             <Select
