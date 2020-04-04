@@ -76,7 +76,7 @@ const Examples = () => {
       column: true
     },
     {
-      title: 'The Shelf',
+      title: 'The Carousel',
       content: <CollectionShelf
         key="collections"
         title=""
@@ -87,7 +87,7 @@ const Examples = () => {
       column: true
     },
     {
-      title: 'Drop PDF zone',
+      title: 'PDF Drop Zone',
       content: <GithubHeatmap data={arvore}/>,
       show: false
     },
