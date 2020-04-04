@@ -19,7 +19,7 @@ const AboutMe = () => {
       setAnimate(true)
     setTimeout(() => {
       setAnimate2(true)
-    }, 250)
+    }, 300)
     setTimeout(() => {
       setAnimate(false)
       setAnimate2(false)

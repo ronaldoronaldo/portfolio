@@ -1,12 +1,14 @@
 import React from 'react'
 import {
-  BadgeContainer, BadgeImage, BadgeTitle, BadgeTitleBox,
+  BadgeContainer, BadgeIcon, BadgeImage, BadgeTitle, BadgeTitleBox,
 } from './Badge.style'
+import badgeImage from 'assets/images/portfolio/badges/ribbon.png'
 
 const Badge = ({ title, image }) => {
   return (
     <BadgeContainer>
-      <BadgeImage src={image}/>
+      <BadgeImage src={badgeImage}/>
+      <BadgeIcon src={image}/>
       <BadgeTitleBox>
         <BadgeTitle>
           {title}
