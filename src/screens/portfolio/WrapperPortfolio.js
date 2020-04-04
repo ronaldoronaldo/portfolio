@@ -7,7 +7,7 @@ import {
   Page,
   IconsContainer,
   LogoImage, IconsBorder,
-  PageContent
+  PageContent, IconBox
 } from './WrapperPortfolio.style'
 import IconButton from 'components/lib/buttons/IconButton'
 
@@ -50,9 +50,18 @@ const WrapperPortfolio = () => {
       {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
 
       <IconsContainer selectedPage={unlock1}>
-        <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
-        <IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>
-        <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>
+        <IconBox selectedPage={selectedPage}>
+          <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
+        </IconBox>
+        <IconBox selectedPage={selectedPage}>
+          <IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>
+        </IconBox>
+        <IconBox selectedPage={selectedPage}>
+          <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>
+        </IconBox>
+          {/*<IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>*/}
+          {/*<IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>*/}
+          {/*<IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>*/}
       </IconsContainer>
       <IconsBorder selectedPage={unlock2}/>
       <PageContent unlock3={unlock3}>

@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body.about-me {
-    background-color: ${colors.black5};
+    background-color: ${colors.red1};
   }  
   
   body.examples {

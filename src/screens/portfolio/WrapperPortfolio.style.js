@@ -27,54 +27,71 @@ export const IconsContainer = styled.div`
       @media (min-width: ${sizes.mdScreen}px) {
         max-width: 700px;
       }
-      > Button {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background-color: transparent;
-        transition: box-shadow 0.1s ease-out;
-        &:hover {
+      > div { 
+        > Button {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background-color: transparent;
+          transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+          
+          
+          ${selectedPage === 'examples' && `
+            > span { color: ${colors.black3}; }
+          `}
+          
+          &:hover {
+            > span {
+             color: ${
+              selectedPage === 'curriculum' ?
+                colors.portGreen :
+                selectedPage === 'about-me' ?
+                  colors.red3 : selectedPage === 'examples' ? colors.black3 : colors.black4
+              };
+            }
+            background-color: transparent;
+            ${selectedPage === '' && `
+               transform: scale(1.04);
+               box-shadow: 10px 10px 25px 0 rgba(83, 101, 111, 0.4);
+            `}
+            ${selectedPage === 'curriculum' && `
+              background-color: ${colors.portGreen};
+              > span { color: ${colors.portBlack}; }
+            `}
+          }
+          &:active {
+            box-shadow: 0 0 0 0 rgba(83, 101, 111, 0.4);
+          }
           > span {
-           color: ${
+            transition: none;
+            font-size: 70px;
+            color: ${
             selectedPage === 'curriculum' ?
               colors.portGreen :
               selectedPage === 'about-me' ?
-                colors.white : colors.black4
+                colors.red2 : colors.black4
             };
           }
-          background-color: transparent;
-          ${selectedPage === 'curriculum' && `
-            background-color: ${colors.portGreen};
-            > span { color: ${colors.portBlack}; }
-          `}
-          ${selectedPage === 'about-me' && `
-            > span { color: ${colors.white}; }
-          `}
-          ${(selectedPage === 'examples' || selectedPage === '') && `
-            box-shadow: 10px 10px 25px 0 rgba(83, 101, 111, 0.4);
-          `}
-        }
-        &:active {
-          box-shadow: 0 0 0 0 rgba(83, 101, 111, 0.4);
-        }
-        > span {
-          transition: none;
-          font-size: 70px;
-          color: ${
-          selectedPage === 'curriculum' ?
-            colors.portGreen :
-            selectedPage === 'about-me' ?
-              colors.black3 : colors.black4
-          };
-        }
-        @media (max-width: ${sizes.mdScreen}px) {
-          width: 70px;
-          height: 70px;
-          > span { 
-            font-size: 40px;          
+          @media (max-width: ${sizes.mdScreen}px) {
+            width: 70px;
+            height: 70px;
+            > span { 
+              font-size: 40px;          
+            }
           }
         }
       }
+  `}
+`
+
+export const IconBox = styled.div`
+  ${({selectedPage}) => css`
+    height: 141px;
+    ${(selectedPage === 'examples') && `
+      &:hover {
+        border-bottom: 6px solid ${colors.black2Dark};
+      }
+    `}
   `}
 `
 
@@ -97,7 +114,7 @@ export const IconsBorder = styled.div`
     selectedPage === 'curriculum' ?
       colors.portGreen :
       selectedPage === 'about-me' ?
-        colors.black3 : colors.black2Dark
+        colors.red2 : colors.black2Dark
     };
     width: ${selectedPage === '' ? 0 : 100}%;
     transition: width 0.5s ease-out;
@@ -111,7 +128,7 @@ export const IconsBorder = styled.div`
       selectedPage === 'curriculum' ?
         colors.portGreen :
         selectedPage === 'about-me' ?
-          colors.black3 : colors.black2Dark
+          colors.red2 : colors.black2Dark
       };
     } 
   `}
