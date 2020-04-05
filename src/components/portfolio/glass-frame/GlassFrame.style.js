@@ -6,6 +6,7 @@ export const FrameContainer = styled.div`
   border: 4px solid ${colors.red2};
   position: relative;
   overflow: hidden;
+  margin: 0 8px 16px 8px;
 `
 
 export const ReflexMask = styled.div`

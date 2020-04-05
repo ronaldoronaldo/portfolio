@@ -1,13 +1,33 @@
 import React, {useEffect, useState} from 'react'
-import {AboutMeContainer} from "./AboutMe.style"
+import {AboutMeContainer, BadgesContainer} from "./AboutMe.style"
 import {GlassFrame} from 'components/portfolio/glass-frame'
-import reactHooks from 'assets/images/portfolio/badges/reactHooks.svg'
 import Badge from 'components/portfolio/badge/Badge'
+
+import reactHooks from 'assets/images/portfolio/badges/reactHooks.svg'
+import graphql from 'assets/images/portfolio/badges/graphql.svg'
+import jest from 'assets/images/portfolio/badges/jest.svg'
+import mobileFirst from 'assets/images/portfolio/badges/mobileFirst.svg'
 
 const badges = [
   {
     title: 'React Hooks',
-    image: reactHooks
+    image: reactHooks,
+    iconWidth: 90
+  },
+  {
+    title: 'GraphQL',
+    image: graphql,
+    iconWidth: 76
+  },
+  {
+    title: 'Jest',
+    image: jest,
+    iconWidth: 74
+  },
+  {
+    title: 'Mobile First',
+    image: mobileFirst,
+    iconWidth: 84
   }
 ]
 
@@ -15,14 +35,14 @@ const AboutMe = () => {
   const [animate, setAnimate] = useState(false)
   const [animate2, setAnimate2] = useState(false)
 
-  const randomLoop = () => {
-    console.log('oi')
-    const rand = Math.round(Math.random() * (3000 - 500)) + 500
-    setTimeout(function () {
-      triggerAnimation()
-      randomLoop()
-    }, rand)
-  }
+  // const randomLoop = () => {
+  //   console.log('oi')
+  //   const rand = Math.round(Math.random() * (3000 - 500)) + 500
+  //   setTimeout(function () {
+  //     triggerAnimation()
+  //     randomLoop()
+  //   }, rand)
+  // }
 
 
   const triggerAnimation = () => {
@@ -55,7 +75,9 @@ const AboutMe = () => {
 
   return (
     <AboutMeContainer>
-      {renderBadges()}
+      <BadgesContainer>
+        {renderBadges()}
+      </BadgesContainer>
     </AboutMeContainer>
   )
 }

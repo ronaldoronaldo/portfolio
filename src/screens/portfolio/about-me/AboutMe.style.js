@@ -15,3 +15,12 @@ export const AboutMeContainer = styled.div`
     top: 212px;
   }
 `
+
+export const BadgesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`

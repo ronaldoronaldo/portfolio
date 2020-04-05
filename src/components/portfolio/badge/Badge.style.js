@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { colors, spacing } from 'config/ui'
 
 export const BadgeContainer = styled.div`
   display: flex;
-  width: 200px;
+  width: 176px;
   padding: 32px 16px;
   justify-content: space-between;
   align-items: center;
@@ -26,13 +26,25 @@ export const BadgeImage = styled.img`
 `
 
 export const BadgeIcon = styled.img`
-  width: 100px;
-  position: absolute;
-  top: 88px;
+  width: 100%;
 `
 
-export const BadgeTitle = styled.div`
+export const BadgeTitle = styled.span`
   font-size: 16px;
   text-align: center;
   color: ${colors.white}
+`
+
+export const BadgeIconContainer = styled.div`
+  ${({iconWidth}) => css`
+    display: flex;
+    width: ${iconWidth}px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    top: 56px;
+    position: absolute;
+    border-radius: 50%;
+  `}
+  
 `
