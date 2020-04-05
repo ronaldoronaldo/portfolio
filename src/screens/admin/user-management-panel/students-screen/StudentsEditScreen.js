@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Container } from 'components/admin/user-management-panel/grid'
 import { Title } from 'components/lib/titles'
-
 import {
   WrapperStyle,
-  BodyStyle,
   InputStyle,
   FinishButtons,
   RowStyle,
@@ -19,7 +16,8 @@ import {
   ScholarshipSwitchContainer,
   AccessCodeLabel,
   InputSearchStyle,
-  ContainerAccordionMenu
+  ContainerAccordionMenu,
+  InfoRow
 } from 'styles/common/Common.styles'
 import { colors } from 'config/ui'
 import Button from 'components/lib/buttons/Button'
@@ -28,7 +26,7 @@ import PagedList from 'components/admin/user-management-panel/paged-list/PagedLi
 import { AccordionMenu } from 'components/admin/user-management-panel/accordion-menu'
 import Select from 'components/lib/selects/Select'
 import ToggleSwitch from 'components/lib/toggleSwitch'
-import {ResponsabilitiesCard} from "../../../../components/admin/user-management-panel/responsabilities-card"
+import { ResponsabilitiesCard } from '/components/admin/user-management-panel/responsabilities-card'
 
 const mockedLinked = ['Turma 401']
 const mockedUnlinked = [
@@ -150,8 +148,8 @@ const StudentsEditScreen = props => {
       <AccordionMenu text="Access information">
         <ContainerAccordionMenu>
           <LabelAccordionStyle>E-mail e senha</LabelAccordionStyle>
-          <RowStyle style={{ marginBottom: 50 }}>
-            <LeftColumnStyle sm={7.5} style={{ padding: 0, margin: 16 }}>
+          <InfoRow style={{ marginBottom: 50 }}>
+            <LeftColumnStyle md={7.5}>
               <InputStyle
                 id={'directorsEmail'}
                 style={{ marginBottom: 0 }}
@@ -160,7 +158,7 @@ const StudentsEditScreen = props => {
                 onChange={handleEmailChange}
               />
             </LeftColumnStyle>
-            <RightColumnStyle sm={4.5} style={{ padding: 0, margin: 0 }}>
+            <RightColumnStyle md={4.5} style={{ padding: 0, margin: 0 }}>
               <ResetPasswordButton
                 text="Redefinir senha"
                 bgColor={colors.purple3}
@@ -171,13 +169,13 @@ const StudentsEditScreen = props => {
                 onClick={resetPassword}
               />
             </RightColumnStyle>
-          </RowStyle>
+          </InfoRow>
 
           <LabelAccordionStyle>
             Identificador e senha pública
           </LabelAccordionStyle>
-          <RowStyle style={{ marginBottom: 50 }}>
-            <LeftColumnStyle sm={7.5} style={{ padding: 0, margin: 16 }}>
+          <InfoRow style={{ marginBottom: 50 }}>
+            <LeftColumnStyle md={7.5}>
               <InputStyle
                 id={'identifier'}
                 style={{ marginBottom: 0 }}
@@ -185,7 +183,7 @@ const StudentsEditScreen = props => {
                 value={'caio.avila'}
               />
             </LeftColumnStyle>
-            <RightColumnStyle sm={4.5} style={{ padding: 0, margin: 0 }}>
+            <RightColumnStyle md={4.5} style={{ padding: 0, margin: 0 }}>
               <InputStyle
                 id={'publicKey'}
                 style={{ marginBottom: 0 }}
@@ -193,7 +191,7 @@ const StudentsEditScreen = props => {
                 value={'arvore12345'}
               />
             </RightColumnStyle>
-          </RowStyle>
+          </InfoRow>
         </ContainerAccordionMenu>
       </AccordionMenu>
       <AccordionMenu text="Student classes">
@@ -202,7 +200,11 @@ const StudentsEditScreen = props => {
             <Select
               text={units}
               noMarginLeft
-              items={['Unidade Norte 02', 'Unidade Norte 03', 'Unidade Norte 04']}
+              items={[
+                'Unidade Norte 02',
+                'Unidade Norte 03',
+                'Unidade Norte 04'
+              ]}
               onChange={handleSelectUnits}
               label="Unidade"
               activeSelectButton={units}
@@ -247,7 +249,7 @@ const StudentsEditScreen = props => {
                   <InputSearchStyle
                     value={''}
                     onChange={handleSearchInput}
-                    placeholder="Buscar turmas"
+                    placeholder="Buscar"
                   />
                 </ColumnStyle>
               </PagedListHeader>

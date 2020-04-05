@@ -77,6 +77,17 @@ export const RowStyle = styled.div`
   align-items: center;
 `
 
+export const InfoRow = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  @media (min-width: ${sizes.mScreen}px) {
+    flex-direction: row;
+  }
+`
+
 export const FinishButtons = styled(RowStyle)`
   justify-content: flex-end;
   margin-top: 32px;
@@ -157,12 +168,16 @@ export const ContainerPlatform = styled.div`
 `
 
 export const LeftColumnStyle = styled(Column)`
-  margin-left: 0 !important;
+  margin-right: 0;
   padding: 0;
+  margin-bottom: 16px;
+  @media (min-width: ${sizes.mScreen}px) {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
 `
 
-export const RightColumnStyle = styled(Column)`
-`
+export const RightColumnStyle = styled(Column)``
 
 export const DisabledInputStyle = styled(Input)`
   border-color: ${colors.black2};
@@ -226,29 +241,31 @@ export const AccessCodeLabel = styled.div`
     line-height: 1.3;
   }
 
-  h2 {  
+  h2 {
     color: ${colors.white};
     line-height: 0;
     font-size: 16px;
   }
-  
+
   @media (min-width: ${sizes.mScreen}px) {
     padding: 0 32px;
     h3 {
       font-size: ${sizes.h[5].size}px;
     }
-  
+
     h2 {
       font-size: ${sizes.h[4].size + 1}px;
     }
   }
-  
 `
 
 export const LabelAccordionStyle = styled.p`
   color: ${colors.blue};
   font-weight: ${fontWeights.bold};
-  margin-bottom: 0px;
+  margin-bottom: 16px;
+  @media (min-width: ${sizes.mScreen}px) {
+    margin-bottom: 0px;
+  }
 `
 
 export const ScholarshipSwitchContainer = styled.div`
@@ -273,8 +290,7 @@ export const ScholarshipSwitchContainer = styled.div`
 
 export const InputSearchStyle = styled(InputSearch)``
 
-export const ContainerAccordionMenu = styled.div`
-`
+export const ContainerAccordionMenu = styled.div``
 
 export const SpinnerContainer = styled(Container)`
   display: flex;
