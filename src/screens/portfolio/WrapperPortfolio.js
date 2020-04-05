@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Curriculum } from './curriculum'
 import { AboutMe } from './about-me'
 import { Examples } from './examples'
@@ -6,8 +6,10 @@ import logo from 'assets/images/rw-logo.png'
 import {
   Page,
   IconsContainer,
-  LogoImage, IconsBorder,
-  PageContent, IconBox
+  LogoImage,
+  IconsBorder,
+  PageContent,
+  IconBox
 } from './WrapperPortfolio.style'
 import IconButton from 'components/lib/buttons/IconButton'
 
@@ -19,9 +21,17 @@ const WrapperPortfolio = () => {
   const body = document.body
 
   const changeBackgroundColor = page => {
-    body.setAttribute("class", "")
+    body.setAttribute('class', '')
     body.classList.add(page)
   }
+
+  useEffect(() => {
+    body.setAttribute('class', '')
+    body.classList.add('introduction')
+    return () => {
+      body.setAttribute('class', '')
+    }
+  }, [])
 
   const handleIconClicked = page => {
     if (selectedPage === '') {
@@ -47,27 +57,36 @@ const WrapperPortfolio = () => {
 
   return (
     <Page selectedPage={selectedPage}>
-      {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
+      {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage} />}
 
       <IconsContainer selectedPage={unlock1}>
         <IconBox selectedPage={selectedPage}>
-          <IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>
+          <IconButton
+            iconName={'clipboard-content'}
+            onClick={() => handleIconClicked('curriculum')}
+          />
         </IconBox>
         <IconBox selectedPage={selectedPage}>
-          <IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>
+          <IconButton
+            iconName={'user'}
+            onClick={() => handleIconClicked('about-me')}
+          />
         </IconBox>
         <IconBox selectedPage={selectedPage}>
-          <IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>
+          <IconButton
+            iconName={'browser-code'}
+            onClick={() => handleIconClicked('examples')}
+          />
         </IconBox>
-          {/*<IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>*/}
-          {/*<IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>*/}
-          {/*<IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>*/}
+        {/*<IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>*/}
+        {/*<IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>*/}
+        {/*<IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>*/}
       </IconsContainer>
-      <IconsBorder selectedPage={unlock2}/>
+      <IconsBorder selectedPage={unlock2} />
       <PageContent unlock3={unlock3}>
-        {selectedPage === 'curriculum' && <Curriculum/>}
-        {selectedPage === 'about-me' && <AboutMe/>}
-        {selectedPage === 'examples' && <Examples/>}
+        {selectedPage === 'curriculum' && <Curriculum />}
+        {selectedPage === 'about-me' && <AboutMe />}
+        {selectedPage === 'examples' && <Examples />}
       </PageContent>
     </Page>
   )

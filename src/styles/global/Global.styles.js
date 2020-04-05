@@ -50,6 +50,10 @@ const GlobalStyle = createGlobalStyle`
   
   body.examples {
     background-color: ${colors.black1};
+  }
+  
+  body.introduction {
+    overflow-y: scroll;
   }  
 
  #root {
