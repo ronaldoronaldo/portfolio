@@ -26,7 +26,7 @@ import PagedList from 'components/admin/user-management-panel/paged-list/PagedLi
 import { AccordionMenu } from 'components/admin/user-management-panel/accordion-menu'
 import Select from 'components/lib/selects/Select'
 import ToggleSwitch from 'components/lib/toggleSwitch'
-import { ResponsabilitiesCard } from '/components/admin/user-management-panel/responsabilities-card'
+import { ResponsabilitiesCard } from 'components/admin/user-management-panel/responsabilities-card'
 
 const mockedLinked = ['Turma 401']
 const mockedUnlinked = [

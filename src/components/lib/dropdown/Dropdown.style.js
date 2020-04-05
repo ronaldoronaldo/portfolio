@@ -156,7 +156,7 @@ export const ActionsButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: ${props => props.checkbox && '320px'};
+  max-width: ${props => props.checkbox && '263px'};
   height: 72px;
   border-radius: 5px;
   border-top: 1px solid ${colors.black2};
@@ -166,6 +166,9 @@ export const ActionsButtonsContainer = styled.div`
   margin-top: 465px;
   margin-bottom: 19px;
   justify-content: flex-end;
+  @media (min-width: ${sizes.mdScreen}px) {
+    max-width: ${props => props.checkbox && '320px'};
+  }
 `
 
 export const ContainerIcon = styled.div`

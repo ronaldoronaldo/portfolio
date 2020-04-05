@@ -52,7 +52,7 @@ export const BodyStyle = styled.div`
 `
 
 export const SelectStyle = styled(Select)`
-  max-width: 503px;
+  
 `
 
 export const ContainerCheckboxStyle = styled.div`

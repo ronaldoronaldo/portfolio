@@ -123,12 +123,14 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
     setCards(newCards)
   }
 
-  const removeTag = (card, item) => {
+  const removeTag = (card, item, index) => {
     const newArrActiveClasses = card.classes.filter(
       itemActiveClasses => itemActiveClasses !== item
     )
     let newCards = [...cards]
+    console.log(cards)
     newCards[index].classes = newArrActiveClasses
+    console.log(newCards)
     setCards(cards)
   }
 
@@ -155,7 +157,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
           text={item}
           border
           style={{ height: 24, marginLeft: 0, marginRight: 8 }}
-          onClick={() => removeTag(card, item)}
+          onClick={() => removeTag(card, item, index)}
         />
       )
     })
@@ -220,7 +222,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
                   {card.dropdownOpened && (
                     <ClickOutside
                       onClickOutside={() => closeDropdown(index)}
-                      style={{ maxHeight: 504 }}
+                      style={{ maxHeight: 504, overflow: 'hidden' }}
                     >
                       <DropdownStyle
                         items={card.availableClasses}
