@@ -83,7 +83,7 @@ export const InfoRow = styled.div`
   flex-direction: column;
   width: 100%;
   display: flex;
-  @media (min-width: ${sizes.mScreen}px) {
+  @media (min-width: ${sizes.mdScreen}px) {
     flex-direction: row;
   }
 `
@@ -171,7 +171,7 @@ export const LeftColumnStyle = styled(Column)`
   margin-right: 0;
   padding: 0;
   margin-bottom: 16px;
-  @media (min-width: ${sizes.mScreen}px) {
+  @media (min-width: ${sizes.mdScreen}px) {
     margin-bottom: 0;
     margin-right: 16px;
   }
@@ -190,15 +190,15 @@ export const AlertRecovery = styled.p`
   color: ${props => (props.color ? props.color : colors.green3)};
   font-weight: ${fontWeights.regular};
   width: 100%;
-  height: ${props => (props.open ? sizes.inputSizes.medium : 0)}px;
+  height: ${props => (props.open ? 'auto' : 0)}px;
   display: flex;
   align-items: center;
   margin-bottom: 36px;
   border-radius: 4px;
-  padding: 0 16px;
+  padding: 16px 16px;
   transition: all 0.3s linear;
   font-size: 12.8px !important;
-  line-height: 1.2 !important;
+  line-height: 1.6 !important;
   @media (min-width: ${sizes.mScreen}px) {
     font-size: 16px !important;
     line-height: 27px !important;

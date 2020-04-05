@@ -195,6 +195,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
           <BodyStyle>
             <SelectStyle
               label="Unidade"
+              specialCase
               text={card.unit}
               items={itensUnitsArr}
               activeSelectButton

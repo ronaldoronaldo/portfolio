@@ -19,6 +19,7 @@ const Select = ({
   marginBottom,
   dropdownStyle,
   noMarginLeft,
+                  specialCase,
   ...rest
 }) => {
   const [active, setActive] = useState(false)
@@ -45,6 +46,7 @@ const Select = ({
       </ClickOutside>
       {items.length > 0 && (
         <Dropdown
+          specialCase={specialCase}
           noMarginLeft={noMarginLeft}
           items={items}
           active={active}

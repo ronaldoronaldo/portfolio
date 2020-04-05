@@ -33,6 +33,7 @@ const Dropdown = ({
   handleAdd,
   checked,
   itemsColor,
+                    specialCase,
   ...rest
 }) => {
   const [filteredItems, setFilteredItems] = useState(items)
@@ -132,6 +133,7 @@ const Dropdown = ({
     <React.Fragment>
       {active && (
         <SelectContainerStyle
+          specialCase={specialCase}
           mobileStyle={mobileStyle}
           style={style}
           checkbox={checkbox}

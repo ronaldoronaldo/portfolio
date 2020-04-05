@@ -48,6 +48,7 @@ export const BodyStyle = styled.div`
   border: solid 1px ${colors.black2};
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.06);
   padding: 0 32px 40px 32px;
+  position: relative;
   margin-bottom: ${spacing.small}px;
 `
 
