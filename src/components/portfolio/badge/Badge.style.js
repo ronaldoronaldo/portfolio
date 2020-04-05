@@ -18,7 +18,7 @@ export const BadgeTitleBox = styled.div`
   align-items: center;
   border-radius: 6px;
   margin-top: ${spacing.medium}px;
-  background-color: ${colors.red2};
+  background-color: #BA7979;
 `
 
 export const BadgeImage = styled.img`

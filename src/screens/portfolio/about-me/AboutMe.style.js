@@ -26,6 +26,21 @@ export const BadgesContainer = styled.div`
   margin-bottom: 32px;
 `
 
+export const Photos = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 32px;
+`
+
+export const Box = styled.div`
+  flex: 1;
+  display: flex;
+`
+
 export const CertificateImage = styled.img`
   width: 100%;
 `
