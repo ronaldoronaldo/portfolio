@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {AboutMeContainer, BadgesContainer} from "./AboutMe.style"
+import {AboutMeContainer, BadgesContainer, CertificateImage} from "./AboutMe.style"
 import {GlassFrame} from 'components/portfolio/glass-frame'
 import Badge from 'components/portfolio/badge/Badge'
 
@@ -16,6 +16,7 @@ import enzyme from 'assets/images/portfolio/badges/test1.svg'
 // import linuxXP from 'assets/images/portfolio/badges/code1.svg'
 // import SRRCode from 'assets/images/portfolio/badges/code2.svg'
 import responsive from 'assets/images/portfolio/badges/responsive2.svg'
+import certificate from 'assets/images/portfolio/badges/jestEnzymeCertificate.jpg'
 
 const badges = [
   {
@@ -111,7 +112,7 @@ const AboutMe = () => {
   }
 
   useEffect(() => {
-    const interval = setInterval(triggerAnimation, 5000)
+    const interval = setInterval(triggerAnimation, 6400)
     return () => {
       clearInterval(interval)
     }
@@ -132,6 +133,9 @@ const AboutMe = () => {
       <BadgesContainer>
         {renderBadges()}
       </BadgesContainer>
+      <GlassFrame animate={animate} animate2={animate2}>
+        <CertificateImage src={certificate}/>
+      </GlassFrame>
     </AboutMeContainer>
   )
 }

@@ -23,4 +23,9 @@ export const BadgesContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 32px;
+`
+
+export const CertificateImage = styled.img`
+  width: 100%;
 `

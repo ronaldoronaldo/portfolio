@@ -7,6 +7,7 @@ export const FrameContainer = styled.div`
   position: relative;
   overflow: hidden;
   margin: 0 8px 16px 8px;
+  box-shadow: 0 6px 25px 0 rgba(83, 101, 111, 0.2);
 `
 
 export const ReflexMask = styled.div`
