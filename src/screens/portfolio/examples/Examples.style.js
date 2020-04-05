@@ -38,9 +38,12 @@ export const FormContainer = styled(ComponentsContainer)`
 export const CardsSection = styled.div`
   display: flex;
   flex: 1;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   margin-bottom: ${spacing.large}px;
+  @media (min-width: ${sizes.mScreen}px) {
+     flex-direction: row;
+  }
 `
 
 export const ResponsiveScreens = styled(Section)`

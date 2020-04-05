@@ -1,17 +1,19 @@
 import styled from 'styled-components'
-import { fontWeights, spacing, colors } from 'config/ui'
+import { fontWeights, spacing, colors, sizes } from 'config/ui'
 import { Link } from 'react-router-dom'
 
 export const CardContainer = styled(Link)`
   display: flex;
-  width: 33%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  margin-left: ${spacing.mSmall}px;
-  margin-right: ${spacing.mSmall}px;
+  margin-left: 0;
+  margin-right: 0;
+  display: none;
+  margin-bottom: ${spacing.large}px;
   position: relative;
-  height: 464px;
+  height: 250px;
   border: 3px solid ${colors.black2Dark};
   transition: all 0.2s ease-in;
   &:first-child {
@@ -23,6 +25,23 @@ export const CardContainer = styled(Link)`
   &:hover {
     transform: scale(1.04);
   }
+  @media (min-width: ${sizes.mScreen}px) {
+    width: 33%;
+    margin-left: ${spacing.mSmall}px;
+    margin-right: ${spacing.mSmall}px;
+    margin-bottom: ${spacing.small}px;
+    height: 464px;
+    display: flex;
+  }
+`
+
+export const CardContainerMobile = styled(CardContainer)`
+  display: flex;
+  height: auto;
+  @media (min-width: ${sizes.mScreen}px) {
+    display: none;
+  }
+  
 `
 
 export const CardHeader = styled.div`

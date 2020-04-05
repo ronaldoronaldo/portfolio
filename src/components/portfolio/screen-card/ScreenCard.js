@@ -3,19 +3,26 @@ import {
   CardContainer,
   ScreenTitle,
   OpacityMask,
-  ScreenImage,
+  ScreenImage, CardContainerMobile,
 } from './ScreenCard.style'
 import PropTypes from 'prop-types'
 
-const ScreenCard = ({ title, image, path }) => {
+const ScreenCard = ({ title, image, path, imageMobile }) => {
   const body = document.body
 
   return (
-    <CardContainer to={path} onClick={()=>body.setAttribute("class", "")}>
-      <ScreenImage src={image} />
-      <OpacityMask />
-      <ScreenTitle>{title}</ScreenTitle>
-    </CardContainer>
+    <>
+      <CardContainer to={path} onClick={()=>body.setAttribute("class", "")}>
+        <ScreenImage src={image} />
+        <OpacityMask />
+        <ScreenTitle>{title}</ScreenTitle>
+      </CardContainer>
+      <CardContainerMobile to={path} onClick={()=>body.setAttribute("class", "")}>
+        <ScreenImage src={imageMobile} />
+        <OpacityMask />
+        <ScreenTitle>{title}</ScreenTitle>
+      </CardContainerMobile>
+    </>
   )
 }
 

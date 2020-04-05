@@ -12,6 +12,9 @@ import {
 } from './Examples.style'
 import ScreenCard from 'components/portfolio/screen-card/ScreenCard'
 import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
+import loginDesktop from 'assets/images/portfolio/pages/loginDesktop.png'
+import libraryDesktop from 'assets/images/portfolio/pages/libraryDesktop.png'
+import leagueDesktop from 'assets/images/portfolio/pages/leagueDesktop.png'
 import libraryMobile from 'assets/images/portfolio/pages/libraryMobile.png'
 import leagueMobile from 'assets/images/portfolio/pages/leagueMobile.png'
 import { LEAGUE_PATH, LOGIN_PATH, SITE_PATH } from 'routes'
@@ -101,18 +104,21 @@ const Examples = () => {
     {
       title: 'Login',
       image: loginMobile,
+      imageMobile: loginDesktop,
       numberOfPages: 6,
       path: LOGIN_PATH
     },
     {
       title: 'Library',
       image: libraryMobile,
+      imageMobile: libraryDesktop,
       numberOfPages: 11,
       path: SITE_PATH
     },
     {
       title: 'League',
       image: leagueMobile,
+      imageMobile: leagueDesktop,
       numberOfPages: 2,
       path: LEAGUE_PATH
     }

@@ -42,7 +42,7 @@ export const colors = {
   black5Dark: `hsl(220, 2%, ${35 - lightness}%)`,
   black5Light: `hsl(220, 2%, ${35 + lightness}%)`,
   black4: `hsl(228, 2%, 54%)`,
-  black4Dark: `hsl(228, 2%, ${54 - lightness}%)`,
+  black4Dark: `hsl(228, 2%, ${54 - lightness*2}%)`,
   black4Light: `hsl(228, 2%, ${54 + lightness}%)`,
   black3: `hsl(223, 5%, 71%)`,
   black3Dark: `hsl(223, 5%, ${71 - lightness}%)`,
