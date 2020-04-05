@@ -171,8 +171,6 @@ export const ColumnStyled = styled.div`
   ${({ sm = 12, md, lg, xlg, xxlg }) => css`
     position: relative;
     width: ${(sm / 12) * 100}%;
-    padding-left: ${spacing.xSmall}px;
-    padding-right: ${spacing.xSmall}px;
 
     @media (min-width: ${sizes.specialScreen}px) {
       ${md && `width: ${(md / 12) * 100}%`};

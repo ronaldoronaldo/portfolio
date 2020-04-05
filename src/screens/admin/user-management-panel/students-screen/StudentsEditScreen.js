@@ -302,8 +302,8 @@ const StudentsEditScreen = props => {
             <AlertRecovery open={true} color="#595A5C" bgColor="#FFF5F1">
               Esses dados podem ser importantes para recuperação de senha
             </AlertRecovery>
-            <RowStyle>
-              <LeftColumnStyle sm={8}>
+            <InfoRow>
+              <LeftColumnStyle md={8}>
                 <InputStyle
                   id={'secondaryEmail'}
                   style={{ marginBottom: 0 }}
@@ -311,7 +311,7 @@ const StudentsEditScreen = props => {
                   value={''}
                 />
               </LeftColumnStyle>
-              <RightColumnStyle sm={4}>
+              <RightColumnStyle md={4}>
                 <InputStyle
                   id={'phoneNumber'}
                   style={{ marginBottom: 0 }}
@@ -319,7 +319,7 @@ const StudentsEditScreen = props => {
                   value={''}
                 />
               </RightColumnStyle>
-            </RowStyle>
+            </InfoRow>
 
             <LabelAccordionStyle>Esse aluno é bolsista?</LabelAccordionStyle>
             <ScholarshipSwitchContainer>
