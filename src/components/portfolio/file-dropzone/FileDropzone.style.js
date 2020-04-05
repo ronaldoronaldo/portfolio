@@ -1,16 +1,19 @@
 import styled from 'styled-components'
-import { colors, fontWeights } from 'config/ui'
+import { colors, fontWeights, sizes } from 'config/ui'
 
 export const PublishersAddBookFiles = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: ${sizes.mScreen}px) {
+    flex-direction: row;
+  }
 `
 
 export const PublishersAddBookFilesBox = styled.div`
-  width: 48.5%;
+  width: 100%;
   height: 400px;
   display: flex;
   background-color: ${colors.white};
@@ -22,6 +25,12 @@ export const PublishersAddBookFilesBox = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-top: 16px;
+  @media (min-width: ${sizes.mScreen}px) {
+    width: 48.5%;
+    margin-top: 0;
+  }
+  
 `
 
 export const PublishersAddBookDropzoneContent = styled.div`

@@ -66,6 +66,7 @@ export const FormSection = styled(Section)`
 
 export const SectionTitle = styled.span`
   font-size: 32px;
+  text-align: center;
   font-weight: ${fontWeights.bold};
   margin-bottom: ${spacing.small}px;
 `

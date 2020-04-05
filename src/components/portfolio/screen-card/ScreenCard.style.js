@@ -73,7 +73,11 @@ export const OpacityMask = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 145px;
+  height: 90px;
+  
+  @media (min-width: ${sizes.sScreen}px) {
+    height: 145px;
+  }
 `
 
 export const ScreenTitle = styled.div`
