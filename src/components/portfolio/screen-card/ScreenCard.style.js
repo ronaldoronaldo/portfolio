@@ -37,7 +37,7 @@ export const CardContainer = styled(Link)`
 
 export const CardContainerMobile = styled(CardContainer)`
   display: flex;
-  height: auto;
+  height: 100%;
   @media (min-width: ${sizes.mScreen}px) {
     display: none;
   }
