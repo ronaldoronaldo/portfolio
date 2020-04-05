@@ -39,21 +39,61 @@ const GlobalStyle = createGlobalStyle`
     font-smoothing: antialiased;
     overflow-x: hidden;
     transition: background-color 0.5s ease-out;
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: ${colors.blue3}; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${colors.blue3}; 
+    }
   }
   body.curriculum {
     background-color: ${colors.portBlack};
+    
+    ::-webkit-scrollbar-thumb {
+      background: ${colors.portGray}; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${colors.portGray}; 
+    }
   }
 
   body.about-me {
     background-color: ${colors.red1};
+    
+    ::-webkit-scrollbar-thumb {
+      background: ${colors.red2}; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${colors.red2}; 
+    }
   }  
   
   body.examples {
     background-color: ${colors.black1};
+    
+    ::-webkit-scrollbar-thumb {
+      background: ${colors.black4}; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${colors.black4}; 
+    }
   }
   
   body.introduction {
     overflow-y: scroll;
+    
+    ::-webkit-scrollbar-thumb {
+      background: transparent; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: transparent; 
+    }
   }  
 
  #root {
