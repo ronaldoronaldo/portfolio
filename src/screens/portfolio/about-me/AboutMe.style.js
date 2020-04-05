@@ -9,7 +9,7 @@ export const AboutMeContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 2000px;
+  padding-bottom: 56px;
   align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
     top: 212px;
