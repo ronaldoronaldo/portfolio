@@ -205,7 +205,7 @@ export const AccessCodeLabel = styled.div`
   background: ${colors.blue};
   display: flex;
   justify-content: space-between;
-  padding: 0 32px;
+  padding: 0 12px;
   height: 64px;
   align-items: center;
   border-radius: 10px;
@@ -213,13 +213,27 @@ export const AccessCodeLabel = styled.div`
 
   h3 {
     color: ${colors.white};
-    font-size: ${sizes.h[5].size}px;
+    font-size: 12.8px;
+    line-height: 1.3;
   }
 
-  h2 {
+  h2 {  
     color: ${colors.white};
-    font-size: ${sizes.h[4].size + 1}px;
+    line-height: 0;
+    font-size: 16px;
   }
+  
+  @media (min-width: ${sizes.mScreen}px) {
+    padding: 0 32px;
+    h3 {
+      font-size: ${sizes.h[5].size}px;
+    }
+  
+    h2 {
+      font-size: ${sizes.h[4].size + 1}px;
+    }
+  }
+  
 `
 
 export const LabelAccordionStyle = styled.p`

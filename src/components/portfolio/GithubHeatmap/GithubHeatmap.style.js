@@ -11,6 +11,9 @@ export const GithubHeatmapHeader = styled.div`
     width: 100%;
     line-height: 26px;
     margin-top: 0;
+    @media (min-width: ${sizes.mScreen}px) {
+       font-size: 18px;
+    }
   }
 `
 export const OpacityMask = styled.div`
