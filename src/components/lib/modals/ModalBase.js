@@ -3,8 +3,7 @@ import { createPortal } from 'react-dom'
 import PropTypes from 'prop-types'
 import ModalWrapper from './ModalWrapper'
 import { Overlay } from 'styles/common/Common.styles'
-import { closeModal } from 'ducks/modal'
-import { connect } from 'react-redux'
+
 const ModalBase = ({
   show,
   onClose,
@@ -20,7 +19,7 @@ const ModalBase = ({
   }
 
   const handleClickOverlay = () => {
-    rest.closeModal()
+    onClose()
   }
 
   return createPortal(
@@ -58,7 +57,4 @@ export const modalPropTypes = {
 
 ModalBase.propTypes = modalPropTypes
 
-export default connect(
-  null,
-  { closeModal }
-)(ModalBase)
+export default ModalBase

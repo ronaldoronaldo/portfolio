@@ -6,18 +6,24 @@ import {
   ImageGetColor
 } from './ModalItemsShelfDetails.styles'
 import { IconButtonClose } from './ModalItemsShelfDetails.styles'
-import ColorThief from 'colorthief/dist/color-thief'
+// import ColorThief from 'colorthief/dist/color-thief'
 
-const ModalItemsShelfDetails = ({ item, type, active, onClose, openNewModal }) => {
+const ModalItemsShelfDetails = ({
+  item,
+  type,
+  active,
+  onClose,
+  openNewModal
+}) => {
   const [background, setBackground] = useState(null)
 
   useEffect(() => {
-    const colorThief = new ColorThief()
+    // const colorThief = new ColorThief()
     const img = new Image()
-    img.addEventListener('load', function() {
-      const result = colorThief.getColor(img)
-      setBackground(result)
-    })
+    // img.addEventListener('load', function() {
+    //   const result = colorThief.getColor(img)
+    //   setBackground(result)
+    // })
     const googleProxyURL =
       'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url='
     img.crossOrigin = 'Anonymous'
@@ -46,7 +52,12 @@ const ModalItemsShelfDetails = ({ item, type, active, onClose, openNewModal }) =
       >
         <ImageGetColor src={item.image} crossorigin="anonymous" />
       </BackgroundContainerTop>
-      <ItemShelfDetails item={item} type={type} openNewModal={openNewModal} onClose={onClose} />
+      <ItemShelfDetails
+        item={item}
+        type={type}
+        openNewModal={openNewModal}
+        onClose={onClose}
+      />
     </Container>
   )
 }

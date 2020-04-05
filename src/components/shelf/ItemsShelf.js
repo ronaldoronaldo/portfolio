@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
 import { Book } from 'components/shelf-itens/book'
 import { NewsItem } from 'components/shelf-itens/news-item'
 import { CollectionsItem } from 'components/shelf-itens/collections-item'
@@ -9,9 +8,7 @@ import ExploreMore from 'components/shelf-itens/ExploreMore'
 import Shelf from './Shelf'
 import { sizes } from 'config/ui'
 import fakeShelf from './fake'
-import { showModal, setItemModal, setLoadingModal } from 'ducks/modal'
-import { withApollo } from 'react-apollo'
-import {ModalItemsShelfDetails} from "../lib/modals"
+import { ModalItemsShelfDetails } from '../lib/modals'
 
 const ItemsShelf = ({
   title,
@@ -36,7 +33,7 @@ const ItemsShelf = ({
   const [type, setType] = useState('')
 
   const handleShowShelfItemDetails = (item, type) => {
-    if(openNewModal){
+    if (openNewModal) {
       openNewModal(item, typeModal)
       return
     }
@@ -478,7 +475,4 @@ const ItemsShelf = ({
   )
 }
 
-export default connect(
-  null,
-  { showModal, setItemModal, setLoadingModal }
-)(withApollo(ItemsShelf))
+export default ItemsShelf
