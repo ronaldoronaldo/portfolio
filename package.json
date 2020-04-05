@@ -12,7 +12,9 @@
     "test:watch": "jest --watch --no-cache --onlyChanged",
     "test:update-snapshots": "jest --updateSnapshot",
     "lint": "eslint 'src/**/*.js'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack --mode production --config webpack/webpack.prod.js"
   },
   "lint-staged": {
     "src/**/*.js": [
