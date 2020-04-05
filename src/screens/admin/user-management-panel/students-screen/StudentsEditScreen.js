@@ -202,15 +202,14 @@ const StudentsEditScreen = props => {
             <Select
               text={units}
               noMarginLeft
-              items={['Unidade Norte 02']}
+              items={['Unidade Norte 02', 'Unidade Norte 03', 'Unidade Norte 04']}
               onChange={handleSelectUnits}
-              maxWidth={620}
               label="Unidade"
               activeSelectButton={units}
               labelColor={colors.black3}
               dropdownStyle={{
                 top: 43,
-                width: 556,
+                width: '100%',
                 marginLeft: 16
               }}
               style={{
@@ -218,7 +217,7 @@ const StudentsEditScreen = props => {
                 color: colors.black5,
                 marginBottom: 32,
                 marginLeft: 16,
-                width: 556
+                width: '100%'
               }}
             />
             <RowStyle

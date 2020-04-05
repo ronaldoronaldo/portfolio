@@ -1,10 +1,16 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { colors, sizes } from 'config/ui'
 
 export const Icon = styled.span`
-  font-size: ${props => props.sizeMobile || 20}px;
-  color: ${props => props.color || colors.black6};
-  @media (min-width: ${sizes.mdScreen}px) {
-    font-size: ${props => props.size || 20}px;
-  }
+  ${({ sizeMobile, color, hardMobile, size}) => css`
+    font-size: ${sizeMobile || 20}px;
+    color: ${color || colors.black6};
+    font-size: ${hardMobile}px !important;
+    
+    @media (min-width: ${sizes.mdScreen}px) {
+      font-size: ${size || 20}px;
+    }
+  `}
+
+  
 `

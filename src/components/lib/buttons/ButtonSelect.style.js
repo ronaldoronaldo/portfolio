@@ -19,7 +19,7 @@ export const ButtonSelectStyle = styled.button`
     cursor: pointer;
     display: flex;
     flex: ${flex ? flex : 1};
-    width: 100%;
+    width: 100% !important;
     justify-content: space-between;
     align-items: center;
     position: relative;

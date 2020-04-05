@@ -13,6 +13,8 @@ const Tag = ({ text, iconName, noIcon, onClick, border, style, ...props }) => {
           iconName={iconName ? iconName : 'cancel'}
           onClick={onClick}
           size={8}
+          sizeMobile={8}
+          hardMobile={8}
           style={{
             marginLeft: 16,
             color: colors.purple3,

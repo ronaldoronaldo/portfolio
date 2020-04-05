@@ -29,6 +29,7 @@ const ShowTags = ({ tags, removeTag, label, style }) => {
               iconName={'cancel'}
               onClick={() => removeItem(index)}
               size={8}
+              sizeMobile={8}
               style={{
                 marginLeft: 8,
                 color: colors.purple3,

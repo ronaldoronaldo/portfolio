@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubHeatmap.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubHeatmap.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/common/Common.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/common/Common.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-tags/ShowTags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-tags/ShowTags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/user-management-panel/tags/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/tags/Tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lib/buttons/ButtonSelect.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/buttons/ButtonSelect.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsEditScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsEditScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,21 +184,7 @@
       <workItem from="1585833731931" duration="45166000" />
       <workItem from="1585919147070" duration="39008000" />
       <workItem from="1586010681693" duration="5411000" />
-      <workItem from="1586030478044" duration="22053000" />
-    </task>
-    <task id="LOCAL-00288" summary="league boards done">
-      <created>1585860303274</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1585860303274</updated>
-    </task>
-    <task id="LOCAL-00289" summary="league tutorials">
-      <created>1585863433949</created>
-      <option name="number" value="00289" />
-      <option name="presentableId" value="LOCAL-00289" />
-      <option name="project" value="LOCAL" />
-      <updated>1585863433949</updated>
+      <workItem from="1586030478044" duration="26771000" />
     </task>
     <task id="LOCAL-00290" summary="rebimbei">
       <created>1585863769745</created>
@@ -525,7 +515,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586051444830</updated>
     </task>
-    <option name="localTasksCounter" value="337" />
+    <task id="LOCAL-00337" summary="style">
+      <created>1586053147085</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1586053147085</updated>
+    </task>
+    <task id="LOCAL-00338" summary="style">
+      <created>1586055973846</created>
+      <option name="number" value="00338" />
+      <option name="presentableId" value="LOCAL-00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1586055973846</updated>
+    </task>
+    <option name="localTasksCounter" value="339" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,10 +593,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1586051444017">
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1586055972999">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586051444017" />
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586055972999" />
     <state x="217" y="2270" width="1536" height="901" key="DiffContextDialog" timestamp="1585944738509">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
@@ -605,26 +609,26 @@
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586037664062" />
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586052721535">
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586056888232">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586052721535" />
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586056888232" />
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585789603984">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585789603984" />
-    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1586053075912">
+    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1586057444386">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586053075912" />
+    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586057444386" />
     <state x="659" y="1332" key="run.anything.popup" timestamp="1585965542552">
       <screen x="70" y="0" width="3770" height="2160" />
     </state>
     <state x="659" y="1332" key="run.anything.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585965542552" />
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1586053053721">
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1586057269919">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586053053721" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586057269919" />
     <state x="720" y="2594" width="540" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585885415803">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
