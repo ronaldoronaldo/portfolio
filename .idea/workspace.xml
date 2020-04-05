@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/WrapperPortfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/WrapperPortfolio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global/Global.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global/Global.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,27 +180,7 @@
       <workItem from="1585919147070" duration="39008000" />
       <workItem from="1586010681693" duration="5411000" />
       <workItem from="1586030478044" duration="31749000" />
-    </task>
-    <task id="LOCAL-00293" summary="GG">
-      <created>1585868296802</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1585868296802</updated>
-    </task>
-    <task id="LOCAL-00294" summary="images">
-      <created>1585869533590</created>
-      <option name="number" value="00294" />
-      <option name="presentableId" value="LOCAL-00294" />
-      <option name="project" value="LOCAL" />
-      <updated>1585869533590</updated>
-    </task>
-    <task id="LOCAL-00295" summary="só vitoria">
-      <created>1585872892402</created>
-      <option name="number" value="00295" />
-      <option name="presentableId" value="LOCAL-00295" />
-      <option name="project" value="LOCAL" />
-      <updated>1585872892402</updated>
+      <workItem from="1586125895231" duration="397000" />
     </task>
     <task id="LOCAL-00296" summary="só vitoria">
       <created>1585874742558</created>
@@ -525,7 +504,28 @@
       <option name="project" value="LOCAL" />
       <updated>1586061252691</updated>
     </task>
-    <option name="localTasksCounter" value="342" />
+    <task id="LOCAL-00342" summary="scrollbar style">
+      <created>1586105407687</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1586105407687</updated>
+    </task>
+    <task id="LOCAL-00343" summary="new index.html">
+      <created>1586108028083</created>
+      <option name="number" value="00343" />
+      <option name="presentableId" value="LOCAL-00343" />
+      <option name="project" value="LOCAL" />
+      <updated>1586108028083</updated>
+    </task>
+    <task id="LOCAL-00344" summary="card container height 100%">
+      <created>1586109131634</created>
+      <option name="number" value="00344" />
+      <option name="presentableId" value="LOCAL-00344" />
+      <option name="project" value="LOCAL" />
+      <updated>1586109131634</updated>
+    </task>
+    <option name="localTasksCounter" value="345" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,9 +561,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="more league stuff" />
-    <MESSAGE value="league boards done" />
-    <MESSAGE value="league tutorials" />
     <MESSAGE value="rebimbei" />
     <MESSAGE value="LeagueVacation.js" />
     <MESSAGE value="goback header" />
@@ -586,13 +583,16 @@
     <MESSAGE value="um deus tem nome" />
     <MESSAGE value="top" />
     <MESSAGE value="style" />
-    <option name="LAST_COMMIT_MESSAGE" value="style" />
+    <MESSAGE value="scrollbar style" />
+    <MESSAGE value="new index.html" />
+    <MESSAGE value="card container height 100%" />
+    <option name="LAST_COMMIT_MESSAGE" value="card container height 100%" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1586061251833">
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1586109130803">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586061251833" />
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586109130803" />
     <state x="217" y="2270" width="1536" height="901" key="DiffContextDialog" timestamp="1585944738509">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
@@ -613,18 +613,18 @@
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585789603984" />
-    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1586104559495">
+    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1586126222287">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586104559495" />
+    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586126222287" />
     <state x="659" y="1332" key="run.anything.popup" timestamp="1586060805735">
       <screen x="70" y="0" width="3770" height="2160" />
     </state>
     <state x="659" y="1332" key="run.anything.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586060805735" />
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1586104604380">
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1586108977132">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586104604380" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586108977132" />
     <state x="720" y="2594" width="540" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585885415803">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>

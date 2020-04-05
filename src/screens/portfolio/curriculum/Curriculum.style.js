@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import {sizes, colors, fontWeights, spacing} from 'config/ui'
+import { sizes, colors, fontWeights, spacing } from 'config/ui'
 
 export const CurriculumContainer = styled.div`
   color: white;
@@ -15,7 +15,7 @@ export const CurriculumContainer = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     top: 212px;
-  } 
+  }
 `
 
 export const NameSection = styled.div`
@@ -24,7 +24,7 @@ export const NameSection = styled.div`
   flex: 1;
   @media (min-width: ${sizes.mdScreen}px) {
     flex-direction: column;
-  } 
+  }
 `
 
 export const NameText = styled.div`
@@ -43,7 +43,7 @@ export const LeftSide = styled.div`
     padding: 0;
     max-width: 100%;
     margin-bottom: 0;
-  } 
+  }
 `
 
 export const RightSide = styled.div`
@@ -56,7 +56,7 @@ export const RightSide = styled.div`
     max-width: 100%;
     flex: 1.8;
     border-left: 4px solid ${colors.portDivision};
-  } 
+  }
 `
 
 export const LeftSectionContainer = styled.div`
@@ -67,7 +67,7 @@ export const LeftSectionContainer = styled.div`
   margin-top: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding-right: ${spacing.medium}px;
-  } 
+  }
 `
 
 export const RightSectionContainer = styled.div`
@@ -88,7 +88,7 @@ export const LanguagesContainer = styled.div`
   margin-top: ${spacing.small}px;
   @media (min-width: ${sizes.mdScreen}px) {
     flex-direction: row;
-  } 
+  }
 `
 
 export const LanguagesRightColumn = styled.div`
@@ -96,11 +96,11 @@ export const LanguagesRightColumn = styled.div`
   display: flex;
   flex: 1;
   width: 100%;
-  padding-left: 0; 
+  padding-left: 0;
   @media (min-width: ${sizes.mdScreen}px) {
-    padding-left: ${spacing.xSmall}px; 
+    padding-left: ${spacing.xSmall}px;
     width: 50%;
-  } 
+  }
 `
 
 export const LanguagesLeftColumn = styled.div`
@@ -112,7 +112,7 @@ export const LanguagesLeftColumn = styled.div`
   @media (min-width: ${sizes.mdScreen}px) {
     padding-right: ${spacing.xSmall}px;
     width: 50%;
-  } 
+  }
 `
 
 export const InformationRow = styled.div`
@@ -152,7 +152,7 @@ export const ExperienceListItem = styled.li`
   margin-bottom: 4px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 16px;
-  } 
+  }
 `
 
 export const ExperienceText = styled.span`
@@ -161,10 +161,10 @@ export const ExperienceText = styled.span`
   font-weight: ${fontWeights.regular};
   @media (min-width: ${sizes.smScreen}px) {
     font-size: 16px;
-  } 
+  }
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 20px;
-  } 
+  }
 `
 
 export const EducationDescription = styled.span`
@@ -174,15 +174,17 @@ export const EducationDescription = styled.span`
 `
 
 export const LampImage = styled.img`
-  ${({smallScreen}) => css`
+  ${({ smallScreen }) => css`
     display: ${smallScreen ? 'flex' : 'none'};
     width: 79px;
+    height: 79px;
     margin-bottom: ${spacing.medium}px;
     @media (min-width: ${sizes.mdScreen}px) {
-      width: 60%;
+      width: 171px;
+      height: 79px;
       display: ${smallScreen ? 'none' : 'flex'};
     }
- `}
+  `}
 `
 export const ScreensImage = styled.img`
   width: 100%;
