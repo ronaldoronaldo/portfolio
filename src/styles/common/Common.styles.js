@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { colors, sizes, fontWeights } from 'config/ui'
+import {colors, sizes, fontWeights, spacing} from 'config/ui'
 import { Input } from 'components/lib/inputs'
 import Column from 'components/lib/grid/Column'
 import IconButton from 'components/lib/buttons/IconButton'
@@ -83,7 +83,7 @@ export const InfoRow = styled.div`
   flex-direction: column;
   width: 100%;
   display: flex;
-  @media (min-width: ${sizes.mdScreen}px) {
+  @media (min-width: ${sizes.specialScreen}px) {
     flex-direction: row;
   }
 `
@@ -167,17 +167,45 @@ export const ContainerPlatform = styled.div`
   }
 `
 
-export const LeftColumnStyle = styled(Column)`
+export const ColumnStyled = styled.div`
+  ${({ sm = 12, md, lg, xlg, xxlg }) => css`
+    position: relative;
+    width: ${(sm / 12) * 100}%;
+    padding-left: ${spacing.xSmall}px;
+    padding-right: ${spacing.xSmall}px;
+
+    @media (min-width: ${sizes.specialScreen}px) {
+      ${md && `width: ${(md / 12) * 100}%`};
+      padding-left: ${spacing.small}px;
+      padding-right: ${spacing.small}px;
+    }
+
+    @media (min-width: ${sizes.lgScreen}px) {
+      ${lg && `width: ${(lg / 12) * 100}%`};
+    }
+
+    @media (min-width: ${sizes.xlgScreen}px) {
+      ${xlg && `width: ${(xlg / 12) * 100}%`};
+    }
+
+    @media (min-width: ${sizes.xxlgScreen}px) {
+      ${xxlg && `width: ${(xxlg / 12) * 100}%`};
+    }
+  `};
+`
+
+
+export const LeftColumnStyle = styled(ColumnStyled)`
   margin-right: 0;
   padding: 0;
   margin-bottom: 16px;
-  @media (min-width: ${sizes.mdScreen}px) {
+  @media (min-width: ${sizes.specialScreen}px) {
     margin-bottom: 0;
     margin-right: 16px;
   }
 `
 
-export const RightColumnStyle = styled(Column)``
+export const RightColumnStyle = styled(ColumnStyled)``
 
 export const DisabledInputStyle = styled(Input)`
   border-color: ${colors.black2};
@@ -264,7 +292,7 @@ export const LabelAccordionStyle = styled.p`
   font-weight: ${fontWeights.bold};
   margin-bottom: 16px;
   @media (min-width: ${sizes.mScreen}px) {
-    margin-bottom: 0px;
+    margin-bottom: 16px;
   }
 `
 
