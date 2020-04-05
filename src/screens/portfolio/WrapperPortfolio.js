@@ -46,7 +46,7 @@ const WrapperPortfolio = () => {
   }
 
   return (
-    <Page>
+    <Page selectedPage={selectedPage}>
       {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage}/>}
 
       <IconsContainer selectedPage={unlock1}>

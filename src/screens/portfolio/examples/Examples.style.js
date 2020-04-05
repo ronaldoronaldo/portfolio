@@ -46,10 +46,34 @@ export const CardsSection = styled.div`
   }
 `
 
+export const PaddingBox = styled.div`
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (min-width: ${sizes.mScreen}px) {
+    padding: 0;
+  }
+`
+
+export const NoPaddingBox = styled.div`
+  width: 100%;
+  padding: 0 0 0 16px;
+  @media (min-width: ${sizes.mScreen}px) {
+    padding: 0;
+  }
+`
+
 export const ResponsiveScreens = styled(Section)`
   flex-direction: column;
   margin-top: 16px;
   margin-bottom: 16px;
+  padding: 0 16px;
+  @media (min-width: ${sizes.mScreen}px) {
+    padding: 0;
+  }
 `
 
 export const ComponentsSection = styled(Section)`

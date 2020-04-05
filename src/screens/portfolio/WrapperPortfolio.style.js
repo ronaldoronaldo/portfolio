@@ -2,14 +2,19 @@ import styled, { css } from 'styled-components'
 import { colors, spacing, sizes } from 'config/ui'
 
 export const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 ${spacing.small}px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    padding: 0;
-  }
+  ${({selectedPage}) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 ${spacing.small}px;
+    @media (min-width: ${sizes.mdScreen}px) {
+      padding: 0;
+    }
+    ${selectedPage === 'examples' && `
+      padding: 0;
+    `}
+  `}
 `
 
 export const IconsContainer = styled.div`

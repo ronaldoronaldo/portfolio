@@ -29,7 +29,10 @@ export const WrapperStyle = styled.div`
   background: ${colors.white};
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
-  padding: 0 56px;
+  padding: 0 32px;
+  @media (min-width: ${sizes.mScreen}px) {
+    padding: 0 56px;
+  }
 `
 
 export const HeaderStyle = styled.div`
@@ -177,8 +180,14 @@ export const AlertRecovery = styled.p`
   align-items: center;
   margin-bottom: 36px;
   border-radius: 4px;
-  padding-left: 16px;
+  padding: 0 16px;
   transition: all 0.3s linear;
+  font-size: 12.8px !important;
+  line-height: 1.2 !important;
+  @media (min-width: ${sizes.mScreen}px) {
+    font-size: 16px !important;
+    line-height: 27px !important;
+  }
 `
 
 export const Overlay = styled.div`
@@ -205,7 +214,7 @@ export const AccessCodeLabel = styled.div`
   background: ${colors.blue};
   display: flex;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 0 16px;
   height: 64px;
   align-items: center;
   border-radius: 10px;

@@ -8,7 +8,7 @@ import {
   SectionTitle,
   ComponentsContainer,
   FormSection,
-  FormContainer
+  FormContainer, PaddingBox
 } from './Examples.style'
 import ScreenCard from 'components/portfolio/screen-card/ScreenCard'
 import loginMobile from 'assets/images/portfolio/pages/loginMobile.png'
@@ -91,7 +91,8 @@ const Examples = () => {
         />
       ),
       show: false,
-      column: true
+      column: true,
+      ignorePadding: true
     },
     {
       title: 'File Drag & Drop',
@@ -138,10 +139,11 @@ const Examples = () => {
 
   const renderComponents = () => {
     return components.map((component, index) => {
-      const { title, show, content, column } = component
+      const { title, show, content, column, ignorePadding } = component
       return (
         <ComponentsAccordion
           column={column}
+          ignorePadding={ignorePadding}
           title={title}
           open={show}
           onClose={() => onCloseAccordion(index)}
@@ -163,11 +165,13 @@ const Examples = () => {
         <CardsSection>{renderCards(responsiveScreens)}</CardsSection>
       </ResponsiveScreens>
       <ComponentsSection>
-        <SectionTitle>Components Examples</SectionTitle>
-        <SectionSubtitle>
-          Everything here in this website is fully handmade by me, every
-          animation and functionality, with almost zero external libs used.
-        </SectionSubtitle>
+        <PaddingBox>
+          <SectionTitle>Components Examples</SectionTitle>
+          <SectionSubtitle>
+            Everything here in this website is fully handmade by me, every
+            animation and functionality, with almost zero external libs used.
+          </SectionSubtitle>
+        </PaddingBox>
         <ComponentsContainer>{renderComponents()}</ComponentsContainer>
       </ComponentsSection>
       <FormSection>

@@ -3,6 +3,7 @@ import {Container, ExampleBody, ExampleBodyContainer, ExampleHeader, Title} from
 import PropTypes from 'prop-types'
 import {FontIcon} from 'components/lib/icons'
 import { colors } from 'config/ui'
+import {NoPaddingBox, PaddingBox} from "../../../screens/portfolio/examples/Examples.style"
 
 
 const ComponentsAccordion = ({
@@ -10,8 +11,24 @@ const ComponentsAccordion = ({
   open,
   onClose,
   children,
-  column
+  column,
+  ignorePadding
 }) => {
+
+  const child = ignorePadding ? (
+    <>
+      <NoPaddingBox>
+        {children}
+      </NoPaddingBox>
+    </>
+  ) : (
+    <>
+      <PaddingBox>
+        {children}
+      </PaddingBox>
+    </>
+  )
+
   return (
     <Container>
       <ExampleHeader onClick={onClose}>
@@ -24,7 +41,7 @@ const ComponentsAccordion = ({
       </ExampleHeader>
       <ExampleBodyContainer show={open}>
         <ExampleBody column={column}>
-          {children}
+          {child}
         </ExampleBody>
       </ExampleBodyContainer>
     </Container>

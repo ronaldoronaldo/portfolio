@@ -6,13 +6,13 @@ export const GithubHeatmapHeader = styled.div`
   display: inline-flex;
   .total-contributions {
     color: ${colors.black5};
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 400;
     width: 100%;
     line-height: 26px;
     margin-top: 0;
     @media (min-width: ${sizes.mScreen}px) {
-       font-size: 18px;
+       font-size: 26px;
     }
   }
 `

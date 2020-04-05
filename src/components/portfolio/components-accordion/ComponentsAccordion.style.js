@@ -21,7 +21,7 @@ export const ExampleBodyContainer = styled.div`
   ${({ show }) => `
     height: auto;
     overflow: hidden;
-    max-height: ${show ? '900px' : '0'};
+    max-height: ${show ? '920px' : '0'};
     transition: max-height 0.4s ease-in-out;
   `}
 `

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, spacing } from 'config/ui'
+import { colors, spacing, sizes } from 'config/ui'
 import IconButton from 'components/lib/buttons/IconButton'
 
 export const AccordionMenuContainer = styled.div`
@@ -25,7 +25,10 @@ export const IconButtonStyle = styled(IconButton)`
   border-radius: 0;
   padding: 0;
   padding-right: 16px;
-  font-size: 20px;
+  font-size: 16px;
+  @media (min-width: ${sizes.mScreen}px) {
+    font-size: 20px;
+  }
   margin-bottom: ${props =>
   props.open ? 16 : 0}px;
 `

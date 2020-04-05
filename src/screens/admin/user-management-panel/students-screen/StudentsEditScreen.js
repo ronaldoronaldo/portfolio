@@ -134,7 +134,7 @@ const StudentsEditScreen = props => {
   return (
     <WrapperStyle>
       <AlertRecovery open={notificationOpen}>
-        E-mail enviado para caio.avila@arvoreeducacao.com.br
+        E-mail enviado para caio@arvore.com
       </AlertRecovery>
       <InputStyle
         id={'directorsName'}
@@ -196,7 +196,7 @@ const StudentsEditScreen = props => {
           </RowStyle>
         </ContainerAccordionMenu>
       </AccordionMenu>
-      <AccordionMenu text="Student classes to enroll">
+      <AccordionMenu text="Student classes">
         <ContainerAccordionMenu>
           <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
             <Select
@@ -262,7 +262,7 @@ const StudentsEditScreen = props => {
         </ContainerAccordionMenu>
       </AccordionMenu>
 
-      <AccordionMenu text="Teacher responsibilities">
+      <AccordionMenu text="Teacher lessons">
         <ContainerAccordionMenu>
           <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
             <RowStyle
