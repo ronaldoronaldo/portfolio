@@ -43,4 +43,5 @@ export const Box = styled.div`
 
 export const CertificateImage = styled.img`
   width: 100%;
+  height: auto !important;
 `
