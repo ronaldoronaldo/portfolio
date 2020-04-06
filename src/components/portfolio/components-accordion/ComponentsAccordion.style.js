@@ -11,10 +11,13 @@ export const ExampleHeader = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row;
-  padding: 8px 16px 8px 0;
+  padding: 8px 16px;
   justify-content: space-between;
   border-bottom: 2px solid ${colors.black2};
   cursor: pointer;
+  @media (min-width: 804px) {
+    padding: 8px 16px 8px 0;
+  }
 `
 
 export const ExampleBodyContainer = styled.div`
