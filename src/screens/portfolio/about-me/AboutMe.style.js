@@ -54,6 +54,9 @@ export const Box2 = styled.div`
   @media (min-width: 490px) {
     flex-direction: row;
   }
+  @media (min-width: 608px) {
+    flex-direction: column;
+  }
 `
 
 export const CertificateImage = styled.img`
