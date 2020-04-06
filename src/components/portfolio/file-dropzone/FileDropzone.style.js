@@ -25,10 +25,8 @@ export const PublishersAddBookFilesBox = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 16px;
   @media (min-width: ${sizes.mScreen}px) {
     width: 48.5%;
-    margin-top: 0;
   }
 `
 

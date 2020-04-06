@@ -30,15 +30,18 @@ export const ExampleBodyContainer = styled.div`
 `
 
 export const ExampleBody = styled.div`
-  ${({ column }) => `
+  ${({ column, drag }) => `
     display: flex;
     overflow: hidden;
     flex: 1;
     flex-direction: ${column ? 'column' : 'row'};
-    padding: 56px 0;
     justify-content: center;
     border-bottom: 2px solid ${colors.black2};
-    `}
+    padding: ${drag ? '0' : '56px 0'};    
+    @media (min-width: 804px) {
+      padding: ${drag ? '32px 0' : '56px 0'};
+    }
+  `}
 `
 
 

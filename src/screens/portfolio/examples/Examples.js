@@ -97,7 +97,8 @@ const Examples = () => {
     {
       title: 'File Drag & Drop',
       content: <FileDropzone />,
-      show: false
+      show: false,
+      drag: true
     }
   ])
 
@@ -139,10 +140,11 @@ const Examples = () => {
 
   const renderComponents = () => {
     return components.map((component, index) => {
-      const { title, show, content, column, ignorePadding } = component
+      const { title, show, content, column, ignorePadding, drag } = component
       return (
         <ComponentsAccordion
           column={column}
+          drag={drag}
           ignorePadding={ignorePadding}
           title={title}
           open={show}

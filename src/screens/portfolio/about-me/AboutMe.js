@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react'
 import {
   AboutMeContainer,
   BadgesContainer,
-  Box, Box1, Box2,
+  Box1, Box2,
   CertificateImage,
   Photos,
-  PulseImage
+  PulseImage,
+  SectionSubtitle, SectionTitle
 } from "./AboutMe.style"
 import {GlassFrame} from 'components/portfolio/glass-frame'
 import Badge from 'components/portfolio/badge/Badge'
@@ -139,9 +140,19 @@ const AboutMe = () => {
 
   return (
     <AboutMeContainer>
+      <SectionTitle>Coding Badges</SectionTitle>
+      <SectionSubtitle>
+        Some important topics about my code. Always simple, reusable, readable and optimized as every code should be.
+      </SectionSubtitle>
       <BadgesContainer>
         {renderBadges()}
       </BadgesContainer>
+      <SectionTitle style={{
+        marginTop: 56
+      }}>About Me</SectionTitle>
+      <SectionSubtitle>
+        Some important topics about my code. Always simple, reusable, readable and optimized as every code should be.
+      </SectionSubtitle>
       <Photos>
         <Box1>
           <GlassFrame>

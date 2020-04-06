@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {colors, sizes} from "../../../config/ui"
+import {colors, fontWeights, sizes, spacing} from "../../../config/ui"
 
 export const AboutMeContainer = styled.div`
   color: ${colors.red2};
@@ -15,6 +15,25 @@ export const AboutMeContainer = styled.div`
     top: 212px;
   }
 `
+
+
+export const SectionTitle = styled.span`
+  font-size: 32px;
+  text-align: center;
+  font-weight: ${fontWeights.bold};
+  margin-bottom: ${spacing.small}px;
+  margin-top: 16px;
+  color: #BA7979;
+`
+
+export const SectionSubtitle = styled.span`
+  font-size: 18px;
+  font-weight: ${fontWeights.regular};
+  color: #BA7979;
+  text-align: center;
+  margin-bottom: ${spacing.large + 16}px;
+`
+
 
 export const BadgesContainer = styled.div`
   display: flex;

@@ -12,7 +12,8 @@ const ComponentsAccordion = ({
   onClose,
   children,
   column,
-  ignorePadding
+  ignorePadding,
+  drag
 }) => {
 
   const child = ignorePadding ? (
@@ -40,7 +41,7 @@ const ComponentsAccordion = ({
         />
       </ExampleHeader>
       <ExampleBodyContainer show={open}>
-        <ExampleBody column={column}>
+        <ExampleBody column={column} drag={drag}>
           {child}
         </ExampleBody>
       </ExampleBodyContainer>
