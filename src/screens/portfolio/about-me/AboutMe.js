@@ -1,5 +1,12 @@
 import React, {useEffect, useState} from 'react'
-import {AboutMeContainer, BadgesContainer, Box, CertificateImage, Photos} from "./AboutMe.style"
+import {
+  AboutMeContainer,
+  BadgesContainer,
+  Box, Box1, Box2,
+  CertificateImage,
+  Photos,
+  PulseImage
+} from "./AboutMe.style"
 import {GlassFrame} from 'components/portfolio/glass-frame'
 import Badge from 'components/portfolio/badge/Badge'
 
@@ -135,20 +142,20 @@ const AboutMe = () => {
       <BadgesContainer>
         {renderBadges()}
       </BadgesContainer>
-      <GlassFrame>
-        <CertificateImage src={certificate}/>
-      </GlassFrame>
       <Photos>
-        <Box>
+        <Box1>
           <GlassFrame>
-            <CertificateImage src={magro}/>
+            <CertificateImage src={certificate}/>
           </GlassFrame>
-        </Box>
-        <Box>
+        </Box1>
+        <Box2>
           <GlassFrame>
-            <CertificateImage src={pulse}/>
+            <PulseImage src={magro}/>
           </GlassFrame>
-        </Box>
+          <GlassFrame>
+            <PulseImage src={pulse}/>
+          </GlassFrame>
+        </Box2>
       </Photos>
     </AboutMeContainer>
   )

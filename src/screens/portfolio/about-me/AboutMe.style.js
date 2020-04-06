@@ -29,19 +29,42 @@ export const BadgesContainer = styled.div`
 export const Photos = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  @media (min-width: 608px) {
+    flex-direction: row;
+  }
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin-top: 32px;
 `
 
-export const Box = styled.div`
+export const Box1 = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 290px;
+`
+
+export const Box2 = styled.div`
   flex: 1;
   display: flex;
+  min-width: 193px;
+  flex-direction: column;
+  @media (min-width: 560px) {
+    flex-direction: row;
+  }
+  @media (min-width: 608px) {
+    flex-direction: column;
+  }
 `
 
 export const CertificateImage = styled.img`
+  max-height: 344px;
   width: 100%;
-  height: auto !important;
+`
+
+export const PulseImage = styled.img`
+  max-height: 216px;
+  width: 100%;
 `
