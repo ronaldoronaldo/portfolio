@@ -149,7 +149,7 @@ const AboutMe = () => {
           </GlassFrame>
         </Box1>
         <Box2>
-          <GlassFrame>
+          <GlassFrame style={{minWidth: '48%'}}>
             <PulseImage src={magro}/>
           </GlassFrame>
           <GlassFrame>

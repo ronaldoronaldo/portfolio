@@ -51,20 +51,24 @@ export const Box2 = styled.div`
   display: flex;
   min-width: 193px;
   flex-direction: column;
-  @media (min-width: 560px) {
+  @media (min-width: 490px) {
     flex-direction: row;
-  }
-  @media (min-width: 608px) {
-    flex-direction: column;
   }
 `
 
 export const CertificateImage = styled.img`
-  max-height: 344px;
+  max-height: 400px;
   width: 100%;
 `
 
 export const PulseImage = styled.img`
   max-height: 216px;
   width: 100%;
+  height: auto;
+  @media (min-width: 608px) {
+    width: 100%;
+  }
+  @media (min-width: 803px) {
+    height: 178px;
+  }
 `
