@@ -181,7 +181,7 @@ export const LampImage = styled.img`
     margin-bottom: ${spacing.medium}px;
     @media (min-width: ${sizes.mdScreen}px) {
       width: 171px;
-      height: 79px;
+      height: 171px;
       display: ${smallScreen ? 'none' : 'flex'};
     }
   `}

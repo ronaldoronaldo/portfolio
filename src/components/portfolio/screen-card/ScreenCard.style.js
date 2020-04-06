@@ -13,7 +13,7 @@ export const CardContainer = styled(Link)`
   display: none;
   margin-bottom: ${spacing.large}px;
   position: relative;
-  min-height: 180px;
+  min-height: 170px;
   border: 3px solid ${colors.black2Dark};
   transition: all 0.2s ease-in;
   &:first-child {

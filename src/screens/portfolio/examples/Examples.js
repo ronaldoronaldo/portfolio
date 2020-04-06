@@ -177,12 +177,14 @@ const Examples = () => {
         <ComponentsContainer>{renderComponents()}</ComponentsContainer>
       </ComponentsSection>
       <FormSection>
-        <SectionTitle>Form Example</SectionTitle>
-        <SectionSubtitle>
-          A complete form component with plenty of different functionality and
-          those floating label inputs that I love so much. This form simulates a
-          student register formulary.
-        </SectionSubtitle>
+        <PaddingBox>
+          <SectionTitle>Form Example</SectionTitle>
+          <SectionSubtitle>
+            A complete form component with plenty of different functionality and
+            those floating label inputs that I love so much. This form simulates a
+            student register formulary.
+          </SectionSubtitle>
+        </PaddingBox>
         <FormContainer>
           <StudentsEditScreen />
         </FormContainer>
