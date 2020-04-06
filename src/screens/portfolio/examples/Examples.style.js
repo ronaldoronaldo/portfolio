@@ -77,13 +77,13 @@ export const ResponsiveScreens = styled(Section)`
 
 export const ComponentsSection = styled(Section)`
   flex-direction: column;
-  margin-top: ${spacing.large + 56}px;
-  margin-bottom: ${spacing.large + 56}px;
+  margin-top: ${spacing.large + 16}px;
+  margin-bottom: ${spacing.large + 32}px;
 `
 
 export const FormSection = styled(Section)`
   flex-direction: column;
-  margin-top: ${spacing.large + 32}px;
+  margin-top: ${spacing.large + 16}px;
   margin-bottom: ${spacing.large + 56}px;
 `
 

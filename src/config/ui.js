@@ -140,6 +140,7 @@ export const sizes = {
   padding: 16,
   text: 16,
   smScreen: 480,
+  smdScreen: 720,
   mdScreen: 802,
   // mdScreen: 768,
   specialScreen: 802,
