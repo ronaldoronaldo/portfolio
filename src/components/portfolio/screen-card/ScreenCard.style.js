@@ -13,7 +13,7 @@ export const CardContainer = styled(Link)`
   display: none;
   margin-bottom: ${spacing.large}px;
   position: relative;
-  height: 250px;
+  min-height: 143px;
   border: 3px solid ${colors.black2Dark};
   transition: all 0.2s ease-in;
   &:first-child {
@@ -37,11 +37,9 @@ export const CardContainer = styled(Link)`
 
 export const CardContainerMobile = styled(CardContainer)`
   display: flex;
-  height: 100%;
   @media (min-width: ${sizes.mScreen}px) {
     display: none;
   }
-  
 `
 
 export const CardHeader = styled.div`
@@ -74,7 +72,7 @@ export const OpacityMask = styled.div`
   bottom: 0;
   width: 100%;
   height: 90px;
-  
+
   @media (min-width: ${sizes.sScreen}px) {
     height: 145px;
   }

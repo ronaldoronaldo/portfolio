@@ -30,7 +30,15 @@ export const PublishersAddBookFilesBox = styled.div`
     width: 48.5%;
     margin-top: 0;
   }
-  
+`
+
+export const PublishersAddBookFilesBoxDesktop = styled(
+  PublishersAddBookFilesBox
+)`
+  display: none;
+  @media (min-width: ${sizes.mScreen}px) {
+    display: flex;
+  }
 `
 
 export const PublishersAddBookDropzoneContent = styled.div`

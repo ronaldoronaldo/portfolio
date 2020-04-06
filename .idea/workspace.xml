@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/screen-card/ScreenCard.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/screen-card/ScreenCard.style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,28 +182,7 @@
       <workItem from="1585919147070" duration="39008000" />
       <workItem from="1586010681693" duration="5411000" />
       <workItem from="1586030478044" duration="31749000" />
-      <workItem from="1586125895231" duration="397000" />
-    </task>
-    <task id="LOCAL-00296" summary="só vitoria">
-      <created>1585874742558</created>
-      <option name="number" value="00296" />
-      <option name="presentableId" value="LOCAL-00296" />
-      <option name="project" value="LOCAL" />
-      <updated>1585874742558</updated>
-    </task>
-    <task id="LOCAL-00297" summary="só vitoria">
-      <created>1585875553637</created>
-      <option name="number" value="00297" />
-      <option name="presentableId" value="LOCAL-00297" />
-      <option name="project" value="LOCAL" />
-      <updated>1585875553637</updated>
-    </task>
-    <task id="LOCAL-00298" summary="o homem é mt brabo">
-      <created>1585876257293</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1585876257293</updated>
+      <workItem from="1586125895231" duration="7316000" />
     </task>
     <task id="LOCAL-00299" summary="o homem é mt brabo">
       <created>1585877511032</created>
@@ -525,7 +506,28 @@
       <option name="project" value="LOCAL" />
       <updated>1586109131634</updated>
     </task>
-    <option name="localTasksCounter" value="345" />
+    <task id="LOCAL-00345" summary="about me sizes for mobile">
+      <created>1586127330372</created>
+      <option name="number" value="00345" />
+      <option name="presentableId" value="LOCAL-00345" />
+      <option name="project" value="LOCAL" />
+      <updated>1586127330372</updated>
+    </task>
+    <task id="LOCAL-00346" summary="about me sizes for mobile 2 huge commit">
+      <created>1586142476911</created>
+      <option name="number" value="00346" />
+      <option name="presentableId" value="LOCAL-00346" />
+      <option name="project" value="LOCAL" />
+      <updated>1586142476911</updated>
+    </task>
+    <task id="LOCAL-00347" summary="about me sizes for mobile 3">
+      <created>1586143379586</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1586143379586</updated>
+    </task>
+    <option name="localTasksCounter" value="348" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,9 +563,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="rebimbei" />
-    <MESSAGE value="LeagueVacation.js" />
-    <MESSAGE value="goback header" />
     <MESSAGE value="GG" />
     <MESSAGE value="images" />
     <MESSAGE value="só vitoria" />
@@ -586,13 +585,16 @@
     <MESSAGE value="scrollbar style" />
     <MESSAGE value="new index.html" />
     <MESSAGE value="card container height 100%" />
-    <option name="LAST_COMMIT_MESSAGE" value="card container height 100%" />
+    <MESSAGE value="about me sizes for mobile" />
+    <MESSAGE value="about me sizes for mobile 2 huge commit" />
+    <MESSAGE value="about me sizes for mobile 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="about me sizes for mobile 3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1586109130803">
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2" timestamp="1586144052528">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586109130803" />
+    <state x="528" y="2301" width="923" height="832" key="CommitChangelistDialog2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586144052528" />
     <state x="217" y="2270" width="1536" height="901" key="DiffContextDialog" timestamp="1585944738509">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
@@ -605,26 +607,26 @@
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="792" y="2426" width="395" height="581" key="RollbackChangesDialog/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586037664062" />
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586060228034">
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586142085675">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586060228034" />
+    <state x="648" y="2331" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586142085675" />
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585789603984">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
     <state x="763" y="2633" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1585789603984" />
-    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1586126222287">
+    <state x="643" y="2444" width="863" height="606" key="find.popup" timestamp="1586127780214">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586126222287" />
+    <state x="643" y="2444" width="863" height="606" key="find.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586127780214" />
     <state x="659" y="1332" key="run.anything.popup" timestamp="1586060805735">
       <screen x="70" y="0" width="3770" height="2160" />
     </state>
     <state x="659" y="1332" key="run.anything.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586060805735" />
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1586108977132">
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup" timestamp="1586143740712">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>
-    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586108977132" />
+    <state x="658" y="2419" width="672" height="678" key="search.everywhere.popup/0.2160.1920.1080/1920.2160.1920.1080/70.0.3770.2160@0.2160.1920.1080" timestamp="1586143740712" />
     <state x="720" y="2594" width="540" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585885415803">
       <screen x="0" y="2160" width="1920" height="1080" />
     </state>

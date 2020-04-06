@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react'
+import React, { Fragment, useState } from 'react'
 import {
   PublishersAddBookFiles,
   PublishersAddBookFilesBox,
@@ -7,10 +7,12 @@ import {
   DropzoneContentButton,
   DropzoneContentFileType,
   DropzoneContentTitle,
-  DropzoneContentFileName, DragAndDropText
+  DropzoneContentFileName,
+  DragAndDropText,
+  PublishersAddBookFilesBoxDesktop
 } from './FileDropzone.style'
-import UploadDropzone from "./upload-dropzone"
-import Input from "../../lib/inputs/Input"
+import UploadDropzone from './upload-dropzone'
+import Input from '../../lib/inputs/Input'
 
 const FileDropzone = () => {
   const [bookFile, setBookFile] = useState('')
@@ -48,7 +50,6 @@ const FileDropzone = () => {
       }
     }
   }
-
 
   const setFileReceived = file => {
     setBookFileName(file.name)
@@ -96,7 +97,7 @@ const FileDropzone = () => {
           <DragAndDropText> or drag and drop</DragAndDropText>
         )}
       </PublishersAddBookFilesBox>
-      <PublishersAddBookFilesBox>
+      <PublishersAddBookFilesBoxDesktop>
         <UploadDropzone handleDrop={handleCoverFile}>
           <PublishersAddBookDropzoneContent>
             <DropzoneContentIcon className={'icon-file-png'} />
@@ -122,20 +123,13 @@ const FileDropzone = () => {
           </PublishersAddBookDropzoneContent>
         </UploadDropzone>
         {coverFileName ? (
-          <DropzoneContentFileName>
-            {coverFileName}
-          </DropzoneContentFileName>
+          <DropzoneContentFileName>{coverFileName}</DropzoneContentFileName>
         ) : (
           <DragAndDropText> or drag and drop</DragAndDropText>
         )}
-      </PublishersAddBookFilesBox>
+      </PublishersAddBookFilesBoxDesktop>
     </PublishersAddBookFiles>
   )
 }
 
 export default FileDropzone
-
-
-
-
-
