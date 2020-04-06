@@ -10,7 +10,6 @@ export const ExamplesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 2000px;
   align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
     top: 212px;
