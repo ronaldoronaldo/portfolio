@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Switch, Route, Link, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import { Curriculum } from './curriculum'
 import { AboutMe } from './about-me'

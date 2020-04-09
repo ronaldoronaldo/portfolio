@@ -80,7 +80,7 @@ export const OpacityMask = styled.div`
 
 export const ScreenTitle = styled.div`
   font-size: 28px;
-  color: ${colors.black3Light};
+  color: ${colors.black3Dark};
   position: absolute;
   bottom: -6px;
   line-height: 0.6;
