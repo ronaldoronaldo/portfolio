@@ -5,6 +5,9 @@ export const ROOT_PATH = '/app'
 
 //PORTFOLIO ROUTES
 export const PORTFOLIO_PATH = ROOT_PATH + '/home'
+export const CURRICULUM_PATH = PORTFOLIO_PATH + '/curriculum'
+export const ABOUT_ME_PATH = PORTFOLIO_PATH + '/about-me'
+export const EXAMPLES_PATH = PORTFOLIO_PATH + '/examples'
 
 //SITE ROUTES
 export const SITE_PATH = ROOT_PATH + '/biblioteca'
@@ -207,7 +210,7 @@ const Routes = () => (
     <Route path={LEAGUE_VACATION_PATH} exact component={LeagueVacation} />
 
     {/*portfolio routes*/}
-    <Route path={PORTFOLIO_PATH} exact component={WrapperPortfolio} />
+    <Route path={PORTFOLIO_PATH} component={WrapperPortfolio} />
   </BrowserRouter>
 )
 

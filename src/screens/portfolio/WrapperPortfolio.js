@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Switch, Route, Link, Redirect } from 'react-router-dom'
+
 import { Curriculum } from './curriculum'
 import { AboutMe } from './about-me'
 import { Examples } from './examples'
@@ -12,13 +14,35 @@ import {
   IconBox
 } from './WrapperPortfolio.style'
 import IconButton from 'components/lib/buttons/IconButton'
+import {
+  CURRICULUM_PATH,
+  ABOUT_ME_PATH,
+  EXAMPLES_PATH,
+  PORTFOLIO_PATH
+} from 'routes'
 
-const WrapperPortfolio = () => {
+const WrapperPortfolio = props => {
   const [selectedPage, setSelectedPage] = useState('')
   const [unlock1, setUnlock1] = useState('')
   const [unlock2, setUnlock2] = useState('')
-  const [unlock3, setUnlock3] = useState(false)
+  const [unlock3, setUnlock3] = useState(true)
   const body = document.body
+
+  const routes = [
+    {
+      path: PORTFOLIO_PATH,
+      component: () => {
+        return <div />
+      }
+    },
+    { path: CURRICULUM_PATH, component: Curriculum },
+    { path: ABOUT_ME_PATH, component: AboutMe },
+    { path: EXAMPLES_PATH, component: Examples }
+  ]
+
+  const routeComponents = routes.map(({ path, component }, key) => (
+    <Route exact path={path} component={component} key={key} />
+  ))
 
   const changeBackgroundColor = page => {
     body.setAttribute('class', '')
@@ -33,7 +57,7 @@ const WrapperPortfolio = () => {
     }
   }, [])
 
-  const handleIconClicked = page => {
+  const handleIconClicked = (page, pagePath) => {
     if (selectedPage === '') {
       setSelectedPage(page)
       setTimeout(() => {
@@ -45,6 +69,7 @@ const WrapperPortfolio = () => {
       }, 1000)
       setTimeout(() => {
         setUnlock3(true)
+        props.history.push(pagePath)
       }, 1500)
       return
     }
@@ -53,6 +78,7 @@ const WrapperPortfolio = () => {
     setUnlock1(page)
     setUnlock2(page)
     setUnlock3(true)
+    props.history.push(pagePath)
   }
 
   return (
@@ -63,30 +89,25 @@ const WrapperPortfolio = () => {
         <IconBox selectedPage={selectedPage}>
           <IconButton
             iconName={'clipboard-content'}
-            onClick={() => handleIconClicked('curriculum')}
+            onClick={() => handleIconClicked('curriculum', CURRICULUM_PATH)}
           />
         </IconBox>
         <IconBox selectedPage={selectedPage}>
           <IconButton
             iconName={'user'}
-            onClick={() => handleIconClicked('about-me')}
+            onClick={() => handleIconClicked('about-me', ABOUT_ME_PATH)}
           />
         </IconBox>
         <IconBox selectedPage={selectedPage}>
           <IconButton
             iconName={'browser-code'}
-            onClick={() => handleIconClicked('examples')}
+            onClick={() => handleIconClicked('examples', EXAMPLES_PATH)}
           />
         </IconBox>
-        {/*<IconButton iconName={'clipboard-content'} onClick={() => handleIconClicked('curriculum')}/>*/}
-        {/*<IconButton iconName={'user'} onClick={() => handleIconClicked('about-me')}/>*/}
-        {/*<IconButton iconName={'browser-code'} onClick={() => handleIconClicked('examples')}/>*/}
       </IconsContainer>
       <IconsBorder selectedPage={unlock2} />
       <PageContent unlock3={unlock3}>
-        {selectedPage === 'curriculum' && <Curriculum />}
-        {selectedPage === 'about-me' && <AboutMe />}
-        {selectedPage === 'examples' && <Examples />}
+        <Switch>{routeComponents}</Switch>
       </PageContent>
     </Page>
   )
