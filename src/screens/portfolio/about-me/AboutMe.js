@@ -151,7 +151,7 @@ const AboutMe = () => {
         marginTop: 56
       }}>About Me</SectionTitle>
       <SectionSubtitle>
-        Some important topics about my code. Always simple, reusable, readable and optimized as every code should be.
+        Pictures of achievements and career moments.
       </SectionSubtitle>
       <Photos>
         <Box1>
