@@ -23,9 +23,8 @@ import {
 
 const WrapperPortfolio = props => {
   const [selectedPage, setSelectedPage] = useState('')
-  const [unlock1, setUnlock1] = useState('')
-  const [unlock2, setUnlock2] = useState('')
-  const [unlock3, setUnlock3] = useState(true)
+  const [removeLogo, setRemoveLogo] = useState(false)
+  const [showPageContent, setShowPageContent] = useState(false)
   const body = document.body
 
   const routes = [
@@ -60,32 +59,27 @@ const WrapperPortfolio = props => {
   const handleIconClicked = (page, pagePath) => {
     if (selectedPage === '') {
       setSelectedPage(page)
+      setShowPageContent(true)
+      changeBackgroundColor(page)
       setTimeout(() => {
-        changeBackgroundColor(page)
-        setUnlock1(page)
+        setRemoveLogo(true)
       }, 500)
       setTimeout(() => {
-        setUnlock2(page)
-      }, 1000)
-      setTimeout(() => {
-        setUnlock3(true)
         props.history.push(pagePath)
       }, 1500)
       return
     }
     changeBackgroundColor(page)
     setSelectedPage(page)
-    setUnlock1(page)
-    setUnlock2(page)
-    setUnlock3(true)
+    setShowPageContent(true)
     props.history.push(pagePath)
   }
 
   return (
     <Page selectedPage={selectedPage}>
-      {unlock1 === '' && <LogoImage src={logo} selectedPage={selectedPage} />}
+      {!removeLogo && <LogoImage src={logo} selectedPage={selectedPage} />}
 
-      <IconsContainer selectedPage={unlock1}>
+      <IconsContainer selectedPage={selectedPage}>
         <IconBox selectedPage={selectedPage}>
           <IconButton
             iconName={'clipboard-content'}
@@ -105,8 +99,8 @@ const WrapperPortfolio = props => {
           />
         </IconBox>
       </IconsContainer>
-      <IconsBorder selectedPage={unlock2} />
-      <PageContent unlock3={unlock3}>
+      <IconsBorder selectedPage={selectedPage} />
+      <PageContent showPageContent={showPageContent}>
         <Switch>{routeComponents}</Switch>
       </PageContent>
     </Page>

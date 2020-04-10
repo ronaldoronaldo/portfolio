@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body.curriculum {
     background-color: ${colors.portBlack};
-    
+    transition-delay: 0.5s;
     ::-webkit-scrollbar-thumb {
       background: ${colors.portGray}; 
     }
@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
 
   body.about-me {
     background-color: ${colors.red1};
-    
+    transition-delay: 0.5s;    
     ::-webkit-scrollbar-thumb {
       background: ${colors.red2}; 
     }
@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
   
   body.examples {
     background-color: ${colors.black1};
-    
+    transition-delay: 0.5s;
     ::-webkit-scrollbar-thumb {
       background: ${colors.black4}; 
     }
@@ -87,7 +87,7 @@ const GlobalStyle = createGlobalStyle`
   
   body.introduction {
     overflow-y: scroll;
-    
+    transition-delay: 0.5s;    
     ::-webkit-scrollbar-thumb {
       background: transparent; 
     }

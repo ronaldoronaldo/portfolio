@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 import { colors, spacing, sizes } from 'config/ui'
 
+const animationDelay1 = 0.5
+const animationDelay2 = 1
+const animationDelay3 = 1.5
+
 export const Page = styled.div`
   ${({selectedPage}) => css`
     display: flex;
@@ -21,7 +25,8 @@ export const IconsContainer = styled.div`
   ${({selectedPage}) => css`
       top: ${selectedPage ? '20px' : '48vh'};
       padding: 0 ${spacing.medium}px;
-      transition: top 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      transition-delay: ${animationDelay1}s;
       position: absolute;
       display: flex;
       width: 100%;
@@ -47,6 +52,7 @@ export const IconsContainer = styled.div`
           
           &:hover {
             > span {
+             transition: none;
              color: ${
               selectedPage === 'curriculum' ?
                 colors.portGreen :
@@ -71,7 +77,8 @@ export const IconsContainer = styled.div`
             box-shadow: 0 0 0 0 rgba(83, 101, 111, 0.4);
           }
           > span {
-            transition: none;
+            transition: all 0.5s ease-in-out;
+            transition-delay: ${animationDelay1}s;
             font-size: 70px;
             color: ${
             selectedPage === 'curriculum' ?
@@ -132,6 +139,7 @@ export const IconsBorder = styled.div`
     };
     width: ${selectedPage === '' ? 0 : 100}%;
     transition: width 0.5s ease-out;
+    transition-delay: ${animationDelay2}s;
     position: absolute;
     top: 100px;
     @media (min-width: ${sizes.mdScreen}px) {
@@ -149,9 +157,10 @@ export const IconsBorder = styled.div`
 `
 
 export const PageContent = styled.div`
-  ${({unlock3}) => css`
-    opacity: ${unlock3 ? 1 : 0};
+  ${({showPageContent}) => css`
+    opacity: ${showPageContent ? 1 : 0};
     transition: opacity 0.5s ease-out;
+    transition-delay: ${animationDelay3}s;
     width: 100%;
     @media (min-width: ${sizes.mdScreen}px) {
       width: 800px;
