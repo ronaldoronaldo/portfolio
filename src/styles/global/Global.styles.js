@@ -5,6 +5,7 @@ import './icons.css'
 import AvertaRegular from '../fonts/Averta-Regular.otf'
 import AvertaSemiBold from '../fonts/Averta-Semibold.otf'
 import AvertaBold from '../fonts/Averta-Bold.otf'
+import { shortAnimation } from 'screens/portfolio/WrapperPortfolio'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -38,23 +39,26 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     overflow-x: hidden;
-    transition: background-color 0.5s ease-out;
+    transition: background-color ${shortAnimation}s ease-out;
     ::-webkit-scrollbar {
       width: 10px;
     }
     ::-webkit-scrollbar-track {
+      transition: background-color ${shortAnimation}s ease-out;
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
+      transition: background-color ${shortAnimation}s ease-out;
       background: ${colors.blue3}; 
     }
     ::-webkit-scrollbar-thumb:hover {
+      transition: background-color ${shortAnimation}s ease-out;
       background: ${colors.blue3}; 
     }
   }
   body.curriculum {
     background-color: ${colors.portBlack};
-    transition-delay: 0.5s;
+    transition-delay: ${shortAnimation}s;
     ::-webkit-scrollbar-thumb {
       background: ${colors.portGray}; 
     }
@@ -65,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
 
   body.about-me {
     background-color: ${colors.red1};
-    transition-delay: 0.5s;    
+    transition-delay: ${shortAnimation}s;    
     ::-webkit-scrollbar-thumb {
       background: ${colors.red2}; 
     }
@@ -76,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
   
   body.examples {
     background-color: ${colors.black1};
-    transition-delay: 0.5s;
+    transition-delay: ${shortAnimation}s;
     ::-webkit-scrollbar-thumb {
       background: ${colors.black4}; 
     }
@@ -87,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
   
   body.introduction {
     overflow-y: scroll;
-    transition-delay: 0.5s;    
+    transition-delay: ${shortAnimation}s;    
     ::-webkit-scrollbar-thumb {
       background: transparent; 
     }

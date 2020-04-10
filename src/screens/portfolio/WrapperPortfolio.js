@@ -23,7 +23,6 @@ import {
 export const shortAnimation = 0.5
 
 const WrapperPortfolio = props => {
-  const [iconsContainerAnimationDelay, setIconsContainerAnimationDelay] = useState(shortAnimation)
   const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(shortAnimation*2)
   const [pageContentAnimationDelay, setPageContentAnimationDelay] = useState(shortAnimation*3)
   const [selectedPage, setSelectedPage] = useState('')
@@ -100,7 +99,7 @@ const WrapperPortfolio = props => {
   return (
     <Page selectedPage={selectedPage}>
       {!removeLogo && <LogoImage src={logo} selectedPage={selectedPage} />}
-      <IconsContainer selectedPage={selectedPage} animationDelay={iconsContainerAnimationDelay}>
+      <IconsContainer selectedPage={selectedPage} animationDelay={shortAnimation}>
         <IconButton
           iconName={'clipboard-content'}
           onClick={() => handleIconClicked('curriculum', CURRICULUM_PATH)}
