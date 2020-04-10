@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components'
 import { colors, spacing, sizes } from 'config/ui'
 
-const animationDelay1 = 0.5
-const animationDelay2 = 1
-const animationDelay3 = 1.5
-
 export const Page = styled.div`
   ${({selectedPage}) => css`
     display: flex;
@@ -22,11 +18,11 @@ export const Page = styled.div`
 `
 
 export const IconsContainer = styled.div`
-  ${({selectedPage}) => css`
+  ${({selectedPage, animationDelay}) => css`
       top: ${selectedPage ? '20px' : '48vh'};
       padding: 0 ${spacing.medium}px;
       transition: all 0.5s ease-in-out;
-      transition-delay: ${animationDelay1}s;
+      transition-delay: ${animationDelay}s;
       position: absolute;
       display: flex;
       width: 100%;
@@ -78,7 +74,7 @@ export const IconsContainer = styled.div`
           }
           > span {
             transition: all 0.5s ease-in-out;
-            transition-delay: ${animationDelay1}s;
+            transition-delay: ${animationDelay}s;
             font-size: 70px;
             color: ${
             selectedPage === 'curriculum' ?
@@ -129,7 +125,7 @@ export const LogoImage = styled.img`
 `
 
 export const IconsBorder = styled.div`
-  ${({selectedPage}) => css`
+  ${({selectedPage, animationDelay}) => css`
     border-bottom: 2px solid;
     border-color: ${
     selectedPage === 'curriculum' ?
@@ -139,7 +135,7 @@ export const IconsBorder = styled.div`
     };
     width: ${selectedPage === '' ? 0 : 100}%;
     transition: width 0.5s ease-out;
-    transition-delay: ${animationDelay2}s;
+    transition-delay: ${animationDelay}s;
     position: absolute;
     top: 100px;
     @media (min-width: ${sizes.mdScreen}px) {
@@ -157,10 +153,10 @@ export const IconsBorder = styled.div`
 `
 
 export const PageContent = styled.div`
-  ${({showPageContent}) => css`
+  ${({showPageContent, animationDelay}) => css`
     opacity: ${showPageContent ? 1 : 0};
     transition: opacity 0.5s ease-out;
-    transition-delay: ${animationDelay3}s;
+    transition-delay: ${animationDelay}s;
     width: 100%;
     @media (min-width: ${sizes.mdScreen}px) {
       width: 800px;

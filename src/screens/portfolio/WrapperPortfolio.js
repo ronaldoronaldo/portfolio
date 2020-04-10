@@ -22,6 +22,9 @@ import {
 } from 'routes'
 
 const WrapperPortfolio = props => {
+  const [pageContentAnimationDelay, setPageContentAnimationDelay] = useState(1.5)
+  const [iconsContainerAnimationDelay, setIconsContainerAnimationDelay] = useState(0.5)
+  const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(1)
   const [selectedPage, setSelectedPage] = useState('')
   const [removeLogo, setRemoveLogo] = useState(false)
   const [showPageContent, setShowPageContent] = useState(false)
@@ -65,21 +68,25 @@ const WrapperPortfolio = props => {
         setRemoveLogo(true)
       }, 500)
       setTimeout(() => {
+        setPageContentAnimationDelay(0.5)
         props.history.push(pagePath)
       }, 1500)
       return
     }
-    changeBackgroundColor(page)
-    setSelectedPage(page)
-    setShowPageContent(true)
-    props.history.push(pagePath)
+    setShowPageContent(false)
+    setTimeout(() => {
+      changeBackgroundColor(page)
+      setSelectedPage(page)
+      setShowPageContent(true)
+      props.history.push(pagePath)
+    }, 2000)
+
   }
 
   return (
     <Page selectedPage={selectedPage}>
       {!removeLogo && <LogoImage src={logo} selectedPage={selectedPage} />}
-
-      <IconsContainer selectedPage={selectedPage}>
+      <IconsContainer selectedPage={selectedPage} animationDelay={iconsContainerAnimationDelay}>
         <IconBox selectedPage={selectedPage}>
           <IconButton
             iconName={'clipboard-content'}
@@ -99,8 +106,8 @@ const WrapperPortfolio = props => {
           />
         </IconBox>
       </IconsContainer>
-      <IconsBorder selectedPage={selectedPage} />
-      <PageContent showPageContent={showPageContent}>
+      <IconsBorder selectedPage={selectedPage} animationDelay={iconsBorderAnimationDelay} />
+      <PageContent showPageContent={showPageContent} animationDelay={pageContentAnimationDelay}>
         <Switch>{routeComponents}</Switch>
       </PageContent>
     </Page>
