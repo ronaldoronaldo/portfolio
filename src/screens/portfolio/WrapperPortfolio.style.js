@@ -20,8 +20,8 @@ export const Page = styled.div`
 `
 
 export const IconsContainer = styled.div`
-  ${({selectedPage, animationDelay}) => css`
-      top: ${selectedPage ? '20px' : '48vh'};
+  ${({selectedPage, animationDelay, changingPages}) => css`
+      top: ${changingPages ? '-400px' : selectedPage ? '20px' : '48vh'};
       padding: 0 ${spacing.medium}px;
       transition: all ${shortAnimation}s ease-in-out;
       transition-delay: ${animationDelay}s;
@@ -48,7 +48,6 @@ export const IconsContainer = styled.div`
         
         &:hover {
           > span {
-           transition: none;
            color: ${
             selectedPage === 'curriculum' ?
               colors.portGreen :
@@ -73,8 +72,6 @@ export const IconsContainer = styled.div`
           box-shadow: 0 0 0 0 rgba(83, 101, 111, 0.4);
         }
         > span {
-          transition: all ${shortAnimation}s ease-in-out;
-          transition-delay: ${animationDelay}s;
           font-size: 70px;
           color: ${
           selectedPage === 'curriculum' ?
@@ -107,7 +104,7 @@ export const LogoImage = styled.img`
 `
 
 export const IconsBorder = styled.div`
-  ${({selectedPage, animationDelay}) => css`
+  ${({selectedPage, animationDelay, expand}) => css`
     border-bottom: 2px solid;
     border-color: ${
     selectedPage === 'curriculum' ?
@@ -115,13 +112,13 @@ export const IconsBorder = styled.div`
       selectedPage === 'about-me' ?
         colors.red2 : colors.black2Dark
     };
-    width: ${selectedPage === '' ? 0 : 100}%;
+    width: ${expand ? 100 : 0}%;
     transition: all ${shortAnimation}s ease-out;
-    transition-delay: ${animationDelay}s;
+    transition-delay: ${selectedPage === '' ? animationDelay : 0}s;
     position: absolute;
     top: 100px;
     @media (min-width: ${sizes.mdScreen}px) {
-      width: ${selectedPage === '' ? 0 : 800}px;
+      width: ${expand ? 800 : 0}px;
       top: 160px;
       border-bottom: 4px solid;
       border-color: ${

@@ -29,10 +29,13 @@ export const shortAnimation = 0.5
 // }
 
 const WrapperPortfolio = props => {
+  const [iconsContainerAnimationDelay, setIconsContainerAnimationDelay] = useState(shortAnimation)
   const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(shortAnimation*2)
   const [pageContentAnimationDelay, setPageContentAnimationDelay] = useState(shortAnimation*3)
   const [removeLogo, setRemoveLogo] = useState(false)
   const [showPageContent, setShowPageContent] = useState(false)
+  const [changingPages, setChangingPages] = useState(true)
+  const [triggerBorder, setTriggerBorder] = useState(false)
   const body = document.body
   let location = useLocation()
   const currentPath = location.pathname.split('/')[3]
@@ -41,9 +44,11 @@ const WrapperPortfolio = props => {
 
   useEffect(() => {
     if (currentPath) {
+      changeBackgroundColor(currentPath)
       cancelAnimations(currentPath)
     }
     else {
+      setChangingPages(false)
       body.setAttribute('class', '')
       body.classList.add('introduction')
     }
@@ -75,12 +80,14 @@ const WrapperPortfolio = props => {
 
   const introductionAnimation = (page, pagePath) => {
     setSelectedPage(page)
+    setTriggerBorder(true)
     changeBackgroundColor(page)
     setTimeout(() => {
       setRemoveLogo(true)
     }, shortAnimation*1000)
     setTimeout(() => {
       setPageContentAnimationDelay(0)
+      setIconsContainerAnimationDelay(0)
       setIconsBorderAnimationDelay(shortAnimation)
       props.history.push(pagePath)
       setShowPageContent(true)
@@ -99,36 +106,44 @@ const WrapperPortfolio = props => {
     if(page === currentPath) {
       return
     }
-    setPageContentAnimationDelay(0)
-    setIconsBorderAnimationDelay(shortAnimation)
+    setIconsBorderAnimationDelay(0)
+    setChangingPages(true)
     setShowPageContent(false)
+    setTriggerBorder(false)
     setTimeout(() => {
       changeBackgroundColor(page)
       setSelectedPage(page)
     }, shortAnimation*600)
     setTimeout(() => {
+      setChangingPages(false)
+      setTriggerBorder(true)
       props.history.push(pagePath)
       setShowPageContent(true)
     }, shortAnimation*2600)
   }
 
   const cancelAnimations = page => {
+    setTriggerBorder(false)
     setRemoveLogo(true)
     setPageContentAnimationDelay(0)
+    setIconsContainerAnimationDelay(0)
     setIconsBorderAnimationDelay(shortAnimation)
     setShowPageContent(false)
-    changeBackgroundColor(page)
     setSelectedPage(page)
+    setTimeout(() => {
+      setChangingPages(false)
+      setTriggerBorder(true)
+    }, shortAnimation*1000)
     setTimeout(() => {
       setShowPageContent(true)
       window.scrollTo(0, 0)
-    }, shortAnimation*1000)
+    }, shortAnimation*3000)
   }
 
   return (
     <Page selectedPage={selectedPage}>
       {!removeLogo && <LogoImage src={logo} selectedPage={selectedPage} />}
-      <IconsContainer selectedPage={selectedPage} animationDelay={shortAnimation}>
+      <IconsContainer selectedPage={selectedPage} changingPages={changingPages} animationDelay={iconsContainerAnimationDelay}>
         <IconButton
           iconName={'clipboard-content'}
           onClick={() => handleIconClicked('curriculum', CURRICULUM_PATH)}
@@ -142,7 +157,7 @@ const WrapperPortfolio = props => {
           onClick={() => handleIconClicked('examples', EXAMPLES_PATH)}
         />
       </IconsContainer>
-      <IconsBorder selectedPage={selectedPage} animationDelay={iconsBorderAnimationDelay} />
+      <IconsBorder selectedPage={selectedPage} expand={triggerBorder} animationDelay={iconsBorderAnimationDelay} />
       <PageContent showPageContent={showPageContent} animationDelay={pageContentAnimationDelay}>
         <Switch>{routeComponents}</Switch>
       </PageContent>
