@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 
 import { Curriculum } from './curriculum'
 import { AboutMe } from './about-me'
@@ -22,17 +22,31 @@ import {
 
 export const shortAnimation = 0.5
 
+// const paths = {
+//   "curriculum": CURRICULUM_PATH,
+//   "about-me": ABOUT_ME_PATH,
+//   "examples": EXAMPLES_PATH
+// }
+
 const WrapperPortfolio = props => {
   const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(shortAnimation*2)
   const [pageContentAnimationDelay, setPageContentAnimationDelay] = useState(shortAnimation*3)
-  const [selectedPage, setSelectedPage] = useState('')
   const [removeLogo, setRemoveLogo] = useState(false)
   const [showPageContent, setShowPageContent] = useState(false)
   const body = document.body
+  let location = useLocation()
+  const currentPath = location.pathname.split('/')[3]
+  const [selectedPage, setSelectedPage] = useState(currentPath || '')
+
 
   useEffect(() => {
-    body.setAttribute('class', '')
-    body.classList.add('introduction')
+    if (currentPath) {
+      cancelAnimations(currentPath)
+    }
+    else {
+      body.setAttribute('class', '')
+      body.classList.add('introduction')
+    }
     return () => {
       body.setAttribute('class', '')
     }
@@ -61,7 +75,6 @@ const WrapperPortfolio = props => {
 
   const introductionAnimation = (page, pagePath) => {
     setSelectedPage(page)
-    setShowPageContent(true)
     changeBackgroundColor(page)
     setTimeout(() => {
       setRemoveLogo(true)
@@ -70,6 +83,7 @@ const WrapperPortfolio = props => {
       setPageContentAnimationDelay(0)
       setIconsBorderAnimationDelay(shortAnimation)
       props.history.push(pagePath)
+      setShowPageContent(true)
     }, shortAnimation*3000)
   }
 
@@ -82,18 +96,33 @@ const WrapperPortfolio = props => {
   }
 
   const changePageAnimation = (page, pagePath) => {
+    if(page === currentPath) {
+      return
+    }
     setPageContentAnimationDelay(0)
     setIconsBorderAnimationDelay(shortAnimation)
     setShowPageContent(false)
     setTimeout(() => {
       changeBackgroundColor(page)
       setSelectedPage(page)
-    }, shortAnimation*1000)
+    }, shortAnimation*600)
     setTimeout(() => {
       props.history.push(pagePath)
       setShowPageContent(true)
-    }, shortAnimation*3000)
+    }, shortAnimation*2600)
+  }
 
+  const cancelAnimations = page => {
+    setRemoveLogo(true)
+    setPageContentAnimationDelay(0)
+    setIconsBorderAnimationDelay(shortAnimation)
+    setShowPageContent(false)
+    changeBackgroundColor(page)
+    setSelectedPage(page)
+    setTimeout(() => {
+      setShowPageContent(true)
+      window.scrollTo(0, 0)
+    }, shortAnimation*1000)
   }
 
   return (
