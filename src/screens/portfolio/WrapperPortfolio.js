@@ -11,7 +11,6 @@ import {
   LogoImage,
   IconsBorder,
   PageContent,
-  IconBox
 } from './WrapperPortfolio.style'
 import IconButton from 'components/lib/buttons/IconButton'
 import {
@@ -21,14 +20,24 @@ import {
   PORTFOLIO_PATH
 } from 'routes'
 
+export const shortAnimation = 0.5
+
 const WrapperPortfolio = props => {
-  const [pageContentAnimationDelay, setPageContentAnimationDelay] = useState(1.5)
-  const [iconsContainerAnimationDelay, setIconsContainerAnimationDelay] = useState(0.5)
-  const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(1)
+  const [iconsContainerAnimationDelay, setIconsContainerAnimationDelay] = useState(shortAnimation)
+  const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(shortAnimation*2)
+  const [pageContentAnimationDelay, setPageContentAnimationDelay] = useState(shortAnimation*3)
   const [selectedPage, setSelectedPage] = useState('')
   const [removeLogo, setRemoveLogo] = useState(false)
   const [showPageContent, setShowPageContent] = useState(false)
   const body = document.body
+
+  useEffect(() => {
+    body.setAttribute('class', '')
+    body.classList.add('introduction')
+    return () => {
+      body.setAttribute('class', '')
+    }
+  }, [])
 
   const routes = [
     {
@@ -51,35 +60,40 @@ const WrapperPortfolio = props => {
     body.classList.add(page)
   }
 
-  useEffect(() => {
-    body.setAttribute('class', '')
-    body.classList.add('introduction')
-    return () => {
-      body.setAttribute('class', '')
-    }
-  }, [])
+  const introductionAnimation = (page, pagePath) => {
+    setSelectedPage(page)
+    setShowPageContent(true)
+    changeBackgroundColor(page)
+    setTimeout(() => {
+      setRemoveLogo(true)
+    }, shortAnimation*1000)
+    setTimeout(() => {
+      setPageContentAnimationDelay(0)
+      setIconsBorderAnimationDelay(shortAnimation)
+      props.history.push(pagePath)
+    }, shortAnimation*3000)
+  }
 
   const handleIconClicked = (page, pagePath) => {
     if (selectedPage === '') {
-      setSelectedPage(page)
-      setShowPageContent(true)
-      changeBackgroundColor(page)
-      setTimeout(() => {
-        setRemoveLogo(true)
-      }, 500)
-      setTimeout(() => {
-        setPageContentAnimationDelay(0.5)
-        props.history.push(pagePath)
-      }, 1500)
+      introductionAnimation(page, pagePath)
       return
     }
+    changePageAnimation(page, pagePath)
+  }
+
+  const changePageAnimation = (page, pagePath) => {
+    setPageContentAnimationDelay(0)
+    setIconsBorderAnimationDelay(shortAnimation)
     setShowPageContent(false)
     setTimeout(() => {
       changeBackgroundColor(page)
       setSelectedPage(page)
-      setShowPageContent(true)
+    }, shortAnimation*1000)
+    setTimeout(() => {
       props.history.push(pagePath)
-    }, 2000)
+      setShowPageContent(true)
+    }, shortAnimation*3000)
 
   }
 
@@ -87,24 +101,18 @@ const WrapperPortfolio = props => {
     <Page selectedPage={selectedPage}>
       {!removeLogo && <LogoImage src={logo} selectedPage={selectedPage} />}
       <IconsContainer selectedPage={selectedPage} animationDelay={iconsContainerAnimationDelay}>
-        <IconBox selectedPage={selectedPage}>
-          <IconButton
-            iconName={'clipboard-content'}
-            onClick={() => handleIconClicked('curriculum', CURRICULUM_PATH)}
-          />
-        </IconBox>
-        <IconBox selectedPage={selectedPage}>
-          <IconButton
-            iconName={'user'}
-            onClick={() => handleIconClicked('about-me', ABOUT_ME_PATH)}
-          />
-        </IconBox>
-        <IconBox selectedPage={selectedPage}>
-          <IconButton
-            iconName={'browser-code'}
-            onClick={() => handleIconClicked('examples', EXAMPLES_PATH)}
-          />
-        </IconBox>
+        <IconButton
+          iconName={'clipboard-content'}
+          onClick={() => handleIconClicked('curriculum', CURRICULUM_PATH)}
+        />
+        <IconButton
+          iconName={'user'}
+          onClick={() => handleIconClicked('about-me', ABOUT_ME_PATH)}
+        />
+        <IconButton
+          iconName={'browser-code'}
+          onClick={() => handleIconClicked('examples', EXAMPLES_PATH)}
+        />
       </IconsContainer>
       <IconsBorder selectedPage={selectedPage} animationDelay={iconsBorderAnimationDelay} />
       <PageContent showPageContent={showPageContent} animationDelay={pageContentAnimationDelay}>
