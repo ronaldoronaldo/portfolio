@@ -211,9 +211,7 @@ const StudentsEditScreen = props => {
               activeSelectButton={units}
               labelColor={colors.black3}
               dropdownStyle={{
-                top: 43,
                 width: '100%',
-                marginLeft: 16
               }}
               style={{
                 borderColor: colors.black3,
@@ -292,7 +290,6 @@ const StudentsEditScreen = props => {
               activeSelectButton={userType}
               labelColor={colors.black3}
               dropdownStyle={{
-                top: 43,
                 width: '100%'
               }}
               style={{
