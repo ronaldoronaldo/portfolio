@@ -203,6 +203,11 @@ export const LeftColumnStyle = styled(ColumnStyled)`
   }
 `
 
+export const SectionContainer = styled.div`
+  position: relative;
+  padding-top: 6px;
+`
+
 export const RightColumnStyle = styled(ColumnStyled)`
   padding: 0 !important;
 `

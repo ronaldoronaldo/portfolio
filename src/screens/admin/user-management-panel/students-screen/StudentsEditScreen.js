@@ -17,7 +17,8 @@ import {
   AccessCodeLabel,
   InputSearchStyle,
   ContainerAccordionMenu,
-  InfoRow
+  InfoRow,
+  SectionContainer
 } from 'styles/common/Common.styles'
 import { colors } from 'config/ui'
 import Button from 'components/lib/buttons/Button'
@@ -196,7 +197,7 @@ const StudentsEditScreen = props => {
       </AccordionMenu>
       <AccordionMenu text="Student classes">
         <ContainerAccordionMenu>
-          <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
+          <SectionContainer style={{ margin: 0 }}>
             <Select
               text={units}
               noMarginLeft
@@ -259,7 +260,7 @@ const StudentsEditScreen = props => {
                 emptyLabel="unidades"
               />
             </RowStyle>
-          </LeftColumnStyle>
+          </SectionContainer>
         </ContainerAccordionMenu>
       </AccordionMenu>
 
@@ -282,7 +283,7 @@ const StudentsEditScreen = props => {
 
       <AccordionMenu text="Secondary information" haveBorderBottom>
         <ContainerAccordionMenu>
-          <LeftColumnStyle>
+          <SectionContainer>
             <Select
               text={userType}
               items={['Admin', 'Professor']}
@@ -320,7 +321,6 @@ const StudentsEditScreen = props => {
                 />
               </RightColumnStyle>
             </InfoRow>
-
             <LabelAccordionStyle>Esse aluno é bolsista?</LabelAccordionStyle>
             <ScholarshipSwitchContainer>
               <div>
@@ -332,7 +332,7 @@ const StudentsEditScreen = props => {
                 />
               </div>
             </ScholarshipSwitchContainer>
-          </LeftColumnStyle>
+          </SectionContainer>
         </ContainerAccordionMenu>
       </AccordionMenu>
 
