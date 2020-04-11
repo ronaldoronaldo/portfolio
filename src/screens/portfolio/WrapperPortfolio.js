@@ -31,11 +31,20 @@ const WrapperPortfolio = props => {
   const [changingPages, setChangingPages] = useState(true)
   const [triggerBorder, setTriggerBorder] = useState(false)
   const body = document.body
-  let location = useLocation()
-  const currentPath = location.pathname.split('/')[3]
+  let componentLocation = useLocation()
+  const currentPath = componentLocation.pathname.split('/')[3]
   const [selectedPage, setSelectedPage] = useState(currentPath || '')
 
   useEffect(() => {
+    const { history } = props
+    const unlisten = history.listen((newLocation, action) => {
+      console.log('action', action)
+      if (action === 'POP') {
+        //provisorio
+        location.reload()
+      }
+    })
+
     if (currentPath) {
       changeBackgroundColor(currentPath)
       cancelAnimations(currentPath)
@@ -47,6 +56,7 @@ const WrapperPortfolio = props => {
     }
     return () => {
       body.setAttribute('class', '')
+      unlisten()
     }
   }, [])
 

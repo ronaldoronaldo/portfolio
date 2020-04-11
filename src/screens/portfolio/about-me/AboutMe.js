@@ -129,9 +129,9 @@ const AboutMe = () => {
   }, [])
 
   const renderBadges = () => {
-    return badges.map(badge => {
+    return badges.map((badge,index) => {
       return (
-        <GlassFrame animate={animate} animate2={animate2}>
+        <GlassFrame key={index} animate={animate} animate2={animate2}>
           <Badge {...badge}/>
         </GlassFrame>
       )

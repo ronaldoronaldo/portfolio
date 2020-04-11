@@ -9,10 +9,10 @@ const Meter = ({
   const unfilled = 5 - filled
   let circlesArray = []
   for (let i=0; i<filled; i++){
-    circlesArray.push(<Circle filled/>)
+    circlesArray.push(<Circle key={i} filled/>)
   }
   for (let j=0; j<unfilled; j++){
-    circlesArray.push(<Circle/>)
+    circlesArray.push(<Circle key={(j+1)*10}/>)
   }
   return (
     <MeterRow>

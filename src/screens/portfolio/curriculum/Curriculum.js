@@ -133,9 +133,9 @@ const Curriculum = props => {
   const renderExperienceList = experienceList => {
     return (
       <ExperienceList>
-        {experienceList.map(item => {
+        {experienceList.map((item, index) => {
           return (
-            <ExperienceListItem>
+            <ExperienceListItem key={index}>
               {item}
             </ExperienceListItem>
           )
@@ -145,9 +145,9 @@ const Curriculum = props => {
   }
 
   const renderContactsInfo = () => {
-    return contactsInfo.map(contact => {
+    return contactsInfo.map((contact,index) => {
       return (
-        <InformationRow>
+        <InformationRow key={index}>
           <Info>
             {contact.label}
           </Info>
@@ -210,13 +210,13 @@ const Curriculum = props => {
           {renderTitle('Languages & Frameworks')}
           <LanguagesContainer>
             <LanguagesLeftColumn>
-              {leftSideLanguages.map(item => {
-                return <ExperienceMeter language={item.label} level={item.level}/>
+              {leftSideLanguages.map((item, index) => {
+                return <ExperienceMeter language={item.label} level={item.level} key={index}/>
               })}
             </LanguagesLeftColumn>
             <LanguagesRightColumn>
-              {rightSideLanguages.map(item => {
-                return <ExperienceMeter language={item.label} level={item.level}/>
+              {rightSideLanguages.map((item, index) => {
+                return <ExperienceMeter language={item.label} level={item.level} key={index}/>
               })}
             </LanguagesRightColumn>
           </LanguagesContainer>
