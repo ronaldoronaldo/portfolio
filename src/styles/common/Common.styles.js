@@ -195,7 +195,7 @@ export const ColumnStyled = styled.div`
 
 export const LeftColumnStyle = styled(ColumnStyled)`
   margin-right: 0;
-  padding: 0;
+  padding: 0 !important;
   margin-bottom: 16px;
   @media (min-width: ${sizes.specialScreen}px) {
     margin-bottom: 0;
@@ -203,7 +203,9 @@ export const LeftColumnStyle = styled(ColumnStyled)`
   }
 `
 
-export const RightColumnStyle = styled(ColumnStyled)``
+export const RightColumnStyle = styled(ColumnStyled)`
+  padding: 0 !important;
+`
 
 export const DisabledInputStyle = styled(Input)`
   border-color: ${colors.black2};
