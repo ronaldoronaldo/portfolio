@@ -90,6 +90,10 @@ const sections = [
 class LeagueTutorial extends Component {
   state = { sections: sections }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   handleSectionClick(index) {
     let newSections = [...this.state.sections]
     const clickedSection = newSections[index]
