@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useEffect} from 'react'
 import {
   CurriculumContainer,
   LeftSide,
@@ -93,7 +93,21 @@ const contactsInfo = [
   }
 ]
 
-const Curriculum = () => {
+const Curriculum = props => {
+  // const body = document.body
+  //
+  //
+  // useEffect(() => {
+  //   console.log('action', props.history.location.action)
+  //   console.log('location', props.history.location)
+  //   changeBackgroundColor('curriculum')
+  // }, [])
+  //
+  // const changeBackgroundColor = page => {
+  //   body.setAttribute('class', '')
+  //   body.classList.add(page)
+  // }
+
   const renderTitle = text => {
     return (
       <Fragment>
