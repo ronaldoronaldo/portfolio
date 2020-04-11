@@ -22,15 +22,16 @@ import { DropdownEnd, Item } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 import { withRouter } from 'react-router-dom'
 import {
+  EXAMPLES_PATH,
   LEAGUE_PATH,
   LEAGUE_VACATION_PATH,
   LOGIN_PATH,
   PORTFOLIO_PATH,
-  SITE_PATH
+  SITE_PATH,
+  SITE_SEARCH_RESULTS_PATH
 } from 'routes'
 import { FontIcon } from 'components/lib/icons'
 import { Link } from 'react-router-dom'
-import { SITE_SEARCH_RESULTS_PATH } from '../../../routes'
 
 const Header = props => {
   const [userDropdown, setUserDropdown] = useState(false)
@@ -102,7 +103,7 @@ const Header = props => {
                 text="Back to portfolio"
                 imagePath={symbolEducacao}
                 type="img-left-text-left"
-                to={PORTFOLIO_PATH}
+                to={EXAMPLES_PATH}
               />
               <Item
                 text="Disabled button example"
@@ -221,7 +222,7 @@ const Header = props => {
           </>
         )}
         <ContainerItemMenu>
-          <ItemMenu as={Link} to={LOGIN_PATH}>
+          <ItemMenu as={Link} to={EXAMPLES_PATH}>
             <FontIcon
               iconName="magazine"
               size={15}

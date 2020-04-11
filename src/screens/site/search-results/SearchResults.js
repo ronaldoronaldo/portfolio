@@ -112,6 +112,7 @@ const SearchResults = props => {
   useEffect(() => {
     setTerm(props.match.params.term)
     setResultsNumber(54)
+    window.scrollTo(0, 0)
   }, [])
 
   const handleFilter = values => {
