@@ -29,6 +29,7 @@ const WrapperPortfolio = props => {
   const [removeLogo, setRemoveLogo] = useState(false)
   const [showPageContent, setShowPageContent] = useState(false)
   const [changingPages, setChangingPages] = useState(true)
+  const [iconsOpacityController, setIconsOpacityController] = useState(false)
   const [triggerBorder, setTriggerBorder] = useState(false)
   const body = document.body
   let componentLocation = useLocation()
@@ -40,7 +41,7 @@ const WrapperPortfolio = props => {
     const unlisten = history.listen((newLocation, action) => {
       console.log('action', action)
       if (action === 'POP') {
-        //provisorio
+        setShowPageContent(false)
         location.reload()
       }
     })
@@ -53,6 +54,9 @@ const WrapperPortfolio = props => {
       setChangingPages(false)
       body.setAttribute('class', '')
       body.classList.add('introduction')
+      setTimeout(() => {
+        setIconsOpacityController(true)
+      },460)
     }
     return () => {
       body.setAttribute('class', '')
@@ -110,6 +114,7 @@ const WrapperPortfolio = props => {
       return
     }
     setIconsBorderAnimationDelay(0)
+    setIconsOpacityController(true)
     setChangingPages(true)
     setShowPageContent(false)
     setTriggerBorder(false)
@@ -128,6 +133,7 @@ const WrapperPortfolio = props => {
   }
 
   const cancelAnimations = page => {
+    setIconsOpacityController(true)
     setTriggerBorder(false)
     setRemoveLogo(true)
     setPageContentAnimationDelay(0)
@@ -148,7 +154,7 @@ const WrapperPortfolio = props => {
   return (
     <Page selectedPage={selectedPage}>
       {!removeLogo && <LogoImage src={logo} selectedPage={selectedPage} />}
-      <IconsContainer selectedPage={selectedPage} changingPages={changingPages} animationDelay={iconsContainerAnimationDelay}>
+      <IconsContainer selectedPage={selectedPage} changingPages={changingPages} animationDelay={iconsContainerAnimationDelay} opacityController={iconsOpacityController}>
         <IconButton
           iconName={'clipboard-content'}
           onClick={() => handleIconClicked('curriculum', CURRICULUM_PATH)}

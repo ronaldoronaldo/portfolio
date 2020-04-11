@@ -20,8 +20,9 @@ export const Page = styled.div`
 `
 
 export const IconsContainer = styled.div`
-  ${({selectedPage, animationDelay, changingPages}) => css`
+  ${({selectedPage, animationDelay, changingPages, opacityController}) => css`
       top: ${changingPages ? '-400px' : selectedPage ? '20px' : '48vh'};
+      opacity: ${opacityController ? '1' : '0'};
       padding: 0 ${spacing.medium}px;
       transition: all ${shortAnimation}s ease-in-out;
       transition-delay: ${animationDelay}s;
