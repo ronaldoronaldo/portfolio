@@ -22,12 +22,6 @@ import {
 
 export const shortAnimation = 0.5
 
-// const paths = {
-//   "curriculum": CURRICULUM_PATH,
-//   "about-me": ABOUT_ME_PATH,
-//   "examples": EXAMPLES_PATH
-// }
-
 const WrapperPortfolio = props => {
   const [iconsContainerAnimationDelay, setIconsContainerAnimationDelay] = useState(shortAnimation)
   const [iconsBorderAnimationDelay, setIconsBorderAnimationDelay] = useState(shortAnimation*2)
@@ -40,7 +34,6 @@ const WrapperPortfolio = props => {
   let location = useLocation()
   const currentPath = location.pathname.split('/')[3]
   const [selectedPage, setSelectedPage] = useState(currentPath || '')
-
 
   useEffect(() => {
     if (currentPath) {
@@ -117,9 +110,11 @@ const WrapperPortfolio = props => {
     setTimeout(() => {
       setChangingPages(false)
       setTriggerBorder(true)
+    }, shortAnimation*2600)
+    setTimeout(() => {
       props.history.push(pagePath)
       setShowPageContent(true)
-    }, shortAnimation*2600)
+    }, shortAnimation*3800)
   }
 
   const cancelAnimations = page => {
