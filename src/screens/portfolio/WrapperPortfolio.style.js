@@ -21,7 +21,7 @@ export const Page = styled.div`
 
 export const IconsContainer = styled.div`
   ${({selectedPage, animationDelay, changingPages, opacityController}) => css`
-      top: ${changingPages ? '-400px' : selectedPage ? '20px' : '48vh'};
+      top: ${changingPages ? '-400px' : selectedPage ? '20px' : '60vh'};
       opacity: ${opacityController ? '1' : '0'};
       padding: 0 ${spacing.medium}px;
       transition: all ${shortAnimation}s ease-in-out;
@@ -35,6 +35,7 @@ export const IconsContainer = styled.div`
       max-width: 400px;
       @media (min-width: ${sizes.mdScreen}px) {
         max-width: 700px;
+        top: ${changingPages ? '-400px' : selectedPage ? '20px' : '48vh'};
       }
       > Button {
         width: 120px;
@@ -97,8 +98,8 @@ export const LogoImage = styled.img`
     opacity: ${selectedPage === '' ? 1 : 0};
   `}
   transition: opacity ${shortAnimation - 0.1}s ease-out;
-  margin-top: ${spacing.large + 64}px;
-  margin-bottom: ${spacing.large + 32}px;
+  position: absolute;
+  top: 20vh;
   @media (max-width: ${sizes.mdScreen}px) {
     width: 255px;
   } 

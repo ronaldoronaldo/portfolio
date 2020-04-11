@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { colors, sizes, fontWeights, spacing } from 'config/ui'
+import { colors, sizes, fontWeights } from 'config/ui'
 
 import InputSearch from 'components/lib/inputs/InputSearch'
 
