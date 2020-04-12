@@ -49,11 +49,11 @@ const GlobalStyle = createGlobalStyle`
     }
     ::-webkit-scrollbar-thumb {
       transition: background-color ${shortAnimation}s ease-out;
-      background: ${colors.blue3}; 
+      background: ${colors.blue4}; 
     }
     ::-webkit-scrollbar-thumb:hover {
       transition: background-color ${shortAnimation}s ease-out;
-      background: ${colors.blue3}; 
+      background: ${colors.blue4}; 
     }
   }
   body.curriculum {

@@ -14,6 +14,7 @@ import { spacing, colors } from 'config/ui'
 import Title from 'components/lib/titles/Title'
 import PropTypes from 'prop-types'
 import Checkbox from "../../admin/user-management-panel/checkbox";
+import ClickOutside from "../../../utils/ClickOutside"
 
 const ModalFilter = ({
   closeFilter,
@@ -99,98 +100,100 @@ const ModalFilter = ({
 
   return (
     <ModalFilterBackground fade={fade} {...props}>
-      <FilterContainer slide={slide}>
-        <ContainerStyle>
-          <div>
-            <Row>
-              <Column sm={6}>
-                <Title
-                  text={title || "Filtrar"}
-                  sizeMobile={4}
-                  size={4}
-                  style={{ marginBottom: 48 }}
-                  textAlign={'left'}
-                />
-              </Column>
-            </Row>
-            <Row>
-              <Column sm={12}>
-                {selects && selectsArray.map((select, index) => {
-                  return (
-                    <SelectStyle
-                      mobileStyle
-                      key={index}
-                      placeholder={select.placeholder}
-                      items={select.items}
-                      text={values[index]}
-                      activeSelectButton={
-                        selectsArray[index].activeSelectButton
-                      }
-                      label={selects[index].placeholder}
-                      onChange={value => onFilterChange(value, index)}
-                      headerTitle={select.headerTitle}
-                      searchInputLabel={select.searchInputPlaceholder}
-                      style={{
-                        marginBottom: spacing.medium
-                      }}
-                      iconNext={iconNext}
-                    />
-                  )
-                })}
-                {checkboxes && checkboxesArray.map((checkboxCategory, index) => {
-                  return (
-                    <CheckboxWrapper>
-                      <Title
-                        text={checkboxCategory.title}
-                        sizeMobile={5}
-                        size={5}
-                        style={{ marginBottom: 48 }}
-                        textAlign={'left'}
+      <ClickOutside onClickOutside={fadeAndCloseFilter}>
+        <FilterContainer slide={slide}>
+          <ContainerStyle>
+            <div>
+              <Row>
+                <Column sm={6}>
+                  <Title
+                    text={title || "Filtrar"}
+                    sizeMobile={4}
+                    size={4}
+                    style={{ marginBottom: 48 }}
+                    textAlign={'left'}
+                  />
+                </Column>
+              </Row>
+              <Row>
+                <Column sm={12}>
+                  {selects && selectsArray.map((select, index) => {
+                    return (
+                      <SelectStyle
+                        mobileStyle
+                        key={index}
+                        placeholder={select.placeholder}
+                        items={select.items}
+                        text={values[index]}
+                        activeSelectButton={
+                          selectsArray[index].activeSelectButton
+                        }
+                        label={selects[index].placeholder}
+                        onChange={value => onFilterChange(value, index)}
+                        headerTitle={select.headerTitle}
+                        searchInputLabel={select.searchInputPlaceholder}
+                        style={{
+                          marginBottom: spacing.medium
+                        }}
+                        iconNext={iconNext}
                       />
-                      {checkboxCategory.options.map((option, opIndex)=> {
-                        return (
-                          <CheckboxContainer
-                            onClick={() => onCheck(option, index, opIndex)}
-                          >
-                            <Checkbox
-                              checked={option.checked}
-                              onChange={() => console.log('checked')}
-                            />
-                            <LabelCheckbox>{option.text}</LabelCheckbox>
-                          </CheckboxContainer>
-                        )
-                       })
-                      }
-                    </CheckboxWrapper>
-                  )
-                })}
-              </Column>
-            </Row>
-          </div>
-          <div>
-            <Row>
-              <Column sm={4}>
-                <Button
-                  text="Cancelar"
-                  bgColor={colors.white}
-                  bgColorHover={colors.white}
-                  textColorHover={colors.black4}
-                  color={colors.black5}
-                  onClick={fadeAndCloseFilter}
-                />
-              </Column>
-              <Column sm={8}>
-                <Button
-                  text="Filtrar"
-                  isEnabled={enableButton}
-                  onClick={handleFilterSubmitAction}
-                  // loading={filterLoading}
-                />
-              </Column>
-            </Row>
-          </div>
-        </ContainerStyle>
-      </FilterContainer>
+                    )
+                  })}
+                  {checkboxes && checkboxesArray.map((checkboxCategory, index) => {
+                    return (
+                      <CheckboxWrapper>
+                        <Title
+                          text={checkboxCategory.title}
+                          sizeMobile={5}
+                          size={5}
+                          style={{ marginBottom: 48 }}
+                          textAlign={'left'}
+                        />
+                        {checkboxCategory.options.map((option, opIndex)=> {
+                          return (
+                            <CheckboxContainer
+                              onClick={() => onCheck(option, index, opIndex)}
+                            >
+                              <Checkbox
+                                checked={option.checked}
+                                onChange={() => console.log('checked')}
+                              />
+                              <LabelCheckbox>{option.text}</LabelCheckbox>
+                            </CheckboxContainer>
+                          )
+                        })
+                        }
+                      </CheckboxWrapper>
+                    )
+                  })}
+                </Column>
+              </Row>
+            </div>
+            <div>
+              <Row>
+                <Column sm={4}>
+                  <Button
+                    text="Cancelar"
+                    bgColor={colors.white}
+                    bgColorHover={colors.white}
+                    textColorHover={colors.black4}
+                    color={colors.black5}
+                    onClick={fadeAndCloseFilter}
+                  />
+                </Column>
+                <Column sm={8}>
+                  <Button
+                    text="Filtrar"
+                    isEnabled={enableButton}
+                    onClick={handleFilterSubmitAction}
+                    // loading={filterLoading}
+                  />
+                </Column>
+              </Row>
+            </div>
+          </ContainerStyle>
+        </FilterContainer>
+      </ClickOutside>
     </ModalFilterBackground>
   )
 }

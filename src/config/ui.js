@@ -30,6 +30,7 @@ export const colors = {
   blue1: `hsl(187, 50%, 91%)`,
   blue2: `hsl(188, 50%, 74%)`,
   blue3: `hsl(188, 50%, 51%)`,
+  blue4: `#348794`,
 
   blue: `hsl(188, 50%, 51%)`,
   blueDark: `hsl(188, 50%, ${51 - lightness}%)`,
