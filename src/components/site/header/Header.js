@@ -144,7 +144,7 @@ const Header = props => {
                     text="Sair"
                     iconName="magazine"
                     type="icon-left-text-left"
-                    to={LOGIN_PATH}
+                    to={EXAMPLES_PATH}
                     as={Link}
                   />
                 </DropdownEnd>
