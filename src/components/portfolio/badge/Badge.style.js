@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components'
 import { colors, spacing, sizes } from 'config/ui'
 
+const specialWidth = 806
+
 export const BadgeContainer = styled.div`
   display: flex;
   width: 120px;
@@ -8,7 +10,7 @@ export const BadgeContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  @media (min-width: ${sizes.mScreen}px) {
+  @media (min-width: ${specialWidth}px) {
     width: 176px;
   }
 `
@@ -22,7 +24,7 @@ export const BadgeTitleBox = styled.div`
   border-radius: 6px;
   margin-top: ${spacing.medium}px;
   background-color: #BA7979;
-  @media (min-width: ${sizes.mScreen}px) {
+  @media (min-width: ${specialWidth}px) {
     width: 150px;
   }
 `
@@ -39,7 +41,7 @@ export const BadgeTitle = styled.span`
   font-size: 12.8px;
   text-align: center;
   color: ${colors.white};
-  @media (min-width: ${sizes.mScreen}px) {
+  @media (min-width: ${specialWidth}px) {
     font-size: 16px;
   }
 `
@@ -54,7 +56,7 @@ export const BadgeIconContainer = styled.div`
     top: 27px;
     position: absolute;
     border-radius: 50%;
-    @media (min-width: ${sizes.mScreen}px) {
+    @media (min-width: ${specialWidth}px) {
       width: ${iconWidth}px;
       top: 56px;
     }
