@@ -121,21 +121,21 @@ const SearchResults = props => {
 
   const checkboxes = [
     {
-      title: 'Categorias',
+      title: 'Category',
       options: [
-        "Ciencias da natureza",
-        "Artes",
-        "Autoajuda",
-        "Ficção científica",
+        "Science",
+        "Arts",
+        "Self help",
+        "Science fiction",
       ]
     },
     {
-      title: 'Ano Escolar',
+      title: 'School Year',
       options: [
-        "1º ano",
-        "2º ano",
-        "3º ano",
-        "4º ano",
+        "1º year",
+        "2º year",
+        "3º year",
+        "4º year",
       ]
     }
   ]
@@ -148,14 +148,14 @@ const SearchResults = props => {
           handleFilter={handleFilter}
           checkboxes={checkboxes}
           iconNext={true}
-          title={'Filtrar por:'}
+          title={'Filter by:'}
           handleFilterSubmit={handleFilter}
         />
       )}
       <Container>
         <ContainerHeaderStyle>
           <Title
-            text={"Resultados da busca: " + term}
+            text={"Search results: " + term}
             textAlign="left"
             style={{ color: colors.blue, marginTop: 0, marginBottom: 0 }}
             size={4}
@@ -164,7 +164,7 @@ const SearchResults = props => {
           <ContainerActionsStyle>
             <IconButtonStyle
               iconName="filter"
-              text="Filtros"
+              text="Filters"
               invertIconPosition
               color={colors.black4}
               onClick={() => setShowFilter(true)}
@@ -178,19 +178,19 @@ const SearchResults = props => {
         <ItemsShelf
           slidesToShow={7.5}
           booksShelf
-          title="Livros"
+          title="Books"
           data={books}
         />
         <ItemsShelf
           slidesToShow={4.7}
           newsShelf
-          title="Notícias"
+          title="News"
           data={news}
         />
         <ItemsShelf
           slidesToShow={3.8}
           didacticsShelf
-          title="Materiais Pedagógicos"
+          title="Teaching Materials"
           data={didactics}
         />
       </Container>
