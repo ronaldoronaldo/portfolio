@@ -5,7 +5,6 @@ import Shelf from './Shelf'
 import { sizes } from 'config/ui'
 
 const CollectionShelf = ({
-  onClickCollection,
   title,
   data,
   loading,
@@ -71,7 +70,6 @@ const CollectionShelf = ({
               marginBottom: 0
             }}
             loading={loading}
-            onClickCollection={onClickCollection}
           />
         )
       })}

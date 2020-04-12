@@ -13,7 +13,6 @@ export class Collection extends Component {
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired
     }).isRequired,
-    onClickCollection: PropTypes.func
   }
 
   static defaultProps = {

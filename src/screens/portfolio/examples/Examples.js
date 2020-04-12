@@ -127,8 +127,8 @@ const Examples = () => {
   ]
 
   const renderCards = cards => {
-    return cards.map(card => {
-      return <ScreenCard {...card} />
+    return cards.map((card, index) => {
+      return <ScreenCard {...card} key={index} />
     })
   }
 
@@ -148,6 +148,7 @@ const Examples = () => {
           ignorePadding={ignorePadding}
           title={title}
           open={show}
+          key={index}
           onClose={() => onCloseAccordion(index)}
         >
           {content}

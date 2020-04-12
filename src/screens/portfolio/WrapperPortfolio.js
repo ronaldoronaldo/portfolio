@@ -39,7 +39,6 @@ const WrapperPortfolio = props => {
   useEffect(() => {
     const { history } = props
     const unlisten = history.listen((newLocation, action) => {
-      console.log('action', action)
       if (action === 'POP') {
         setShowPageContent(false)
         location.reload()
