@@ -178,7 +178,7 @@ const SchoolClassesEditScreen = ({ client, ...props }) => {
         setIsLoading(false)
         setAlertData({
           title: 'Sucesso',
-          message: 'Turma editada com sucesso.',
+          message: 'Class editada com sucesso.',
           textButton: 'Entendi!'
         })
 
@@ -205,7 +205,7 @@ const SchoolClassesEditScreen = ({ client, ...props }) => {
 
         setAlertData({
           title: 'Sucesso',
-          message: 'Turma criada com sucesso.',
+          message: 'Class criada com sucesso.',
           textButton: 'Entendi!'
         })
 

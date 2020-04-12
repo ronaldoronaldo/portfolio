@@ -48,7 +48,7 @@ const SchoolsScreen = ({ client, ...props }) => {
       accessor: 'parent'
     },
     {
-      title: 'Turmas',
+      title: 'Classs',
       accessor: 'children_count'
     },
     {
@@ -81,7 +81,7 @@ const SchoolsScreen = ({ client, ...props }) => {
   return (
     <Container>
       <ContentMenu
-        title="Unidades"
+        title="Unitys"
         buttonCreateConfig={{
           text: 'Criar unidade',
           to: USER_MANAGEMENT_PANEL_SCHOOLS_CREATE_PATH

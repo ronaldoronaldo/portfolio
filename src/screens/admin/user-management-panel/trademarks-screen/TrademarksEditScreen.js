@@ -231,13 +231,13 @@ const TrademarksEditScreen = ({ client, ...props }) => {
           />
           {/*<ShowTags*/}
           {/*  tags={linkedItems}*/}
-          {/*  label="Unidades dessa marca"*/}
+          {/*  label="Unitys dessa marca"*/}
           {/*  removeTag={removeLinkedItem}*/}
           {/*/>*/}
           {/*<PagedListHeader>*/}
           {/*  <ColumnStyle sm={6}>*/}
           {/*    <Title*/}
-          {/*      text="Unidades não vinculadas"*/}
+          {/*      text="Unitys não vinculadas"*/}
           {/*      size={5}*/}
           {/*      sizeMobile={5}*/}
           {/*      textAlign="left"*/}

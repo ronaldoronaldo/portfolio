@@ -28,14 +28,14 @@ import { HeaderEdit } from 'components/admin/user-management-panel/header'
 import { AccordionMenu } from 'components/admin/user-management-panel/accordion-menu'
 import Select from 'components/lib/selects/Select'
 
-const mockedLinked = ['Unidade norte 01']
+const mockedLinked = ['Unity norte 01']
 const mockedUnlinked = [
-  'Unidade norte 01 - 01',
-  'Unidade norte 01 - 02',
-  'Unidade norte 01 - 03',
-  'Unidade norte 01 - 04',
-  'Unidade norte 01 - 05',
-  'Unidade norte 01 - 06'
+  'Unity norte 01 - 01',
+  'Unity norte 01 - 02',
+  'Unity norte 01 - 03',
+  'Unity norte 01 - 04',
+  'Unity norte 01 - 05',
+  'Unity norte 01 - 06'
 ]
 
 const DirectorsEditScreen = props => {
@@ -201,7 +201,7 @@ const DirectorsEditScreen = props => {
                   <PagedListHeader style={{ width: '100%' }}>
                     <ColumnStyle sm={6}>
                       <Title
-                        text="Turmas da unidade"
+                        text="Classs da unidade"
                         size={5}
                         sizeMobile={5}
                         textAlign="left"

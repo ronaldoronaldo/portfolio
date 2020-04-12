@@ -19,8 +19,7 @@ export const EmprtyMessageContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 28px;
-  padding: 24px 16px 24px 16px;
+  padding: 16px;
   border: solid 1px ${colors.orange2};
   background-color: ${colors.orange1};
   color: ${colors.orange3};

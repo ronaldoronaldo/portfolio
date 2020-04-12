@@ -18,14 +18,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -34,22 +34,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -74,14 +74,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -90,22 +90,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -130,14 +130,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -146,22 +146,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'finished'
     },
     employees: {
@@ -187,14 +187,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -203,22 +203,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -243,14 +243,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -259,22 +259,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -299,14 +299,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -315,22 +315,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'finished'
     },
     employees: {
@@ -356,14 +356,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -372,22 +372,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -412,14 +412,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -428,22 +428,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -468,14 +468,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -484,22 +484,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'finished'
     },
     employees: {
@@ -525,14 +525,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -541,22 +541,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -581,14 +581,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -597,22 +597,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'pending'
     },
     employees: {
@@ -637,14 +637,14 @@ let data = [
       students: 1829
     },
     units: {
-      name: 'Unidade Sul 01 - 01',
+      name: 'Unity Sul 01 - 01',
       belongsTo: 'Marca Sul 01',
       classes: 12,
       students: 1829
     },
     classes: {
       name: 201,
-      belongsTo: 'Unidade Sul 01 - 01',
+      belongsTo: 'Unity Sul 01 - 01',
       students: 38,
       platform: ['arvore', 'guten']
     },
@@ -653,22 +653,22 @@ let data = [
     },
     directors: {
       name: 'Chineze Afamefuna',
-      units: ['Unidade Norte 01']
+      units: ['North Unity 01']
     },
     coordinators: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     teachers: {
       name: 'Chineze Afamefuna',
       responsabilities: ['Ensino médio', '501', '601', '602'],
-      units: ['Unidade Norte 01 - 01']
+      units: ['North Unity 01 - 01']
     },
     students: {
       name: 'Georges Embolo',
       classes: ['501', 'Inglês V'],
-      units: ['Unidade Norte 01 - 02'],
+      units: ['North Unity 01 - 02'],
       paymentStatus: 'finished'
     },
     employees: {

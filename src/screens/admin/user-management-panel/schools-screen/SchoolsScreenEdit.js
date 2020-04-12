@@ -122,7 +122,7 @@ const SchoolsEditScreen = ({ client, ...props }) => {
         setIsLoading(false)
         setAlertData({
           title: 'Sucesso',
-          message: 'Unidade editada com sucesso.',
+          message: 'Unity editada com sucesso.',
           textButton: 'Entendi!'
         })
 
@@ -149,7 +149,7 @@ const SchoolsEditScreen = ({ client, ...props }) => {
 
         setAlertData({
           title: 'Sucesso',
-          message: 'Unidade criada com sucesso.',
+          message: 'Unity criada com sucesso.',
           textButton: 'Entendi!'
         })
 
@@ -254,13 +254,13 @@ const SchoolsEditScreen = ({ client, ...props }) => {
           />
           {/*<ShowTags*/}
           {/*  tags={linkedItems}*/}
-          {/*  label="Turmas dessa unidade"*/}
+          {/*  label="Classs dessa unidade"*/}
           {/*  removeTag={removeLinkedItem}*/}
           {/*/>*/}
           {/*<PagedListHeader>*/}
           {/*  <ColumnStyle sm={6}>*/}
           {/*    <Title*/}
-          {/*      text="Turmas não vinculadas"*/}
+          {/*      text="Classs não vinculadas"*/}
           {/*      size={5}*/}
           {/*      sizeMobile={5}*/}
           {/*      textAlign="left"*/}

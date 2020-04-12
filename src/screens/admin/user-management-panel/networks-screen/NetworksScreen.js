@@ -42,7 +42,7 @@ const NetworksScreen = ({ client, ...props }) => {
       accessor: 'count_child'
     },
     {
-      title: 'Unidades',
+      title: 'Unitys',
       accessor: 'count_grand_child'
     }
   ]

@@ -40,23 +40,20 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
     'Ensino médio'
   ]
   const classesArr = [
-    'Turma 501',
-    'Turma 601',
-    'Turma 701',
-    'Turma 801',
-    'Turma 901',
-    'Turma 1101',
-    'Turma 1102',
-    'Turma 1103',
-    'Turma 1104',
-    'Turma 1105'
+    'Class 501',
+    'Class 601',
+    'Class 701',
+    'Class 801',
+    'Class 901',
+    'Class 1101',
+    'Class 1102',
   ]
-  const itensUnitsArr = ['Unidade Norte 01', 'Unidade Norte 02']
-  const itensSetupByArr = ['Ano escolar', 'Turma']
+  const itensUnitsArr = ['North Unity 01', 'North Unity 02']
+  const itensSetupByArr = ['Ano escolar', 'Class']
 
   if (setupByClasses) {
     let newCards = [...cards]
-    newCards.forEach(item => (item.setupBy = 'Turma'))
+    newCards.forEach(item => (item.setupBy = 'Class'))
   }
 
   const closeDropdown = index => {
@@ -101,9 +98,9 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
     setCards([
       ...cards,
       {
-        unit: 'Unidade Norte 01',
+        unit: 'North Unity 01',
         schoolYears: [],
-        classes: ['Turma 501'],
+        classes: ['Class 501'],
         setupBy: 'Ano escolar',
         availableClasses: classesArr,
         dropdownOpened: false
@@ -173,7 +170,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
         <ContainerCardResponsabilities key={index}>
           <HeaderStyle>
             <Title
-              text={`Responsabilidade ${newNumber}`}
+              text={`Responsibility ${newNumber}`}
               size={4}
               sizeMobile={4}
               style={{
@@ -194,7 +191,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
 
           <BodyStyle>
             <SelectStyle
-              label="Unidade"
+              label="Unity"
               specialCase
               text={card.unit}
               items={itensUnitsArr}
@@ -217,7 +214,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
                 {renderCheckboxSchoolYears(card, index)}
               </ContainerCheckboxStyle>
             )}
-            {card.setupBy === 'Turma' && (
+            {card.setupBy === 'Class' && (
               <ContainerClassesStyle>
                 <Overlay showOverlay={card.dropdownOpened}>
                   {card.dropdownOpened && (
@@ -249,7 +246,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
                   {renderActiveClasses(card)}
                 </ContainerTagsStyle>
                 <ButtonAddClassStyle
-                  text="Adicionar Turma"
+                  text="Add class"
                   size="small"
                   bgColorHover={colors.purple3Light}
                   onClick={() => openDropdown(index)}
@@ -266,7 +263,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
     <Container>
       {renderCardResponsabilities()}
       <ButtonAddNewResponsabilities
-        text="Adicionar novas responsabilidades"
+        text="Add new responsibility"
         size="medium"
         bgColorHover={colors.orange3Light}
         onClick={handleAddNewResponsabilities}

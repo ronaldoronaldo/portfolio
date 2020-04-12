@@ -185,7 +185,7 @@
        "layout":"pdf",
        "image":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/coisas-de-menina/thumb_9788525054388.jpg",
        "imageUrlIntermediaria":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/coisas-de-menina/intermediaria_9788525054388.jpg",
-       "description":"Coisas de menina ñ histÛrias que revelam o que È ser menina maluquinha È um livro com histÛrias em quadrinhos que mostra as preferÍncias, d˙vidas e brincadeiras das meninas da Turma do Maluquinho. Enquanto as meninas v„o vivendo o seu dia-a-dia, os meninos resolvem montar a OperaÁ„o Coisas de Menina para descobrir definitivamente o que È ser menina. Assim, Julieta, Carol, Joana, Nina, Shirley ValÈria, JanaÌna, Renata, Simone, PatrÌcia, Nadja e a professora de artes, Adriana, s„o alvo de uma intensa pesquisa com o objetivo de descobrir como s„o e o que pensam. Quando o relatÛrio final fica pronto, os meninos acabam tendo uma grande surpresa.",
+       "description":"Coisas de menina ñ histÛrias que revelam o que È ser menina maluquinha È um livro com histÛrias em quadrinhos que mostra as preferÍncias, d˙vidas e brincadeiras das meninas da Class do Maluquinho. Enquanto as meninas v„o vivendo o seu dia-a-dia, os meninos resolvem montar a OperaÁ„o Coisas de Menina para descobrir definitivamente o que È ser menina. Assim, Julieta, Carol, Joana, Nina, Shirley ValÈria, JanaÌna, Renata, Simone, PatrÌcia, Nadja e a professora de artes, Adriana, s„o alvo de uma intensa pesquisa com o objetivo de descobrir como s„o e o que pensam. Quando o relatÛrio final fica pronto, os meninos acabam tendo uma grande surpresa.",
        "degrees":["3º Ano", "5º Ano", "Ensino Infantil", "Ensino Médio"],
        "author":"Ziraldo",
        "__typename":"Book", "publishedAt": "11/08/1992", "publisher": "Machado"
@@ -308,7 +308,7 @@
        "layout":"pdf",
        "image":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/a-turma-do-perere-365-dias-na-mata-do-fundao/thumb_9788525054050.jpg",
        "imageUrlIntermediaria":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/a-turma-do-perere-365-dias-na-mata-do-fundao/intermediaria_9788525054050.jpg",
-       "description":"A Turma do PererÍ surgiu na dÈcada de 1960 e foi a primeira revista em quadrinhos feita por um sÛ autor com personagens brasileiros. Inspirada nos Ìndios, animais e personagens das lendas e do folclore brasileiro, esta criaÁ„o do cartunista e escritor Ziraldo foi escolhida em 2006, no Sal„o Internacional de Banda Desenhada de Portugal, como uma das 100 melhores histÛrias em quadrinhos do sÈculo XX.",
+       "description":"A Class do PererÍ surgiu na dÈcada de 1960 e foi a primeira revista em quadrinhos feita por um sÛ autor com personagens brasileiros. Inspirada nos Ìndios, animais e personagens das lendas e do folclore brasileiro, esta criaÁ„o do cartunista e escritor Ziraldo foi escolhida em 2006, no Sal„o Internacional de Banda Desenhada de Portugal, como uma das 100 melhores histÛrias em quadrinhos do sÈculo XX.",
        "degrees":["3º Ano", "5º Ano", "Ensino Infantil", "Ensino Médio"],
        "author":"Ziraldo",
        "__typename":"Book", "publishedAt": "11/08/1992", "publisher": "Machado"
@@ -417,7 +417,7 @@
        "layout":"pdf",
        "image":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/almanaque-maluquinho-viagens-da-carolina/thumb_9788525053947.jpg",
        "imageUrlIntermediaria":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/almanaque-maluquinho-viagens-da-carolina/intermediaria_9788525053947.jpg",
-       "description":"As histÛrias em quadrinhos do Almanaque Maluquinho Viagens da Carolina trazem situaÁıes superengraÁadas que s„o a marca registrada de toda turma maluquinha. Entre uma maluquice e outra, Carol lidera o passeio por v·rios temas relacionados ao turismo como aspectos histÛricos e curiosos da hotelaria, o que È preciso para fazer uma viagem segura de automÛvel, dicas para arrumar a mala, o que È um cruzeiro marÌtimo, como funcionam os aeroportos e informaÁıes importantes sobre ecoturismo. Esse tipo de viagem È o preferido da Carolina, a personagem da Turma do Menino Maluquinho mais preocupada com o meio ambiente.",
+       "description":"As histÛrias em quadrinhos do Almanaque Maluquinho Viagens da Carolina trazem situaÁıes superengraÁadas que s„o a marca registrada de toda turma maluquinha. Entre uma maluquice e outra, Carol lidera o passeio por v·rios temas relacionados ao turismo como aspectos histÛricos e curiosos da hotelaria, o que È preciso para fazer uma viagem segura de automÛvel, dicas para arrumar a mala, o que È um cruzeiro marÌtimo, como funcionam os aeroportos e informaÁıes importantes sobre ecoturismo. Esse tipo de viagem È o preferido da Carolina, a personagem da Class do Menino Maluquinho mais preocupada com o meio ambiente.",
        "degrees":["3º Ano", "5º Ano", "Ensino Infantil", "Ensino Médio"],
        "author":"Ziraldo",
        "__typename":"Book", "publishedAt": "11/08/1992", "publisher": "Machado"
@@ -555,7 +555,7 @@
        "layout":"pdf",
        "image":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/descobertas-da-nina/thumb_9788525054371.jpg",
        "imageUrlIntermediaria":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/descobertas-da-nina/intermediaria_9788525054371.jpg",
-       "description":"N„o È f·cil ser a mais novinha da Turma do Menino Maluquinho. Mas para a Nina isso n„o È problema. Ela est· sempre por perto dos amigos do seu irm„o Boc„o, fazendo mil travessuras. Em Descobertas de Nina, a caÁulinha ainda tem in˙meras histÛrias para contar, como as emoÁıes do seu primeiro dia na escola, a difÌcil noite de insÙnia e a alegria de ter um irm„o mais velho como companhia. AlÈm das divertidas histÛrias em quadrinhos do cartunista Ziraldo, h· ainda uma lista de tiradas que a m„e da Nina anotou com as coisas mais engraÁadas que a pequena j· falou e descobriu. Para Nina, aÁ˙car È pÛ m·gico que transforma as comidas em doces. Coisas de crianÁa.",
+       "description":"N„o È f·cil ser a mais novinha da Class do Menino Maluquinho. Mas para a Nina isso n„o È problema. Ela est· sempre por perto dos amigos do seu irm„o Boc„o, fazendo mil travessuras. Em Descobertas de Nina, a caÁulinha ainda tem in˙meras histÛrias para contar, como as emoÁıes do seu primeiro dia na escola, a difÌcil noite de insÙnia e a alegria de ter um irm„o mais velho como companhia. AlÈm das divertidas histÛrias em quadrinhos do cartunista Ziraldo, h· ainda uma lista de tiradas que a m„e da Nina anotou com as coisas mais engraÁadas que a pequena j· falou e descobriu. Para Nina, aÁ˙car È pÛ m·gico que transforma as comidas em doces. Coisas de crianÁa.",
        "degrees":["3º Ano", "5º Ano", "Ensino Infantil", "Ensino Médio"],
        "author":"Ziraldo",
        "__typename":"Book", "publishedAt": "11/08/1992", "publisher": "Machado"
@@ -564,12 +564,12 @@
        "v2ready":true,
        "slug":"a-turma-do-perere-coisas-do-coracao",
        "premium":false,
-       "name":"A Turma do PererÍ",
+       "name":"A Class do PererÍ",
        "manualInfoChecked":true,
        "layout":"pdf",
        "image":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/a-turma-do-perere-coisas-do-coracao/thumb_9788525054067.jpg",
        "imageUrlIntermediaria":"https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/books/images/a-turma-do-perere-coisas-do-coracao/intermediaria_9788525054067.jpg",
-       "description":"Ver o luar sobre a Mata do Fund„o È t„o lindo que È difÌcil n„o se apaixonar.†'Coisas do coraÁ„o',†de Ziraldo apresenta as histÛrias em quadrinhos mais rom‚nticas e divertidas que aconteceram na Mata do Fund„o e os criativos e, ‡s vezes indecifr·veis, bilhetes e cartinhas de amor, que os apaixonados da Turma andam trocando entre si.",
+       "description":"Ver o luar sobre a Mata do Fund„o È t„o lindo que È difÌcil n„o se apaixonar.†'Coisas do coraÁ„o',†de Ziraldo apresenta as histÛrias em quadrinhos mais rom‚nticas e divertidas que aconteceram na Mata do Fund„o e os criativos e, ‡s vezes indecifr·veis, bilhetes e cartinhas de amor, que os apaixonados da Class andam trocando entre si.",
        "degrees":["3º Ano", "5º Ano", "Ensino Infantil", "Ensino Médio"],
        "author":"Ziraldo",
        "__typename":"Book", "publishedAt": "11/08/1992", "publisher": "Machado"

@@ -30,15 +30,15 @@ import { AccordionMenu } from 'components/admin/user-management-panel/accordion-
 import Select from 'components/lib/selects/Select'
 import ToggleSwitch from 'components/lib/toggleSwitch'
 
-const mockedLinked = ['Turma 401']
+const mockedLinked = ['Class 401']
 const mockedUnlinked = [
-  'Turma 501',
-  'Turma 601',
-  'Turma 701',
-  'Turma 801',
-  'Turma 901',
-  'Turma 1001',
-  'Turma 1002',
+  'Class 501',
+  'Class 601',
+  'Class 701',
+  'Class 801',
+  'Class 901',
+  'Class 1001',
+  'Class 1002',
   'Inglês IV'
 ]
 
@@ -204,10 +204,10 @@ const FellowsEditScreen = props => {
               <LeftColumnStyle style={{ padding: 0, margin: 0 }}>
                 <Select
                   text={units}
-                  items={['Unidade Norte 02']}
+                  items={['North Unity 02']}
                   onChange={handleSelectUnits}
                   maxWidth={620}
-                  label="Unidade"
+                  label="Unity"
                   activeSelectButton={units}
                   labelColor={colors.black3}
                   dropdownStyle={{
@@ -233,14 +233,14 @@ const FellowsEditScreen = props => {
                 >
                   <ShowTags
                     tags={linkedItems}
-                    label="Turmas desse aluno"
+                    label="Classs desse aluno"
                     removeTag={removeLinkedItem}
                     style={{ minHeight: 108 }}
                   />
                   <PagedListHeader style={{ width: '100%' }}>
                     <ColumnStyle sm={6}>
                       <Title
-                        text="Turmas da unidade"
+                        text="Classs da unidade"
                         size={5}
                         sizeMobile={5}
                         textAlign="left"

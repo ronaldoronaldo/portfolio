@@ -46,7 +46,7 @@ const SchoolsScreen = ({client, ...props}) => {
       sendTo: '/bolsistas'
     },
     {
-      title: 'Unidade',
+      title: 'Unity',
       accessor: 'parentName'
     }
   ]

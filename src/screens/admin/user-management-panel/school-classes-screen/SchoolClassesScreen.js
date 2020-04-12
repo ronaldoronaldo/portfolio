@@ -104,7 +104,7 @@ const SchoolClassesScreen = ({ client, ...props }) => {
   return (
     <Container>
       <ContentMenu
-        title="Turmas"
+        title="Classs"
         buttonCreateConfig={{
           text: 'Criar turma',
           to: USER_MANAGEMENT_PANEL_SCHOOLS_CLASSES_CREATE_PATH

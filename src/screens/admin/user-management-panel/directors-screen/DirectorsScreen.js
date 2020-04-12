@@ -47,7 +47,7 @@ const TrademarksScreen = ({ client, ...props }) => {
       sendTo: '/coordenadores'
     },
     {
-      title: 'Unidades',
+      title: 'Unitys',
       accessor: 'parentName'
     }
   ]

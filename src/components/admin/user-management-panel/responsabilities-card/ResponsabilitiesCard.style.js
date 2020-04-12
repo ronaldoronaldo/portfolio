@@ -140,4 +140,6 @@ export const ButtonAddNewResponsabilities = styled(Button)`
   color: ${colors.white};
   border-radius: 10px;
   margin-top: 32px;
+  height: auto;
+  padding: 8px;
 `

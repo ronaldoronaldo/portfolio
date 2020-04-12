@@ -27,10 +27,10 @@ const SidebarMenu = ({ minimize }) => {
         { id: 1, name: 'Marcas', path: USER_MANAGEMENT_ROOT_PATH + '/marcas' },
         {
           id: 2,
-          name: 'Unidades',
+          name: 'Unitys',
           path: USER_MANAGEMENT_ROOT_PATH + '/unidades'
         },
-        { id: 3, name: 'Turmas', path: USER_MANAGEMENT_ROOT_PATH + '/turmas' }
+        { id: 3, name: 'Classs', path: USER_MANAGEMENT_ROOT_PATH + '/turmas' }
       ]
     },
     {

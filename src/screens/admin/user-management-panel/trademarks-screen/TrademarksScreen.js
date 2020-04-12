@@ -48,7 +48,7 @@ const TrademarksScreen = ({ client, ...props }) => {
       accessor: 'parent'
     },
     {
-      title: 'Unidades',
+      title: 'Unitys',
       accessor: 'children_count'
     },
     {

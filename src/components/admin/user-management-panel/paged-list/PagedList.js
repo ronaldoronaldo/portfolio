@@ -72,9 +72,8 @@ const PagedList = ({ items, onItemClicked, emptyLabel }) => {
           })
         ) : (
           <EmprtyMessageContainer>
-            Todas as {emptyLabel} já estão vinculadas. Para editar basta acessar
-            a página de {emptyLabel + ' '}{' '}
-            <StyledLink>clicando aqui</StyledLink>
+            All classes from that unity are already applied. You can edit classes by {' '}
+            <StyledLink>clicking here</StyledLink>
           </EmprtyMessageContainer>
         )}
       </PagedListContent>

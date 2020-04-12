@@ -29,15 +29,15 @@ import Select from 'components/lib/selects/Select'
 import ToggleSwitch from 'components/lib/toggleSwitch'
 import { ResponsabilitiesCard } from 'components/admin/user-management-panel/responsabilities-card'
 
-const mockedLinked = ['Turma 401']
+const mockedLinked = ['Class 401']
 const mockedUnlinked = [
-  'Turma 501',
-  'Turma 601',
-  'Turma 701',
-  'Turma 801',
-  'Turma 901',
-  'Turma 1001',
-  'Turma 1002',
+  'Class 501',
+  'Class 601',
+  'Class 701',
+  'Class 801',
+  'Class 901',
+  'Class 1001',
+  'Class 1002',
   'Inglês IV'
 ]
 
@@ -137,18 +137,18 @@ const StudentsEditScreen = props => {
       </AlertRecovery>
       <InputStyle
         id={'directorsName'}
-        placeholder="Nome completo"
+        placeholder="Full name"
         value={nameInputValue}
         onChange={handleNameChange}
         style={{ marginBottom: 50 }}
       />
       <AccessCodeLabel>
-        <h3>Código de acesso</h3>
+        <h3>Access code</h3>
         <h2>CDA8236</h2>
       </AccessCodeLabel>
       <AccordionMenu text="Access information">
         <ContainerAccordionMenu>
-          <LabelAccordionStyle>E-mail e senha</LabelAccordionStyle>
+          <LabelAccordionStyle>E-mail e password</LabelAccordionStyle>
           <InfoRow style={{ marginBottom: 50 }}>
             <LeftColumnStyle md={7.5}>
               <InputStyle
@@ -161,7 +161,7 @@ const StudentsEditScreen = props => {
             </LeftColumnStyle>
             <RightColumnStyle md={4.5} style={{ padding: 0, margin: 0 }}>
               <ResetPasswordButton
-                text="Redefinir senha"
+                text="Reset password"
                 bgColor={colors.purple3}
                 bgColorHover={colors.purple3Dark}
                 color={colors.white}
@@ -173,14 +173,14 @@ const StudentsEditScreen = props => {
           </InfoRow>
 
           <LabelAccordionStyle>
-            Identificador e senha pública
+            Identifier and public password
           </LabelAccordionStyle>
           <InfoRow style={{ marginBottom: 50 }}>
             <LeftColumnStyle md={7.5}>
               <InputStyle
                 id={'identifier'}
                 style={{ marginBottom: 0 }}
-                placeholder="Identificador"
+                placeholder="Identifier"
                 value={'caio.avila'}
               />
             </LeftColumnStyle>
@@ -188,7 +188,7 @@ const StudentsEditScreen = props => {
               <InputStyle
                 id={'publicKey'}
                 style={{ marginBottom: 0 }}
-                placeholder="Senha pública"
+                placeholder="Public password"
                 value={'arvore12345'}
               />
             </RightColumnStyle>
@@ -202,12 +202,13 @@ const StudentsEditScreen = props => {
               text={units}
               noMarginLeft
               items={[
-                'Unidade Norte 02',
-                'Unidade Norte 03',
-                'Unidade Norte 04'
+                'North Unity 01',
+                'North Unity 02',
+                'South Unity 01',
+                'East Unity 01',
               ]}
               onChange={handleSelectUnits}
-              label="Unidade"
+              label="Unity"
               activeSelectButton={units}
               labelColor={colors.black3}
               dropdownStyle={{
@@ -230,14 +231,14 @@ const StudentsEditScreen = props => {
             >
               <ShowTags
                 tags={linkedItems}
-                label="Turmas desse aluno"
+                label="Student's classes"
                 removeTag={removeLinkedItem}
                 style={{ minHeight: 108 }}
               />
               <PagedListHeader style={{ width: '100%' }}>
                 <ColumnStyle sm={6}>
                   <Title
-                    text="Turmas da unidade"
+                    text="Unity classes"
                     size={5}
                     sizeMobile={5}
                     textAlign="left"
@@ -248,14 +249,14 @@ const StudentsEditScreen = props => {
                   <InputSearchStyle
                     value={''}
                     onChange={handleSearchInput}
-                    placeholder="Buscar"
+                    placeholder="Search"
                   />
                 </ColumnStyle>
               </PagedListHeader>
               <PagedList
                 items={unlinkedItems}
                 onItemClicked={addLinkedItem}
-                emptyLabel="unidades"
+                emptyLabel="unities"
               />
             </RowStyle>
           </SectionContainer>

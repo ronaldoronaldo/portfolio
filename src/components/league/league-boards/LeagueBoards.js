@@ -77,7 +77,7 @@ const getLeagueNameFromDegree = degree => {
 const menuItems = [
   { title: 'Geral', show: 'arvoreRank' },
   { title: 'Escola', show: 'schoolRank' },
-  { title: 'Turma', show: 'classRank' }
+  { title: 'Class', show: 'classRank' }
 ]
 
 const numberOfPointsToEnterTheLeague = 80

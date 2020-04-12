@@ -54,11 +54,11 @@ const SchoolsScreen = ({ client, ...props }) => {
       sendTo: '/funcionarios'
     },
     {
-      title: 'Turmas',
+      title: 'Classs',
       accessor: 'entityNames'
     },
     {
-      title: 'Unidade',
+      title: 'Unity',
       accessor: 'parentName'
     },
     // {
