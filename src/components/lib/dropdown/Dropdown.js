@@ -165,7 +165,7 @@ const Dropdown = ({
           {actionsButtons && (
             <ActionsButtonsContainer checkbox={checkbox}>
               <IconButtonStyled
-                text="Cancelar"
+                text="Cancel"
                 color={colors.black4}
                 onClick={handleCancel}
                 style={{

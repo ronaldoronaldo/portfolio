@@ -282,14 +282,14 @@ const SchoolsEditScreen = ({ client, ...props }) => {
           {/*/>*/}
           <FinishButtons>
             <IconButtonStyled
-              text="Cancelar"
+              text="Cancel"
               color={colors.black4}
               onClick={() => props.history.goBack()}
               iconName=""
             />
             <Button
               iconName="add"
-              text="Salvar"
+              text="Save"
               primary
               onClick={handleSave}
               loading={isLoading}

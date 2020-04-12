@@ -178,7 +178,7 @@ select:-webkit-autofill:focus {
 
     > a.ql-action {
       &:after {
-        content: "Salvar" !important;
+        content: "Save" !important;
       }
     }
   }

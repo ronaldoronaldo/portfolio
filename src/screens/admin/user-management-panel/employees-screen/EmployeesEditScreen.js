@@ -165,7 +165,7 @@ const EmployeesEditScreen = props => {
 
           <FinishButtons>
             <IconButtonStyled
-              text="Cancelar"
+              text="Cancel"
               color={colors.black4}
               iconName=""
               style={{ border: 'none' }}
@@ -173,7 +173,7 @@ const EmployeesEditScreen = props => {
             />
             <Button
               iconName="add"
-              text="Salvar"
+              text="Save"
               primary
               onClick={() => console.log('save')}
               iconSize={16}

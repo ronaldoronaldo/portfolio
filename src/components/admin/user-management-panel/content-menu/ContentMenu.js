@@ -139,7 +139,7 @@ const ContentMenu = ({
             <ExcludeButtonsWrapper showButtons={selectedTableItems.length > 0}>
               <IconButtonCancelStyle
                 iconName="cancel"
-                text="Cancelar"
+                text="Cancel"
                 color={colors.black4}
                 iconSize={13}
                 onClick={handleCancelTableSelection}
