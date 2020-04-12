@@ -35,6 +35,7 @@ export const TeacherImageContainer = styled(StudentImageContainer)`
 
 export const OptionsWrapper = styled.div`
   display: flex;
+  padding-top: 180px;
   flex-direction: column;
   justify-content: center;
   max-width: 400px;

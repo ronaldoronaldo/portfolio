@@ -36,7 +36,7 @@ export const ButtonStyle = styled.button`
         : isEnabled
           ? colors.white
           : colors.black3};
-    font-size: ${sizes.buttonText.size}px;
+    font-size: ${sizes.buttonText}px;
     padding: 0 ${sizes.padding}px;
     outline: ${outline ? outline : 'none'};
     height: ${size === 'x-small'
