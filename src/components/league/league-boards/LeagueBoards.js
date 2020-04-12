@@ -57,26 +57,11 @@ import {
 } from './LeagueBoards.styles'
 import RankingHistoryCard from 'components/league/ranking-history-card'
 
-const getLeagueNameFromDegree = degree => {
-  if (fundamental1DegreeMap.includes(degree)) {
-    return 'Liga Fundamental 1'
-  } else if (fundamental2DegreeMap.includes(degree)) {
-    return 'Liga Fundamental 2'
-  } else if (mediumDegreeMap.includes(degree)) {
-    return 'Liga Ensino Médio'
-  } else if (
-    teacherDegreeMap.includes(degree) ||
-    nonSchoolMap.includes(degree)
-  ) {
-    return 'Liga do Professor'
-  } else {
-    return ''
-  }
-}
+const leagueName = 'Students League'
 
 const menuItems = [
-  { title: 'Geral', show: 'arvoreRank' },
-  { title: 'Escola', show: 'schoolRank' },
+  { title: 'Everyone', show: 'arvoreRank' },
+  { title: 'School', show: 'schoolRank' },
   { title: 'Class', show: 'classRank' }
 ]
 
@@ -528,7 +513,7 @@ class LeagueBoards extends Component {
               <LevelAndPoints>
                 <div>
                   {rankLegend && rankLegend.title}{' '}
-                  <span>{getLeagueNameFromDegree(entity.degree)}</span>
+                  <span>{leagueName}</span>
                 </div>
                 <div>
                   {currentPoints} <span>pts</span>
@@ -540,7 +525,7 @@ class LeagueBoards extends Component {
                   <ProgressBarLabel>
                     <div>{rankLegend.title}</div>
                     <div>
-                      {nextRankLegend ? nextRankLegend.title : '1º Lugar'}
+                      {nextRankLegend ? nextRankLegend.title : '1º Place'}
                     </div>
                   </ProgressBarLabel>
                 </ProgressBarWrapper>
@@ -555,7 +540,7 @@ class LeagueBoards extends Component {
               <LevelAndPoints>
                 <div>
                   {rankLegend && rankLegend.title}{' '}
-                  <span>{getLeagueNameFromDegree(entity.degree)}</span>
+                  <span>{leagueName}</span>
                 </div>
                 <div>
                   {currentPoints} <span>pts</span>
@@ -568,7 +553,7 @@ class LeagueBoards extends Component {
                 <ProgressBarLabel>
                   <div>{rankLegend.title}</div>
                   <div>
-                    {nextRankLegend ? nextRankLegend.title : '1º Lugar'}
+                    {nextRankLegend ? nextRankLegend.title : '1º Place'}
                   </div>
                 </ProgressBarLabel>
               </ProgressBarWrapper>
@@ -611,7 +596,7 @@ class LeagueBoards extends Component {
             <ListHeader>
               {renderUserInfo()}
               <MonthCountdownWrapper>
-                <Month>Termina em:</Month>
+                <Month>Finish in:</Month>
                 <MonthCountdown />
               </MonthCountdownWrapper>
             </ListHeader>
@@ -623,7 +608,7 @@ class LeagueBoards extends Component {
                 noSpacingTop
               >
                 <LeagueBannerTitle>
-                  Entenda como funciona a Liga!
+                  Understand how the league works!
                 </LeagueBannerTitle>
                 <LeagueBannerImage
                   src={
@@ -644,11 +629,10 @@ class LeagueBoards extends Component {
                 />
                 <LeagueBannerTextContainer>
                   <LeagueBannerTitle color={colors.red3}>
-                    Fique atento!
+                    Stay alert!
                   </LeagueBannerTitle>
                   <LeagueBannerSubtitle>
-                    O nosso sistema pode detectar e desclassificar leituras fora
-                    do padrão.
+                    Our system can detect and declassify readers out of the pattern.
                   </LeagueBannerSubtitle>
                 </LeagueBannerTextContainer>
               </LeagueBanner>
@@ -661,7 +645,7 @@ class LeagueBoards extends Component {
           </StyledColumn>
           <StyledColumn m={8} xl={7}>
             <RankingHistory>
-              <HistoryTitle>Meu histórico</HistoryTitle>
+              <HistoryTitle>My history</HistoryTitle>
               {renderRankedHistory()}
             </RankingHistory>
           </StyledColumn>

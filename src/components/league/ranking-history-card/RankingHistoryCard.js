@@ -99,7 +99,7 @@ const RankingHistoryCard = ({ item, index }) => {
         { rankStatus && <RankStatus>{rankStatus}</RankStatus> }
         {
           userReachedTheLeague &&
-          <RankPosition>{item.rankPosition}º colocado</RankPosition>
+          <RankPosition>{item.rankPosition}º place</RankPosition>
         }
       </HistoryItemBody>
       <HistoryItemFooter bgColor={footerBgColor} noPointsFooter={noPointsFooter}>

@@ -1,25 +1,25 @@
 export const LEAGUE_RANK_LEGEND = [
   {
     name: 'diamond',
-    title: 'Diamante',
+    title: 'Diamond',
     startAt: 98,
     endsAt: 100
   },
   {
     name: 'platinum',
-    title: 'Platina',
+    title: 'Platinum',
     startAt: 93,
     endsAt: 98
   },
   {
     name: 'gold',
-    title: 'Ouro',
+    title: 'Gold',
     startAt: 83,
     endsAt: 93
   },
   {
     name: 'silver',
-    title: 'Prata',
+    title: 'Silver',
     startAt: 60,
     endsAt: 83
   },
