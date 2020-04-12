@@ -159,11 +159,10 @@ export const LeagueBannerWrapper = styled.div`
 `
 
 export const LeagueBanner = styled(Link)`
-  ${({ bgColor, noSpacingTop, detectiveBanner }) => css`
-    background-color: ${bgColor ? bgColor : colors.idGreen1};
-    margin-top: ${noSpacingTop ? 0 : '16px'};
-    justify-content: ${detectiveBanner ? 'flex-start' : 'space-between'};
-  `} height: 80px;
+  background-color: ${colors.idGreen1};
+  margin-top: 16px;
+  justify-content: space-between;
+  height: 80px;
   width: 100%;
   overflow: hidden;
   text-decoration: none;

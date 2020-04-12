@@ -605,7 +605,9 @@ class LeagueBoards extends Component {
             <LeagueBannerWrapper>
               <LeagueBanner
                 to={LEAGUE_TUTORIAL_PATH}
-                noSpacingTop
+                style={{
+                  marginTop: 0
+                }}
               >
                 <LeagueBannerTitle>
                   Understand how the league works!
@@ -618,11 +620,9 @@ class LeagueBoards extends Component {
               </LeagueBanner>
               <LeagueBanner
                 to={LEAGUE_TUTORIAL_PATH}
-                bgColor={colors.red1}
-                detectiveBanner
+                style={{backgroundColor: colors.red1, justifyContent: 'flex-start'}}
               >
                 <LeagueRedBannerImage
-                  detectiveBanner
                   src={
                     'https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/liga/detetive.png'
                   }

@@ -16,7 +16,7 @@ import { colors } from '../../config/ui'
 const renderSection = instructions => {
   return instructions.map((instruction, index) => {
     return (
-      <InstructionBox>
+      <InstructionBox key={index}>
         <InstructionNumber>{index + 1}</InstructionNumber>
         <InstructionTextContainer>
           <InstructionText>{instruction}</InstructionText>
