@@ -55,34 +55,34 @@ const ItemsShelf = ({
       ? settings
       : {
           slidesToScroll: 7,
-          slidesToShow: 7.5,
+          slidesToShow: 7,
           responsive: [
             {
               breakpoint: sizes.xxlgScreen,
               settings: {
                 slidesToScroll: 6,
-                slidesToShow: 6.5
+                slidesToShow: 6
               }
             },
             {
               breakpoint: sizes.xlgScreen,
               settings: {
                 slidesToScroll: 5,
-                slidesToShow: 5.2
+                slidesToShow: 5
               }
             },
             {
               breakpoint: sizes.lgScreen,
               settings: {
                 slidesToScroll: 3,
-                slidesToShow: 3.8
+                slidesToShow: 3
               }
             },
             {
               breakpoint: sizes.mdScreen,
               settings: {
                 slidesToScroll: 3,
-                slidesToShow: 4
+                slidesToShow: 3
               }
             },
             {
@@ -142,41 +142,41 @@ const ItemsShelf = ({
       ? settings
       : {
           slidesToScroll: 4,
-          slidesToShow: 4.8,
+          slidesToShow: 4,
           responsive: [
             {
               breakpoint: sizes.xxlgScreen,
               settings: {
                 slidesToScroll: 4,
-                slidesToShow: 4.1
+                slidesToShow: 4
               }
             },
             {
               breakpoint: sizes.xlgScreen,
               settings: {
                 slidesToScroll: 3,
-                slidesToShow: 3.3
+                slidesToShow: 3
               }
             },
             {
               breakpoint: sizes.lgScreen,
               settings: {
                 slidesToScroll: 2,
-                slidesToShow: 2.4
+                slidesToShow: 2
               }
             },
             {
               breakpoint: sizes.mdScreen,
               settings: {
                 slidesToScroll: 2,
-                slidesToShow: 2.4
+                slidesToShow: 2
               }
             },
             {
               breakpoint: sizes.smScreen,
               settings: {
                 slidesToScroll: 1,
-                slidesToShow: 1.7,
+                slidesToShow: 1,
                 arrows: false
               }
             }
@@ -233,41 +233,41 @@ const ItemsShelf = ({
         titleMobile={titleMobile}
         settings={{
           slidesToScroll: 5,
-          slidesToShow: 5.1,
+          slidesToShow: 5,
           responsive: [
             {
               breakpoint: sizes.xxlgScreen,
               settings: {
                 slidesToScroll: 5,
-                slidesToShow: 5.1
+                slidesToShow: 5
               }
             },
             {
               breakpoint: sizes.xlgScreen,
               settings: {
                 slidesToScroll: 4,
-                slidesToShow: 4.2
+                slidesToShow: 4
               }
             },
             {
               breakpoint: sizes.lgScreen,
               settings: {
                 slidesToScroll: 3,
-                slidesToShow: 3.1
+                slidesToShow: 3
               }
             },
             {
               breakpoint: sizes.mdScreen,
               settings: {
                 slidesToScroll: 3,
-                slidesToShow: 3.4
+                slidesToShow: 3
               }
             },
             {
               breakpoint: sizes.smScreen,
               settings: {
                 slidesToScroll: 2,
-                slidesToShow: 2.5,
+                slidesToShow: 2,
                 arrows: false
               }
             }
@@ -301,35 +301,35 @@ const ItemsShelf = ({
           breakpoint: sizes.xxlgScreen,
           settings: {
             slidesToScroll: 2,
-            slidesToShow: 2.5
+            slidesToShow: 2
           }
         },
         {
           breakpoint: sizes.xlgScreen,
           settings: {
             slidesToScroll: 2,
-            slidesToShow: 2.1
+            slidesToShow: 2
           }
         },
         {
           breakpoint: sizes.lgScreen,
           settings: {
             slidesToScroll: 2,
-            slidesToShow: 2.3
+            slidesToShow: 2
           }
         },
         {
           breakpoint: sizes.mdScreen,
           settings: {
             slidesToScroll: 1,
-            slidesToShow: 2
+            slidesToShow: 1
           }
         },
         {
           breakpoint: sizes.smScreen,
           settings: {
             slidesToScroll: 1,
-            slidesToShow: 1.07,
+            slidesToShow: 1,
             arrows: false
           }
         }
@@ -377,20 +377,20 @@ const ItemsShelf = ({
 
     const didacticsCarouselConfig = {
       slidesToScroll: 3,
-      slidesToShow: 3.8,
+      slidesToShow: 3,
       responsive: [
         {
           breakpoint: sizes.xxlgScreen,
           settings: {
             slidesToScroll: 3,
-            slidesToShow: 3.3
+            slidesToShow: 3
           }
         },
         {
           breakpoint: sizes.xlgScreen,
           settings: {
             slidesToScroll: 2,
-            slidesToShow: 2.8
+            slidesToShow: 2
           }
         },
         {
@@ -404,14 +404,14 @@ const ItemsShelf = ({
           breakpoint: sizes.mdScreen,
           settings: {
             slidesToScroll: 1,
-            slidesToShow: 1.8
+            slidesToShow: 1
           }
         },
         {
           breakpoint: sizes.smScreen,
           settings: {
             slidesToScroll: 1,
-            slidesToShow: 1.3,
+            slidesToShow: 1,
             arrows: false
           }
         }
