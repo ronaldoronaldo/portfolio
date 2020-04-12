@@ -448,7 +448,7 @@ class LeagueBoards extends Component {
               }}
             >
               {overallRankingHistory.map((item, index) => {
-                return <RankingHistoryCard item={item} index={index} />
+                return <RankingHistoryCard item={item} index={index} key={index} />
               })}
             </Carousel>
           </RankingHistoryContainer>

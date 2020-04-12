@@ -102,12 +102,13 @@ const Header = props => {
               <Item
                 text="Back to portfolio"
                 imagePath={symbolEducacao}
+                path={EXAMPLES_PATH}
                 type="img-left-text-left"
-                to={EXAMPLES_PATH}
               />
               <Item
                 text="Disabled button example"
                 imagePath={symbolGutenNews}
+                path={''}
                 type="img-left-text-left"
                 disabled
               />
@@ -208,12 +209,13 @@ const Header = props => {
                   text="Back to portfolio"
                   imagePath={symbolEducacao}
                   type="img-left-text-left"
-                  to={PORTFOLIO_PATH}
+                  path={EXAMPLES_PATH}
                 />
                 <Item
                   text="Disabled button example"
                   imagePath={symbolGutenNews}
                   type="img-left-text-left"
+                  path={''}
                   disabled
                 />
               </DropdownEnd>
