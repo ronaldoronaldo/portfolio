@@ -23,6 +23,10 @@ import image6 from 'assets/images/mock/Modelo_Colecao_6.jpg'
 
 import books from 'components/shelf/books'
 import news from 'components/shelf/news.json'
+
+const booksClone = [...books]
+const newsClone = [...news]
+
 const collections = [
   { image: image4, title: 'Histórias inspiradoras' },
   { image: image1, title: 'Viajando sem sair de casa' },
@@ -30,77 +34,6 @@ const collections = [
   { image: image5, title: 'Luz, câmera, ação!' },
   { image: image2, title: 'Aventuras animais' },
   { image: image3, title: 'Rumos do planeta' }
-]
-
-import BookImage from 'assets/images/book.svg'
-import NewsImage from 'assets/images/news.svg'
-const didactics = [
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: BookImage,
-    platform: 'arvore'
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  },
-  {
-    title: 'Redes sociais, celular e internet: o gênero Notícia',
-    genre: 'Campo jornalístico/midiático',
-    image: NewsImage
-  }
 ]
 
 const BooksAndNewsScreen = ({ client, ...props }) => {
@@ -118,7 +51,7 @@ const BooksAndNewsScreen = ({ client, ...props }) => {
     <Container>
       <ContainerHeaderStyle>
         <TitleStyle
-          text="O que vamos ler hoje?"
+          text="What are we going to read?"
           textAlign="left"
           style={{ color: colors.blue3, marginTop: 0, marginBottom: 0 }}
           size={3}
@@ -146,22 +79,22 @@ const BooksAndNewsScreen = ({ client, ...props }) => {
       <ItemsShelf
         booksShelf
         exploreMore
-        title="Destaques da Árvore de Livros para você"
-        titleMobile="Destaques da Árvore de Livros"
-        data={books}
+        title="Trending books for you"
+        titleMobile="Trending books"
+        data={booksClone}
         loading={loadingData}
       />
       <ItemsShelf
         newsShelf
         exploreMore
-        title="As atualidades do Guten News que você vai adorar"
+        title="Most recent news that you will love"
         titleMobile="Atualidades do Guten News"
-        data={news}
+        data={newsClone}
         loading={loadingData}
       />
       <ItemsShelf
         collectionsShelf
-        title="Nossas Coleções"
+        title="Our Collections"
         data={collections}
         loading={loadingData}
       />
@@ -169,15 +102,15 @@ const BooksAndNewsScreen = ({ client, ...props }) => {
         slidesToShow={7.5}
         booksShelf
         exploreMore
-        title={`Por que você leu a matéria “Descobertas literárias”`}
-        data={books}
+        data={books.reverse()}
+        title={`Because you read the book “O Menino Maluquinho” `}
         loading={loadingRecommendations}
       />
       <ItemsShelf
         newsShelf
         exploreMore
-        title={`Por que você leu o livro “O Menino Maluquinho” `}
-        data={news}
+        data={news.reverse()}
+        title={`Because you read the news “Descobertas literárias”`}
         loading={loadingRecommendations}
       />
     </Container>

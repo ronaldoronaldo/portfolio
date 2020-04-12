@@ -9,11 +9,11 @@ const HomeScreen = ({ client, ...props }) => {
   const [showScreen, setShowScreen] = useState('books')
 
   const menuItens = [
-    { title: 'Livros e Notícias', show: 'books' },
+    { title: 'Books and News', show: 'books' },
     {
-      title: 'Materiais Pedagógicos',
+      title: 'Teaching Materials',
       show: 'materials',
-      titleMobile: 'Para o professor'
+      titleMobile: 'Teacher Area'
     }
   ]
 
