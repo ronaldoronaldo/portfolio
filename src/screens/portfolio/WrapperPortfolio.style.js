@@ -54,7 +54,7 @@ export const IconsContainer = styled.div`
             selectedPage === 'curriculum' ?
               colors.portGreen :
               selectedPage === 'about-me' ?
-                colors.red3 : selectedPage === 'examples' ? colors.black4Dark : colors.black4
+                colors.red2 : selectedPage === 'examples' ? colors.black4Dark : colors.black4
             };
           }
           background-color: transparent;
@@ -79,7 +79,7 @@ export const IconsContainer = styled.div`
           selectedPage === 'curriculum' ?
             colors.portGreen :
             selectedPage === 'about-me' ?
-              colors.red2 : colors.black4
+              '#BA7979' : colors.black4
           };
         }
         @media (max-width: ${sizes.mdScreen}px) {
