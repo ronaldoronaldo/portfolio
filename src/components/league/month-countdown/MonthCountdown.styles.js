@@ -44,8 +44,8 @@ export const UnityBox = styled.div`
 UnityBox.defaultProps = {
   theme: {
     box: {
-      width: 'auto',
-      widthBig: 'auto',
+      width: '28px',
+      widthBig: '35px',
       height: 'auto',
       heightBig: 'auto',
       padding: '0',
