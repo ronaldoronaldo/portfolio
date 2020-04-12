@@ -285,9 +285,9 @@ const StudentsEditScreen = props => {
           <SectionContainer>
             <Select
               text={userType}
-              items={['Admin', 'Professor']}
+              items={['Principal', 'Professor', 'Student']}
               onChange={handleSelectValue}
-              label="Tipo de usuário"
+              label="User role"
               activeSelectButton={userType}
               labelColor={colors.black3}
               dropdownStyle={{
@@ -299,14 +299,14 @@ const StudentsEditScreen = props => {
               }}
             />
             <AlertRecovery open={true} color="#595A5C" bgColor="#FFF5F1">
-              Esses dados podem ser importantes para recuperação de senha
+              This section is important for password recovery
             </AlertRecovery>
             <InfoRow>
               <LeftColumnStyle md={8}>
                 <InputStyle
                   id={'secondaryEmail'}
                   style={{ marginBottom: 0 }}
-                  placeholder="E-mail secundário"
+                  placeholder="Secondary e-mail "
                   value={''}
                 />
               </LeftColumnStyle>
@@ -314,15 +314,15 @@ const StudentsEditScreen = props => {
                 <InputStyle
                   id={'phoneNumber'}
                   style={{ marginBottom: 0 }}
-                  placeholder="Número celular"
+                  placeholder="Cellphone number"
                   value={''}
                 />
               </RightColumnStyle>
             </InfoRow>
-            <LabelAccordionStyle>Esse aluno é bolsista?</LabelAccordionStyle>
+            <LabelAccordionStyle>This student have a scholarship?</LabelAccordionStyle>
             <ScholarshipSwitchContainer>
               <div>
-                <span>Esse aluno é bolsista!</span>
+                <span>Yes it does!</span>
                 <ToggleSwitch
                   active={scholarship}
                   onChange={toggleScholarshipSwitch}
