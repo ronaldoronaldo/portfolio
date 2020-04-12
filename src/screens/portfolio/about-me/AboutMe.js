@@ -50,7 +50,7 @@ const badges = [
   //   iconWidth: 74
   // },
   {
-    title: 'UX / UI',
+    title: 'UX & UI',
     image: uxui,
     iconWidth: 76
   },

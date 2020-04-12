@@ -43,7 +43,6 @@ const ItemsShelf = ({
   }
 
   const openNew = (newItem, newType) => {
-    console.log(newItem)
     setItemDetails(newItem)
     setType(newType)
   }

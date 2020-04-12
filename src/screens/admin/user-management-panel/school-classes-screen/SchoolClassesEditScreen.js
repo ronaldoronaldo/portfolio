@@ -61,7 +61,7 @@ const SchoolClassesEditScreen = ({ client, ...props }) => {
         setEntityId(~~id)
         dataGetEntityFn(~~id)
       }
-    }).catch(err => console.log(err))
+    }).catch(err => console.log(''))
   }, [parentsEntities])
 
   const dataGetParentsEntitiesFn = async () => {
@@ -75,7 +75,6 @@ const SchoolClassesEditScreen = ({ client, ...props }) => {
 
   const dataGetEntityFn = async (id) => {
     const entity = await getEntity(client, id)
-    console.log(entity)
     setNameInputValue(entity.name)
     setSchoolYear(entity.grade || schoolYears[3])
     const parentId = ~~entity.ancestry.split('/')[3]

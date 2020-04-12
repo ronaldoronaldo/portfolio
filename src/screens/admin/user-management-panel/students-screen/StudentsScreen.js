@@ -33,7 +33,6 @@ const SchoolsScreen = ({ client, ...props }) => {
 
   const dataEntitiesFn = async () => {
     const dataEntities = await listUsers(client, 'STUDENT')
-    console.log(dataEntities)
     setData(dataEntities)
     setFilteredData(dataEntities)
   }

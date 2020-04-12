@@ -166,7 +166,7 @@ const Login = ({ client, ...props }) => {
                 />
               )}
               onSuccess={responseGoogle}
-              onFailure={obj => console.log('error on google signin', obj)}
+              onFailure={obj => console.log('')}
               cookiePolicy={'single_host_origin'}
             />
             <IconButton

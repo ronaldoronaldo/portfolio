@@ -20,7 +20,6 @@ const client = new ApolloClient({
   },
   onError: ({ graphQLErrors, networkError }) => {
     if (graphQLErrors) {
-      console.log('graphQLErrors', graphQLErrors)
 
       const unauthorized = graphQLErrors.find(
         graphqlError =>
@@ -36,7 +35,6 @@ const client = new ApolloClient({
     }
 
     if (networkError) {
-      console.log('networkError', networkError)
     }
   },
   clientState: {

@@ -7,7 +7,6 @@ import {
   NotRequiredLabel,
   EyeIcon
 } from './Input.style'
-import PropTypes from 'prop-types'
 import { FontIcon } from 'components/lib/icons'
 import { colors } from 'config/ui'
 
@@ -108,20 +107,6 @@ const Input = ({
       {notRequired && <NotRequiredLabel>Não obrigatório</NotRequiredLabel>}
     </ContainerTextInputStyle>
   )
-}
-
-Input.propTypes = {
-  value: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
-  error: PropTypes.bool,
-  success: PropTypes.bool,
-  outline: PropTypes.string,
-  placeholder: PropTypes.string,
-  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  placeholderTextColor: PropTypes.string,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  type: PropTypes.string
 }
 
 export default Input

@@ -14,7 +14,6 @@ import { CHOOSE_RECOVER_METHOD_PATH } from 'routes'
 
 const ChooseUserType = props => {
   const goForward = isTeacher => {
-    console.log(isTeacher)
     props.history.push(CHOOSE_RECOVER_METHOD_PATH)
   }
 

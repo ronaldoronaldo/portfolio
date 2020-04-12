@@ -125,9 +125,7 @@ const ResponsabilitiesCard = ({ setupByClasses }) => {
       itemActiveClasses => itemActiveClasses !== item
     )
     let newCards = [...cards]
-    console.log(cards)
     newCards[index].classes = newArrActiveClasses
-    console.log(newCards)
     setCards(cards)
   }
 

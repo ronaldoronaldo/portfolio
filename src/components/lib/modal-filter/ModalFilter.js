@@ -61,7 +61,6 @@ const ModalFilter = ({
   const handleFilterSubmitAction = () => {
     if (!enableButton) return
     const filteredValues = values.filter(value => value.length > 0)
-    console.log(filteredValues)
     handleFilter(filteredValues)
     fadeAndCloseFilter()
     handleFilterSubmit(filteredValues)

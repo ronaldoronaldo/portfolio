@@ -182,6 +182,7 @@ const StudentsEditScreen = props => {
                 style={{ marginBottom: 0 }}
                 placeholder="Identifier"
                 value={'caio.avila'}
+                readOnly
               />
             </LeftColumnStyle>
             <RightColumnStyle md={4.5} style={{ padding: 0, margin: 0 }}>
@@ -190,6 +191,7 @@ const StudentsEditScreen = props => {
                 style={{ marginBottom: 0 }}
                 placeholder="Public password"
                 value={'arvore12345'}
+                readOnly
               />
             </RightColumnStyle>
           </InfoRow>
@@ -308,6 +310,7 @@ const StudentsEditScreen = props => {
                   style={{ marginBottom: 0 }}
                   placeholder="Secondary e-mail "
                   value={''}
+                  readOnly
                 />
               </LeftColumnStyle>
               <RightColumnStyle md={4}>
@@ -316,6 +319,7 @@ const StudentsEditScreen = props => {
                   style={{ marginBottom: 0 }}
                   placeholder="Cellphone number"
                   value={''}
+                  readOnly
                 />
               </RightColumnStyle>
             </InfoRow>

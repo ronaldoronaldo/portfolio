@@ -44,7 +44,7 @@ const SchoolsEditScreen = ({ client, ...props }) => {
         setSchoolId(~~id)
         dataGetEntityFn(~~id)
       }
-    }).catch(err => console.log(err))
+    }).catch(err => console.log(''))
   }, [parentsEntities])
 
   const dataGetParentsEntitiesFn = async () => {

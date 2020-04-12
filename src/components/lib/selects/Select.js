@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { ButtonSelect } from 'components/lib/buttons'
-import PropTypes from 'prop-types'
 import { Dropdown } from 'components/lib/dropdown'
 import ClickOutside from 'utils/ClickOutside'
 
@@ -62,18 +61,6 @@ const Select = ({
       )}
     </React.Fragment>
   )
-}
-
-Select.propTypes = {
-  items: PropTypes.array.isRequired,
-  text: PropTypes.string.isRequired,
-  searchInputLabel: PropTypes.string,
-  onChange: PropTypes.func,
-  mobileStyle: PropTypes.bool,
-  headerTitle: PropTypes.string,
-  label: PropTypes.string,
-  activeSelectButton: PropTypes.bool,
-  itemsSchoolYear: PropTypes.bool
 }
 
 export default Select
