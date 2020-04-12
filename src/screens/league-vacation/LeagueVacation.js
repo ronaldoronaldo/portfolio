@@ -64,8 +64,8 @@ const LeagueVacation = () => {
           path={LEAGUE_PATH}
           bgColor={colors.leagueOnVacationPurple1}
         />
-        <Title>A Liga de Leitores está de férias!</Title>
-        <Subtitle>Estamos contando os dias para o retorno da Liga:</Subtitle>
+        <Title>The Reading League is on vacation!</Title>
+        <Subtitle>We are counting the days for the league to return:</Subtitle>
         <ThemeProvider theme={vacationTheme}>
           <MonthCountdown endDate={vacationEndDate} removeSeparators />
         </ThemeProvider>

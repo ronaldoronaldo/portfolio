@@ -57,7 +57,7 @@ const Header = props => {
       <WrapperInput>
         {!props.leagueHeader && (
           <ExpandableSearchInputStyle
-            placeholder="Buscar por livros, notícias, autores…"
+            placeholder="Search by books, news, authors…"
             iconSize={22}
             onChange={onSearchChange}
             value={searchValue}

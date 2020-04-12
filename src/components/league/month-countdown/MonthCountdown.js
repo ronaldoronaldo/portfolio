@@ -38,18 +38,18 @@ class MonthCountdown extends Component {
     const { endDate, removeSeparators } = this.props
     const now = Date.now()
     const countdown = {
-      dias: differenceInDays(
+      days: differenceInDays(
         endOfMonth(endDate ? endDate : now),
         now
       ).toString(),
-      horas: differenceInHours(endOfDay(now), now).toString(),
+      hours: differenceInHours(endOfDay(now), now).toString(),
       min: differenceInMinutes(endOfHour(now), now).toString(),
-      seg: differenceInSeconds(endOfMinute(now), now).toString()
+      sec: differenceInSeconds(endOfMinute(now), now).toString()
     }
 
     const renderUnityBox = label => {
       return (
-        <UnityBox isTheFirstBox={label==='dias'}>
+        <UnityBox isTheFirstBox={label==='days'}>
           <UnityNumber>{this.formateInfo(countdown[label])}</UnityNumber>
           <UnityLabel>{label}</UnityLabel>
         </UnityBox>
@@ -58,13 +58,13 @@ class MonthCountdown extends Component {
 
     return (
       <CountdownWrapper>
-        {renderUnityBox('dias')}
+        {renderUnityBox('days')}
         {!removeSeparators && <StyledDots>{` : `}</StyledDots>}
-        {renderUnityBox('horas')}
+        {renderUnityBox('hours')}
         {!removeSeparators && <StyledDots>{` : `}</StyledDots>}
         {renderUnityBox('min')}
         {!removeSeparators && <StyledDots>{` : `}</StyledDots>}
-        {renderUnityBox('seg')}
+        {renderUnityBox('sec')}
       </CountdownWrapper>
     )
   }

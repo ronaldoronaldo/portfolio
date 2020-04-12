@@ -173,7 +173,7 @@ const ModalFilter = ({
               <Row>
                 <Column sm={4}>
                   <Button
-                    text="Cancelar"
+                    text="Cancel"
                     bgColor={colors.white}
                     bgColorHover={colors.white}
                     textColorHover={colors.black4}
@@ -183,7 +183,7 @@ const ModalFilter = ({
                 </Column>
                 <Column sm={8}>
                   <Button
-                    text="Filtrar"
+                    text="Filter"
                     isEnabled={enableButton}
                     onClick={handleFilterSubmitAction}
                     // loading={filterLoading}
