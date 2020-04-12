@@ -42,6 +42,7 @@ export const RankingHistory = styled.div`
   flex-direction: column;
   flex: 1;
   margin-right: 0;
+  margin-bottom: 56px;
   overflow: hidden;
   margin-top: ${spacing.large}px;
   @media (min-width: ${sizes.sScreen}px) {
