@@ -163,7 +163,7 @@ const Examples = () => {
         <SectionTitle>Responsive Screens</SectionTitle>
         <SectionSubtitle>
           Three different environments, each one with at least three pages where
-          you can navigate between. Everything works in any screen size.
+          you can navigate between. Everything in the entire portfolio works in any screen size.
         </SectionSubtitle>
         <CardsSection>{renderCards(responsiveScreens)}</CardsSection>
       </ResponsiveScreens>
@@ -171,7 +171,7 @@ const Examples = () => {
         <PaddingBox>
           <SectionTitle>Components Examples</SectionTitle>
           <SectionSubtitle>
-            Everything here in this website is fully handmade by me, every
+            Everything here in this website is also fully handmade by me, every
             animation and functionality, with almost zero external libs used.
           </SectionSubtitle>
         </PaddingBox>
