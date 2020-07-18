@@ -149,7 +149,7 @@ export const ExperienceListItem = styled.li`
   color: ${colors.portGray};
   font-size: 12px;
   font-weight: ${fontWeights.regular};
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 16px;
   }

@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react'
+import React, {Fragment} from 'react'
 import {
   CurriculumContainer,
   LeftSide,
@@ -29,11 +29,20 @@ import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
 import {ExperienceMeter} from "../../../components/portfolio/experience-meter"
 
+const TCExperiences = [
+  'TradersClub is a social network based on sharing your trading ideas for the stock market.',
+  'The teams in TC are divided by page, just like in Spotify.',
+  'My team is responsible for the Stocks Wallet page, which is the page that contains the stocks you want to follow.',
+  'I am the only Front-end developer on the team and managed to deliver incredible cool features, many times going beyond the expectations of the P.O. himself.',
+  'Working with charts in real time to show the price changing for each stock on the wallet simultaneously.',
+  'Mainly languages are React, React-native and Styled Components.'
+]
+
 const arvoreExperiences = [
   'Árvore is an educational app, its like Netflix but with books instead of movies and it helps improving reading at schools in many different ways.',
-  'Already did a lot since I got in Árvore, even huge platforms like the editors panel and the user management panel for schools.',
+  'Did a lot in Árvore, such as huge platforms like the editors panel and the user management panel for schools.',
   'Also created many pages and components for web and mobile.',
-  'Here we work with most recent technologies such as react native, react hooks, GraphQL and Styled Components.',
+  'Here I worked with most recent technologies such as react native, react hooks, GraphQL and Styled Components.',
   'Certified front end tester with Jest and Enzyme.'
 ]
 
@@ -93,21 +102,7 @@ const contactsInfo = [
   }
 ]
 
-const Curriculum = props => {
-  // const body = document.body
-  //
-  //
-  // useEffect(() => {
-  //   console.log('action', props.history.location.action)
-  //   console.log('location', props.history.location)
-  //   changeBackgroundColor('curriculum')
-  // }, [])
-  //
-  // const changeBackgroundColor = page => {
-  //   body.setAttribute('class', '')
-  //   body.classList.add(page)
-  // }
-
+const Curriculum = () => {
   const renderTitle = text => {
     return (
       <Fragment>
@@ -192,7 +187,9 @@ const Curriculum = props => {
       <RightSide>
         <RightSectionContainer>
           {renderTitle('Experience')}
-          {renderExperienceTitle('Front-end, Árvore Educação', '2019 - Present')}
+          {renderExperienceTitle('Front-end, TradersClub', '2020 - Present')}
+          {renderExperienceList(TCExperiences)}
+          {renderExperienceTitle('Front-end, Árvore Educação', '2019 - 2020')}
           {renderExperienceList(arvoreExperiences)}
           {renderExperienceTitle('Fullstack, Inceres', '2017 - 2019')}
           {renderExperienceList(inceresExperiences)}
