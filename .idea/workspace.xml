@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/screen-card/ScreenCard.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/screen-card/ScreenCard.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,15 +27,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,6 +45,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/assets/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/assets/src/styles/common/Common.styles.js" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -64,18 +63,7 @@
       <recent name="$PROJECT_DIR$/src/components/portfolio/file-dropzone" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -183,6 +171,7 @@
       <workItem from="1586010681693" duration="5411000" />
       <workItem from="1586030478044" duration="31749000" />
       <workItem from="1586125895231" duration="7316000" />
+      <workItem from="1609875502089" duration="3351000" />
     </task>
     <task id="LOCAL-00299" summary="o homem é mt brabo">
       <created>1585877511032</created>
@@ -531,16 +520,14 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -559,6 +546,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
