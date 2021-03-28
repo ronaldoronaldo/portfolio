@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Portfolio | Rafael Weiss</title>
+  <meta content="Rafael Weiss's Portfolio - Front-End Developer & Designer" name="description">
+  <meta content="Rafael Weiss's Portfolio - Front-End Developer" property="og:title">
+  <meta content="A front-end developer fully-committed to designing and developing innovative web materials" property="og:description">
+  <meta content="https://i.ibb.co/MSt1r2d/Whats-App-Image-2020-03-11-at-18-00-31.jpg" property="og:image">
+  <meta content="summary" name="twitter:card">
+  <link href="https://i.ibb.co/1XLVNyT/70855601537347974-128.png" rel="shortcut icon" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- For older browsers -->
+  <div id="notsupported-warning" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 530px;
+    height: 432px;
+    text-align: center;
+    z-index: 10;
+    margin-left: -265px;
+    margin-top: -216px;
+    display: none;
+  ">
+    <h2 style="font-family: Lato; font-weight: 600; font-size: 40px; line-height: 48px; color: #293841; margin-top: 70px; margin-bottom: 10px;">
+      SEU NAVEGADOR
+      <br />ESTÁ DESATUALIZADO</h2>
+    <p style="font-family: Lato; font-weight: 400; font-size: 18px; line-height: 31px; color: #9EAEB7;">Verificamos que seu navegador está desatualizado. Isso pode causar um não funcionamento de algumas funções dentro da
+      plataforma. Clique no botão abaixo para instalar uma nova versão!</p>
+    <a href="https://s3-sa-east-1.amazonaws.com/files.arvoredelivros.com.br/chrome_installer/Firefox+Setup+61.0.2.exe" style="
+      text-decoration: none;
+      width: 170px;
+      height: 56px;
+      font-family: Lato;
+      font-weight: 400;
+      background-color: #41c2b4;
+      color: #FFFFFF;
+      font-size: 14px;
+      margin-top: 40px;
+      display: inline-block;
+      line-height: 56px;
+      border-radius: 3px;
+    ">
+      Instalar agora
+    </a>
+  </div>
+
+  <div id="root"></div>
+  <div id="print"></div>
+  <div id="modal"></div>
+  <script>
+    (function (d) {
+      if (Object.assign === undefined) {
+        d.getElementById("notsupported-warning").style.display = "block";
+        return;
+      }
+
+      var js = d.createElement("script");
+      js.type = "text/javascript";
+      js.src = "/js/main.js";
+      d.body.appendChild(js);
+    })(document)
+  </script>
+</body>
+
+</html>

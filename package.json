@@ -1,0 +1,161 @@
+{
+  "name": "combo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production --config webpack/webpack.prod.js",
+    "dev": "webpack-dev-server --mode development --hot --config webpack/webpack.dev.js",
+    "analyze": "webpack --config webpack/webpack.analyzer.js",
+    "watch": "webpack --watch --color --mode development --config webpack/webpack.dev.phoenix.js",
+    "test": "cross-env BABEL_ENV=test NODE_ENV=test jest --no-cache",
+    "test:coverage": "jest --coverage --no-cache",
+    "test:watch": "jest --watch --no-cache --onlyChanged",
+    "test:update-snapshots": "jest --updateSnapshot",
+    "lint": "eslint 'src/**/*.js'",
+    "precommit": "lint-staged",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack --mode production --config webpack/webpack.prod.js"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.0.1",
+    "apollo-boost": "^0.4.4",
+    "babel-polyfill": "^6.26.0",
+    "express": "*",
+    "date-fns": "^2.11.1",
+    "graphql": "^14.5.4",
+    "lodash": "^4.17.15",
+    "msal": "^1.1.3",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-apollo": "^3.0.1",
+    "react-dom": "16.9.0",
+    "react-google-login": "^5.0.5",
+    "react-redux": "7.1.1",
+    "react-router-dom": "^5.1.0",
+    "react-slick": "0.23.2",
+    "react-table": "next",
+    "react-tooltip": "^4.1.5",
+    "react-transition-group": "^4.3.0",
+    "redux": "4.0.4",
+    "styled-components": "4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "10.0.3",
+    "babel-jest": "24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "2.3.0",
+    "babel-plugin-lodash": "3.3.4",
+    "babel-plugin-styled-components": "1.10.6",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-1": "6.24.1",
+    "cross-env": "^6.0.0",
+    "css-loader": "3.2.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
+    "enzyme-to-json": "3.4.0",
+    "eslint": "6.2.2",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.14.3",
+    "file-loader": "4.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "3.0.4",
+    "jest-cli": "24.9.0",
+    "jest-styled-components": "6.3.3",
+    "lint-staged": "9.2.5",
+    "prettier": "1.18.2",
+    "react-test-renderer": "16.9.0",
+    "redux-mock-store": "1.5.3",
+    "style-loader": "1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-bundle-analyzer": "3.4.1",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "3.8.0",
+    "webpack-merge": "4.2.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "styled-components",
+      "@babel/plugin-proposal-class-properties"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs",
+          "dynamic-import-node"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.spec.js",
+      "!src/**/index.js"
+    ],
+    "setupFiles": [
+      "./tests-setup/raf.polyfill.js",
+      "./tests-setup/perf.polyfill.js",
+      "./tests-setup/matchMedia.polyfill.js",
+      "./tests-setup/setup.js"
+    ],
+    "modulePaths": [
+      "src"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!lodash-es)(?!react-virtualized)",
+      "/node_modules/",
+      "/assets/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|png)$": "<rootDir>/__mocks__/file.mock.js",
+      "\\.(css)$": "<rootDir>/__mocks__/style.mock.js"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "promise"
+    ],
+    "rules": {
+      "promise/catch-or-return": "error",
+      "react/jsx-uses-vars": 2,
+      "react/jsx-uses-react": 2,
+      "no-unused-vars": [
+        "error",
+        {
+          "vars": "all",
+          "args": "none",
+          "ignoreRestSiblings": true
+        }
+      ]
+    }
+  }
+}
