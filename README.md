@@ -1,4 +1,4 @@
-# combo frontend
+# frontend
 Consumes the GraphQL api and render the content using React.
 
 ## How to install
