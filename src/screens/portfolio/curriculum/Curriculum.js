@@ -29,6 +29,21 @@ import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
 import { ExperienceMeter } from '../../../components/portfolio/experience-meter'
 
+const AFExperiences = [
+  'My job here is develop a new version for their main application, the coach dashboard.',
+  'The platform is built to help coaches and trainers to get along and complete an exercise routine.',
+  "I've developed new feature for the chat component, profile page, workouts section and many more.",
+  'I have also spent a lot of time writing tests, unit and e2e tests using playwright react testing library.',
+  'Another great part of my dedication is on code review, with a proper validation of the feature before it.'
+]
+
+const LoadExperiences = [
+  "Here I'm working on the RFP Guide, which helps shippers decide who is the best carrier for them.",
+  'In only 5 months I have delivered 4 Epics, created a documentation for Mixpanel events and refactored their API calls from redux to react-query.',
+  'I have also changed the way we destruct properties in CSS for Styled Components',
+  'Mainly languages are React, React-native and Styled Components.'
+]
+
 const TCExperiences = [
   'TradersClub is a social network based on sharing your trading ideas for the stock market.',
   'The teams in TC are divided by page, just like in Spotify.',
@@ -68,6 +83,7 @@ const leftSideLanguages = [
   { label: 'React', level: 5 },
   { label: 'React Native', level: 5 },
   { label: 'Styled Comp.', level: 5 },
+  { label: 'Hooks', level: 5 },
   { label: 'ES6', level: 5 },
   { label: 'GraphQL', level: 5 },
   { label: 'JavaScript', level: 5 },
@@ -76,19 +92,18 @@ const leftSideLanguages = [
   { label: 'Angular 6', level: 4 },
   { label: 'Bootstrap', level: 4 },
   { label: 'OpenLayers', level: 3 },
-  { label: 'Elastic S.', level: 2 },
-  { label: 'Flask', level: 2 }
+  { label: 'Elastic S.', level: 2 }
 ]
 
 const rightSideLanguages = [
   { label: 'HTML', level: 5 },
   { label: 'CSS', level: 5 },
   { label: 'Jest', level: 5 },
-  { label: 'Enzyme', level: 5 },
+  { label: 'Playwright', level: 5 },
   { label: 'SASS', level: 5 },
+  { label: 'Enzyme', level: 4 },
   { label: 'Python', level: 4 },
   { label: 'Karma', level: 3 },
-  { label: 'mySQL', level: 3 },
   { label: 'JQuery', level: 3 },
   { label: 'Linux', level: 3 },
   { label: 'Xamarin', level: 3 },
@@ -98,11 +113,11 @@ const rightSideLanguages = [
 const contactsInfo = [
   {
     label: 'Cellphone',
-    info: '+55 21 959 017 906'
+    info: '+55 32 999 711 797'
   },
   {
     label: 'E-mail',
-    info: 'dataweiss@gmail.com'
+    info: 'weissfrontend@gmail.com'
   },
   {
     label: 'linkedin',
@@ -110,7 +125,7 @@ const contactsInfo = [
   },
   {
     label: 'Address',
-    info: 'Muriaé, MG - Brasil'
+    info: 'Rio de Janeiro, RJ - Brazil'
   }
 ]
 
@@ -184,8 +199,18 @@ const Curriculum = () => {
         <RightSectionContainer>
           {renderTitle('Experience')}
           {renderExperienceTitle(
+            'Senior Front-end, Anytime Fitness',
+            '05/2022 - Today'
+          )}
+          {renderExperienceList(AFExperiences)}
+          {renderExperienceTitle(
+            'Senior Front-end, Loadsmart',
+            '03/2021 - 05/2022'
+          )}
+          {renderExperienceList(LoadExperiences)}
+          {renderExperienceTitle(
             'Front-end Tech Lead, Byne',
-            '08/2020 - Today'
+            '08/2020 - 03/2021'
           )}
           {renderExperienceList(ByneExperiences)}
           {renderExperienceTitle(

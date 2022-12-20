@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,585 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/portfolio-rw.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__mocks__/file.mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__mocks__/style.mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/HEAD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/description" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/applypatch-msg.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/commit-msg.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/fsmonitor-watchman.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/post-update.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/pre-applypatch.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/pre-commit.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/pre-merge-commit.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/pre-push.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/pre-rebase.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/pre-receive.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/prepare-commit-msg.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hooks/update.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/info/exclude" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/queries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/book-ghost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/book.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/collection-ghost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/guten-news.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icon-arvore.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icon-google.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icon-guten.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icon-microsoft.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icon-otto.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/img-login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/img_login_web.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-arvore-edu-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-arvore-edu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-arvore-educacao-vert.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-arvore.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-guten-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mask-color.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mask_book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/Modelo_Colecao.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/Modelo_Colecao_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/Modelo_Colecao_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/Modelo_Colecao_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/Modelo_Colecao_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/Modelo_Colecao_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/collection-mock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mock/projeto-ex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/news-ghost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/news.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/chart1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/chart2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/chart3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/chart4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/chart5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/code1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/code2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/graphql.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/jest.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/jestEnzymeCertificate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/maps.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/mobileFirst.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/reactHooks.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/reactRouter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/responsive1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/responsive2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/responsive3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/ribbon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/test1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/teste2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/badges/uxui.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/book-open.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/lamp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/magro4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/leagueDesktop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/leagueMobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/libraryDesktop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/libraryMobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/loginDesktop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pages/loginMobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/pulse1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/screens.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/portfolio/trophy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/rw-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/student-recover-pass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/success-forget-password.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/symbol-arvore.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/symbol-educacao.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/symbol-guten.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/teacher-recover-pass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/card-button/CardButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/card-button/CardButton.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/card-button/CardButton.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/card-button/__snapshots__/CardButton.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/header/Header.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/home/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/accordion-menu/AccordionMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/accordion-menu/AccordionMenu.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/accordion-menu/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/breadcrumb/Breadcrumb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/breadcrumb/Breadcrumb.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/breadcrumb/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/checkbox/Checkbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/checkbox/Checkbox.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/checkbox/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/content-menu/ContentMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/content-menu/ContentMenu.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/content-menu/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/empty-data-content/EmptyDataContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/empty-data-content/EmptyDataContent.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/empty-data-content/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/expandable-search-input/ExpandableSearchInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/expandable-search-input/ExpandableSearchInput.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/expandable-search-input/ExpandableSearchInput.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/expandable-search-input/__snapshots__/ExpandableSearchInput.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/expandable-search-input/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/grid/Column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/grid/FlexboxGrid.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/grid/Grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/grid/Row.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/grid/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/header/Header.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/header/HeaderEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/paged-list/PagedList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/paged-list/PagedList.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/paged-list/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/responsabilities-card/ResponsabilitiesCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/responsabilities-card/ResponsabilitiesCard.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/responsabilities-card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/round-button/RoundButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/round-button/RoundButton.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/round-button/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-selected-filters/ShowSelectedFilters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-selected-filters/ShowSelectedFilters.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-selected-filters/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-tags/ShowTags.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-tags/ShowTags.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/show-tags/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/sidebar-menu/SidebarMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/sidebar-menu/SidebarMenu.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/sidebar-menu/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/sidebar/Sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/sidebar/Sidebar.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/sidebar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/table/ContainerActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/table/HeaderTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/table/PaginationComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/table/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/table/Table.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/table/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/tags/Tag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/tags/Tag.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/admin/user-management-panel/tags/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/Carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/Carousel.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/Item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/Item.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/Item.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/NextButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/NextButton.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/NextButton.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/PrevButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/PrevButton.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/PrevButton.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/carousel/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/combo-accordion/ComboAccordion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/combo-accordion/ComboAccordion.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/combo-accordion/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/flexboxgrid/Column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/flexboxgrid/FlexboxGrid.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/flexboxgrid/Grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/flexboxgrid/Row.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/flexboxgrid/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/go-back-header/GoBackHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/go-back-header/GoBackHeader.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/go-back-header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/league-boards/LeagueBoards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/league-boards/LeagueBoards.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/league-boards/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/month-countdown/MonthCountdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/month-countdown/MonthCountdown.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/month-countdown/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/ranking-history-card/RankingHistoryCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/ranking-history-card/RankingHistoryCard.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/league/ranking-history-card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/Alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/Alert.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/Alert.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/Notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/Notification.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/Notification.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/__snapshots__/Alert.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/__snapshots__/Notification.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/alerts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/borderOr/BorderOr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/borderOr/BorderOr.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/borderOr/BorderOrLogin.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/borderOr/__snapshots__/BorderOrLogin.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/borderOr/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/bullets/Bullet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/bullets/Bullet.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/bullets/Bullet.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/bullets/Bullets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/bullets/__snapshots__/Bullet.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/bullets/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/BackButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/BackButton.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/BackButton.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/Button.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/Button.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/ButtonSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/ButtonSelect.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/ButtonSelect.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/IconButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/IconButton.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/IconButton.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/__snapshots__/BackButton.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/__snapshots__/Button.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/__snapshots__/ButtonSelect.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/__snapshots__/IconButton.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/next-button/NextButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/next-button/NextButton.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/buttons/next-button/NextButton.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/Carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/Carousel.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/NextButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/NextButton.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/PrevButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/PrevButton.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/carousel/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/Dropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/Dropdown.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/DropdownEnd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/DropdownEnd.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/Item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/Item.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/dropdown/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/grid/Column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/grid/FlexboxGrid.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/grid/Grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/grid/Row.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/grid/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/icons/FontIcon.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/icons/__snapshots__/FontIcon.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/icons/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/inputs/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/inputs/Input.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/inputs/Input.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/inputs/InputSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/inputs/InputSearch.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/inputs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/BookPlaceholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/BookPlaceholder.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/CollectionPlaceholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/CollectionPlaceholder.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/DidacticsCardPlaceholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/DidacticsCardPlaceholder.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/NewPlaceholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/NewPlaceholder.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/ProjectsPlaceholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/ProjectsPlaceholder.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/Spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/Spinner.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/loaders/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modal-filter/ModalFilter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modal-filter/ModalFilter.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modal-filter/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modals/ModalBase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modals/ModalItemsShelfDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modals/ModalItemsShelfDetails.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modals/ModalWrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modals/ModalWrapper.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/modals/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/selects/Select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/selects/Select.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/selects/__snapshots__/Select.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/selects/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/titles/Title.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/titles/Title.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/titles/Title.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/titles/__snapshots__/Title.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/titles/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/toggleSwitch/ToggleSwitch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/toggleSwitch/ToggleSwitch.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/toggleSwitch/__snapshots__/toggleSwitch.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/toggleSwitch/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/toggleSwitch/toggleSwitch.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/tooltips/Tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/tooltips/Tooltip.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/lib/tooltips/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/ModalLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/ModalLoader.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/PageLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/PageLoader.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/SpinnerLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/SpinnerLoader.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubHeatmap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubHeatmap.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubMonths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubTile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/GithubTiles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/arvore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/GithubHeatmap/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/badge/Badge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/badge/Badge.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/badge/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/CollectionShelf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/Collectionshelf.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/Shelf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/Shelf.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection/Collection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection/Collection.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection/Collection.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection/__snapshots__/Collection.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/collection/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/collections-shelf/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/ComponentsAccordion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/ComponentsAccordion.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/components-accordion/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/experience-meter/ExperienceMeter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/experience-meter/ExperienceMeter.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/experience-meter/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/experience-meter/meter/Meter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/experience-meter/meter/Meter.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/experience-meter/meter/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/FileDropzone.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/upload-dropzone/UploadDropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/file-dropzone/upload-dropzone/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/glass-frame/GlassFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/glass-frame/GlassFrame.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/glass-frame/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/screen-card/ScreenCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/screen-card/ScreenCard.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/screen-card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/ExploreMore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/ExploreMore.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/ItemShelfDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/ItemShelfDetails.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/book/Book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/book/Book.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/book/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/collections-item/CollectionsItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/collections-item/CollectionsItem.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/collections-item/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/didactics-card/DidacticCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/didactics-card/DidacticCard.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/didactics-card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/news-item/NewsItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/news-item/NewsItem.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/news-item/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/projects-item/ProjectsItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/projects-item/ProjectsItem.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf-itens/projects-item/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/ItemsShelf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/Shelf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/Shelf.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/books.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/fake.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shelf/news.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/books-and-news/BooksAndNewsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/books-and-news/BooksAndNewsScreen.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/books-and-news/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/footer/Footer.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/header/Header.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/teaching-materials/TeachingMaterialsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/teaching-materials/TeachingMaterialsScreen.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/site/teaching-materials/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/vars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ducks/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ducks/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/WrapperAdminHome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/choose-client-screen/ChooseClientScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/choose-client-screen/ChooseClientScreen.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/choose-client-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/home-screen/HomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/home-screen/HomeScreen.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/home-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/WrapperPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/admin-screen/AdminEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/admin-screen/AdminScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/admin-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/coordinators-screen/CoordinatorsEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/coordinators-screen/CoordinatorsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/coordinators-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/directors-screen/DirectorsEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/directors-screen/DirectorsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/directors-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/employees-screen/EmployeesEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/employees-screen/EmployeesScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/employees-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/fellows-screen/FellowsEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/fellows-screen/FellowsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/fellows-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/networks-screen/NetworksEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/networks-screen/NetworksScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/networks-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/school-classes-screen/SchoolClassesEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/school-classes-screen/SchoolClassesScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/school-classes-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/schools-screen/SchoolsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/schools-screen/SchoolsScreenEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/schools-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/StudentsScreen.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/students-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/teachers-screen/TeachersEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/teachers-screen/TeachersScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/teachers-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/trademarks-screen/TrademarksEditScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/trademarks-screen/TrademarksScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/admin/user-management-panel/trademarks-screen/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league-tutorial/LeagueTutorial.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league-tutorial/LeagueTutorial.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league-tutorial/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league-vacation/LeagueVacation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league-vacation/LeagueVacation.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league-vacation/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league/League.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league/League.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/league/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/Login.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/CellphoneAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/CellphoneAnswer.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/ChooseUserType.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/ChooseUserType.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/EmailAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/EmailAnswer.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/ForgotLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/ForgotLogin.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/RecoveryError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/RecoveryError.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/RecoverySuccess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/RecoverySuccess.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/ResetPassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/ResetPassword.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SchoolNameAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SchoolNameAnswer.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SecretQuestionAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SecretQuestionAnswer.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectCityAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectCityAnswer.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectSchoolYear.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectSchoolYear.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectSecretQuestion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectSecretQuestion.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectStateAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/SelectStateAnswer.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/UserFirstNameAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/UserFirstNameAnswerStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/VerifyCellphone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/VerifyCellphone.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/VerifyEmail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/login/recovery/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/logout/Logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/logout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/WrapperPortfolio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/WrapperPortfolio.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/about-me/AboutMe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/about-me/AboutMe.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/about-me/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/Examples.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/portfolio/examples/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/WrapperSite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/WrapperSite.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/home/HomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/home/HomeScreen.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/search-results/SearchResults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/search-results/SearchResults.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/site/search-results/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/common/Animation.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/common/Common.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/common/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/fonts/Averta-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/fonts/Averta-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/fonts/Averta-Semibold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/fonts/iconcombo.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global/Global.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global/icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global/manifest-icons.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ClickOutside.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/degree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/degrees.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getQueryStringValue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/goToAddScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/league.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/queries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/readMore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/redirects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/removeArrayDuplicates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/username.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests-setup/matchMedia.polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests-setup/perf.polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests-setup/raf.polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests-setup/setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/paths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.analyzer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.dev.phoenix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/Modelo_Colecao-ac5c2b6e4b5c89e8c36fde136fb07291.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/Modelo_Colecao_2-595893e4c9379c1f5fc8c6ad465bee6c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/Modelo_Colecao_3-abecfe34a5da3f2b9e9b32b2e6589cec.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/Modelo_Colecao_4-3c46e9a667f14bb84a31a5c8b92482de.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/Modelo_Colecao_5-82b57b71c6a8bab09e89537c78c586f5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/Modelo_Colecao_6-7c8b1cb05ca3bf5b44096b904ccaf47d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/book-f826b665711832508ee9e9099eb961d3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/guten-news-c87456f60ecde13b23f9d268b2c0cd00.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/icon-arvore-40d226b59ed24c322a65b2b784c33de5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/icon-google-97a5071b5cc7581025a301d462d4541a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/icon-guten-89bdf6107d62928057fc8233ae3ee0c8.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/icon-microsoft-36803e1e3f657a6bc89589eef8735442.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/icon-otto-e833dd7c79144735e10f27b3e9b83120.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/iconcombo-ae3dfef964c7c3c16f2c997371130aaf.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/logo-arvore-edu-white-462a61c902cbccc3da0acf8a1965c02a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/news-ee36fb35301a41e6c99a14fba5385dc7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/fonts/success-forget-password-7d535ceccd95f819e2a9fef39539ad31.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/img_login_web-852771403a730dfc033434b2dc4ec71d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/student-recover-pass-e4a9a3014c4251f9e2c42d0b5afc5365.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/teacher-recover-pass-ffd384d56e9ead2715a0c98f4581e00d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/js/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="combo" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -610,30 +42,30 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1ZwaPpeORMZAQxpIZlUs13DEdG6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/assets/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/assets/src/styles/common/Common.styles.js" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Projects/portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Projects\\portfolio\\node_modules\\prettier",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images/portfolio/badges" />
@@ -760,6 +192,8 @@
       <workItem from="1586125895231" duration="7316000" />
       <workItem from="1609875502089" duration="3351000" />
       <workItem from="1616949628361" duration="308000" />
+      <workItem from="1671538746781" duration="38000" />
+      <workItem from="1671538810135" duration="2718000" />
     </task>
     <task id="LOCAL-00299" summary="o homem é mt brabo">
       <created>1585877511032</created>
@@ -1134,7 +568,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -1165,23 +598,5 @@
     <MESSAGE value="about me sizes for mobile 2 huge commit" />
     <MESSAGE value="about me sizes for mobile 3" />
     <option name="LAST_COMMIT_MESSAGE" value="about me sizes for mobile 3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1067" height="583" key="Git.Branch.Popup" timestamp="1616949810036">
-      <screen x="1920" y="2160" width="1920" height="1080" />
-    </state>
-    <state width="1067" height="583" key="Git.Branch.Popup/0.2160.1920.1080/72.0.3768.2160/1920.2160.1920.1080@1920.2160.1920.1080" timestamp="1616949810036" />
-    <state x="2511" y="2462" width="728" height="482" key="MultipleFileMergeDialog" timestamp="1616949938330">
-      <screen x="1920" y="2160" width="1920" height="1080" />
-    </state>
-    <state x="2511" y="2462" width="728" height="482" key="MultipleFileMergeDialog/0.2160.1920.1080/72.0.3768.2160/1920.2160.1920.1080@1920.2160.1920.1080" timestamp="1616949938330" />
-    <state x="2687" y="2383" width="376" height="640" key="RollbackChangesDialog" timestamp="1616949764375">
-      <screen x="1920" y="2160" width="1920" height="1080" />
-    </state>
-    <state x="2687" y="2383" width="376" height="640" key="RollbackChangesDialog/0.2160.1920.1080/72.0.3768.2160/1920.2160.1920.1080@1920.2160.1920.1080" timestamp="1616949764375" />
-    <state x="2605" y="2394" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1616949727622">
-      <screen x="1920" y="2160" width="1920" height="1080" />
-    </state>
-    <state x="2605" y="2394" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.2160.1920.1080/72.0.3768.2160/1920.2160.1920.1080@1920.2160.1920.1080" timestamp="1616949727622" />
   </component>
 </project>
