@@ -27,15 +27,16 @@ export const NameText = styled.div`
   flex: 1;
   margin-left: 16px;
   justify-content: space-between;
-  max-height: 140px;
+  max-height: 100px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    max-height: 140px;
+  }
 `
 
 export const LeftSide = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
-  max-width: 400px;
-  margin-bottom: ${spacing.medium}px;
   @media (min-width: ${sizes.mdScreen}px) {
     padding: 0;
     max-width: 100%;
@@ -48,7 +49,6 @@ export const RightSide = styled.div`
   display: flex;
   border-left: none;
   flex: 1;
-  max-width: 400px;
   @media (min-width: ${sizes.mdScreen}px) {
     max-width: 100%;
   }
@@ -69,13 +69,42 @@ export const RightSectionContainer = styled.div`
   margin-bottom: ${spacing.medium}px;
 `
 
-export const LanguagesContainer = styled.div`
-  flex-direction: column;
+export const ContactsSection = styled.div`
+  flex-direction: row;
   display: flex;
   flex: 1;
+`
+
+export const Education = styled.div`
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+`
+
+export const Contacts = styled.div`
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+  padding-right: 32px;
+`
+
+export const LanguagesContainer = styled.div`
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
   margin-top: ${spacing.small}px;
+`
+
+export const Language = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: ${spacing.small}px;
+  color: ${colors.portGray};
   @media (min-width: ${sizes.mdScreen}px) {
-    flex-direction: row;
+    width: 33%;
   }
 `
 
@@ -134,8 +163,8 @@ export const ExperienceList = styled.ul`
 `
 
 export const ExperienceListItem = styled.li`
-  color: ${colors.portGray};
-  font-size: 12px;
+  color: ${colors.portGrayText};
+  font-size: 14px;
   font-weight: ${fontWeights.regular};
   margin-bottom: 8px;
   @media (min-width: ${sizes.mdScreen}px) {
@@ -147,6 +176,11 @@ export const ExperienceText = styled.span`
   color: ${colors.portGray};
   font-size: 14px;
   font-weight: ${fontWeights.regular};
+  a {
+    color: ${colors.portGray};
+    text-decoration: none;
+    cursor: pointer;
+  }
   @media (min-width: ${sizes.smScreen}px) {
     font-size: 16px;
   }
@@ -162,8 +196,11 @@ export const EducationDescription = styled.span`
 `
 
 export const LampImage = styled.img`
-  width: 140px;
+  width: 100px;
   margin-bottom: ${spacing.medium}px;
+  @media (min-width: ${sizes.mdScreen}px) {
+    width: 140px;
+  }
 `
 export const ScreensImage = styled.img`
   width: 100%;
@@ -190,14 +227,18 @@ export const Title = styled.span`
   font-size: 26px;
   font-weight: ${fontWeights.bold};
   line-height: 1 !important;
-  margin-bottom: ${spacing.mSmall + 2}px;
+  margin-bottom: ${spacing.xSmall}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 34px;
+    margin-bottom: ${spacing.mSmall + 2}px;
   }
 `
 
 export const NameTitle = styled(Title)`
-  font-size: 52px !important;
+  font-size: 32px !important;
+  @media (min-width: ${sizes.mdScreen}px) {
+    font-size: 52px !important;
+  }
 `
 
 export const Info = styled.span`
@@ -222,5 +263,8 @@ export const Role = styled.span`
 `
 
 export const NameRole = styled(Role)`
-  font-size: 32px !important;
+  font-size: 24px !important;
+  @media (min-width: ${sizes.mdScreen}px) {
+    font-size: 32px !important;
+  }
 `

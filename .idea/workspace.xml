@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="">
+    <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="chama">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" afterDir="false" />
     </list>
@@ -204,14 +203,7 @@
       <workItem from="1616949628361" duration="308000" />
       <workItem from="1671538746781" duration="38000" />
       <workItem from="1671538810135" duration="2718000" />
-      <workItem from="1687201696011" duration="3535000" />
-    </task>
-    <task id="LOCAL-00299" summary="o homem é mt brabo">
-      <created>1585877511032</created>
-      <option name="number" value="00299" />
-      <option name="presentableId" value="LOCAL-00299" />
-      <option name="project" value="LOCAL" />
-      <updated>1585877511032</updated>
+      <workItem from="1687201696011" duration="8027000" />
     </task>
     <task id="LOCAL-00300" summary="style">
       <created>1585879024296</created>
@@ -549,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586143379586</updated>
     </task>
-    <option name="localTasksCounter" value="348" />
+    <task id="LOCAL-00348" summary="chama">
+      <created>1687205624696</created>
+      <option name="number" value="00348" />
+      <option name="presentableId" value="LOCAL-00348" />
+      <option name="project" value="LOCAL" />
+      <updated>1687205624696</updated>
+    </task>
+    <option name="localTasksCounter" value="349" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +582,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="GG" />
     <MESSAGE value="images" />
     <MESSAGE value="só vitoria" />
     <MESSAGE value="o homem é mt brabo" />
@@ -608,6 +606,7 @@
     <MESSAGE value="about me sizes for mobile" />
     <MESSAGE value="about me sizes for mobile 2 huge commit" />
     <MESSAGE value="about me sizes for mobile 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="about me sizes for mobile 3" />
+    <MESSAGE value="chama" />
+    <option name="LAST_COMMIT_MESSAGE" value="chama" />
   </component>
 </project>

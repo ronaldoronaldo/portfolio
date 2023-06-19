@@ -10,7 +10,8 @@ export const colors = {
   portGreen: '#3EECB4',
   portBlack: '#282828',
   portDark: '#4b4b4b',
-  portGray: '#626262',
+  portGray: '#8d8d8d',
+  portGrayText: '#626262',
   portDivision: '#3B3B3B',
 
   primary: `hsl(174, 60%, 54%)`,
@@ -43,7 +44,7 @@ export const colors = {
   black5Dark: `hsl(220, 2%, ${35 - lightness}%)`,
   black5Light: `hsl(220, 2%, ${35 + lightness}%)`,
   black4: `hsl(228, 2%, 54%)`,
-  black4Dark: `hsl(228, 2%, ${54 - lightness*2}%)`,
+  black4Dark: `hsl(228, 2%, ${54 - lightness * 2}%)`,
   black4Light: `hsl(228, 2%, ${54 + lightness}%)`,
   black3: `hsl(223, 5%, 71%)`,
   black3Dark: `hsl(223, 5%, ${71 - lightness}%)`,
@@ -66,7 +67,7 @@ export const colors = {
   red1Light: `hsl(0, 86%, ${97 + lightness}%)`,
 
   purple3: `hsl(271, 47%, 66%)`,
-  purple4: '#7e5f9b' ,
+  purple4: '#7e5f9b',
   purple3Dark: `hsl(271, 47%, ${66 - lightness}%)`,
   purple3Light: `hsl(271, 47%, ${66 + lightness}%)`,
   purple2: `hsl(271, 66%, 84%)`,

@@ -25,110 +25,90 @@ import {
   LanguagesLeftColumn,
   LanguagesRightColumn,
   NameTitle,
-  NameRole
+  NameRole,
+  ContactsSection,
+  Contacts,
+  Education,
+  Language
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
 import { ExperienceMeter } from '../../../components/portfolio/experience-meter'
+import { sizes } from '../../../config/ui'
+
+const KipExperiences = [
+  'Single-handedly conceptualized, designed, and developed a full-featured mobile app using Expo.',
+  'Managed product and marketing strategies, positioning the app effectively in its target market.',
+  'Oversaw the entire product lifecycle from inception to deployment, acting as the sole developer, designer, and product manager.',
+  'The app, while no longer running, showcased a comprehensive set of features, demonstrated at kipkart.com.br',
+  'Technologies used: React Native, Styled Components, Expo, Python, GraphQL.'
+]
+
+const PodopoloExperiences = [
+  'Pioneered the creation of new login and onboarding pages for mobile, enhancing user experience, and increasing conversion rates.',
+  'Optimized waveform rendering on the clip screen, effectively reducing load times for larger episodes, a significant performance upgrade valued by the company.',
+  'Led a team of 3 Front-End developers, improving team synergy and code quality through regular code reviews and one-on-one mentoring.',
+  'Demonstrated initiative in upgrading the Storybook documentation to its latest version, improving team efficiency and consistency in UI component development.',
+  'Technologies used: React, React Native, Styled Components, Storybook, Figma, React Hooks, Jira, SCRUM.'
+]
 
 const AFExperiences = [
-  'My job here is develop a new version for their main application, the coach dashboard.',
-  'The platform is built to help coaches and trainers to get along and complete an exercise routine.',
-  "I've developed new feature for the chat component, profile page, workouts section and many more.",
-  'I have also spent a lot of time writing tests, unit and e2e tests using playwright react testing library.',
-  'Another great part of my dedication is on code review, with a proper validation of the feature before it.'
+  'Delivered a comprehensive range of tasks, including the creation of new features and refactoring of the existing codebase, driving continuous improvement in functionality and user experience.',
+  'Regularly performed unit and end-to-end testing to validate code quality and functionality, ensuring the delivery of robust, high-performing applications.',
+  'Optimized codebase for improved performance and readability, reducing load times and enhancing the user experience.',
+  'Conducted regular code reviews to maintain high coding standards and adherence to best practices.',
+  'Contributed to the development and implementation of agile methodologies, improving team productivity and project delivery timelines.',
+  'Technologies used: React, React Hooks, Bootstrap, Figma, Jira, SCRUM.'
 ]
 
 const LoadExperiences = [
-  "Here I'm working on the RFP Guide, which helps shippers decide who is the best carrier for them.",
-  'In only 5 months I have delivered 4 Epics, created a documentation for Mixpanel events and refactored their API calls from redux to react-query.',
-  'I have also changed the way we destruct properties in CSS for Styled Components',
-  'Mainly languages are React, React-native and Styled Components.'
-]
-
-const TCExperiences = [
-  'TradersClub is a social network based on sharing your trading ideas for the stock market.',
-  'The teams in TC are divided by page, just like in Spotify.',
-  'My team was responsible for the Stocks Wallet page, which contains the stocks you want to follow.',
-  'I was the only Front-end developer on the team and managed to deliver incredible cool features.',
-  'Complex interactions with charts updated in real time.',
-  'Mainly languages are React, React-native and Styled Components.'
+  'Led the development of the highly valued RFP Guide, a tool assisting shippers in carrier selection, recognized for its impact on business operations.',
+  'Established documentation for Mixpanel events, ensuring accurate and consistent tracking of user interactions and system events, leading to improved product decision-making.',
+  'Introduced a shift from Redux to React-query for API calls, enhancing data fetching efficiency and application responsiveness.',
+  'Technologies used: React, React Hooks, Styled Components, Figma, Jira, SCRUM.'
 ]
 
 const ByneExperiences = [
-  'Byne is a company focused in emergency communication, recently purchased by RTM.',
-  'Here I am hired to guide they in a new path to web development.',
-  'Our first MVP website is already been used by RTM employees and it helps by managing new hotline requests.',
-  'In my first week I wrote a front-end guide at Confluence, describing my stack and the main responsibilities we should know when coding React, CSS and other topics.',
-  "In the meantime, my weekends where dedicated to an App that I'm really proud of and looking forward to, it just got its MVP finished on new year's eve and I will soon be able to tell more about it in my resume."
+  'Played a pivotal role in reorienting the company towards modern web development standards, significantly enhancing website performance and user engagement.',
+  'Composed a comprehensive front-end guide at Confluence, establishing a robust knowledge base and promoting best coding practices within the team.',
+  'Led a team of 4 developers, fostering a culture of collaboration, continual learning, and high-quality code.',
+  'Technologies used: React, React Hooks, Styled Components, Figma, Jira, SCRUM.'
+]
+
+const TCExperiences = [
+  'Developed a real-time interactive charting interface for the Stocks Wallet page, a core feature of the platform that serviced over 700,000 users.',
+  'Introduced several code optimization strategies and testing methodologies, which resulted in improved application performance and reliability.',
+  'Technologies used: React, React-native, Styled Components, Figma, Jira, SCRUM.'
 ]
 
 const arvoreExperiences = [
-  'Árvore is an educational app, its like Netflix but with books instead of movies and it helps improving reading at schools in many different ways.',
-  'Did a lot in Árvore, such as huge platforms like the editors panel and the user management panel for schools.',
-  'Also created many pages and components for web and mobile.',
-  'Here I worked with most recent technologies such as react native, react hooks, GraphQL and Styled Components.',
-  'Certified front end tester with Jest and Enzyme.'
+  "Developed several integral platforms including the editor's panel and user management panel for schools, designed with a mobile-first approach and delivering optimal performance across devices of all sizes.",
+  "Ensured every page and component created was fully responsive and adaptable to any screen size, significantly enhancing the application's accessibility and user experience for over 1.8 million users.",
+  'Led the implementation of a robust testing framework using Jest and Enzyme, raising the standard for code quality and reliability within the team.',
+  'Technologies used: React Native, React Hooks, GraphQL, Styled Components.'
 ]
 
 const inceresExperiences = [
-  'Inceres develop systems and solutions for precision agriculture.',
-  'I recreate the interface of existing projects and build the new ones from the design to the deployment.',
-  'Deployed many features and projects working on back and front.',
-  'I Built a complex module for soil sample grids generation.',
-  'Member of a team that uses agile method, works with SCRUM, sprints, code review and provides daily feedback.',
-  'Implemented a Health Check app to respond faster if modules go off, a special need for the system architecture',
-  'Using technologies such as React, Angular, Flask, Django, ElasticSearch, OpenLayers and many others.'
+  "Spearheaded the development of an intricate soil sample grid generation module, a pivotal feature in the company's precision agriculture solutions.",
+  'Developed a dynamic map interface, enabling users to interactively draw polygons, create farms, and color the map based on soil samples. This novel feature significantly enhanced user experience and the overall utility of the product.',
+  "Implemented a sophisticated color logic system that can alter the entire interface's colors based on three variables, providing a customizable user interface and improving accessibility.",
+  "Built a Health Check app that significantly reduced error response time and bolstered system reliability, a critical upgrade for the system's architecture.",
+  'Technologies used: React, Angular, Flask, Django, ElasticSearch, OpenLayers, and others.'
 ]
 
-const leftSideLanguages = [
-  { label: 'React', level: 5 },
-  { label: 'React Native', level: 5 },
-  { label: 'Styled Comp.', level: 5 },
-  { label: 'Hooks', level: 5 },
-  { label: 'ES6', level: 5 },
-  { label: 'GraphQL', level: 5 },
-  { label: 'JavaScript', level: 5 },
-  { label: 'AngularJS', level: 5 },
-  { label: 'Angular 2', level: 4 },
-  { label: 'Angular 6', level: 4 },
-  { label: 'Bootstrap', level: 4 },
-  { label: 'OpenLayers', level: 3 },
-  { label: 'Elastic S.', level: 2 }
-]
-
-const rightSideLanguages = [
-  { label: 'HTML', level: 5 },
-  { label: 'CSS', level: 5 },
-  { label: 'Jest', level: 5 },
-  { label: 'Playwright', level: 5 },
-  { label: 'SASS', level: 5 },
-  { label: 'Enzyme', level: 4 },
-  { label: 'Python', level: 4 },
-  { label: 'Karma', level: 3 },
-  { label: 'JQuery', level: 3 },
-  { label: 'Linux', level: 3 },
-  { label: 'Xamarin', level: 3 },
-  { label: 'C#', level: 2 }
-]
-
-const contactsInfo = [
-  {
-    label: 'Cellphone',
-    info: '+55 32 999 711 797'
-  },
-  {
-    label: 'E-mail',
-    info: 'weissfrontend@gmail.com'
-  },
-  {
-    label: 'linkedin',
-    info: 'rafael-weiss-frontend'
-  },
-  {
-    label: 'Address',
-    info: 'Rio, RJ - Brazil'
-  }
+const languages = [
+  'React JS',
+  'React Hooks',
+  'Styled Components',
+  'React Query',
+  'React Native',
+  'Jest',
+  'React Testing Library',
+  'Playwright',
+  'Responsive CSS',
+  'CSS animations',
+  'GraphQL',
+  'Next JS'
 ]
 
 const Curriculum = () => {
@@ -150,6 +130,16 @@ const Curriculum = () => {
     )
   }
 
+  const renderCertificateLink = (where, when) => {
+    return (
+      <ExperienceTitle>
+        <ExperienceText>
+          <a href={when}>{where}</a>
+        </ExperienceText>
+      </ExperienceTitle>
+    )
+  }
+
   const renderExperienceList = experienceList => {
     return (
       <ExperienceList>
@@ -160,16 +150,7 @@ const Curriculum = () => {
     )
   }
 
-  const renderContactsInfo = () => {
-    return contactsInfo.map((contact, index) => {
-      return (
-        <InformationRow key={index}>
-          <Info>{contact.label}</Info>
-          <Info>{contact.info}</Info>
-        </InformationRow>
-      )
-    })
-  }
+  const isSmallScreen = window.innerWidth < sizes.mdScreen
 
   return (
     <CurriculumContainer>
@@ -202,76 +183,92 @@ const Curriculum = () => {
       </LeftSide>
       <RightSide>
         <RightSectionContainer>
-          {renderTitle('Experience')}
+          {renderTitle('Independent Projects')}
+          {renderExperienceTitle('Kipkart App • 01/2020 - 06/2021', '')}
+          {renderExperienceList(KipExperiences)}
+          <Spacing />
+          {renderTitle('Working Experience')}
           {renderExperienceTitle(
-            'Senior Front-end, Anytime Fitness',
-            '05/2022 - Today'
+            'Front-end Tech Lead • Podopolo • 04/2023 - Today',
+            ''
+          )}
+          {renderExperienceList(PodopoloExperiences)}
+          {renderExperienceTitle(
+            'Senior Front-end • Anytime Fitness • 05/2022 - 04/2023',
+            ''
           )}
           {renderExperienceList(AFExperiences)}
           {renderExperienceTitle(
-            'Senior Front-end, Loadsmart',
-            '03/2021 - 05/2022'
+            'Senior Front-end • Loadsmart • 03/2021 - 05/2022',
+            ''
           )}
           {renderExperienceList(LoadExperiences)}
           {renderExperienceTitle(
-            'Front-end Tech Lead, Byne',
-            '08/2020 - 03/2021'
+            'Front-end Tech Lead • Byne • 08/2020 - 03/2021',
+            ''
           )}
           {renderExperienceList(ByneExperiences)}
           {renderExperienceTitle(
-            'Senior Front-end, TradersClub',
-            '04/2020 - 08/2020'
+            'Senior Front-end • TradersClub • 04/2020 - 08/2020',
+            ''
           )}
           {renderExperienceList(TCExperiences)}
           {renderExperienceTitle(
-            'Front-end, Árvore Educação',
-            '2019 - 04/2020'
+            'Front-end • Árvore Educação • 2019 - 04/2020',
+            ''
           )}
           {renderExperienceList(arvoreExperiences)}
-          {renderExperienceTitle('Fullstack, Inceres', '2017 - 2019')}
+          {renderExperienceTitle('Front-end • Inceres • 2017 - 2019', '')}
           {renderExperienceList(inceresExperiences)}
-          {renderExperienceTitle(
-            'Front-end and Designer Freelancer',
-            '2015 - 2017'
-          )}
-          {renderExperienceTitle(
-            'Intern Engineering at Setepla',
-            '2014 - 2015'
-          )}
+          {renderExperienceTitle('Front-end Freelancer • 2015 - 2017', '')}
+          {renderExperienceTitle('Intern Engineer • Setepla • 2014 - 2015', '')}
         </RightSectionContainer>
         <RightSectionContainer>
-          {renderTitle('Education')}
-          {renderExperienceTitle('Self-Taught', '2012 - Present')}
-          {renderExperienceTitle('Self-Taught', '2012 - Present')}
-          {renderExperienceTitle('Self-Taught', '2012 - Present')}
+          {renderTitle('Licenses and Certificates')}
+          {renderCertificateLink(
+            'HackerRank Problem Solving Certificate',
+            'https://www.hackerrank.com/certificates/b0a152a7246f'
+          )}
+          {renderCertificateLink(
+            'Certified React Tester with Jest and Enzyme',
+            'https://www.udemy.com/certificate/UC-1PQ4I2IK/'
+          )}
+          <Spacing />
+          <Spacing />
+          <ContactsSection>
+            <Contacts>
+              {renderTitle('Contacts')}
+              {isSmallScreen ? (
+                <>
+                  {renderExperienceTitle('+55 32 999 711 797', '')}
+                  {renderExperienceTitle('weissfrontend@gmail', '')}
+                  {renderExperienceTitle('Rio, RJ - Brazil', '')}
+                </>
+              ) : (
+                <>
+                  {renderExperienceTitle('Phone', '+55 32 999 711 797')}
+                  {renderExperienceTitle('Email', 'weissfrontend@gmail.com')}
+                  {renderExperienceTitle(
+                    'Location',
+                    'Rio de Janeiro, RJ - Brazil'
+                  )}
+                </>
+              )}
+            </Contacts>
+            <Education>
+              {renderTitle('Education')}
+              {renderExperienceTitle('Self-Taught', '')}
+              {renderExperienceTitle('Udemy', '')}
+              {renderExperienceTitle('Internet', '')}
+            </Education>
+          </ContactsSection>
         </RightSectionContainer>
-        {renderContactsInfo()}
-
         <RightSectionContainer>
-          {renderTitle('Languages & Frameworks')}
+          {renderTitle('Languages and Frameworks')}
           <LanguagesContainer>
-            <LanguagesLeftColumn>
-              {leftSideLanguages.map((item, index) => {
-                return (
-                  <ExperienceMeter
-                    language={item.label}
-                    level={item.level}
-                    key={index}
-                  />
-                )
-              })}
-            </LanguagesLeftColumn>
-            <LanguagesRightColumn>
-              {rightSideLanguages.map((item, index) => {
-                return (
-                  <ExperienceMeter
-                    language={item.label}
-                    level={item.level}
-                    key={index}
-                  />
-                )
-              })}
-            </LanguagesRightColumn>
+            {languages.map((language, index) => {
+              return <Language>{language}</Language>
+            })}
           </LanguagesContainer>
         </RightSectionContainer>
       </RightSide>
