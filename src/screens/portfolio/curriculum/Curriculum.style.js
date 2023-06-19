@@ -11,9 +11,6 @@ export const CurriculumContainer = styled.div`
   justify-content: center;
   align-items: center;
   @media (min-width: ${sizes.mdScreen}px) {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
     top: 212px;
   }
 `
@@ -22,15 +19,15 @@ export const NameSection = styled.div`
   flex-direction: row;
   display: flex;
   flex: 1;
-  @media (min-width: ${sizes.mdScreen}px) {
-    flex-direction: column;
-  }
 `
 
 export const NameText = styled.div`
   flex-direction: column;
   display: flex;
   flex: 1;
+  margin-left: 16px;
+  justify-content: space-between;
+  max-height: 140px;
 `
 
 export const LeftSide = styled.div`
@@ -54,8 +51,6 @@ export const RightSide = styled.div`
   max-width: 400px;
   @media (min-width: ${sizes.mdScreen}px) {
     max-width: 100%;
-    flex: 1.8;
-    border-left: 4px solid ${colors.portDivision};
   }
 `
 
@@ -64,10 +59,6 @@ export const LeftSectionContainer = styled.div`
   display: flex;
   flex: 1;
   padding-right: 0;
-  margin-top: ${spacing.medium}px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    padding-right: ${spacing.medium}px;
-  }
 `
 
 export const RightSectionContainer = styled.div`
@@ -76,9 +67,6 @@ export const RightSectionContainer = styled.div`
   flex: 1;
   padding-left: 0;
   margin-bottom: ${spacing.medium}px;
-  @media (min-width: ${sizes.mdScreen}px) {
-    padding-left: ${spacing.medium}px;
-  }
 `
 
 export const LanguagesContainer = styled.div`
@@ -174,17 +162,8 @@ export const EducationDescription = styled.span`
 `
 
 export const LampImage = styled.img`
-  ${({ smallScreen }) => css`
-    display: ${smallScreen ? 'flex' : 'none'};
-    width: 79px;
-    height: 79px;
-    margin-bottom: ${spacing.medium}px;
-    @media (min-width: ${sizes.mdScreen}px) {
-      width: 171px;
-      height: 171px;
-      display: ${smallScreen ? 'none' : 'flex'};
-    }
-  `}
+  width: 140px;
+  margin-bottom: ${spacing.medium}px;
 `
 export const ScreensImage = styled.img`
   width: 100%;
@@ -199,7 +178,7 @@ export const ProfileText = styled.span`
   font-size: ${sizes.text}px;
   font-weight: ${fontWeights.regular};
   line-height: 1.5 !important;
-  margin-bottom: ${spacing.large}px;
+  margin-bottom: ${spacing.medium}px;
   margin-top: ${spacing.small}px;
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 16px;
@@ -215,6 +194,10 @@ export const Title = styled.span`
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 34px;
   }
+`
+
+export const NameTitle = styled(Title)`
+  font-size: 52px !important;
 `
 
 export const Info = styled.span`
@@ -236,4 +219,8 @@ export const Role = styled.span`
   @media (min-width: ${sizes.mdScreen}px) {
     font-size: 24px;
   }
+`
+
+export const NameRole = styled(Role)`
+  font-size: 32px !important;
 `

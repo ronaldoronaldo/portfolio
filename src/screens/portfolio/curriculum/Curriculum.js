@@ -23,7 +23,9 @@ import {
   EducationDescription,
   LanguagesContainer,
   LanguagesLeftColumn,
-  LanguagesRightColumn
+  LanguagesRightColumn,
+  NameTitle,
+  NameRole
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
 import screen from 'assets/images/portfolio/screens.png'
@@ -125,7 +127,7 @@ const contactsInfo = [
   },
   {
     label: 'Address',
-    info: 'Rio de Janeiro, RJ - Brazil'
+    info: 'Rio, RJ - Brazil'
   }
 ]
 
@@ -175,24 +177,27 @@ const Curriculum = () => {
         <NameSection>
           <LampImage src={lamp} />
           <NameText>
-            <Title>Rafael Weiss</Title>
-            <Role>Front-end Developer</Role>
-            <Role>UX UI Designer</Role>
+            <NameTitle>Rafael Weiss</NameTitle>
+            <NameRole>Senior Frontend</NameRole>
+            <NameRole>Web & Mobile</NameRole>
           </NameText>
-          <LampImage src={lamp} smallScreen />
         </NameSection>
         <LeftSectionContainer>
-          {renderContactsInfo()}
-          <Spacing />
-          {renderTitle('Profile')}
+          {renderTitle('Professional Summary')}
           <ProfileText>
-            A fullstack web developer with a strong interest in projects that
-            require both conceptual and analytical thinking. Son of a great
-            designer, I'm fully-committed to designing and developing innovative
-            web based materials that users will love. Always eager to learn more
-            from anyone, regardless of the industry, language or framework.
+            Passionate and versatile Senior Front-End Engineer with over 7 years
+            of experience in building and maintaining responsive websites and
+            applications. Proven ability in leading teams, optimizing
+            performance, and implementing new features from concept through
+            completion. Known for a hands-on approach in using the latest
+            technologies and frameworks, and a deep understanding of Agile
+            methodologies. Equally comfortable working independently and
+            collaborating within team settings. Demonstrated initiative in
+            creating a full-fledged mobile application single-handedly,
+            encompassing roles from design to development, and product
+            management to marketing.
           </ProfileText>
-          <ScreensImage src={screen} />
+          {/*<ScreensImage src={screen} />*/}
         </LeftSectionContainer>
       </LeftSide>
       <RightSide>
@@ -237,10 +242,11 @@ const Curriculum = () => {
         <RightSectionContainer>
           {renderTitle('Education')}
           {renderExperienceTitle('Self-Taught', '2012 - Present')}
-          <EducationDescription>
-            PUC-RIO, UDEMY, LYNDA, INTERNET
-          </EducationDescription>
+          {renderExperienceTitle('Self-Taught', '2012 - Present')}
+          {renderExperienceTitle('Self-Taught', '2012 - Present')}
         </RightSectionContainer>
+        {renderContactsInfo()}
+
         <RightSectionContainer>
           {renderTitle('Languages & Frameworks')}
           <LanguagesContainer>
