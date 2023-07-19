@@ -23,10 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41c9067d-e20d-4894-9502-60c6d5285bb3" name="Default Changelist" comment="chama">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/portfolio/curriculum/Curriculum.style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/rafael/Projects/portfolio",
+    "last_opened_file_path": "C:/Projects/portfolio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -204,6 +201,7 @@
       <workItem from="1671538746781" duration="38000" />
       <workItem from="1671538810135" duration="2718000" />
       <workItem from="1687201696011" duration="8027000" />
+      <workItem from="1689781678587" duration="752000" />
     </task>
     <task id="LOCAL-00300" summary="style">
       <created>1585879024296</created>
@@ -555,6 +553,15 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -565,15 +572,6 @@
         <entry key="User">
           <value>
             <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
           </value>
         </entry>
       </map>

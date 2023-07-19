@@ -3,15 +3,11 @@ import {
   CurriculumContainer,
   LeftSide,
   RightSide,
-  Role,
   Title,
   LeftSectionContainer,
-  Info,
-  InformationRow,
   Spacing,
   TitleDivision,
   ProfileText,
-  ScreensImage,
   LampImage,
   NameSection,
   NameText,
@@ -20,10 +16,7 @@ import {
   ExperienceText,
   ExperienceList,
   ExperienceListItem,
-  EducationDescription,
   LanguagesContainer,
-  LanguagesLeftColumn,
-  LanguagesRightColumn,
   NameTitle,
   NameRole,
   ContactsSection,
@@ -32,8 +25,6 @@ import {
   Language
 } from './Curriculum.style'
 import lamp from 'assets/images/portfolio/lamp.png'
-import screen from 'assets/images/portfolio/screens.png'
-import { ExperienceMeter } from '../../../components/portfolio/experience-meter'
 import { sizes } from '../../../config/ui'
 
 const KipExperiences = [
@@ -194,31 +185,31 @@ const Curriculum = () => {
           )}
           {renderExperienceList(PodopoloExperiences)}
           {renderExperienceTitle(
-            'Senior Front-end • Anytime Fitness • 05/2022 - 04/2023',
+            'Senior Front-end • Anytime Fitness • 05/2020 - 04/2023',
             ''
           )}
           {renderExperienceList(AFExperiences)}
           {renderExperienceTitle(
-            'Senior Front-end • Loadsmart • 03/2021 - 05/2022',
+            'Senior Front-end • Loadsmart • 03/2019 - 05/2020',
             ''
           )}
           {renderExperienceList(LoadExperiences)}
           {renderExperienceTitle(
-            'Front-end Tech Lead • Byne • 08/2020 - 03/2021',
+            'Front-end Tech Lead • Byne • 08/2018 - 03/2019',
             ''
           )}
           {renderExperienceList(ByneExperiences)}
           {renderExperienceTitle(
-            'Senior Front-end • TradersClub • 04/2020 - 08/2020',
+            'Senior Front-end • TradersClub • 04/2017 - 08/2018',
             ''
           )}
           {renderExperienceList(TCExperiences)}
           {renderExperienceTitle(
-            'Front-end • Árvore Educação • 2019 - 04/2020',
+            'Front-end • Árvore Educação • 2016 - 04/2017',
             ''
           )}
           {renderExperienceList(arvoreExperiences)}
-          {renderExperienceTitle('Front-end • Inceres • 2017 - 2019', '')}
+          {renderExperienceTitle('Front-end • Inceres • 2014 - 2016', '')}
           {renderExperienceList(inceresExperiences)}
           {renderExperienceTitle('Front-end Freelancer • 2015 - 2017', '')}
           {renderExperienceTitle('Intern Engineer • Setepla • 2014 - 2015', '')}
