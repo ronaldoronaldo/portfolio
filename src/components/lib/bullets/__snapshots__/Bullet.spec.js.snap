@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders correctly 1`] = `
-<div
-  className="Bulletstyle__BulletStyle-sc-1ter9xb-0 jUUmQw"
-/>
-`;
